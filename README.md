@@ -4,7 +4,7 @@ Please read this up to learn the proper git workflow: https://www.atlassian.com/
 
 ### Terminal commands for initialising git: ###
 
-`git clone <url>` : creates a copy of this repository locally on your machine
+`git clone <https://<username>:<password>@github.com/<username>/turbo-consent.git>` : creates a copy of this repository locally on your machine
 
 
 ### Terminal commands for using git: ###
