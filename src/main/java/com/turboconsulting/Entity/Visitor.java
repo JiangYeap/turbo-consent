@@ -7,6 +7,7 @@ public class Visitor {
 
     private int id;
     private String uname, name, password;
+    private ConsentLevel consentLevel;
     private GregorianCalendar dob;
     private ArrayList<Integer> experimentIDs;
     private ArrayList<Visitor> dependents;
@@ -16,12 +17,20 @@ public class Visitor {
         this.uname = uname;
         this.password = password;
         this.name = name;
+        this.consentLevel = ConsentLevel.NONE;
         this.dob = dob;
         this.experimentIDs = new ArrayList<Integer>();
         this.dependents = new ArrayList<Visitor>();
+
     }
 
+    public ConsentLevel getConsentLevel() {
+        return consentLevel;
+    }
 
+    public void setConsentLevel(ConsentLevel consentLevel) {
+        this.consentLevel = consentLevel;
+    }
 
     public int getId() {
         return id;
@@ -51,8 +60,8 @@ public class Visitor {
         return experimentIDs;
     }
 
-    public void setExperimentIDs(ArrayList<Integer> experimentIDs) {
-        this.experimentIDs = experimentIDs;
+    public void addExperimentID(int experimentID) {
+        this.experimentIDs.add(experimentID);
     }
 
     public ArrayList<Visitor> getDependents() {
