@@ -28,4 +28,14 @@ public class ConsentService {
     public Collection<Experiment> getAllExperiments(){
         return experimentDao.getAllExperiments();
     }
+
+    public boolean checkLoginDetails(String username, String password)  {
+        Collection<Visitor> visitors = visitorDao.getAllVisitors();
+        for (Visitor v : visitors) {
+            if(v.getUname().equals(username))  {
+                if(v.getPassword().equals(password))  return true;
+            }
+        }
+        return false;
+    }
 }
