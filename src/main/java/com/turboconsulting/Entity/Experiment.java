@@ -1,6 +1,4 @@
-package Entity;
-
-import java.util.ArrayList;
+package com.turboconsulting.Entity;
 
 public class Experiment {
 
