@@ -9,7 +9,7 @@ import java.util.Map;
 
 import static javax.swing.UIManager.put;
 
-public class FakeVisitorDao {
+public class VisitorDao {
     private static Map<Integer, Visitor> visitors;
 
     static {

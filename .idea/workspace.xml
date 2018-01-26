@@ -12,28 +12,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4258373">
+    <splitter split-orientation="horizontal" split-proportion="0.5010874">
       <split-first>
         <leaf>
-          <file leaf-file-name="Service.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/Service/Service.java">
+          <file leaf-file-name="VisitorDao.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/DAO/VisitorDao.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="36">
-                  <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-                  <folding />
+                <state relative-caret-position="306">
+                  <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#665#666#0" expanded="true" />
+                    <element signature="e#710#711#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="FakeVisitorDao.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/DAO/FakeVisitorDao.java">
+          <file leaf-file-name="ExperimentDao.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/DAO/ExperimentDao.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
-                  <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+                <state relative-caret-position="450">
+                  <caret line="25" column="53" lean-forward="true" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#669#670#0" expanded="true" />
-                    <element signature="e#714#715#0" expanded="true" />
+                    <element signature="e#701#702#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -53,11 +56,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="FakeExperimentDao.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/DAO/FakeExperimentDao.java">
+          <file leaf-file-name="Service.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/Service/Service.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="36">
-                  <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+                <state relative-caret-position="108">
+                  <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -104,8 +107,11 @@
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entity/Experiment.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entity/Visitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Service/Service.java" />
         <option value="$PROJECT_DIR$/src/main/java/DAO/FakeVisitorDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/FakeExperimentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/VisitorDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Service/Service.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/ExperimentDao.java" />
       </list>
     </option>
   </component>
@@ -309,12 +315,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516958791174</updated>
-      <workItem from="1516958794261" duration="5908000" />
+      <workItem from="1516958794261" duration="6340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5908000" />
+    <option name="totallyTimeSpent" value="6340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -402,14 +408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/FakeExperimentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -443,20 +441,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Service/Service.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        <state relative-caret-position="108">
+          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/FakeVisitorDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/VisitorDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="306">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/ExperimentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="53" lean-forward="true" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
           </folding>
         </state>
       </provider>
