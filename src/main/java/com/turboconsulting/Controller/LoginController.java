@@ -18,6 +18,11 @@ public class LoginController {
 
     @RequestMapping(value = "/checkDetails", consumes = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
     public boolean checkLoginDetails(@RequestBody LoginDetails loginDetails)  {
-        return consentService.checkLoginDetails(loginDetails.uname, loginDetails.pword);
+        return consentService.checkLoginDetails(loginDetails);
+    }
+
+    @RequestMapping(value = "/updatePassword", consumes = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.PUT)
+    public void updatePassword(@RequestBody LoginDetails loginDetails)  {
+        consentService.updatePassword(loginDetails);
     }
 }

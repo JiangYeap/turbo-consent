@@ -1,5 +1,6 @@
 package com.turboconsulting.DAO;
 
+import com.turboconsulting.Entity.LoginDetails;
 import com.turboconsulting.Entity.Visitor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -32,5 +33,13 @@ public class VisitorDao {
 
     public Collection<Visitor> getAllVisitors () {
         return this.visitors.values();
+    }
+
+    public void updateVisitor(LoginDetails newLogin) {
+        for (Visitor v : this.visitors.values())  {
+            if (v.getUname().equals(newLogin.uname))  {
+                v.setPassword(newLogin.pword);
+            }
+        }
     }
 }

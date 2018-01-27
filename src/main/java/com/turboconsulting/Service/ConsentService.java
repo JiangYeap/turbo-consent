@@ -3,6 +3,7 @@ package com.turboconsulting.Service;
 import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
 import com.turboconsulting.Entity.Experiment;
+import com.turboconsulting.Entity.LoginDetails;
 import com.turboconsulting.Entity.Visitor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -29,13 +30,18 @@ public class ConsentService {
         return experimentDao.getAllExperiments();
     }
 
-    public boolean checkLoginDetails(String username, String password)  {
+    public boolean checkLoginDetails(LoginDetails loginDetails)  {
         Collection<Visitor> visitors = visitorDao.getAllVisitors();
         for (Visitor v : visitors) {
-            if(v.getUname().equals(username))  {
-                if(v.getPassword().equals(password))  return true;
+            if(v.getUname().equals(loginDetails.uname))  {
+                if(v.getPassword().equals(loginDetails.pword))  return true;
             }
         }
         return false;
+    }
+
+    public void updatePassword(LoginDetails login) {
+        visitorDao.updateVisitor(login);
+
     }
 }
