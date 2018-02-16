@@ -15,15 +15,15 @@ import java.util.Collection;
 public class ConsentService {
 
     @Autowired
-    @Qualifier("visitorData")
-    private VisitorDao visitorDao;
+    @Qualifier("fakeVisitorData")
+    private VisitorDao fakeVisitorDaoImpl;
 
     @Autowired
     @Qualifier("experimentData")
     private ExperimentDao experimentDao;
 
     public Collection<Visitor> getAllVisitors(){
-        return visitorDao.getAllVisitors();
+        return fakeVisitorDaoImpl.getAllVisitors();
     }
 
     public Collection<Experiment> getAllExperiments(){
@@ -31,7 +31,7 @@ public class ConsentService {
     }
 
     public boolean checkLoginDetails(LoginDetails loginDetails)  {
-        Collection<Visitor> visitors = visitorDao.getAllVisitors();
+        Collection<Visitor> visitors = fakeVisitorDaoImpl.getAllVisitors();
         for (Visitor v : visitors) {
             if(v.getUname().equals(loginDetails.uname))  {
                 if(v.getPassword().equals(loginDetails.pword))  return true;
@@ -41,7 +41,7 @@ public class ConsentService {
     }
 
     public void updatePassword(LoginDetails login) {
-        visitorDao.updateVisitor(login);
+        fakeVisitorDaoImpl.updateVisitor(login);
 
     }
 }
