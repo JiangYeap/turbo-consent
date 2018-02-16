@@ -23,4 +23,9 @@ public class MySqlVisitorDao implements VisitorDao{
     public void updateVisitor(LoginDetails newLogin) {
 
     }
+
+    @Override
+    public void addNewVisitor(Visitor v) {
+
+    }
 }

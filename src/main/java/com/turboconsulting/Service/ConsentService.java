@@ -16,14 +16,14 @@ public class ConsentService {
 
     @Autowired
     @Qualifier("fakeVisitorData")
-    private VisitorDao fakeVisitorDaoImpl;
+    private VisitorDao visitorDao;
 
     @Autowired
     @Qualifier("experimentData")
     private ExperimentDao experimentDao;
 
     public Collection<Visitor> getAllVisitors(){
-        return fakeVisitorDaoImpl.getAllVisitors();
+        return visitorDao.getAllVisitors();
     }
 
     public Collection<Experiment> getAllExperiments(){
@@ -31,7 +31,7 @@ public class ConsentService {
     }
 
     public boolean checkLoginDetails(LoginDetails loginDetails)  {
-        Collection<Visitor> visitors = fakeVisitorDaoImpl.getAllVisitors();
+        Collection<Visitor> visitors = visitorDao.getAllVisitors();
         for (Visitor v : visitors) {
             if(v.getUname().equals(loginDetails.uname))  {
                 if(v.getPassword().equals(loginDetails.pword))  return true;
@@ -41,7 +41,11 @@ public class ConsentService {
     }
 
     public void updatePassword(LoginDetails login) {
-        fakeVisitorDaoImpl.updateVisitor(login);
+        visitorDao.updateVisitor(login);
 
+    }
+
+    public void addNewUser(Visitor v)  {
+        visitorDao.addNewVisitor(v);
     }
 }

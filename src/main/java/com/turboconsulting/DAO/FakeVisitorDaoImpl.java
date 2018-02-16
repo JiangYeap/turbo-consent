@@ -45,4 +45,9 @@ public class FakeVisitorDaoImpl implements VisitorDao {
             }
         }
     }
+
+    @Override
+    public void addNewVisitor(Visitor v) {
+        visitors.put(visitors.size(), v);
+    }
 }

@@ -10,4 +10,6 @@ public interface VisitorDao {
     Collection<Visitor> getAllVisitors();
 
     void updateVisitor(LoginDetails newLogin);
+
+    void addNewVisitor(Visitor v);
 }
