@@ -20,6 +20,8 @@ public class Visitor {
     private ArrayList<Integer> experimentIDs;
     private ArrayList<Visitor> dependents;
 
+    public Visitor(){}
+
     public Visitor(int id, String uname, String password, String name, GregorianCalendar dob) {
         this.id = id;
         this.uname = uname;
@@ -78,5 +80,25 @@ public class Visitor {
 
     public void setDependents(ArrayList<Visitor> dependents) {
         this.dependents = dependents;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setUname(String uname) {
+        this.uname = uname;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDob(GregorianCalendar dob) {
+        this.dob = dob;
+    }
+
+    public void setExperimentIDs(ArrayList<Integer> experimentIDs) {
+        this.experimentIDs = experimentIDs;
     }
 }
