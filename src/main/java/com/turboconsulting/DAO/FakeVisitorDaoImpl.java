@@ -40,8 +40,8 @@ public class FakeVisitorDaoImpl implements VisitorDao {
     @Override
     public void updateVisitor(LoginDetails newLogin) {
         for (Visitor v : this.visitors.values())  {
-            if (v.getUname().equals(newLogin.uname))  {
-                v.setPassword(newLogin.pword);
+            if (v.getUname().equals(newLogin.getUname()))  {
+                v.setPassword(newLogin.getPword());
             }
         }
     }

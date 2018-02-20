@@ -35,8 +35,8 @@ public class ConsentService {
     public boolean checkLoginDetails(LoginDetails loginDetails)  {
         Iterable<Visitor> visitors = visitorDao.findAll();
         for (Visitor v : visitors) {
-            if(v.getUname().equals(loginDetails.uname))  {
-                if(v.getPassword().equals(loginDetails.pword))  return true;
+            if(v.getUname().equals(loginDetails.getUname()))  {
+                if(v.getPassword().equals(loginDetails.getPword()))  return true;
             }
         }
         return false;
