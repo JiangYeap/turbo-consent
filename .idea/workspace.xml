@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af3e7164-4a0b-4150-8fa2-d64acdaab670" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_2_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring4_2_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Resources/static/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Resources/templates/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Resources/templates/welcome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/DAO/FakeVisitorDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/DAO/FakeVisitorDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Entity/LoginDetails.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Entity/LoginDetails.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentService.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/FakeVisitorDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/FakeVisitorDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/LoginDetails.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/LoginDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/turbo-consent.iml" afterPath="$PROJECT_DIR$/turbo-consent.iml" />
-    </list>
+    <list default="true" id="af3e7164-4a0b-4150-8fa2-d64acdaab670" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,15 +13,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/LoginController.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="522">
+              <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
               <folding>
-                <element signature="e#1082#1083#0" expanded="true" />
-                <element signature="e#1141#1142#0" expanded="true" />
+                <element signature="e#762#763#0" expanded="true" />
+                <element signature="e#816#817#0" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#969#970#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="83" lean-forward="true" selection-start-line="14" selection-start-column="83" selection-end-line="14" selection-end-column="83" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,8 +66,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsentService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="473">
               <caret line="38" column="65" lean-forward="false" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
@@ -459,17 +451,15 @@
       <workItem from="1518778296373" duration="9375000" />
       <workItem from="1518793840253" duration="4320000" />
       <workItem from="1518863712177" duration="5921000" />
-      <workItem from="1518946461210" duration="4784000" />
-      <workItem from="1519120908179" duration="21809000" />
+      <workItem from="1518946461210" duration="6174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87848000" />
+    <option name="totallyTimeSpent" value="61652000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="-4" width="1920" height="1084" extended-state="6" />
-    <editor active="true" />
+    <frame x="149" y="221" width="2562" height="1452" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -489,6 +479,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34969324" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35052317" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19114584" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
@@ -854,15 +845,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Greeting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/GreetingController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="39" lean-forward="true" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
@@ -886,19 +869,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/FakeVisitorDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        <state relative-caret-position="162">
+          <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/greeting.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="522">
+          <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding>
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -910,33 +898,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/welcome.html">
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="252">
+          <caret line="14" column="83" lean-forward="true" selection-start-line="14" selection-start-column="83" selection-end-line="14" selection-end-column="83" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="38" column="65" lean-forward="false" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updatePassword#0;class#ConsentService#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#1082#1083#0" expanded="true" />
-            <element signature="e#1141#1142#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
