@@ -17,8 +17,6 @@ public class Visitor {
     private String uname, name, password;
     private ConsentLevel consentLevel;
     private GregorianCalendar dob;
-    private ArrayList<Integer> experimentIDs;
-    private ArrayList<Visitor> dependents;
 
     public Visitor(){}
 
@@ -29,8 +27,6 @@ public class Visitor {
         this.name = name;
         this.consentLevel = ConsentLevel.NONE;
         this.dob = dob;
-        this.experimentIDs = new ArrayList<Integer>();
-        this.dependents = new ArrayList<Visitor>();
 
     }
 
@@ -66,22 +62,6 @@ public class Visitor {
         this.password = password;
     }
 
-    public ArrayList<Integer> getExperimentIDs() {
-        return experimentIDs;
-    }
-
-    public void addExperimentID(int experimentID) {
-        this.experimentIDs.add(experimentID);
-    }
-
-    public ArrayList<Visitor> getDependents() {
-        return dependents;
-    }
-
-    public void setDependents(ArrayList<Visitor> dependents) {
-        this.dependents = dependents;
-    }
-
     public void setId(int id) {
         this.id = id;
     }
@@ -96,9 +76,5 @@ public class Visitor {
 
     public void setDob(GregorianCalendar dob) {
         this.dob = dob;
-    }
-
-    public void setExperimentIDs(ArrayList<Integer> experimentIDs) {
-        this.experimentIDs = experimentIDs;
     }
 }

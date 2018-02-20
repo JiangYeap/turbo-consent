@@ -13,6 +13,8 @@ public class Experiment {
     private int id;
     private String name, description;
 
+    public Experiment(){};
+
     //When experiment is created.
     public Experiment(int id, String name, String description) {
         this.id = id;
