@@ -2,14 +2,13 @@ package com.turboconsulting.Entity;
 
 import javax.persistence.*;
 
-@Embeddable
+@Entity
 public class DidExperiment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int compoundKey;
 
-    
     @ManyToOne
     @JoinColumn(name="visitorId", nullable = false)
     private Visitor visitor;
@@ -42,12 +41,10 @@ public class DidExperiment {
         this.consentLevel = consentLevel;
     }
 
-
-
-    public int getEventualCompositeKey() {
+    public int getCompoundKey() {
         return compoundKey;
     }
-    public void setEventualCompositeKey(int eventualCompositeKey) {
-        this.compoundKey = eventualCompositeKey;
+    public void setCompoundKey(int compoundKey) {
+        this.compoundKey = compoundKey;
     }
 }
