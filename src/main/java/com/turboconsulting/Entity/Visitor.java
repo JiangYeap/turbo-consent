@@ -19,8 +19,7 @@ public class Visitor {
 
     public Visitor(){}
 
-    public Visitor(int id, String uname, String password, String name, GregorianCalendar dob) {
-        this.id = id;
+    public Visitor(String uname, String password, String name, GregorianCalendar dob) {
         this.uname = uname;
         this.password = password;
         this.name = name;

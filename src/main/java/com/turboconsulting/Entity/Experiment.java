@@ -16,8 +16,7 @@ public class Experiment {
     public Experiment(){};
 
     //When experiment is created.
-    public Experiment(int id, String name, String description) {
-        this.id = id;
+    public Experiment(String name, String description) {
         this.name = name;
         this.description = description;
     }

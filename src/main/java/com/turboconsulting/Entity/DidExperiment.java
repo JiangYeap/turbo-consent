@@ -1,9 +1,11 @@
 package com.turboconsulting.Entity;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
-
+@Entity
 public class DidExperiment {
+    @Id
     private int userID;
     private int experimentID;
     private ConsentLevel consentLevel;

@@ -19,8 +19,8 @@ public class FakeExperimentDao {
     static {
         experiments = new HashMap<Integer, Experiment>(){
             {
-                put(0, new Experiment(0, "Chemistry", "Just your avg chemistry experiment description"));
-                put(1, new Experiment(1, "Physics", "Just your avg physics experiment description"));
+                put(0, new Experiment("Chemistry", "Just your avg chemistry experiment description"));
+                put(1, new Experiment("Physics", "Just your avg physics experiment description"));
 
             }
         };

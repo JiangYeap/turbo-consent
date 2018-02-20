@@ -36,14 +36,14 @@ public class Controller {
     public @ResponseBody String addNewVisitor(@RequestParam String name,
                                               @RequestParam String uname,
                                               @RequestParam String pword) {
-        Visitor v = new Visitor(0, uname, pword, name, new GregorianCalendar(1998, 05, 3));
+        Visitor v = new Visitor(uname, pword, name, new GregorianCalendar(1998, 05, 3));
         consentService.addNewUser(v);
         return "Saved Visitor\n";
     }
 
     @GetMapping(path = "/addExperiment")
     public @ResponseBody String addNewExperiment(@RequestParam String name) {
-        Experiment e = new Experiment(0, name, "Sample Desciption");
+        Experiment e = new Experiment(name, "Sample Desciption");
         consentService.addNewExperiment(e);
         return "Saved Experiment\n";
     }
