@@ -1,21 +1,20 @@
 package com.turboconsulting.Entity;
 
-import java.util.ArrayList;
-import java.util.GregorianCalendar;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.util.*;
+import javax.persistence.*;
 
 @Entity
 public class Visitor {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private int id;
+    private int visitorId;
 
     private String uname, name, password;
     private GregorianCalendar dob;
+
+    @OneToMany(mappedBy = "visitor", cascade = CascadeType.ALL)
+    private Set<DidExperiment> experiments;
 
     public Visitor(){}
 
@@ -24,11 +23,21 @@ public class Visitor {
         this.password = password;
         this.name = name;
         this.dob = dob;
+        experiments = new HashSet<DidExperiment>();
 
     }
 
+
+    public Collection<DidExperiment> getExperiments() {
+        return experiments;
+    }
+
+    public void setExperiments(HashSet<DidExperiment> experiments) {
+        this.experiments = experiments;
+    }
+
     public int getId() {
-        return id;
+        return visitorId;
     }
 
     public String getUname() {
@@ -52,7 +61,7 @@ public class Visitor {
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.visitorId = id;
     }
 
     public void setUname(String uname) {
@@ -65,5 +74,21 @@ public class Visitor {
 
     public void setDob(GregorianCalendar dob) {
         this.dob = dob;
+    }
+
+    public void doExperiment(DidExperiment e) {
+        experiments.add(e);
+    }
+
+    public int getVisitorId() {
+        return visitorId;
+    }
+
+    public void setVisitorId(int visitorId) {
+        this.visitorId = visitorId;
+    }
+
+    public void setExperiments(Set<DidExperiment> experiments) {
+        this.experiments = experiments;
     }
 }

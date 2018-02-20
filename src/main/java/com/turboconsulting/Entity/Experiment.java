@@ -1,9 +1,7 @@
 package com.turboconsulting.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Experiment {
@@ -12,6 +10,9 @@ public class Experiment {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private String name, description;
+
+    @OneToMany(mappedBy = "experiment", cascade = CascadeType.ALL)
+    private Set<DidExperiment> visitors;
 
     public Experiment(){};
 
@@ -46,5 +47,16 @@ public class Experiment {
         this.description = description;
     }
 
+    public void doExperiment(DidExperiment e) {
+        visitors.add(e);
+    }
+
+    public Set<DidExperiment> getVisitors() {
+        return visitors;
+    }
+
+    public void setVisitors(Set<DidExperiment> visitors) {
+        this.visitors = visitors;
+    }
 
 }

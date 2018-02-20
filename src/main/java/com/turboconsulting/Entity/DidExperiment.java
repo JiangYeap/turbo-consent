@@ -1,20 +1,53 @@
 package com.turboconsulting.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity
+@Embeddable
 public class DidExperiment {
+
     @Id
-    private int userID;
-    private int experimentID;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int compoundKey;
+
+    
+    @ManyToOne
+    @JoinColumn(name="visitorId", nullable = false)
+    private Visitor visitor;
+
+    @ManyToOne
+    @JoinColumn(name="experimentId", nullable = false)
+    private Experiment experiment;
+
     private ConsentLevel consentLevel;
 
     public DidExperiment(){}
 
-    public DidExperiment(int userID, int experimentID, ConsentLevel consentLevel) {
-        this.userID = userID;
-        this.experimentID = experimentID;
+    public DidExperiment(Visitor v, Experiment e) {
+        this.visitor = v;
+        this.experiment=e;
+    }
+
+    public void setVisitor(Visitor visitor) {
+        this.visitor = visitor;
+    }
+
+    public void setExperiment(Experiment experiment) {
+        this.experiment = experiment;
+    }
+
+    public ConsentLevel getConsentLevel() {
+        return consentLevel;
+    }
+    public void setConsentLevel(ConsentLevel consentLevel) {
         this.consentLevel = consentLevel;
+    }
+
+
+
+    public int getEventualCompositeKey() {
+        return compoundKey;
+    }
+    public void setEventualCompositeKey(int eventualCompositeKey) {
+        this.compoundKey = eventualCompositeKey;
     }
 }

@@ -3,6 +3,7 @@ package com.turboconsulting.Service;
 import com.turboconsulting.DAO.FakeExperimentDao;
 import com.turboconsulting.DAO.MySqlExperimentDao;
 import com.turboconsulting.DAO.MySqlVisitorDao;
+import com.turboconsulting.Entity.DidExperiment;
 import com.turboconsulting.Entity.Experiment;
 import com.turboconsulting.Entity.LoginDetails;
 import com.turboconsulting.Entity.Visitor;
@@ -48,8 +49,11 @@ public class ConsentService {
     }
 
     public void addNewUser(Visitor v)  {
-        //visitorDao.addNewVisitor(v);
+        DidExperiment e = new DidExperiment(v, experimentDao.findOne(1));
+        v.doExperiment(e);
+        experimentDao.findOne(1).doExperiment(e);
         visitorDao.save(v);
+
 
     }
 
