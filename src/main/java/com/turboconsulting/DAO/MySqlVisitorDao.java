@@ -15,5 +15,4 @@ import java.util.Collection;
 @Qualifier("sqlVisitorData")
 public interface MySqlVisitorDao extends CrudRepository<Visitor, Integer> {
 
-
 }

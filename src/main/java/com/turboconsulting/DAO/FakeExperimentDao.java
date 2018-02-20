@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Repository
 @Qualifier("experimentData")
-public class ExperimentDao {
+public class FakeExperimentDao {
 
     @Autowired
     private static Map<Integer, Experiment> experiments;

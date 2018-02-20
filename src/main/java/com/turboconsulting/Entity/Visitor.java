@@ -15,7 +15,6 @@ public class Visitor {
     private int id;
 
     private String uname, name, password;
-    private ConsentLevel consentLevel;
     private GregorianCalendar dob;
 
     public Visitor(){}
@@ -25,17 +24,8 @@ public class Visitor {
         this.uname = uname;
         this.password = password;
         this.name = name;
-        this.consentLevel = ConsentLevel.NONE;
         this.dob = dob;
 
-    }
-
-    public ConsentLevel getConsentLevel() {
-        return consentLevel;
-    }
-
-    public void setConsentLevel(ConsentLevel consentLevel) {
-        this.consentLevel = consentLevel;
     }
 
     public int getId() {

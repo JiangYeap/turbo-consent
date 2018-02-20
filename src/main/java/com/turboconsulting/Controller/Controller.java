@@ -28,17 +28,23 @@ public class Controller {
     }
 
     @GetMapping(path = "/experiments")
-    public Collection<Experiment> getAllExperiments() {
+    public @ResponseBody Iterable<Experiment> getAllExperiments() {
         return consentService.getAllExperiments();
     }
 
-    @GetMapping(path = "/add")
+    @GetMapping(path = "/addVisitor")
     public @ResponseBody String addNewVisitor(@RequestParam String name,
                                               @RequestParam String uname,
                                               @RequestParam String pword) {
         Visitor v = new Visitor(0, uname, pword, name, new GregorianCalendar(1998, 05, 3));
         consentService.addNewUser(v);
-        return "Saved\n";
+        return "Saved Visitor\n";
+    }
 
+    @GetMapping(path = "/addExperiment")
+    public @ResponseBody String addNewExperiment(@RequestParam String name) {
+        Experiment e = new Experiment(0, name, "Sample Desciption");
+        consentService.addNewExperiment(e);
+        return "Saved Experiment\n";
     }
 }

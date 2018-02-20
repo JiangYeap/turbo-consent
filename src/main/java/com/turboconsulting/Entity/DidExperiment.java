@@ -6,11 +6,13 @@ import javax.persistence.Entity;
 public class DidExperiment {
     private int userID;
     private int experimentID;
+    private ConsentLevel consentLevel;
 
     public DidExperiment(){}
 
-    public DidExperiment(int userID, int experimentID) {
+    public DidExperiment(int userID, int experimentID, ConsentLevel consentLevel) {
         this.userID = userID;
         this.experimentID = experimentID;
+        this.consentLevel = consentLevel;
     }
 }

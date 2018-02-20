@@ -1,8 +1,8 @@
 package com.turboconsulting.Service;
 
-import com.turboconsulting.DAO.ExperimentDao;
+import com.turboconsulting.DAO.FakeExperimentDao;
+import com.turboconsulting.DAO.MySqlExperimentDao;
 import com.turboconsulting.DAO.MySqlVisitorDao;
-import com.turboconsulting.DAO.VisitorDao;
 import com.turboconsulting.Entity.Experiment;
 import com.turboconsulting.Entity.LoginDetails;
 import com.turboconsulting.Entity.Visitor;
@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
 @Service
@@ -21,15 +20,15 @@ public class ConsentService {
     private MySqlVisitorDao visitorDao;
 
     @Autowired
-    @Qualifier("experimentData")
-    private ExperimentDao experimentDao;
+    @Qualifier("sqlExperimentData")
+    private MySqlExperimentDao experimentDao;
 
     public Iterable<Visitor> getAllVisitors(){
         return visitorDao.findAll();
     }
 
-    public Collection<Experiment> getAllExperiments(){
-        return experimentDao.getAllExperiments();
+    public Iterable<Experiment> getAllExperiments(){
+        return experimentDao.findAll();
     }
 
     public boolean checkLoginDetails(LoginDetails loginDetails)  {
@@ -52,5 +51,9 @@ public class ConsentService {
         //visitorDao.addNewVisitor(v);
         visitorDao.save(v);
 
+    }
+
+    public void addNewExperiment(Experiment e){
+        experimentDao.save(e);
     }
 }
