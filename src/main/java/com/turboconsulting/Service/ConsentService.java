@@ -1,17 +1,11 @@
 package com.turboconsulting.Service;
 
-import com.turboconsulting.DAO.FakeExperimentDao;
 import com.turboconsulting.DAO.MySqlExperimentDao;
 import com.turboconsulting.DAO.MySqlVisitorDao;
-import com.turboconsulting.Entity.DidExperiment;
-import com.turboconsulting.Entity.Experiment;
-import com.turboconsulting.Entity.LoginDetails;
-import com.turboconsulting.Entity.Visitor;
+import com.turboconsulting.Entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-
-import java.util.Collection;
 
 @Service
 public class ConsentService {
@@ -48,13 +42,16 @@ public class ConsentService {
 
     }
 
-    public void addNewUser(Visitor v)  {
-        DidExperiment e = new DidExperiment(v, experimentDao.findOne(1));
+    public void doExperiment(int visitorId, int experimentId)  {
+        VisitorExperiment e = new VisitorExperiment(visitorDao.findOne(visitorId), experimentDao.findOne(experimentId), ConsentLevel.NONE);
+        experimentDao.findOne(experimentId).doExperiment(e);
+        Visitor v = visitorDao.findOne(visitorId);
         v.doExperiment(e);
-        experimentDao.findOne(1).doExperiment(e);
         visitorDao.save(v);
+    }
 
-
+    public void addNewUser(Visitor v)  {
+        visitorDao.save(v);
     }
 
     public void addNewExperiment(Experiment e){

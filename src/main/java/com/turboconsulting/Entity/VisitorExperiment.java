@@ -3,7 +3,7 @@ package com.turboconsulting.Entity;
 import javax.persistence.*;
 
 @Entity
-public class DidExperiment {
+public class VisitorExperiment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,11 +19,12 @@ public class DidExperiment {
 
     private ConsentLevel consentLevel;
 
-    public DidExperiment(){}
+    public VisitorExperiment(){}
 
-    public DidExperiment(Visitor v, Experiment e) {
+    public VisitorExperiment(Visitor v, Experiment e, ConsentLevel consentLevel) {
         this.visitor = v;
         this.experiment=e;
+        this.consentLevel = consentLevel;
     }
 
     public void setVisitor(Visitor visitor) {

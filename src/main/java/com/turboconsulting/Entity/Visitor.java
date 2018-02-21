@@ -14,7 +14,7 @@ public class Visitor {
     private GregorianCalendar dob;
 
     @OneToMany(mappedBy = "visitor", cascade = CascadeType.ALL)
-    private Set<DidExperiment> experiments;
+    private Set<VisitorExperiment> experiments;
 
     public Visitor(){}
 
@@ -23,22 +23,19 @@ public class Visitor {
         this.password = password;
         this.name = name;
         this.dob = dob;
-        experiments = new HashSet<DidExperiment>();
+        experiments = new HashSet<VisitorExperiment>();
 
     }
 
 
-    public Collection<DidExperiment> getExperiments() {
+    public Collection<VisitorExperiment> getExperiments() {
         return experiments;
     }
 
-    public void setExperiments(HashSet<DidExperiment> experiments) {
+    public void setExperiments(HashSet<VisitorExperiment> experiments) {
         this.experiments = experiments;
     }
 
-    public int getId() {
-        return visitorId;
-    }
 
     public String getUname() {
         return uname;
@@ -60,9 +57,7 @@ public class Visitor {
         this.password = password;
     }
 
-    public void setId(int id) {
-        this.visitorId = id;
-    }
+
 
     public void setUname(String uname) {
         this.uname = uname;
@@ -76,7 +71,7 @@ public class Visitor {
         this.dob = dob;
     }
 
-    public void doExperiment(DidExperiment e) {
+    public void doExperiment(VisitorExperiment e) {
         experiments.add(e);
     }
 
@@ -88,7 +83,7 @@ public class Visitor {
         this.visitorId = visitorId;
     }
 
-    public void setExperiments(Set<DidExperiment> experiments) {
+    public void setExperiments(Set<VisitorExperiment> experiments) {
         this.experiments = experiments;
     }
 }

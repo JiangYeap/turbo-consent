@@ -41,6 +41,14 @@ public class Controller {
         return "Saved Visitor\n";
     }
 
+
+    @GetMapping(path = "/doExperiment")
+    public @ResponseBody String doExperiment(@RequestParam int visitorId,
+                                             @RequestParam int experimentId) {
+        consentService.doExperiment(visitorId, experimentId);
+        return "Visitor had done experiment\n";
+    }
+
     @GetMapping(path = "/addExperiment")
     public @ResponseBody String addNewExperiment(@RequestParam String name) {
         Experiment e = new Experiment(name, "Sample Desciption");

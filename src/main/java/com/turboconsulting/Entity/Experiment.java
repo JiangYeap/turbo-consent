@@ -11,8 +11,8 @@ public class Experiment {
     private int id;
     private String name, description;
 
-    @OneToMany(mappedBy = "experiment", cascade = CascadeType.ALL)
-    private Set<DidExperiment> visitors;
+    @OneToMany(mappedBy = "experiment" )
+    private Set<VisitorExperiment> visitors;
 
     public Experiment(){};
 
@@ -47,15 +47,15 @@ public class Experiment {
         this.description = description;
     }
 
-    public void doExperiment(DidExperiment e) {
+    public void doExperiment(VisitorExperiment e) {
         visitors.add(e);
     }
 
-    public Set<DidExperiment> getVisitors() {
+    public Set<VisitorExperiment> getVisitors() {
         return visitors;
     }
 
-    public void setVisitors(Set<DidExperiment> visitors) {
+    public void setVisitors(Set<VisitorExperiment> visitors) {
         this.visitors = visitors;
     }
 
