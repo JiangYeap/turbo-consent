@@ -8,8 +8,13 @@
         <h1>Home Page</h1>
         <p th:text="'Welcome, ' + ${uname}" />
         <tr th:each="e: ${experiments}">
-            <button th:text="${e.name}" />
+            <form method="POST" th:action="@{/experiment}">
+                <input type="hidden" name="experimentID" id="experimentID" th:value="${e.id}" />
+                <input type="hidden" name="uname" id="uname" th:value="${uname}" />
+                <button type="submit" name="submit" value="value" class="link-button" th:text="${e.name}"/>
+            </form>
             <p th:text="${e.description}" />
         </tr>
+
     </tbody>
 </html>

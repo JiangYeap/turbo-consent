@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af3e7164-4a0b-4150-8fa2-d64acdaab670" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/Resources/templates/home.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/welcome.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/home.html" afterPath="$PROJECT_DIR$/src/main/Resources/templates/home.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/HomeController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/LoginController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/LoginController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/welcome.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/ExperimentController.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/ExperimentController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/HomeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,34 +22,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4010767">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/LoginController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="702">
-                  <caret line="39" column="43" lean-forward="true" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ConsentService.java" pinned="false" current-in-tab="false">
+        <leaf>
+          <file leaf-file-name="ConsentService.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="394">
-                  <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+                <state relative-caret-position="360">
+                  <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
                   <folding>
                     <element signature="e#450#460#0" expanded="false" />
                     <element signature="e#539#549#0" expanded="false" />
+                    <element signature="method#getVisitorExperiments#0;class#ConsentService#0" expanded="false" />
+                    <element signature="e#1251#1252#0" expanded="true" />
+                    <element signature="e#1299#1300#0" expanded="true" />
+                    <element signature="method#getVisitorID#0;class#ConsentService#0" expanded="false" />
+                    <element signature="method#checkLoginDetails#0;class#ConsentService#0" expanded="false" />
                     <element signature="method#updatePassword#0;class#ConsentService#0" expanded="false" />
-                    <element signature="e#2293#2294#0" expanded="true" />
-                    <element signature="e#2327#2328#0" expanded="true" />
-                    <element signature="e#2376#2377#0" expanded="true" />
-                    <element signature="e#2413#2414#0" expanded="true" />
+                    <element signature="method#doExperiment#0;class#ConsentService#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -60,31 +49,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/home.html">
+          <file leaf-file-name="ExperimentController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Experiment.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="619">
-                  <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/HomeController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
-                  <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+                <state relative-caret-position="432">
+                  <caret line="24" column="70" lean-forward="false" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -92,14 +61,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ExtendedModelMap.class" pinned="false" current-in-tab="false">
-            <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE.jar!/org/springframework/ui/ExtendedModelMap.class">
+          <file leaf-file-name="experiment.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiment.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="648">
-                  <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#1120#1121#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="162">
+                  <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -169,14 +136,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/DidExperiment.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ProfileController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/welcome.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/home.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" />
       </list>
     </option>
   </component>
@@ -481,12 +449,12 @@
       <workItem from="1518863712177" duration="5921000" />
       <workItem from="1518946461210" duration="6174000" />
       <workItem from="1520600659011" duration="2976000" />
-      <workItem from="1520854946958" duration="9020000" />
+      <workItem from="1520854946958" duration="18886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78033000" />
+    <option name="totallyTimeSpent" value="87899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="2560" height="1444" extended-state="6" />
@@ -501,7 +469,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39835575" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2884903" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32660687" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -541,7 +509,7 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="26" />
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -550,14 +518,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -574,10 +534,10 @@
             <element signature="e#450#460#0" expanded="false" />
             <element signature="e#539#549#0" expanded="false" />
             <element signature="method#updatePassword#0;class#ConsentService#0" expanded="false" />
-            <element signature="e#2293#2294#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2376#2377#0" expanded="true" />
-            <element signature="e#2413#2414#0" expanded="true" />
+            <element signature="e#2389#2390#0" expanded="true" />
+            <element signature="e#2423#2424#0" expanded="true" />
+            <element signature="e#2472#2473#0" expanded="true" />
+            <element signature="e#2509#2510#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -768,24 +728,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/DpendendentController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="48" column="47" lean-forward="false" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ProfileController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -859,14 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE.jar!/org/springframework/ui/ExtendedModelMap.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -877,44 +811,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="612">
+          <caret line="48" column="47" lean-forward="false" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/home.html">
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="288">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="e#450#460#0" expanded="false" />
-            <element signature="e#539#549#0" expanded="false" />
-            <element signature="method#updatePassword#0;class#ConsentService#0" expanded="false" />
-            <element signature="e#2293#2294#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2376#2377#0" expanded="true" />
-            <element signature="e#2413#2414#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="43" lean-forward="true" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+        <state relative-caret-position="576">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#loginSubmit#0;class#LoginController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -926,6 +845,60 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="method#getId#0;class#Experiment#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+          <folding>
+            <element signature="e#450#460#0" expanded="false" />
+            <element signature="e#539#549#0" expanded="false" />
+            <element signature="method#getVisitorExperiments#0;class#ConsentService#0" expanded="false" />
+            <element signature="e#1251#1252#0" expanded="true" />
+            <element signature="e#1299#1300#0" expanded="true" />
+            <element signature="method#getVisitorID#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#checkLoginDetails#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updatePassword#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#doExperiment#0;class#ConsentService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="70" lean-forward="false" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>

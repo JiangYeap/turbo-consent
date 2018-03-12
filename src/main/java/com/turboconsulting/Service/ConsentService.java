@@ -40,6 +40,10 @@ public class ConsentService {
         return experiments;
     }
 
+    public Experiment getExperiment(int id)  {
+        return experimentDao.findOne(id);
+    }
+
     private int getVisitorID(String uname)  {
         for (Visitor v : visitorDao.findAll())  {
             if (v.getUname().equals(uname))  return v.getVisitorId();
