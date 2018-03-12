@@ -82,4 +82,11 @@ public class ConsentService {
     public void addNewExperiment(Experiment e){
         experimentDao.save(e);
     }
+
+    public void updateConsent(String uname, ConsentLevel c)  {
+        int id = getVisitorID(uname);
+        Visitor v = visitorDao.findOne(id);
+        v.setDefaultConsent(c);
+        visitorDao.save(v);
+    }
 }

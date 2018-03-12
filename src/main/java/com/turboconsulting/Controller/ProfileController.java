@@ -1,10 +1,12 @@
 package com.turboconsulting.Controller;
 
+import com.turboconsulting.Entity.ConsentLevel;
 import com.turboconsulting.Service.ConsentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.stereotype.Controller;
 
@@ -21,6 +23,13 @@ public class ProfileController {
         if (uname.equals(""))  return "redirect:/login";
 
 
+        return "profile";
+    }
+
+    @PostMapping("/profile/updateConsent")
+    public String updateConsent(@ModelAttribute("uname") String uname,
+                                @ModelAttribute("consentLevel") String c)  {
+        consentService.updateConsent(uname, ConsentLevel.fromString(c));
         return "profile";
     }
 

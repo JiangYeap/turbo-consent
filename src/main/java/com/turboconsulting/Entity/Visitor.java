@@ -13,6 +13,10 @@ public class Visitor {
     private String uname, name, password;
     private GregorianCalendar dob;
 
+
+
+    private ConsentLevel defaultConsent;
+
     @OneToMany(mappedBy = "visitor", cascade = CascadeType.ALL)
     private Set<VisitorExperiment> experiments;
 
@@ -23,6 +27,7 @@ public class Visitor {
         this.password = password;
         this.name = name;
         this.dob = dob;
+        this.defaultConsent = ConsentLevel.RESTRICTED;
         experiments = new HashSet<VisitorExperiment>();
 
     }
@@ -57,7 +62,13 @@ public class Visitor {
         this.password = password;
     }
 
+    public ConsentLevel getDefaultConsent() {
+        return defaultConsent;
+    }
 
+    public void setDefaultConsent(ConsentLevel defaultConsent) {
+        this.defaultConsent = defaultConsent;
+    }
 
     public void setUname(String uname) {
         this.uname = uname;
