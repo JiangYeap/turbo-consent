@@ -3,7 +3,7 @@ package com.turboconsulting.Entity;
 public enum ConsentLevel {
     NONE("NONE"),
     RESTRICTED("RESTRICTED"),
-    UNRESTRICTIED("UNRESTRICTED");
+    UNRESTRICTED("UNRESTRICTED");
 
     private final String text;
 
@@ -15,6 +15,7 @@ public enum ConsentLevel {
     public String toString() {
         return text;
     }
+
 
     public static ConsentLevel fromString(String text) {
         for (ConsentLevel b : ConsentLevel.values()) {

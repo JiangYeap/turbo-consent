@@ -8,10 +8,10 @@
         <h1>Profile Page</h1>
         <p th:text="'Welcome, ' + ${uname}" />
 
-        <form name="Default Consent" action="#" th:action="@{/profile/updateConsent}"  method="post">
+        <form th:action="@{/profile/updateConsent}" th:method="post">
             <input type="hidden" name="uname" id="uname" th:value="${uname}" />
-            <input type="hidden" name="consentLevel" id="consentLevel" th:value="unrestricted" />
-            <p><input type="submit" value="Submit" /></p>
+            <p>Default Consent Level: <input name="consent" id="consent" type="text" th:value="${consent}"  /></p>
+            <button type="submit">submit</button>
         </form>
     </tbody>
 </html>

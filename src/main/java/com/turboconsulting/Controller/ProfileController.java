@@ -21,16 +21,15 @@ public class ProfileController {
     public String homePage(Model m,
                            @ModelAttribute("uname") String uname) {
         if (uname.equals(""))  return "redirect:/login";
-
+        m.addAttribute("consentOptions", ConsentLevel.values());
 
         return "profile";
     }
 
     @PostMapping("/profile/updateConsent")
     public String updateConsent(@ModelAttribute("uname") String uname,
-                                @ModelAttribute("consentLevel") String c)  {
+                                @ModelAttribute("consent") String c)  {
         consentService.updateConsent(uname, ConsentLevel.fromString(c));
         return "profile";
     }
-
 }
