@@ -51,9 +51,7 @@ public class Experiment {
         visitors.add(e);
     }
 
-    public Set<VisitorExperiment> getVisitors() {
-        return visitors;
-    }
+
 
     public void setVisitors(Set<VisitorExperiment> visitors) {
         this.visitors = visitors;

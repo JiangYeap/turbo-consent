@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Getting Started: Handling Form Submission</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <tbody>
+        <h1>Home Page</h1>
+        <p th:text="'Welcome, ' + ${uname}" />
+        <tr th:each="e: ${experiments}">
+            <button th:text="${e.name}" />
+            <p th:text="${e.description}" />
+        </tr>
+    </tbody>
+</html>

@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 @Service
 public class ConsentService {
 
@@ -24,6 +27,24 @@ public class ConsentService {
 
     public Iterable<Experiment> getAllExperiments(){
         return experimentDao.findAll();
+    }
+
+    public Iterable<Experiment> getVisitorExperiments(String uname)  {
+        Collection<Experiment> experiments = new ArrayList<>();
+        int visitorID = getVisitorID(uname);
+
+        Visitor v = visitorDao.findOne(visitorID);
+        for (VisitorExperiment e :v.getExperiments())  {
+            experiments.add(e.getExperiment());
+        }
+        return experiments;
+    }
+
+    private int getVisitorID(String uname)  {
+        for (Visitor v : visitorDao.findAll())  {
+            if (v.getUname().equals(uname))  return v.getVisitorId();
+        }
+        return -1;
     }
 
     public boolean checkLoginDetails(LoginDetails loginDetails)  {

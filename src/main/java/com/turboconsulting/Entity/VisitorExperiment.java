@@ -48,4 +48,9 @@ public class VisitorExperiment {
     public void setCompoundKey(int compoundKey) {
         this.compoundKey = compoundKey;
     }
+
+    public Experiment getExperiment() {
+        return experiment;
+    }
+
 }
