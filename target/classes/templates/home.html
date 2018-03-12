@@ -1,12 +1,18 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Getting Started: Handling Form Submission</title>
+        <title>Home</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     </head>
     <tbody>
         <h1>Home Page</h1>
         <p th:text="'Welcome, ' + ${uname}" />
+
+        <form method="POST" th:action="@{/profile}">
+            <input type="hidden" name="uname" id="uname2" th:value="${uname}" />
+            <button type="submit" name="submit" value="value" class="link-button">Profile Settings</button>
+        </form><p></p>
+
         <tr th:each="e: ${experiments}">
             <form method="POST" th:action="@{/experiment}">
                 <input type="hidden" name="experimentID" id="experimentID" th:value="${e.id}" />

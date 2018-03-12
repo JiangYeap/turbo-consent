@@ -22,6 +22,16 @@ public class HomeController {
         return "home";
     }
 
+    @PostMapping("/profile")
+    public ModelAndView profileSettings(@RequestParam("uname") String uname,
+                                         RedirectAttributes redir)  {
+        ModelAndView m = new ModelAndView();
+        m.setViewName("redirect:/profile");
+        redir.addFlashAttribute("uname", uname);
+        return m;
+    }
+
+
     @PostMapping("/experiment")
     public ModelAndView selectExperiment(@RequestParam("experimentID") int experimentID,
                                          @RequestParam("uname") String uname,
