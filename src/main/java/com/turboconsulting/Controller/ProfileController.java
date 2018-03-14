@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.stereotype.Controller;
 
 
@@ -29,7 +28,7 @@ public class ProfileController {
     @PostMapping("/profile/updateConsent")
     public String updateConsent(@ModelAttribute("uname") String uname,
                                 @ModelAttribute("consent") String c)  {
-        consentService.updateConsent(uname, ConsentLevel.fromString(c));
+        consentService.updateDefaultConsent(uname, ConsentLevel.fromString(c));
         return "profile";
     }
 }

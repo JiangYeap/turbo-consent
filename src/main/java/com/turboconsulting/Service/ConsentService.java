@@ -68,7 +68,7 @@ public class ConsentService {
     }
 
     public void doExperiment(int visitorId, int experimentId)  {
-        VisitorExperiment e = new VisitorExperiment(visitorDao.findOne(visitorId), experimentDao.findOne(experimentId), ConsentLevel.NONE);
+        VisitorExperiment e = new VisitorExperiment(visitorDao.findOne(visitorId), experimentDao.findOne(experimentId), ConsentLevel.RESTRICTED);
         experimentDao.findOne(experimentId).doExperiment(e);
         Visitor v = visitorDao.findOne(visitorId);
         v.doExperiment(e);
@@ -83,10 +83,30 @@ public class ConsentService {
         experimentDao.save(e);
     }
 
-    public void updateConsent(String uname, ConsentLevel c)  {
+    public void updateDefaultConsent(String uname, ConsentLevel c)  {
         int id = getVisitorID(uname);
         Visitor v = visitorDao.findOne(id);
         v.setDefaultConsent(c);
         visitorDao.save(v);
+    }
+
+    public void updateExperimentConsent(String uname, ConsentLevel c, int experimentID)  {
+        int id = getVisitorID(uname);
+        Visitor v = visitorDao.findOne(id);
+        for (VisitorExperiment ve : v.getExperiments())  {
+            if (ve.getExperiment().getId() == experimentID)  {
+                ve.setConsentLevel(c);
+                v.doExperiment(ve);
+            }
+        }
+        visitorDao.save(v);
+    }
+
+    public String getExperimentConsent(String uname, int experimentID)  {
+        Visitor v = visitorDao.findOne(getVisitorID(uname));
+        for (VisitorExperiment ve : v.getExperiments())  {
+            if (ve.getExperiment().getId() == experimentID)  return ve.getConsentLevel().toString();
+        }
+        return "NULL";
     }
 }
