@@ -9,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.jws.WebParam;
 
@@ -33,10 +35,15 @@ public class ExperimentController {
     }
 
     @PostMapping("/experiment/updateConsent")
-    public String updateConsent(@ModelAttribute("uname") String uname,
+    public ModelAndView updateConsent(@ModelAttribute("uname") String uname,
                                 @ModelAttribute("consent") String c,
-                                @ModelAttribute("eID") int eID)  {
+                                @ModelAttribute("eID") int eID,
+                                      RedirectAttributes redir)  {
         consentService.updateExperimentConsent(uname, ConsentLevel.fromString(c), eID);
-        return "experiment";
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("redirect:/home");
+        redir.addFlashAttribute("uname", uname);
+
+        return mav;
     }
 }
