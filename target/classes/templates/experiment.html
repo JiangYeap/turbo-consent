@@ -10,7 +10,8 @@
         <p th:text="'Experiment Name: ' + ${eDetails.name}" />
         <p th:text="'Experiment Details: ' + ${eDetails.description}" />
         <p th:text="'Current Experiment Consent: ' + ${consentValue} "/>
-        <form th:action="@{/experiment/updateConsent}" th:method="post">
+
+        <form th:action="@{/{uname}/experiments/{eID}/updateConsent(uname=${uname}, eID=${eDetails.id})}" th:method="post">
             <input type="hidden" name="uname" id="uname" th:value="${uname}" />
             <input type="hidden" name="eID" id="eID" th:value="${eDetails.id}" />
             <p>Default Consent Level: <input name="consent" id="consent" type="text" th:value="${consent}"  /></p>

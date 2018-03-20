@@ -8,19 +8,10 @@
         <h1>Home Page</h1>
         <p th:text="'Welcome, ' + ${uname}" />
 
-        <form method="POST" th:action="@{/profile}">
-            <input type="hidden" name="uname" id="uname2" th:value="${uname}" />
-            <button type="submit" name="submit" value="value" class="link-button">Profile Settings</button>
-        </form><p></p>
+        <a th:href="@{/{uname}/profile(uname=${uname})}">Profile Settings</a>
+        <p/>
 
-        <tr th:each="e: ${experiments}">
-            <form method="POST" th:action="@{/experiment}">
-                <input type="hidden" name="experimentID" id="experimentID" th:value="${e.id}" />
-                <input type="hidden" name="uname" id="uname" th:value="${uname}" />
-                <button type="submit" name="submit" value="value" class="link-button" th:text="${e.name}"/>
-            </form>
-            <p th:text="${e.description}" />
-        </tr>
+        <a th:href="@{/{uname}/experiments(uname=${uname})}">Experiments</a>
 
     </tbody>
 </html>

@@ -33,8 +33,7 @@ public class LoginController {
     public ModelAndView loginSubmit(@ModelAttribute LoginDetails loginDetails, RedirectAttributes redir) {
         ModelAndView mav = new ModelAndView();
         if(consentService.checkLoginDetails(loginDetails))  {
-            mav.setViewName("redirect:/home");
-            redir.addFlashAttribute("uname", loginDetails.getUname());
+            mav.setViewName("redirect:/"+loginDetails.getUname()+"/home");
             return mav;
         }
         mav.setViewName("redirect:/login");

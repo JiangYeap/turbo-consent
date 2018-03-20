@@ -14,33 +14,13 @@ public class HomeController {
     @Autowired
     private ConsentService consentService;
 
-    @GetMapping("/home")
+    @GetMapping("/{uname}/home")
     public String homePage(Model m,
-                           @ModelAttribute("uname") String uname) {
-        if (uname .equals(""))  return "redirect:/login";
+                           @PathVariable(value="uname") String uname) {
+
+        if (uname.equals(""))  return "redirect:/login";
         m.addAttribute("experiments", consentService.getVisitorExperiments(uname));
         return "home";
     }
 
-    @PostMapping("/profile")
-    public ModelAndView profileSettings(@RequestParam("uname") String uname,
-                                         RedirectAttributes redir)  {
-        ModelAndView m = new ModelAndView();
-        m.setViewName("redirect:/profile");
-        redir.addFlashAttribute("uname", uname);
-        return m;
-    }
-
-
-    @PostMapping("/experiment")
-    public ModelAndView selectExperiment(@RequestParam("experimentID") int experimentID,
-                                         @RequestParam("uname") String uname,
-                                         RedirectAttributes redir)  {
-        ModelAndView m = new ModelAndView();
-        m.setViewName("redirect:/experiment");
-        redir.addFlashAttribute("experimentID", experimentID);
-        redir.addFlashAttribute("uname", uname);
-
-        return m;
-    }
 }
