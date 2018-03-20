@@ -1,4 +1,4 @@
 package com.turboconsulting.Controller;
 
-public class ExperimentController {
+public class ExperimentsController {
 }

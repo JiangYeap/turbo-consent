@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Experiment</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <tbody>
+        <h1>Experiment Page</h1>
+        <p th:text="'Welcome, ' + ${uname}" />
+        <p th:text="'Experiment Name: ' + ${eDetails.name}" />
+        <p th:text="'Experiment Details: ' + ${eDetails.description}" />
+        <p th:text="'Current Experiment Consent: ' + ${consentValue} "/>
+        <form th:action="@{/experiment/updateConsent}" th:method="post">
+            <input type="hidden" name="uname" id="uname" th:value="${uname}" />
+            <input type="hidden" name="eID" id="eID" th:value="${eDetails.id}" />
+            <p>Default Consent Level: <input name="consent" id="consent" type="text" th:value="${consent}"  /></p>
+            <button type="submit">submit</button>
+        </form>
+
+    </tbody>
+</html>
