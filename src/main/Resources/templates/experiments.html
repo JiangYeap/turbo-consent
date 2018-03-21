@@ -97,7 +97,7 @@
 
             <tr th:each="e:${experiments}">
                 <td class="dentry"><input type="checkbox" id="cb1" /></td>
-                <td class="dentry"><a th:href="@{/{uname}/experiments/{eID}(uname=${uname}, eID=${e.id})}" th:text="${e.name}">Physics Experiment</a></td>
+                <td class="dentry"><a th:href="@{/{aID}/visitors/{vID}/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${e.id})}" th:text="${e.name}">Physics Experiment</a></td>
                 <td class="dentry">19/3/2018</td>
                 <td class="dentry">Pending</td>
             </tr>

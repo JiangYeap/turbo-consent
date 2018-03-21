@@ -79,7 +79,7 @@ public class Visitor {
     public void doExperiment(VisitorExperiment e) {
         experiments.add(e);
     }
-    
+
     public void setAccount(Account account) {
         this.account = account;
     }

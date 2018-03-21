@@ -17,12 +17,12 @@ public class ExperimentsController {
     @Autowired
     private ConsentService consentService;
 
-    @GetMapping("/{vID}/experiments")
+    @GetMapping("/{aID}/visitors/{vID}/experiments")
     public String experimentsPage(Model m,
-                           @PathVariable(value="vID") int id) {
+                           @PathVariable(value="aID") int aID,
+                           @PathVariable(value="vID") int vID  ) {
 
-        //if (uname.equals(""))  return "redirect:/login";
-        m.addAttribute("experiments", consentService.getVisitorExperiments(id));
+        m.addAttribute("experiments", consentService.getVisitorExperiments(vID));
         return "experiments";
     }
 

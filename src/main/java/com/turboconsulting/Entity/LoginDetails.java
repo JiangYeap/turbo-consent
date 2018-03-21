@@ -6,14 +6,14 @@ public class LoginDetails {
 
     public LoginDetails(){}
 
-    private String email ;
+    private String email;
     private String pword;
 
     public String getEmail() {
         return email;
     }
 
-    public void setUname(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 

@@ -14,11 +14,10 @@ public class HomeController {
     @Autowired
     private ConsentService consentService;
 
-    @GetMapping("/{uname}/home")
+    @GetMapping("/{aID}/home")
     public String homePage(Model m,
-                           @PathVariable(value="uname") String uname) {
+                           @PathVariable(value="aID") String accountID) {
 
-        //if (uname.equals(""))  return "redirect:/login";
         return "home";
     }
 

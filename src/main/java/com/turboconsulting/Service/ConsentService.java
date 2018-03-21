@@ -37,13 +37,16 @@ public class ConsentService {
         return -1;
     }
     public boolean checkAccountLogin(LoginDetails loginDetails)  {
-        Iterable<Account> visitors = accountDao.findAll();
-        for (Account v : visitors) {
-            if(v.getEmail().equals(loginDetails.getEmail()))  {
-                if(v.getPassword().equals(loginDetails.getPword()))  return true;
+        Iterable<Account> accounts = accountDao.findAll();
+        for (Account a : accounts) {
+            if(a.getEmail().equals(loginDetails.getEmail()))  {
+                if(a.getPassword().equals(loginDetails.getPword()))  return true;
             }
         }
         return false;
+    }
+    public Iterable<Visitor> getAccountsVisitors(int aID) {
+        return accountDao.findOne(aID).getVisitors();
     }
     public Iterable<Account> getAllAccounts(){
         return accountDao.findAll();

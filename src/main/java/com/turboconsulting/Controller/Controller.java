@@ -1,6 +1,5 @@
 package com.turboconsulting.Controller;
 
-import ch.qos.logback.classic.ViewStatusMessagesServlet;
 import com.turboconsulting.Entity.Account;
 import com.turboconsulting.Entity.ConsentLevel;
 import com.turboconsulting.Entity.Experiment;
@@ -9,8 +8,6 @@ import com.turboconsulting.Service.ConsentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.GregorianCalendar;
 
 @RestController
