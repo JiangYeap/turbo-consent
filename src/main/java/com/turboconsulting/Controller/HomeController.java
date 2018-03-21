@@ -18,8 +18,7 @@ public class HomeController {
     public String homePage(Model m,
                            @PathVariable(value="uname") String uname) {
 
-        if (uname.equals(""))  return "redirect:/login";
-        m.addAttribute("experiments", consentService.getVisitorExperiments(uname));
+        //if (uname.equals(""))  return "redirect:/login";
         return "home";
     }
 
