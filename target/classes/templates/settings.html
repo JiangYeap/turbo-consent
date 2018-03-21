@@ -1,15 +1,14 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Profile</title>
+    <title>Settings</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
     <tbody>
-        <h1>Profile Page</h1>
+        <h1>Settings</h1>
         <p th:text="'Welcome, ' + ${uname}" />
 
-        <form th:action="@{/{uname}/profile/updateConsent(uname=${uname})}" th:method="post">
-            <input type="hidden" name="uname" id="uname" th:value="${uname}" />
+        <form th:action="@{/{aID}/settings/updateConsent(aID=${aID})}" th:method="post">
             <p>Default Consent Level: <input name="consent" id="consent" type="text" th:value="${consent}"  /></p>
             <button type="submit">submit</button>
         </form>

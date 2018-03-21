@@ -13,26 +13,26 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-public class ProfileController {
+public class SettingsController {
 
     @Autowired
     private ConsentService consentService;
 
-    @GetMapping("/{vID}/profile")
+    @GetMapping("/{aID}/settings")
     public String homePage(Model m,
-                           @PathVariable("vID") int vID) {
+                           @PathVariable("aID") int aID) {
         //if (uname.equals(""))  return "redirect:/login";
         m.addAttribute("consentOptions", ConsentLevel.values());
 
-        return "profile";
+        return "settings";
     }
 
-    @PostMapping("/{vID}/profile/updateConsent")
-    public ModelAndView updateConsent(@PathVariable("uname") int vID,
+    @PostMapping("/{aID}/settings/updateConsent")
+    public ModelAndView updateConsent(@PathVariable("aID") int aID,
                                       @ModelAttribute("consent") String c)  {
-        consentService.updateVisitorConsent(vID, ConsentLevel.fromString(c));
+        consentService.updateAccountConsent(aID, ConsentLevel.fromString(c));
         ModelAndView m = new ModelAndView();
-        m.setViewName("redirect:/"+ vID +"/profile");
+        m.setViewName("redirect:/"+ aID +"/settings");
         return m;
     }
 }
