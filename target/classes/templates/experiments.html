@@ -1,15 +1,156 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>Experiment</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    </head>
-    <tbody>
-    <h1>Home Page</h1>
-    <p th:text="'Welcome, ' + ${uname}" />
-    <tr th:each="e: ${experiments}">
-        <a th:href="@{/{uname}/experiments/{eID}(uname=${uname}, eID=${e.id})}"><p th:text="${e.name}"></p></a>
-        <p th:text="${e.description}" />
-    </tr>
-    </tbody>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experiments | Turbo Consent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
+    <script async="async" type="text/javascript" th:src="@{/js/bulma.js}"></script>
+</head>
+<body>
+<!-- Navigation bar start -->
+<nav class="navbar is-dark has-shadow">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="home.html" class="navbar-item">
+                <img src="media/wtc_logo.gif" alt="Logo" />
+                <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                <a href="home.html" class="navbar-item">
+                    Home
+                </a>
+                <a href="experiments.html" class="navbar-item is-active">
+                    Experiments
+                </a>
+                <a href="settings.html" class="navbar-item">
+                    Settings
+                </a>
+                <a href="login.html" class="navbar-item has-text-danger is-hidden-desktop">
+                    Log Out
+                </a>
+                <span class="navbar-item is-hidden-touch">
+            <a href="login.html" class="button is-danger is-inverted is-outlined">Log Out</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Banner start -->
+<section class="hero is-success is-2 is-bold">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                Your Experiments
+            </h1>
+            <h2 class="subtitle">
+                Select the consent level for each experiment, or give them in bulk.
+                Your time here is greatly appreciated by the us and the researchers in partner with We The Curious.
+            </h2>
+        </div>
+    </div>
+</section>
+
+<div class="box cta">
+    <p class="has-text-centered">
+        <span class="tag has-text-weight-semibold is-info">Note:</span>
+        &nbsp;Looks like you don't have a Custom Consent option yet, set it up in the
+        <a href="experiments.html">Settings</a> section!
+    </p>
+</div>
+
+<!-- Main Content start -->
+<section class="section">
+    <div class="container is-fluid">
+        <h1 class="title">Knowing Your Consents</h1>
+        <ul style="list-style-type:disc" class="has-text-left">
+            <li><strong>Full Consent:</strong> All your <span class="tooltip" data-tooltip="All your personal details registered with your We The Curious account.">details</span> as well as results will be given.</li>
+            <li><strong>Anonymous:</strong> Only your results will be given, your identity will be hidden.</li>
+            <li><strong>No Consent:</strong> The experiment results will not be submitted.</li>
+            <li><strong>Custom Consent:</strong> Custom set consent option, can be configured in Settings.</li>
+        </ul>
+    </div>
+
+    <form>
+        <table class="table is-hoverable is-fullwidth is-striped">
+            <thead class="thead">
+            <h1 class="title is-size-2">Consent-Pending Experiments</h1>
+            </thead>
+            <tbody class="tbody">
+            <tr>
+                <th class="hentry">Select</th>
+                <th class="hentry">Experiment Title</th>
+                <th class="hentry">Experiment Date</th>
+                <th class="hentry">Consent Status</th>
+            </tr>
+
+            <tr th:each="e:${experiments}">
+                <td class="dentry"><input type="checkbox" id="cb1" /></td>
+                <td class="dentry"><a th:href="@{/{uname}/experiments/{eID}(uname=${uname}, eID=${e.id})}" th:text="${e.name}">Physics Experiment</a></td>
+                <td class="dentry">19/3/2018</td>
+                <td class="dentry">Pending</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="control">
+            <label class="radio"><input type="radio" name="clevel" value="2" />&nbsp;Full Consent</label>
+            <label class="radio"><input type="radio" name="clevel" value="1" />&nbsp;Anonymous</label>
+            <label class="radio"><input type="radio" name="clevel" value="0" />&nbsp;No Consent</label>
+            <label class="radio"><input type="radio" name="clevel" value="3" disabled="disabled" />&nbsp;Custom Consent</label>
+        </div>
+
+        <button type="submit" class="button">Submit Consents</button>
+    </form>
+
+    <form>
+        <table class="table is-hoverable is-fullwidth is-striped" align="center">
+            <thead class="thead">
+            <h1 class="title is-size-2">Consent-Reviewed Experiments</h1>
+            </thead>
+            <tbody class="tbody">
+            <tr>
+                <th>Select</th>
+                <th>Experiment Title</th>
+                <th>Experiment Date</th>
+                <th>Consent Status</th>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>Physics Experiment</td>
+                <td>19/3/2018</td>
+                <td>Full Consent</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>Physics Experiment</td>
+                <td>19/3/2018</td>
+                <td>Anonymous</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="control">
+            <label class="radio"><input type="radio" name="clevel" value="2" />&nbsp;Full Consent</label>
+            <label class="radio"><input type="radio" name="clevel" value="1" />&nbsp;Anonymous</label>
+            <label class="radio"><input type="radio" name="clevel" value="0" />&nbsp;No Consent</label>
+            <label class="radio"><input type="radio" name="clevel" value="3" disabled="disabled" />&nbsp;Custom Consent</label>
+        </div>
+
+        <button type="submit" class="button">Update Consents</button>
+    </form>
+</section>
+
+</body>
 </html>
