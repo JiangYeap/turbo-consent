@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Qualifier("sqlAccountData")
 public interface AccountDao extends CrudRepository<Account, Integer> {
-
+    Account findByEmail(String email);
 }

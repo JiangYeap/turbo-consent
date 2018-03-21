@@ -31,10 +31,7 @@ public class ConsentService {
         accountDao.save(a);
     }
     public int getAccountID(String email)  {
-        for (Account a : accountDao.findAll())  {
-            if (a.getEmail().equals(email))  return a.getAccountId();
-        }
-        return -1;
+        return accountDao.findByEmail(email).getAccountId();
     }
     public boolean checkAccountLogin(LoginDetails loginDetails)  {
         Iterable<Account> accounts = accountDao.findAll();
