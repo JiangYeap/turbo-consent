@@ -1,19 +1,25 @@
 package com.turboconsulting.Entity;
 
+import com.turboconsulting.Service.ConsentService;
+
 import java.util.*;
 import javax.persistence.*;
 
 @Entity
 public class Visitor {
 
+
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int visitorId;
 
-    private String uname, name, password;
+    @ManyToOne
+    @JoinColumn(name="accountId", nullable = false)
+    private Account account;
+
+    private String name;
     private GregorianCalendar dob;
-
-
 
     private ConsentLevel defaultConsent;
 
@@ -22,79 +28,61 @@ public class Visitor {
 
     public Visitor(){}
 
-    public Visitor(String uname, String password, String name, GregorianCalendar dob) {
-        this.uname = uname;
-        this.password = password;
+    public Visitor(String name, GregorianCalendar dob, ConsentLevel c) {
         this.name = name;
         this.dob = dob;
-        this.defaultConsent = ConsentLevel.RESTRICTED;
-        experiments = new HashSet<VisitorExperiment>();
+        this.defaultConsent = c;
+        experiments = new HashSet<>();
 
-    }
-
-
-    public Collection<VisitorExperiment> getExperiments() {
-        return experiments;
     }
 
     public void setExperiments(HashSet<VisitorExperiment> experiments) {
         this.experiments = experiments;
     }
 
-
-    public String getUname() {
-        return uname;
+    public void setName(String name) {
+        this.name = name;
     }
-
     public String getName() {
         return name;
-    }
-
-    public GregorianCalendar getDob() {
-        return dob;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public ConsentLevel getDefaultConsent() {
         return defaultConsent;
     }
-
     public void setDefaultConsent(ConsentLevel defaultConsent) {
         this.defaultConsent = defaultConsent;
-    }
-
-    public void setUname(String uname) {
-        this.uname = uname;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public void setDob(GregorianCalendar dob) {
         this.dob = dob;
     }
-
-    public void doExperiment(VisitorExperiment e) {
-        experiments.add(e);
-    }
-
-    public int getVisitorId() {
-        return visitorId;
+    public GregorianCalendar getDob() {
+        return dob;
     }
 
     public void setVisitorId(int visitorId) {
         this.visitorId = visitorId;
     }
+    public int getVisitorId() {
+        return visitorId;
+    }
+
 
     public void setExperiments(Set<VisitorExperiment> experiments) {
         this.experiments = experiments;
     }
+    public Collection<VisitorExperiment> getExperiments() {
+        return experiments;
+    }
+
+    public void doExperiment(VisitorExperiment e) {
+        experiments.add(e);
+    }
+    
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+
 }

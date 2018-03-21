@@ -18,21 +18,21 @@ public class ProfileController {
     @Autowired
     private ConsentService consentService;
 
-    @GetMapping("/{uname}/profile")
+    @GetMapping("/{vID}/profile")
     public String homePage(Model m,
-                           @PathVariable("uname") String uname) {
+                           @PathVariable("vID") int vID) {
         //if (uname.equals(""))  return "redirect:/login";
         m.addAttribute("consentOptions", ConsentLevel.values());
 
         return "profile";
     }
 
-    @PostMapping("/{uname}/profile/updateConsent")
-    public ModelAndView updateConsent(@PathVariable("uname") String uname,
+    @PostMapping("/{vID}/profile/updateConsent")
+    public ModelAndView updateConsent(@PathVariable("uname") int vID,
                                       @ModelAttribute("consent") String c)  {
-        consentService.updateDefaultConsent(uname, ConsentLevel.fromString(c));
+        consentService.updateVisitorConsent(vID, ConsentLevel.fromString(c));
         ModelAndView m = new ModelAndView();
-        m.setViewName("redirect:/"+ uname +"/profile");
+        m.setViewName("redirect:/"+ vID +"/profile");
         return m;
     }
 }

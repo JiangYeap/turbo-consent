@@ -3,16 +3,18 @@ package com.turboconsulting.Entity;
 
 
 public class LoginDetails {
-    public LoginDetails(){};
-    private String uname ;
+
+    public LoginDetails(){}
+
+    private String email ;
     private String pword;
 
-    public String getUname() {
-        return uname;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUname(String uname) {
-        this.uname = uname;
+    public void setUname(String email) {
+        this.email = email;
     }
 
     public String getPword() {

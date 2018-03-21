@@ -1,7 +1,6 @@
 package com.turboconsulting.Controller;
 
 import com.turboconsulting.Entity.LoginDetails;
-import com.turboconsulting.Entity.Visitor;
 import com.turboconsulting.Service.ConsentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -9,10 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 
 @Controller
 public class LoginController {
@@ -30,10 +25,10 @@ public class LoginController {
 
 
     @PostMapping("/login")
-    public ModelAndView loginSubmit(@ModelAttribute LoginDetails loginDetails, RedirectAttributes redir) {
+    public ModelAndView loginSubmit(@ModelAttribute LoginDetails loginDetails) {
         ModelAndView mav = new ModelAndView();
-        if(consentService.checkLoginDetails(loginDetails))  {
-            mav.setViewName("redirect:/"+loginDetails.getUname()+"/home");
+        if(consentService.checkAccountLogin(loginDetails))  {
+            mav.setViewName("redirect:/" + consentService.getAccountID(loginDetails.getEmail()) + "/home");
             return mav;
         }
         mav.setViewName("redirect:/login");
@@ -42,8 +37,4 @@ public class LoginController {
 
 
 
-    @RequestMapping(value = "/updatePassword", consumes = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.PUT)
-    public void updatePassword(@RequestBody LoginDetails loginDetails)  {
-        consentService.updatePassword(loginDetails);
-    }
 }

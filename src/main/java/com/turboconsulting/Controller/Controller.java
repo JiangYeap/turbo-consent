@@ -1,6 +1,8 @@
 package com.turboconsulting.Controller;
 
 import ch.qos.logback.classic.ViewStatusMessagesServlet;
+import com.turboconsulting.Entity.Account;
+import com.turboconsulting.Entity.ConsentLevel;
 import com.turboconsulting.Entity.Experiment;
 import com.turboconsulting.Entity.Visitor;
 import com.turboconsulting.Service.ConsentService;
@@ -10,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.GregorianCalendar;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/data")
@@ -19,11 +20,14 @@ public class Controller {
     @Autowired
     private ConsentService consentService;
 
-    private static Collection<Visitor> visitors = new ArrayList<>();
 
+    @GetMapping(path = "/accounts")
+    public @ResponseBody Iterable<Account> getAllAccounts() {
+        return consentService.getAllAccounts();
+    }
 
     @GetMapping(path = "/visitors")
-    public @ResponseBody Iterable<Visitor> getAllStudents() {
+    public @ResponseBody Iterable<Visitor> getAllVisitors() {
         return consentService.getAllVisitors();
     }
 
@@ -32,13 +36,27 @@ public class Controller {
         return consentService.getAllExperiments();
     }
 
+    @GetMapping(path = "/addAccount")
+    public @ResponseBody String addNewAccount(@RequestParam String name,
+                                              @RequestParam String email) {
+        Account a = new Account(name, email, "password");
+        consentService.addNewAccount(a);
+        return "Saved Account\n";
+    }
+
     @GetMapping(path = "/addVisitor")
     public @ResponseBody String addNewVisitor(@RequestParam String name,
-                                              @RequestParam String uname,
-                                              @RequestParam String pword) {
-        Visitor v = new Visitor(uname, pword, name, new GregorianCalendar(1998, 05, 3));
-        consentService.addNewUser(v);
+                                              @RequestParam int accountID) {
+        Visitor v = new Visitor( name, new GregorianCalendar(1998, 05, 3), ConsentLevel.RESTRICTED);
+        consentService.addNewVisitor(v, accountID);
         return "Saved Visitor\n";
+    }
+
+    @GetMapping(path = "/addExperiment")
+    public @ResponseBody String addNewExperiment(@RequestParam String name) {
+        Experiment e = new Experiment(name, "Sample Desciption");
+        consentService.addNewExperiment(e);
+        return "Saved Experiment\n";
     }
 
 
@@ -49,10 +67,4 @@ public class Controller {
         return "Visitor had done experiment\n";
     }
 
-    @GetMapping(path = "/addExperiment")
-    public @ResponseBody String addNewExperiment(@RequestParam String name) {
-        Experiment e = new Experiment(name, "Sample Desciption");
-        consentService.addNewExperiment(e);
-        return "Saved Experiment\n";
-    }
 }

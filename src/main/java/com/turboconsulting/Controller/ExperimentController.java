@@ -21,26 +21,26 @@ public class ExperimentController {
     @Autowired
     private ConsentService consentService;
 
-    @GetMapping("/{uname}/experiments/{eID}")
+    @GetMapping("/{vID}/experiments/{eID}")
     public String experimentPage(Model m,
                            @PathVariable("eID") int eID,
-                           @PathVariable("uname") String uname) {
+                           @PathVariable("vID") int vID) {
         //if (uname.equals(""))  return "redirect:/login";
-        m.addAttribute("consentValue", consentService.getExperimentConsent(uname, eID));
+        m.addAttribute("consentValue", consentService.getExperimentConsent(vID, eID));
         m.addAttribute("eDetails", consentService.getExperiment(eID));
 
 
         return "experiment";
     }
 
-    @PostMapping("/{uname}/experiments/{eID}/updateConsent")
-    public ModelAndView updateConsent(@PathVariable("uname") String uname,
+    @PostMapping("/{vID}/experiments/{eID}/updateConsent")
+    public ModelAndView updateConsent(@PathVariable("vID") int vID,
                                       @PathVariable("eID") int eID,
                                       @ModelAttribute("consent") String c)  {
 
-        consentService.updateExperimentConsent(uname, ConsentLevel.fromString(c), eID);
+        consentService.updateExperimentConsent(vID, ConsentLevel.fromString(c), eID);
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("redirect:/"+uname+"/experiments/");
+        mav.setViewName("redirect:/"+vID+"/experiments/");
 
         return mav;
     }

@@ -1,7 +1,8 @@
 package com.turboconsulting.Service;
 
-import com.turboconsulting.DAO.MySqlExperimentDao;
-import com.turboconsulting.DAO.MySqlVisitorDao;
+import com.turboconsulting.DAO.AccountDao;
+import com.turboconsulting.DAO.ExperimentDao;
+import com.turboconsulting.DAO.VisitorDao;
 import com.turboconsulting.Entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -15,84 +16,70 @@ public class ConsentService {
 
     @Autowired
     @Qualifier("sqlVisitorData")
-    private MySqlVisitorDao visitorDao;
+    private VisitorDao visitorDao;
+
+    @Autowired
+    @Qualifier("sqlAccountData")
+    private AccountDao accountDao;
 
     @Autowired
     @Qualifier("sqlExperimentData")
-    private MySqlExperimentDao experimentDao;
+    private ExperimentDao experimentDao;
 
-    public Iterable<Visitor> getAllVisitors(){
-        return visitorDao.findAll();
+    //////////////////////////////////////////////////////////////////////////ACCOUNT FUNCTIONS
+    public void addNewAccount(Account a)  {
+        accountDao.save(a);
     }
-
-    public Iterable<Experiment> getAllExperiments(){
-        return experimentDao.findAll();
-    }
-
-    public Iterable<Experiment> getVisitorExperiments(String uname)  {
-        Collection<Experiment> experiments = new ArrayList<>();
-        int visitorID = getVisitorID(uname);
-
-        Visitor v = visitorDao.findOne(visitorID);
-        for (VisitorExperiment e :v.getExperiments())  {
-            experiments.add(e.getExperiment());
-        }
-        return experiments;
-    }
-
-    public Experiment getExperiment(int id)  {
-        return experimentDao.findOne(id);
-    }
-
-    private int getVisitorID(String uname)  {
-        for (Visitor v : visitorDao.findAll())  {
-            if (v.getUname().equals(uname))  return v.getVisitorId();
+    public int getAccountID(String email)  {
+        for (Account a : accountDao.findAll())  {
+            if (a.getEmail().equals(email))  return a.getAccountId();
         }
         return -1;
     }
-
-    public boolean checkLoginDetails(LoginDetails loginDetails)  {
-        Iterable<Visitor> visitors = visitorDao.findAll();
-        for (Visitor v : visitors) {
-            if(v.getUname().equals(loginDetails.getUname()))  {
+    public boolean checkAccountLogin(LoginDetails loginDetails)  {
+        Iterable<Account> visitors = accountDao.findAll();
+        for (Account v : visitors) {
+            if(v.getEmail().equals(loginDetails.getEmail()))  {
                 if(v.getPassword().equals(loginDetails.getPword()))  return true;
             }
         }
         return false;
     }
-
-    public void updatePassword(LoginDetails login) {
-        //visitorDao.updateVisitor(login);
-
-
+    public Iterable<Account> getAllAccounts(){
+        return accountDao.findAll();
     }
 
-    public void doExperiment(int visitorId, int experimentId)  {
-        VisitorExperiment e = new VisitorExperiment(visitorDao.findOne(visitorId), experimentDao.findOne(experimentId), ConsentLevel.RESTRICTED);
-        experimentDao.findOne(experimentId).doExperiment(e);
-        Visitor v = visitorDao.findOne(visitorId);
-        v.doExperiment(e);
+
+    //////////////////////////////////////////////////////////////////////////VISITOR FUNCTIONS
+    public void addNewVisitor(Visitor v, int accountID)  {
+        v.setAccount(accountDao.findOne(accountID));
         visitorDao.save(v);
     }
-
-    public void addNewUser(Visitor v)  {
-        visitorDao.save(v);
+    public Visitor getVisitor(int id)  {
+        return visitorDao.findOne(id);
     }
-
-    public void addNewExperiment(Experiment e){
-        experimentDao.save(e);
+    public Iterable<Visitor> getAllVisitors(){
+        return visitorDao.findAll();
     }
-
-    public void updateDefaultConsent(String uname, ConsentLevel c)  {
-        int id = getVisitorID(uname);
+    public void updateVisitorConsent(int id, ConsentLevel c)  {
         Visitor v = visitorDao.findOne(id);
         v.setDefaultConsent(c);
         visitorDao.save(v);
     }
 
-    public void updateExperimentConsent(String uname, ConsentLevel c, int experimentID)  {
-        int id = getVisitorID(uname);
-        Visitor v = visitorDao.findOne(id);
+
+    //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
+    public void addNewExperiment(Experiment e){
+        experimentDao.save(e);
+    }
+    public Experiment getExperiment(int id)  {
+        return experimentDao.findOne(id);
+    }
+    public Iterable<Experiment> getAllExperiments(){
+        return experimentDao.findAll();
+    }
+    public void updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID)  {
+        Visitor v = visitorDao.findOne(visitorId);
         for (VisitorExperiment ve : v.getExperiments())  {
             if (ve.getExperiment().getId() == experimentID)  {
                 ve.setConsentLevel(c);
@@ -102,8 +89,26 @@ public class ConsentService {
         visitorDao.save(v);
     }
 
-    public String getExperimentConsent(String uname, int experimentID)  {
-        Visitor v = visitorDao.findOne(getVisitorID(uname));
+
+    //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
+    public Iterable<Experiment> getVisitorExperiments(int id)  {
+        Collection<Experiment> experiments = new ArrayList<>();
+
+        Visitor v = visitorDao.findOne(id);
+        for (VisitorExperiment e :v.getExperiments())  {
+            experiments.add(e.getExperiment());
+        }
+        return experiments;
+    }
+    public void doExperiment(int visitorId, int experimentId)  {
+        VisitorExperiment e = new VisitorExperiment(visitorDao.findOne(visitorId), experimentDao.findOne(experimentId), ConsentLevel.RESTRICTED);
+        experimentDao.findOne(experimentId).doExperiment(e);
+        Visitor v = visitorDao.findOne(visitorId);
+        v.doExperiment(e);
+        visitorDao.save(v);
+    }
+    public String getExperimentConsent(int id, int experimentID)  {
+        Visitor v = visitorDao.findOne(id);
         for (VisitorExperiment ve : v.getExperiments())  {
             if (ve.getExperiment().getId() == experimentID)  return ve.getConsentLevel().toString();
         }
