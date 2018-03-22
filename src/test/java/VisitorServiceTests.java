@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 import java.util.GregorianCalendar;
 
-public class VisitorTest {
+public class VisitorServiceTests {
 
     private GregorianCalendar dob = new GregorianCalendar(1998, 7, 14);
     private Visitor testVistor = new Visitor("Finn", dob, ConsentLevel.RESTRICTED);

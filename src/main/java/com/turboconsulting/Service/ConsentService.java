@@ -15,7 +15,7 @@ import java.util.Collection;
 import java.util.GregorianCalendar;
 
 @Service
-public class ConsentService {
+public class ConsentService implements ConsentServiceInterface {
 
     @Autowired
     @Qualifier("sqlVisitorData")
@@ -29,6 +29,7 @@ public class ConsentService {
     @Qualifier("sqlExperimentData")
     private ExperimentDao experimentDao;
 
+    @Override
     @PostConstruct
     public void ConsentService() {
         accountDao.deleteAll();
@@ -45,12 +46,15 @@ public class ConsentService {
 
 
     //////////////////////////////////////////////////////////////////////////ACCOUNT FUNCTIONS
+    @Override
     public void addNewAccount(Account a)  {
         accountDao.save(a);
     }
+    @Override
     public int getAccountID(String email)  {
         return accountDao.findByEmail(email).getAccountId();
     }
+    @Override
     public boolean checkAccountLogin(LoginDetails loginDetails)  {
         Iterable<Account> accounts = accountDao.findAll();
         for (Account a : accounts) {
@@ -60,12 +64,19 @@ public class ConsentService {
         }
         return false;
     }
+    @Override
     public Iterable<Visitor> getAccountsVisitors(int aID) {
         return accountDao.findOne(aID).getVisitors();
     }
+    @Override
     public Iterable<Account> getAllAccounts(){
         return accountDao.findAll();
     }
+    @Override
+    public Account getAccount(int id)  {
+        return accountDao.findByAccountId(id);
+    }
+    @Override
     public void updateAccountConsent(int id, ConsentLevel c)  {
         Account a = accountDao.findOne(id);
         a.setConsentLevel(c);
@@ -74,16 +85,20 @@ public class ConsentService {
 
 
     //////////////////////////////////////////////////////////////////////////VISITOR FUNCTIONS
+    @Override
     public void addNewVisitor(Visitor v, int accountID)  {
         v.setAccount(accountDao.findOne(accountID));
         visitorDao.save(v);
     }
+    @Override
     public Visitor getVisitor(int id)  {
         return visitorDao.findOne(id);
     }
+    @Override
     public Iterable<Visitor> getAllVisitors(){
         return visitorDao.findAll();
     }
+    @Override
     public void updateVisitorConsent(int id, ConsentLevel c)  {
         Visitor v = visitorDao.findOne(id);
         v.setDefaultConsent(c);
@@ -92,15 +107,19 @@ public class ConsentService {
 
 
     //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
+    @Override
     public void addNewExperiment(Experiment e){
         experimentDao.save(e);
     }
+    @Override
     public Experiment getExperiment(int id)  {
         return experimentDao.findOne(id);
     }
+    @Override
     public Iterable<Experiment> getAllExperiments(){
         return experimentDao.findAll();
     }
+    @Override
     public void updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID)  {
         Visitor v = visitorDao.findOne(visitorId);
         for (VisitorExperiment ve : v.getExperiments())  {
@@ -114,6 +133,7 @@ public class ConsentService {
 
 
     //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
+    @Override
     public Iterable<Experiment> getVisitorExperiments(int id)  {
         Collection<Experiment> experiments = new ArrayList<>();
 
@@ -123,6 +143,7 @@ public class ConsentService {
         }
         return experiments;
     }
+    @Override
     public void doExperiment(int visitorId, int experimentId)  {
         VisitorExperiment e = new VisitorExperiment(visitorDao.findOne(visitorId), experimentDao.findOne(experimentId), ConsentLevel.RESTRICTED);
         experimentDao.findOne(experimentId).doExperiment(e);
@@ -130,6 +151,7 @@ public class ConsentService {
         v.doExperiment(e);
         visitorDao.save(v);
     }
+    @Override
     public String getExperimentConsent(int id, int experimentID)  {
         Visitor v = visitorDao.findOne(id);
         for (VisitorExperiment ve : v.getExperiments())  {
