@@ -51,6 +51,11 @@ public class ConsentService {
     public Iterable<Account> getAllAccounts(){
         return accountDao.findAll();
     }
+    public void updateAccountConsent(int id, ConsentLevel c)  {
+        Account a = accountDao.findOne(id);
+        a.setConsentLevel(c);
+        accountDao.save(a);
+    }
 
 
     //////////////////////////////////////////////////////////////////////////VISITOR FUNCTIONS
