@@ -7,7 +7,7 @@
 //
 //    public static void main(String args[])  {
 //
-//        Result result = JUnitCore.runClasses(VisitorTest.class, AccountTest.class);
+//        Result result = JUnitCore.runClasses(VisitorServiceTests.class, AccountServiceTests.class);
 //
 //        for (Failure failure : result.getFailures())  {
 //            System.out.println(failure.toString());

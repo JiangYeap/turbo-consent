@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+<<<<<<< HEAD
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visitors | Turbo Consent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}">
+    <script async type="text/javascript" th:src="@{/js/bulma.js}"></script>
+=======
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
     <script async="async" type="text/javascript" th:src="@{/js/bulma.js}"></script>
+>>>>>>> master
 </head>
 <body>
     <!-- Navigation bar start -->
@@ -17,7 +28,11 @@
         <div class="container">
             <div class="navbar-brand">
                 <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+<<<<<<< HEAD
+                    <img src="" th:src="@{media/wtc_logo.gif}" alt="Logo">
+=======
                     <img src="" th:src="@{/media/wtc_logo.gif}" alt="Logo" />
+>>>>>>> master
                     <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
                 </a>
                 <span class="navbar-burger burger" data-target="navbarMenu">
@@ -57,9 +72,15 @@
                     Your Visitors
                 </h1>
                 <h2 class="subtitle">
+<<<<<<< HEAD
+                    This section contains profiles of the visitors you can give consent
+                    on behalf of.&nbsp;&nbsp;Select the profiles to view all the experiements
+                    participated by that visitor and select consent options for each of them.
+=======
                     This section lists the profiles of the visitors you can give data consent
                     on behalf of. Select a profile to view the experiments
                     participated by that visitor to submit or change their consent levels.
+>>>>>>> master
                 </h2>
             </div>
         </div>
@@ -68,14 +89,62 @@
     <div class="box cta">
         <p class="has-text-centered">
             <span class="tag has-text-weight-semibold is-warning">Note:</span>
+<<<<<<< HEAD
+            &nbsp;You can add new
+            <span class="tooltip" data-tooltip="Visitors you can give consent on behalf of.">
+                Dependent Visitors
+            </span> in the
+            <a th:href="@{/{aID}/settings(aID=${aID})}">Settings</a> section.
+=======
             Be responsible for your and your other
             <span class="tooltip" data-tooltip="Visitors you can give data consent on behalf of.">Dependent Visitors'</span>
             data rights!
+>>>>>>> master
         </p>
     </div>
 
     <!-- Main Content start -->
     <section class="container">
+<<<<<<< HEAD
+        <div class="columns features is-centered">
+            <div class="column is-4">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-content">
+                            <h1 class="name">
+                                <span class="first-name is-size-1 has-text-weight-bold">John</span>
+                                <span class="last-name is-size-4">Doe</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-footer-item">
+                            54 Unconsented experiment
+                        </div>
+                        <div class="card-footer-item">
+                            View Profile
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-4">
+                <div class="card">
+                    <div class="card-image has-text-centered">
+                        <i class="fa fa-user" id="user"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h4>Visitors</h4>
+                            <p>
+                                Section containing all the Dependent Visitors
+                                <em>(visitors you can give consent on behalf of)</em> of your
+                                account and all their experiments.
+                            </p>
+                            <p>
+                                <a href="visitors.html"><i class="fa fa-location-arrow"></i>&nbsp;Go to Visitors!</a>
+                            </p>
+=======
         <div class="columns features is-multiline">
             <div class="column is-one-third" th:each="v : ${visitors}">
                 <div class="card">
@@ -90,6 +159,7 @@
                             <a th:href="@{/{aID}/visitors/{vID}/experiments(aID=${aID}, vID=${v.visitorId})}">
                                 <i class="fa fa-location-arrow"></i>&nbsp;View Experiments
                             </a>
+>>>>>>> master
                         </div>
                     </div>
                 </div>
