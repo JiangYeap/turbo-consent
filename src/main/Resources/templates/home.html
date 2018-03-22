@@ -15,25 +15,25 @@
     <nav class="navbar is-dark has-shadow">
         <div class="container">
             <div class="navbar-brand">
-                <a href="home.html" class="navbar-item">
-                    <img src="media/wtc_logo.gif" alt="Logo" />
+                <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                    <img src="" th:src="@{/media/wtc_logo.gif}" alt="Logo" />
                     <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
                 </a>
                 <span class="navbar-burger burger" data-target="navbarMenu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a href="home.html" class="navbar-item is-active">
+                    <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item is-active">
                         Home
                     </a>
-                    <a href="visitors.html" class="navbar-item">
+                    <a th:href="@{/{aID}/visitors(aID=${aID})}" class="navbar-item">
                         Visitors
                     </a>
-                    <a href="settings.html" class="navbar-item">
+                    <a th:href="@{/{aID}/settings(aID=${aID})}" class="navbar-item">
                         Settings
                     </a>
                     <a th:href="@{/login}" class="navbar-item has-text-danger is-hidden-desktop">
