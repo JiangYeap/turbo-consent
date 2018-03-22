@@ -67,7 +67,7 @@
         <p class="has-text-centered">
             <span class="tag has-text-weight-semibold is-danger" th:inline="text">New !</span>
             &nbsp;You have a total of [[$]] unconsented data, check them out under the
-            <a href="visitors.html">Visitors</a> section now&nbsp;!
+            <a th:href="@{/{aID}/visitors(aID=${aID})}">Visitors</a> section now&nbsp;!
         </p>
     </div>
 
