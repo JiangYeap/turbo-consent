@@ -1,6 +1,7 @@
 package com.turboconsulting.Entity;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -11,7 +12,7 @@ public class Experiment {
     private int id;
     private String name, description;
 
-    @OneToMany(mappedBy = "experiment" )
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "experiment" )
     private Set<VisitorExperiment> visitors;
 
     public Experiment(){};
@@ -20,6 +21,7 @@ public class Experiment {
     public Experiment(String name, String description) {
         this.name = name;
         this.description = description;
+        visitors = new HashSet<>();
     }
 
     public int getId() {
