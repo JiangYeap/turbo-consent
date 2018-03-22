@@ -8,3 +8,13 @@
         menu.classList.toggle('is-active');
     });
 })();
+
+const closeModal = function() {
+    var modal = document.querySelector('.modal');
+    modal.classList.remove('is-active');
+};
+
+const openModal = function() {
+    var modal = document.querySelector('.modal');
+    modal.classList.add('is-active');
+};

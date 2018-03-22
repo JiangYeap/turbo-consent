@@ -7,6 +7,7 @@
     <title>Visitors | Turbo Consent</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
     <script async="async" type="text/javascript" th:src="@{/js/bulma.js}"></script>
 </head>
@@ -79,12 +80,11 @@
             <div class="column is-one-third" th:each="v : ${visitors}">
                 <div class="card">
                     <div class="card-content">
-                        <h1 class="title" th:text="${v.name}"></h1>
+                        <h1 class="title name-card" th:text="${v.name}"></h1>
                     </div>
                     <div class="card-footer">
                         <div class="card-footer-item">
-                            <span class="tag has-text-weight-semibold is-danger is-medium is-rounded">5 Experiments Pending!</span>
-                            <!--<span class="tag has-text-weight-semibold is-success is-rounded">0 Experiment Pending!</span>-->
+                            <span class="tag has-text-weight-semibold is-medium is-rounded" th:classappend="${true} ? 'is-danger' : 'is-success'">5 Experiments Pending</span>
                         </div>
                         <div class="card-footer-item has-text-centered">
                             <a th:href="@{/{aID}/visitors/{vID}/experiments(aID=${aID}, vID=${v.visitorId})}">
