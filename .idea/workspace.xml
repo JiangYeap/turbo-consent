@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af3e7164-4a0b-4150-8fa2-d64acdaab670" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
       <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/home.html" afterPath="$PROJECT_DIR$/src/main/Resources/templates/home.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/login.html" afterPath="$PROJECT_DIR$/src/main/Resources/templates/login.html" />
       <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/visitors.html" afterPath="$PROJECT_DIR$/src/main/Resources/templates/visitors.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/experiments.html" afterPath="$PROJECT_DIR$/target/classes/templates/experiments.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -74,8 +68,8 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+            <state relative-caret-position="382">
+              <caret line="90" column="137" lean-forward="true" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="137" />
               <folding />
             </state>
           </provider>
@@ -84,32 +78,42 @@
       <file leaf-file-name="VisitorsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/VisitorsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="105">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/HomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
               <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="visitors.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="visitors.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/visitors.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="80" column="37" lean-forward="true" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
+            <state relative-caret-position="147">
+              <caret line="77" column="36" lean-forward="false" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
               <folding>
-                <element signature="e#1074#1080#0" expanded="true" />
+                <element signature="e#1095#1101#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="experiments.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="experiments.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="37" />
+            <state relative-caret-position="252">
+              <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
               <folding>
-                <element signature="e#1044#1050#0" expanded="true" />
+                <element signature="e#1051#1057#0" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -132,50 +136,6 @@
             <state relative-caret-position="63">
               <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmbeddedWebApplicationContext.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/1.5.9.RELEASE/spring-boot-1.5.9.RELEASE.jar!/org/springframework/boot/context/embedded/EmbeddedWebApplicationContext.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1575">
-              <caret line="105" column="19" lean-forward="false" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
-              <folding>
-                <marker date="1521561168867" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1521561168867" expanded="false" signature="165:1538" ph="..." />
-                <marker date="1521561168867" expanded="true" signature="1981:1988" ph="{}" />
-                <marker date="1521561168867" expanded="true" signature="2077:2261" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="2340:2525" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="2558:2798" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="2835:3109" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="3140:3227" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="3279:4110" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="4195:4919" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="4980:5235" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="5029:5228" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="5120:5218" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="5324:6126" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="6216:6297" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="6386:8202" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="8273:8477" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="8537:8893" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="8949:9138" ph="{...}" />
-                <marker date="1521561168867" expanded="false" signature="9186:9197" ph=" { " />
-                <marker date="1521561168867" expanded="false" signature="9224:9230" ph=" }" />
-                <marker date="1521561168867" expanded="false" signature="9264:9275" ph=" { " />
-                <marker date="1521561168867" expanded="false" signature="9297:9303" ph=" }" />
-                <marker date="1521561168867" expanded="false" signature="9366:9377" ph=" { " />
-                <marker date="1521561168867" expanded="false" signature="9412:9418" ph=" }" />
-                <marker date="1521561168867" expanded="false" signature="9463:9474" ph=" { " />
-                <marker date="1521561168867" expanded="false" signature="9500:9506" ph=" }" />
-                <marker date="1521561168867" expanded="false" signature="9573:9584" ph=" { " />
-                <marker date="1521561168867" expanded="false" signature="9621:9627" ph=" }" />
-                <marker date="1521561168867" expanded="true" signature="9682:11113" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="9955:10348" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="10380:10856" ph="{...}" />
-                <marker date="1521561168867" expanded="true" signature="10873:11107" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -206,9 +166,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Experiments</find>
-      <find>visitors</find>
       <find>fav</find>
+      <find>${v</find>
       <find>href</find>
+      <find>visitors</find>
+      <find>Note</find>
+      <find>fa</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -276,9 +239,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/visitors.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/home.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/home.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/visitors.html" />
       </list>
     </option>
   </component>
@@ -288,7 +251,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="161" />
     <option name="y" value="115" />
     <option name="width" value="1485" />
@@ -606,15 +569,15 @@
       <workItem from="1521584002508" duration="153000" />
       <workItem from="1521624661393" duration="2457000" />
       <workItem from="1521669401230" duration="635000" />
-      <workItem from="1521717579032" duration="2142000" />
+      <workItem from="1521717579032" duration="9501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117808000" />
+    <option name="totallyTimeSpent" value="125167000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -636,7 +599,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37172177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4663626" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23147093" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20676692" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -845,14 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -1029,39 +984,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/VisitorsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="336">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/VisitorsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+          <folding>
+            <element signature="e#1051#1057#0" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+        <state relative-caret-position="382">
+          <caret line="90" column="137" lean-forward="true" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="137" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/visitors.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="80" column="37" lean-forward="true" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
+        <state relative-caret-position="147">
+          <caret line="77" column="36" lean-forward="false" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
           <folding>
-            <element signature="e#1074#1080#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="37" />
-          <folding>
-            <element signature="e#1044#1050#0" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1095#1101#0" expanded="true" />
           </folding>
         </state>
       </provider>
