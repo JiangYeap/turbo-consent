@@ -7,8 +7,8 @@ import java.util.GregorianCalendar;
 
 public class VisitorTest {
 
-    GregorianCalendar dob = new GregorianCalendar(1998, 7, 14);
-    Visitor testVistor = new Visitor("Finn", dob, ConsentLevel.RESTRICTED);
+    private GregorianCalendar dob = new GregorianCalendar(1998, 7, 14);
+    private Visitor testVistor = new Visitor("Finn", dob, ConsentLevel.RESTRICTED);
 
     @Test
     public void exampleTest() {

@@ -6,10 +6,13 @@ import com.turboconsulting.DAO.VisitorDao;
 import com.turboconsulting.Entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.GregorianCalendar;
 
 @Service
 public class ConsentService {
@@ -25,6 +28,21 @@ public class ConsentService {
     @Autowired
     @Qualifier("sqlExperimentData")
     private ExperimentDao experimentDao;
+
+    @PostConstruct
+    public void ConsentService() {
+        accountDao.deleteAll();
+        experimentDao.deleteAll();
+        Account newAccount = new Account("Harry", "hw16471@bristol.ac.uk", "password");
+        addNewAccount(newAccount);
+
+        Visitor newVisitor = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ), ConsentLevel.RESTRICTED);
+        addNewVisitor(newVisitor, newAccount.getAccountId());
+        Experiment newExperiment = new Experiment("Physics Experiment", "A lovely desciption.");
+        addNewExperiment(newExperiment);
+        doExperiment(newVisitor.getVisitorId(), newExperiment.getId());
+    }
+
 
     //////////////////////////////////////////////////////////////////////////ACCOUNT FUNCTIONS
     public void addNewAccount(Account a)  {

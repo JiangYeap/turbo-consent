@@ -23,7 +23,7 @@ public class Visitor {
 
     private ConsentLevel defaultConsent;
 
-    @OneToMany(mappedBy = "visitor", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "visitor", cascade = CascadeType.ALL, orphanRemoval=true, fetch = FetchType.EAGER)
     private Set<VisitorExperiment> experiments;
 
     public Visitor(){}
@@ -32,13 +32,10 @@ public class Visitor {
         this.name = name;
         this.dob = dob;
         this.defaultConsent = c;
-        experiments = new HashSet<>();
+        experiments = new HashSet<VisitorExperiment>();
 
     }
 
-    public void setExperiments(HashSet<VisitorExperiment> experiments) {
-        this.experiments = experiments;
-    }
 
     public void setName(String name) {
         this.name = name;
