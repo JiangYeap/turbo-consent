@@ -9,7 +9,7 @@ public interface ConsentServiceInterface {
     void ConsentService();
 
     //////////////////////////////////////////////////////////////////////////ACCOUNT FUNCTIONS
-    void addNewAccount(Account a);
+    boolean addNewAccount(Account a);
 
     int getAccountID(String email);
 

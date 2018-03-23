@@ -33,37 +33,37 @@ public class ConsentService implements ConsentServiceInterface {
     @Override
     @PostConstruct
     public void ConsentService() {
-        accountDao.deleteAll();
-        experimentDao.deleteAll();
-        Account newAccount = new Account("Harry", "hw16471@bristol.ac.uk", "password");
-        addNewAccount(newAccount);
 
-        Visitor newVisitor = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ), ConsentLevel.RESTRICTED);
-        addNewVisitor(newVisitor, newAccount.getAccountId());
-        Experiment newExperiment = new Experiment("Physics Experiment", "A lovely desciption.");
-        addNewExperiment(newExperiment);
-        doExperiment(newVisitor.getVisitorId(), newExperiment.getId());
+//        accountDao.deleteAll();
+//        experimentDao.deleteAll();
+//        Account newAccount = new Account("Harry", "hw16471@bristol.ac.uk", "password");
+//        addNewAccount(newAccount);
+//
+//        Visitor newVisitor = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ), ConsentLevel.RESTRICTED);
+//        addNewVisitor(newVisitor, newAccount.getAccountId());
+//        Experiment newExperiment = new Experiment("Physics Experiment", "A lovely desciption.");
+//        addNewExperiment(newExperiment);
+//        doExperiment(newVisitor.getVisitorId(), newExperiment.getId());
+
     }
 
 
     //////////////////////////////////////////////////////////////////////////ACCOUNT FUNCTIONS
     @Override
-    public void addNewAccount(Account a)  {
-        accountDao.save(a);
+    public boolean addNewAccount(Account a)  {
+        return accountDao.save(a) != null;
+
     }
     @Override
     public int getAccountID(String email)  {
-        return accountDao.findByEmail(email).getAccountId();
+        if(accountDao.findByEmail(email) != null)
+            return accountDao.findByEmail(email).getAccountId();
+        return -1;
     }
     @Override
     public boolean checkAccountLogin(LoginDetails loginDetails)  {
-        Iterable<Account> accounts = accountDao.findAll();
-        for (Account a : accounts) {
-            if(a.getEmail().equals(loginDetails.getEmail()))  {
-                if(a.getPassword().equals(loginDetails.getPword()))  return true;
-            }
-        }
-        return false;
+        Account a = accountDao.findByEmail(loginDetails.getEmail());
+        return a != null && a.getPassword().equals(loginDetails.getPword());
     }
     @Override
     public Iterable<Visitor> getAccountsVisitors(int aID) {
