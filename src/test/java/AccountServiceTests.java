@@ -2,6 +2,7 @@ import com.turboconsulting.DAO.AccountDao;
 import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
 import com.turboconsulting.Entity.Account;
+import com.turboconsulting.Entity.ConsentLevel;
 import com.turboconsulting.Entity.LoginDetails;
 import com.turboconsulting.Service.ConsentService;
 import com.turboconsulting.Service.ConsentServiceInterface;
@@ -72,6 +73,7 @@ public class AccountServiceTests {
         Mockito.when(accountDao.save(any(Account.class))).thenAnswer(AdditionalAnswers.<Account>returnsFirstArg());
 
 
+
         Mockito.when(accountDao.findAll()).thenReturn(accounts);
     }
 
@@ -121,11 +123,17 @@ public class AccountServiceTests {
         assertFalse(consentService.checkAccountLogin(loginDetails));
     }
 
-
     @Test
     public void addNewAccount_success()  {
         Account a = new Account("Harry", "harry@bristol.ac.uk", "password");
         assertTrue(consentService.addNewAccount(a));
+    }
+
+    @Test
+    public void updateAccountConsent_validConsentLevel()  {
+        Account found = consentService.getAccount(1);
+        assertEquals(found.getConsentLevel(), ConsentLevel.RESTRICTED);
+        assertTrue(consentService.updateAccountConsent(found.getAccountId(), ConsentLevel.NONE));
     }
 
 

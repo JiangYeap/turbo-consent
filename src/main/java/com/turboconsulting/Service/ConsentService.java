@@ -34,16 +34,16 @@ public class ConsentService implements ConsentServiceInterface {
     @PostConstruct
     public void ConsentService() {
 
-        accountDao.deleteAll();
-        experimentDao.deleteAll();
-        Account newAccount = new Account("Harry", "hw16471@bristol.ac.uk", "password");
-        addNewAccount(newAccount);
-
-        Visitor newVisitor = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ), ConsentLevel.RESTRICTED);
-        addNewVisitor(newVisitor, newAccount.getAccountId());
-        Experiment newExperiment = new Experiment("Physics Experiment", "A lovely desciption.");
-        addNewExperiment(newExperiment);
-        doExperiment(newVisitor.getVisitorId(), newExperiment.getId());
+//        accountDao.deleteAll();
+//        experimentDao.deleteAll();
+//        Account newAccount = new Account("Harry", "hw16471@bristol.ac.uk", "password");
+//        addNewAccount(newAccount);
+//
+//        Visitor newVisitor = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ), ConsentLevel.RESTRICTED);
+//        addNewVisitor(newVisitor, newAccount.getAccountId());
+//        Experiment newExperiment = new Experiment("Physics Experiment", "A lovely desciption.");
+//        addNewExperiment(newExperiment);
+//        doExperiment(newVisitor.getVisitorId(), newExperiment.getId());
 
     }
 
@@ -78,18 +78,18 @@ public class ConsentService implements ConsentServiceInterface {
         return accountDao.findByAccountId(id);
     }
     @Override
-    public void updateAccountConsent(int id, ConsentLevel c)  {
-        Account a = accountDao.findOne(id);
+    public boolean updateAccountConsent(int id, ConsentLevel c)  {
+        Account a = accountDao.findByAccountId(id);
         a.setConsentLevel(c);
-        accountDao.save(a);
+        return accountDao.save(a) != null;
     }
 
 
     //////////////////////////////////////////////////////////////////////////VISITOR FUNCTIONS
     @Override
-    public void addNewVisitor(Visitor v, int accountID)  {
-        v.setAccount(accountDao.findOne(accountID));
-        visitorDao.save(v);
+    public boolean addNewVisitor(Visitor v, int accountID)  {
+        v.setAccount(getAccount(accountID));
+        return visitorDao.save(v) != null;
     }
     @Override
     public Visitor getVisitor(int id)  {
@@ -100,10 +100,10 @@ public class ConsentService implements ConsentServiceInterface {
         return visitorDao.findAll();
     }
     @Override
-    public void updateVisitorConsent(int id, ConsentLevel c)  {
-        Visitor v = visitorDao.findOne(id);
+    public boolean updateVisitorConsent(int id, ConsentLevel c)  {
+        Visitor v = getVisitor(id);
         v.setDefaultConsent(c);
-        visitorDao.save(v);
+        return visitorDao.save(v) != null;
     }
 
 

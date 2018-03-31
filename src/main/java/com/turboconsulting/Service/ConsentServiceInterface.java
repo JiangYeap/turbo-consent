@@ -21,16 +21,16 @@ public interface ConsentServiceInterface {
 
     Account getAccount(int id);
 
-    void updateAccountConsent(int id, ConsentLevel c);
+    boolean updateAccountConsent(int id, ConsentLevel c);
 
     //////////////////////////////////////////////////////////////////////////VISITOR FUNCTIONS
-    void addNewVisitor(Visitor v, int accountID);
+    boolean addNewVisitor(Visitor v, int accountID);
 
     Visitor getVisitor(int id);
 
     Iterable<Visitor> getAllVisitors();
 
-    void updateVisitorConsent(int id, ConsentLevel c);
+    boolean updateVisitorConsent(int id, ConsentLevel c);
 
     //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
     void addNewExperiment(Experiment e);
