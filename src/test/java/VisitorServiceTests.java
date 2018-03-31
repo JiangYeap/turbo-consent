@@ -17,6 +17,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 
@@ -60,7 +61,9 @@ public class VisitorServiceTests {
         Mockito.when(accountDao.findAll()).thenReturn(accounts);
 
         visitors.add(mockEntityFactory.mockVisitor(visitorDao, "Harry Visitor 1", 1, accounts.get(0)));
-        visitors.add(mockEntityFactory.mockVisitor(visitorDao, "Harry Visitor 2", 1, accounts.get(0)));
+        visitors.add(mockEntityFactory.mockVisitor(visitorDao, "Harry Visitor 2", 2, accounts.get(0)));
+        Mockito.when(visitorDao.save(any(Visitor.class))).thenAnswer(AdditionalAnswers.<Visitor>returnsFirstArg());
+        Mockito.when(visitorDao.findAll()).thenReturn(visitors);
 
     }
 
@@ -69,5 +72,29 @@ public class VisitorServiceTests {
         Visitor visitor = new Visitor( "Tony", new GregorianCalendar(2000, 01, 01), ConsentLevel.RESTRICTED);
         assertTrue(consentService.addNewVisitor(visitor, 1));
     }
+
+    @Test
+    public void getVisitor_withValidId() {
+        Visitor found = consentService.getVisitor(1);
+        assertEquals(found.getName(), "Harry Visitor 1");
+        found = consentService.getVisitor(2);
+        assertEquals(found.getName(), "Harry Visitor 2");
+
+    }
+    @Test
+    public void getVisitor_withInvalidId() {
+        assertEquals(consentService.getVisitor(-1), null);
+        assertEquals(consentService.getVisitor(0), null);
+        assertEquals(consentService.getVisitor(1000), null);
+
+    }
+
+    @Test
+    public void updateVisitorConsent_validConsentLevel()  {
+        Visitor found = consentService.getVisitor(1);
+        assertEquals(found.getDefaultConsent(), ConsentLevel.RESTRICTED);
+        assertTrue(consentService.updateVisitorConsent(found.getVisitorId(), ConsentLevel.NONE));
+    }
+
 
 }
