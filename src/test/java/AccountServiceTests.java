@@ -50,30 +50,14 @@ public class AccountServiceTests {
 
     @Before
     public void setup() {
+
+        MockEntityFactory mockAccountFactory = new MockEntityFactory();
         ArrayList<Account> accounts = new ArrayList<>();
-        Account newAccount = new Account("Harry", "harry@bristol.ac.uk", "password");
-        newAccount.setAccountId(1);
-        accounts.add(newAccount);
-        Mockito.when(accountDao.findByAccountId(newAccount.getAccountId())).thenReturn(newAccount);
-        Mockito.when(accountDao.findByEmail(newAccount.getEmail())).thenReturn(newAccount);
 
-
-        newAccount = new Account("Finn", "finn@bristol.ac.uk", "password");
-        newAccount.setAccountId(2);
-        accounts.add(newAccount);
-        Mockito.when(accountDao.findByAccountId(newAccount.getAccountId())).thenReturn(newAccount);
-        Mockito.when(accountDao.findByEmail(newAccount.getEmail())).thenReturn(newAccount);
-
-        newAccount = new Account("Yeap", "yeap@bristol.ac.uk", "password");
-        newAccount.setAccountId(3);
-        accounts.add(newAccount);
-        Mockito.when(accountDao.findByAccountId(newAccount.getAccountId())).thenReturn(newAccount);
-        Mockito.when(accountDao.findByEmail(newAccount.getEmail())).thenReturn(newAccount);
-
+        accounts.add(mockAccountFactory.mockAccount(accountDao, "Harry", "harry@bristol.ac.uk", "password", 1));
+        accounts.add(mockAccountFactory.mockAccount(accountDao, "Finn", "finn@bristol.ac.uk", "password", 2));
+        accounts.add(mockAccountFactory.mockAccount(accountDao, "Yeap", "yeap@bristol.ac.uk", "password", 3));
         Mockito.when(accountDao.save(any(Account.class))).thenAnswer(AdditionalAnswers.<Account>returnsFirstArg());
-
-
-
         Mockito.when(accountDao.findAll()).thenReturn(accounts);
     }
 

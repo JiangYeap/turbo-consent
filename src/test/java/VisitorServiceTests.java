@@ -17,7 +17,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 
 import java.util.ArrayList;
@@ -50,23 +50,24 @@ public class VisitorServiceTests {
 
     @Before
     public void setup() {
+        MockEntityFactory mockEntityFactory = new MockEntityFactory();
         ArrayList<Account> accounts = new ArrayList<>();
-        Account newAccount = new Account("Harry", "harry@bristol.ac.uk", "password");
-        newAccount.setAccountId(1);
-        accounts.add(newAccount);
-        Mockito.when(accountDao.findByAccountId(newAccount.getAccountId())).thenReturn(newAccount);
-        Mockito.when(accountDao.findByEmail(newAccount.getEmail())).thenReturn(newAccount);
+        ArrayList<Visitor> visitors = new ArrayList<>();
 
-
-        newAccount = new Account("Finn", "finn@bristol.ac.uk", "password");
-        newAccount.setAccountId(2);
-        accounts.add(newAccount);
-        Mockito.when(accountDao.findByAccountId(newAccount.getAccountId())).thenReturn(newAccount);
-        Mockito.when(accountDao.findByEmail(newAccount.getEmail())).thenReturn(newAccount);
+        accounts.add(mockEntityFactory.mockAccount(accountDao, "Harry", "harry@bristol.ac.uk", "password",1));
+        accounts.add(mockEntityFactory.mockAccount(accountDao, "Finn", "finn@bristol.ac.uk", "password", 2));
         Mockito.when(accountDao.save(any(Account.class))).thenAnswer(AdditionalAnswers.<Account>returnsFirstArg());
-
-
-
         Mockito.when(accountDao.findAll()).thenReturn(accounts);
+
+        visitors.add(mockEntityFactory.mockVisitor(visitorDao, "Harry Visitor 1", 1, accounts.get(0)));
+        visitors.add(mockEntityFactory.mockVisitor(visitorDao, "Harry Visitor 2", 1, accounts.get(0)));
+
     }
+
+    @Test
+    public void addNewVisitor_success()  {
+        Visitor visitor = new Visitor( "Tony", new GregorianCalendar(2000, 01, 01), ConsentLevel.RESTRICTED);
+        assertTrue(consentService.addNewVisitor(visitor, 1));
+    }
+
 }

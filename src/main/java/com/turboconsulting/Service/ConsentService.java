@@ -67,7 +67,7 @@ public class ConsentService implements ConsentServiceInterface {
     }
     @Override
     public Iterable<Visitor> getAccountsVisitors(int aID) {
-        return accountDao.findOne(aID).getVisitors();
+        return visitorDao.findAllByAccount(accountDao.findOne(aID));
     }
     @Override
     public Iterable<Account> getAllAccounts(){
