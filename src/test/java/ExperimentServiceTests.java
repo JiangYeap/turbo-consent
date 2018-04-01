@@ -19,6 +19,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 
 @RunWith(SpringRunner.class)
@@ -74,5 +75,10 @@ public class ExperimentServiceTests {
 
     }
 
+    @Test
+    public void addNewExperiment_sucess() {
+        Experiment e = new Experiment("Harry", "harry@bristol.ac.uk");
+        assertTrue(consentService.addNewExperiment(e));
+    }
 
 }
