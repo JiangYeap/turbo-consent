@@ -12,7 +12,10 @@ public class Account {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int accountId;
 
-    private String name, email, password;
+    @Column(unique=true)
+    private String email;
+
+    private String name, password;
     private ConsentLevel consentLevel;
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval=true)

@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af3e7164-4a0b-4150-8fa2-d64acdaab670" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentService.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/experiments.html" afterPath="$PROJECT_DIR$/target/classes/templates/experiments.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/visitors.html" afterPath="$PROJECT_DIR$/target/classes/templates/visitors.html" />
+    <list default="true" id="858eab6b-3367-4031-baad-4fd46f9e7742" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java" afterPath="$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,111 +14,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConsentService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ConsentService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1197">
-              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="112" column="44" lean-forward="false" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="44" />
               <folding>
-                <marker date="1521752018189" expanded="true" signature="5185:5429" ph="{...}" />
+                <element signature="e#650#660#0" expanded="false" />
+                <element signature="e#734#744#0" expanded="false" />
+                <element signature="e#818#828#0" expanded="false" />
+                <element signature="e#912#921#0" expanded="false" />
+                <element signature="method#ConsentService#0;class#ConsentService#0" expanded="false" />
+                <element signature="method#addNewAccount#0;class#ConsentService#0" expanded="false" />
+                <element signature="method#getAccountID#0;class#ConsentService#0" expanded="false" />
+                <element signature="method#checkAccountLogin#0;class#ConsentService#0" expanded="false" />
+                <element signature="method#getAccountsVisitors#0;class#ConsentService#0" expanded="false" />
+                <element signature="method#updateAccountConsent#0;class#ConsentService#0" expanded="false" />
+                <element signature="method#addNewVisitor#0;class#ConsentService#0" expanded="false" />
+                <element signature="method#updateVisitorConsent#0;class#ConsentService#0" expanded="false" />
+                <element signature="e#3632#3633#0" expanded="true" />
+                <element signature="e#3684#3685#0" expanded="true" />
+                <element signature="e#3745#3746#0" expanded="true" />
+                <element signature="e#3794#3795#0" expanded="true" />
+                <element signature="e#3861#3862#0" expanded="true" />
+                <element signature="e#3907#3908#0" expanded="true" />
+                <element signature="method#getVisitorExperiments#0;class#ConsentService#0" expanded="false" />
+                <element signature="method#doExperiment#0;class#ConsentService#0" expanded="false" />
+                <element signature="method#getExperimentConsent#0;class#ConsentService#0" expanded="false" />
+                <element signature="method#updateExperimentConsent#0;class#ConsentService#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VisitorsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/VisitorsController.java">
+      <file leaf-file-name="ConsentServiceInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="583">
+              <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/HomeController.java">
+      <file leaf-file-name="AccountServiceTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/AccountServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="visitors.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/visitors.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="352">
+              <caret line="116" column="32" lean-forward="false" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
               <folding>
-                <element signature="e#1189#1195#0" expanded="true" />
+                <element signature="class#ConsentServiceImplTestContextConfiguration#0;class#AccountServiceTests#0" expanded="false" />
+                <element signature="method#setup#0;class#AccountServiceTests#0" expanded="false" />
+                <element signature="method#getAccount_withValidId#0;class#AccountServiceTests#0" expanded="false" />
+                <element signature="method#getAccount_withInvalidId#0;class#AccountServiceTests#0" expanded="false" />
+                <element signature="method#getAccountId_withValidEmail#0;class#AccountServiceTests#0" expanded="false" />
+                <element signature="method#getAccountId_withInvalidEmail#0;class#AccountServiceTests#0" expanded="false" />
+                <element signature="method#checkAccountLogin_withValidLogin#0;class#AccountServiceTests#0" expanded="false" />
+                <element signature="method#checkAccountLogin_withInvalidLogin#0;class#AccountServiceTests#0" expanded="false" />
+                <element signature="method#addNewAccount_success#0;class#AccountServiceTests#0" expanded="false" />
+                <element signature="method#updateAccountConsent_validConsentLevel#0;class#AccountServiceTests#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="experiment.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiment.html">
+      <file leaf-file-name="ExperimentServiceTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="experiments.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-441">
-              <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+            <state relative-caret-position="311">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
-                <element signature="e#1094#1100#0" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="method#getExperiment_withValidId#0;class#ExperimentServiceTests#0" expanded="false" />
+                <element signature="method#getExperiment_withInvalidId#0;class#ExperimentServiceTests#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExperimentsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java">
+      <file leaf-file-name="VisitorServiceTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/VisitorServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bulma.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="367">
+              <caret line="51" column="11" lean-forward="true" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="method#setup#0;class#VisitorServiceTests#0" expanded="false" />
+                <element signature="method#addNewVisitor_success#0;class#VisitorServiceTests#0" expanded="false" />
+                <element signature="method#getVisitor_withValidId#0;class#VisitorServiceTests#0" expanded="false" />
+                <element signature="method#getVisitor_withInvalidId#0;class#VisitorServiceTests#0" expanded="false" />
+                <element signature="method#updateVisitorConsent_validConsentLevel#0;class#VisitorServiceTests#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="1083" column="20" lean-forward="false" selection-start-line="1083" selection-start-column="20" selection-end-line="1083" selection-end-column="20" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -133,27 +112,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Interface" />
-        <option value="HTML File" />
-        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Experiments</find>
-      <find>visitors</find>
-      <find>fav</find>
-      <find>href</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/src/main/Resources/static/css</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -166,57 +127,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/DAO/BaseDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DAO/ExperimentDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DAO/VisitorDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Service/ConsentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ExperimentConsent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ExperimentDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/loginDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDaoImplementation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Researcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/SqlRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/Resources/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/MySqlVisitorDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/MySqlExperimentDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/FakeExperimentDao.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/Resources/static/index.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/results.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Greeting.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/GreetingController.java" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/greeting.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/result.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/LoginDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/FakeVisitorDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/DidExperiment.java" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/welcome.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/Profile.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Visitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentLevel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MockEntityFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/JunitTestSuite.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/profile.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ProfileController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/Resources/static/css/home.css" />
-        <option value="$PROJECT_DIR$/turbo-consent.iml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/Resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/home.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/visitors.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java" />
       </list>
     </option>
   </component>
@@ -226,12 +142,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="161" />
-    <option name="y" value="115" />
-    <option name="width" value="1485" />
-    <option name="height" value="869" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1919" />
+    <option name="y" value="-11" />
+    <option name="width" value="1922" />
+    <option name="height" value="1092" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -247,9 +164,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,11 +177,6 @@
             <path>
               <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
               <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -286,15 +198,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="turboconsulting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -303,99 +206,50 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="turboconsulting" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="DAO" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
               <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="turboconsulting" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
               <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="turboconsulting" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
               <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
               <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="output.css" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="RequestMappingsPanelOrder2" value="2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-  </component>
-  <component name="RecentsManager">
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="com.turboconsulting.DAO" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Work\Uni\spe\turbo-consent\src\main\Resources\static\css" />
-      <recent name="D:\Work\Uni\spe\turbo-consent\src\main\Resources\static" />
-      <recent name="$PROJECT_DIR$/src/main/Resources" />
-      <recent name="$PROJECT_DIR$/src/main/Resources/static" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/Resources/templates" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -409,7 +263,46 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main">
+  <component name="RunManager" selected="JUnit.JunitTestSuite">
+    <configuration name="JunitTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="TurboConsent" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JunitTestSuite" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.turboconsulting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.turboconsulting.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="TurboConsent" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -442,7 +335,7 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -451,26 +344,11 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="Unnamed" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list />
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -478,18 +356,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-    </configuration>
-    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.turboconsulting.Main" />
-      <module name="turbo-consent" />
-      <envs />
-    </configuration>
-    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.turboconsulting.Main" />
-      <module name="turbo-consent" />
-      <envs />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -504,7 +370,7 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -518,113 +384,113 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Maven.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="Spring Boot.Main" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.JunitTestSuite" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
     </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.JunitTestSuite" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="af3e7164-4a0b-4150-8fa2-d64acdaab670" name="Default" comment="" />
-      <created>1516958791174</created>
+      <changelist id="858eab6b-3367-4031-baad-4fd46f9e7742" name="Default" comment="" />
+      <created>1522503036345</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1516958791174</updated>
-      <workItem from="1516958794261" duration="9768000" />
-      <workItem from="1516974979586" duration="16616000" />
-      <workItem from="1517902524174" duration="985000" />
-      <workItem from="1518623460644" duration="7568000" />
-      <workItem from="1518698569512" duration="65000" />
-      <workItem from="1518773962294" duration="853000" />
-      <workItem from="1518778296373" duration="9375000" />
-      <workItem from="1518793840253" duration="4320000" />
-      <workItem from="1518863712177" duration="5921000" />
-      <workItem from="1518946461210" duration="6174000" />
-      <workItem from="1520600659011" duration="2976000" />
-      <workItem from="1520854946958" duration="19966000" />
-      <workItem from="1521021522524" duration="5336000" />
-      <workItem from="1521577037910" duration="6913000" />
-      <workItem from="1521584002508" duration="153000" />
-      <workItem from="1521624661393" duration="2457000" />
-      <workItem from="1521669401230" duration="635000" />
-      <workItem from="1521717579032" duration="2142000" />
+      <updated>1522503036345</updated>
+      <workItem from="1522503037784" duration="121000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="JunitTestSuite - 2018.03.31 at 14h 31m 04s.xml">
+      <configuration name="JunitTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JunitTestSuite - 2018.03.31 at 14h 31m 27s.xml">
+      <configuration name="JunitTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JunitTestSuite - 2018.03.31 at 14h 31m 56s.xml">
+      <configuration name="JunitTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JunitTestSuite - 2018.04.01 at 11h 00m 26s.xml">
+      <configuration name="JunitTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JunitTestSuite - 2018.04.01 at 11h 13m 31s.xml">
+      <configuration name="JunitTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JunitTestSuite - 2018.04.01 at 11h 13m 47s.xml">
+      <configuration name="JunitTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JunitTestSuite - 2018.04.01 at 11h 27m 58s.xml">
+      <configuration name="JunitTestSuite" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119380000" />
+    <option name="totallyTimeSpent" value="1944000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="1919" y="-11" width="1922" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2884903" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32660687" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27480045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39794755" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20676692" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997955" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2884903" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37172177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4663626" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20676692" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822084" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -637,379 +503,331 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.23/tomcat-embed-core-8.5.23.jar!/org/apache/coyote/http11/Http11InputBuffer.class</url>
-          <line>236</line>
+          <url>file://$PROJECT_DIR$/src/test/java/JunitTestSuite.java</url>
+          <line>12</line>
           <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java</url>
-          <line>92</line>
-          <properties />
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="54" />
+      <option name="time" value="1" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="SpringBootApplicationConfigurationType">
-        <watch expression="experimentDao" language="JAVA" />
-      </configuration>
-    </watches-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/visitors.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/home.html" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.23/tomcat-embed-core-8.5.23.jar!/org/apache/coyote/http11/Http11InputBuffer.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="236" column="0" lean-forward="false" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Researcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/MySqlVisitorDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/MySqlExperimentDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/FakeExperimentDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ExperimentConsent.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1521634505441" expanded="true" signature="168:173" ph="@{...}" />
+            <element signature="e#650#660#0" expanded="false" />
+            <element signature="e#734#744#0" expanded="false" />
+            <element signature="e#818#828#0" expanded="false" />
+            <element signature="e#912#921#0" expanded="false" />
+            <element signature="method#ConsentService#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#addNewAccount#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getAccountID#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#checkAccountLogin#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getAccountsVisitors#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updateAccountConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#addNewVisitor#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updateVisitorConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="e#3632#3633#0" expanded="true" />
+            <element signature="e#3684#3685#0" expanded="true" />
+            <element signature="e#3745#3746#0" expanded="true" />
+            <element signature="e#3794#3795#0" expanded="true" />
+            <element signature="e#3861#3862#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
+            <element signature="method#getVisitorExperiments#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#doExperiment#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getExperimentConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updateExperimentConsent#0;class#ConsentService#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="630">
+          <caret line="37" column="37" lean-forward="true" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/index.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/result.html" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/VisitorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/MockEntityFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/DpendendentController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/index.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/visitExp.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/index.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/welcome.html" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE.jar!/org/springframework/ui/ExtendedModelMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Visitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/LoginDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        <state relative-caret-position="198">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ProfileController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/profile.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/HomeController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/VisitorServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="44" lean-forward="false" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+        <state relative-caret-position="1260">
+          <caret line="96" column="5" lean-forward="false" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
           <folding>
-            <element signature="n#build#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="method#setup#0;class#VisitorServiceTests#0" expanded="false" />
+            <element signature="method#addNewVisitor_success#0;class#VisitorServiceTests#0" expanded="false" />
+            <element signature="method#getVisitor_withValidId#0;class#VisitorServiceTests#0" expanded="false" />
+            <element signature="method#getVisitor_withInvalidId#0;class#VisitorServiceTests#0" expanded="false" />
+            <element signature="method#updateVisitorConsent_validConsentLevel#0;class#VisitorServiceTests#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/turbo-consent.iml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/AccountServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="64" lean-forward="false" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+        <state relative-caret-position="1620">
+          <caret line="115" column="4" lean-forward="false" selection-start-line="115" selection-start-column="4" selection-end-line="120" selection-end-column="5" />
+          <folding>
+            <element signature="class#ConsentServiceImplTestContextConfiguration#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#setup#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#getAccount_withValidId#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#getAccount_withInvalidId#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#getAccountId_withValidEmail#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#getAccountId_withInvalidEmail#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#checkAccountLogin_withValidLogin#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#checkAccountLogin_withInvalidLogin#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#addNewAccount_success#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#updateAccountConsent_validConsentLevel#0;class#AccountServiceTests#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/JunitTestSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1521634505441" expanded="true" signature="168:173" ph="@{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/css/Home.css" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/1.5.9.RELEASE/spring-boot-1.5.9.RELEASE.jar!/org/springframework/boot/context/embedded/EmbeddedWebApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="105" column="19" lean-forward="false" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
-          <folding>
-            <marker date="1521561168867" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1521561168867" expanded="false" signature="165:1538" ph="..." />
-            <marker date="1521561168867" expanded="true" signature="1981:1988" ph="{}" />
-            <marker date="1521561168867" expanded="true" signature="2077:2261" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="2340:2525" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="2558:2798" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="2835:3109" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="3140:3227" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="3279:4110" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="4195:4919" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="4980:5235" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="5029:5228" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="5120:5218" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="5324:6126" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="6216:6297" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="6386:8202" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="8273:8477" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="8537:8893" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="8949:9138" ph="{...}" />
-            <marker date="1521561168867" expanded="false" signature="9186:9197" ph=" { " />
-            <marker date="1521561168867" expanded="false" signature="9224:9230" ph=" }" />
-            <marker date="1521561168867" expanded="false" signature="9264:9275" ph=" { " />
-            <marker date="1521561168867" expanded="false" signature="9297:9303" ph=" }" />
-            <marker date="1521561168867" expanded="false" signature="9366:9377" ph=" { " />
-            <marker date="1521561168867" expanded="false" signature="9412:9418" ph=" }" />
-            <marker date="1521561168867" expanded="false" signature="9463:9474" ph=" { " />
-            <marker date="1521561168867" expanded="false" signature="9500:9506" ph=" }" />
-            <marker date="1521561168867" expanded="false" signature="9573:9584" ph=" { " />
-            <marker date="1521561168867" expanded="false" signature="9621:9627" ph=" }" />
-            <marker date="1521561168867" expanded="true" signature="9682:11113" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="9955:10348" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="10380:10856" ph="{...}" />
-            <marker date="1521561168867" expanded="true" signature="10873:11107" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/media/wethecurious.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.23/tomcat-embed-websocket-8.5.23.jar!/org/apache/tomcat/websocket/server/WsFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <marker date="1521561161271" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1521561161271" expanded="false" signature="158:483" ph="..." />
-            <marker date="1521561161271" expanded="true" signature="584:591" ph="{}" />
-            <marker date="1521561161271" expanded="true" signature="665:798" ph="{...}" />
-            <marker date="1521561161271" expanded="true" signature="931:1818" ph="{...}" />
-            <marker date="1521561161271" expanded="true" signature="1846:1853" ph="{}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.13.RELEASE/spring-aop-4.3.13.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <marker date="1521561167724" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1521561167724" expanded="false" signature="157:776" ph="..." />
-            <marker date="1521561167724" expanded="true" signature="1212:1549" ph="{...}" />
-            <marker date="1521561167724" expanded="false" signature="1579:1590" ph=" { " />
-            <marker date="1521561167724" expanded="false" signature="1647:1653" ph=" }" />
-            <marker date="1521561167724" expanded="true" signature="1707:2118" ph="{...}" />
-            <marker date="1521561167724" expanded="true" signature="2203:3026" ph="{...}" />
-            <marker date="1521561167724" expanded="true" signature="3114:5899" ph="{...}" />
-            <marker date="1521561167724" expanded="true" signature="5941:6716" ph="{...}" />
-            <marker date="1521561167724" expanded="true" signature="6744:6852" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/WebConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ServiceTests.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="491">
+          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="37" column="37" lean-forward="false" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Visitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="522">
+          <caret line="45" column="71" lean-forward="true" selection-start-line="45" selection-start-column="71" selection-end-line="45" selection-end-column="71" />
           <folding>
-            <marker date="1521752018189" expanded="true" signature="5185:5429" ph="{...}" />
+            <element signature="e#650#660#0" expanded="false" />
+            <element signature="e#734#744#0" expanded="false" />
+            <element signature="e#818#828#0" expanded="false" />
+            <element signature="e#912#921#0" expanded="false" />
+            <element signature="method#ConsentService#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#addNewAccount#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getAccountID#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#checkAccountLogin#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getAccountsVisitors#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updateAccountConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#addNewVisitor#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updateVisitorConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="e#3632#3633#0" expanded="true" />
+            <element signature="e#3684#3685#0" expanded="true" />
+            <element signature="e#3745#3746#0" expanded="true" />
+            <element signature="e#3794#3795#0" expanded="true" />
+            <element signature="e#3861#3862#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
+            <element signature="method#getVisitorExperiments#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#doExperiment#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getExperimentConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updateExperimentConsent#0;class#ConsentService#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        <state relative-caret-position="90">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="1083" column="20" lean-forward="false" selection-start-line="1083" selection-start-column="20" selection-end-line="1083" selection-end-column="20" />
+        <state relative-caret-position="198">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="18">
+          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/VisitorsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/AccountDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="162">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiment.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ExperimentDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+        <state relative-caret-position="144">
+          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/home.html">
+    <entry file="file://$PROJECT_DIR$/src/test/java/JunitTestSuite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+        <state relative-caret-position="234">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/visitors.html">
+    <entry file="file://$PROJECT_DIR$/src/test/java/MockEntityFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="475">
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
           <folding>
-            <element signature="e#1189#1195#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
+    <entry file="file://$PROJECT_DIR$/src/test/java/VisitorServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-441">
-          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        <state relative-caret-position="367">
+          <caret line="51" column="11" lean-forward="true" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
           <folding>
-            <element signature="e#1094#1100#0" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="method#setup#0;class#VisitorServiceTests#0" expanded="false" />
+            <element signature="method#addNewVisitor_success#0;class#VisitorServiceTests#0" expanded="false" />
+            <element signature="method#getVisitor_withValidId#0;class#VisitorServiceTests#0" expanded="false" />
+            <element signature="method#getVisitor_withInvalidId#0;class#VisitorServiceTests#0" expanded="false" />
+            <element signature="method#updateVisitorConsent_validConsentLevel#0;class#VisitorServiceTests#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="method#getExperiment_withValidId#0;class#ExperimentServiceTests#0" expanded="false" />
+            <element signature="method#getExperiment_withInvalidId#0;class#ExperimentServiceTests#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AccountServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="116" column="32" lean-forward="false" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
+          <folding>
+            <element signature="class#ConsentServiceImplTestContextConfiguration#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#setup#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#getAccount_withValidId#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#getAccount_withInvalidId#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#getAccountId_withValidEmail#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#getAccountId_withInvalidEmail#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#checkAccountLogin_withValidLogin#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#checkAccountLogin_withInvalidLogin#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#addNewAccount_success#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="method#updateAccountConsent_validConsentLevel#0;class#AccountServiceTests#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="112" column="44" lean-forward="false" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="44" />
+          <folding>
+            <element signature="e#650#660#0" expanded="false" />
+            <element signature="e#734#744#0" expanded="false" />
+            <element signature="e#818#828#0" expanded="false" />
+            <element signature="e#912#921#0" expanded="false" />
+            <element signature="method#ConsentService#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#addNewAccount#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getAccountID#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#checkAccountLogin#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getAccountsVisitors#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updateAccountConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#addNewVisitor#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updateVisitorConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="e#3632#3633#0" expanded="true" />
+            <element signature="e#3684#3685#0" expanded="true" />
+            <element signature="e#3745#3746#0" expanded="true" />
+            <element signature="e#3794#3795#0" expanded="true" />
+            <element signature="e#3861#3862#0" expanded="true" />
+            <element signature="e#3907#3908#0" expanded="true" />
+            <element signature="method#getVisitorExperiments#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#doExperiment#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getExperimentConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updateExperimentConsent#0;class#ConsentService#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1017,68 +835,9 @@
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
+      <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring|turbo-consent</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: ch.qos.logback:logback-classic:1.1.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

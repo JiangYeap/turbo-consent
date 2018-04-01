@@ -6,6 +6,13 @@ public class LoginDetails {
 
     public LoginDetails(){}
 
+    public LoginDetails(String email, String password){
+        this.email = email;
+        this.pword = password;
+    }
+
+
+
     private String email;
     private String pword;
 
