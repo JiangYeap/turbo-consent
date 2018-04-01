@@ -128,23 +128,26 @@ public class ConsentService implements ConsentServiceInterface {
     public Iterable<Experiment> getVisitorExperiments(int id)  {
         Collection<Experiment> experiments = new ArrayList<>();
 
-        Visitor v = visitorDao.findOne(id);
-        for (VisitorExperiment e :v.getExperiments())  {
+        Visitor v = visitorDao.findByVisitorId(id);
+        for (VisitorExperiment e : v.getExperiments())  {
             experiments.add(e.getExperiment());
         }
         return experiments;
     }
     @Override
-    public void doExperiment(int visitorId, int experimentId)  {
-        VisitorExperiment e = new VisitorExperiment(visitorDao.findOne(visitorId), experimentDao.findOne(experimentId), ConsentLevel.RESTRICTED);
-        experimentDao.findOne(experimentId).doExperiment(e);
-        Visitor v = visitorDao.findOne(visitorId);
+    public boolean doExperiment(int visitorId, int experimentId)  {
+        VisitorExperiment e = new VisitorExperiment( visitorDao.findByVisitorId(visitorId),
+                                                     experimentDao.findById(experimentId),
+                                                     visitorDao.findByVisitorId(visitorId).getDefaultConsent());
+
+        experimentDao.findById(experimentId).doExperiment(e);
+        Visitor v = visitorDao.findByVisitorId(visitorId);
         v.doExperiment(e);
-        visitorDao.save(v);
+        return visitorDao.save(v) != null;
     }
     @Override
     public String getExperimentConsent(int id, int experimentID)  {
-        Visitor v = visitorDao.findOne(id);
+        Visitor v = visitorDao.findByVisitorId(id);
         for (VisitorExperiment ve : v.getExperiments())  {
             if (ve.getExperiment().getId() == experimentID)  return ve.getConsentLevel().toString();
         }

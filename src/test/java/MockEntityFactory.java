@@ -1,13 +1,14 @@
 import com.turboconsulting.DAO.AccountDao;
 import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
-import com.turboconsulting.Entity.Account;
-import com.turboconsulting.Entity.ConsentLevel;
-import com.turboconsulting.Entity.Experiment;
-import com.turboconsulting.Entity.Visitor;
+import com.turboconsulting.Entity.*;
 import org.mockito.Mockito;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 public class MockEntityFactory {
 
@@ -32,7 +33,15 @@ public class MockEntityFactory {
         newExperiment.setId(id);
         Mockito.when(experimentDao.findById(newExperiment.getId())).thenReturn(newExperiment);
         return newExperiment;
+    }
 
+    public VisitorExperiment mockVisitorExperiment(VisitorDao visitorDao, ExperimentDao experimentDao, int visitorId, int experimentId)  {
+        VisitorExperiment visitorExperiment = new VisitorExperiment(
+                visitorDao.findByVisitorId(visitorId),
+                experimentDao.findById(experimentId),
+                visitorDao.findByVisitorId(visitorId).getDefaultConsent());
+        visitorDao.findByVisitorId(visitorId).addExperiment(visitorExperiment);
+        return visitorExperiment;
     }
 
 }

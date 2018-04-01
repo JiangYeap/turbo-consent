@@ -65,6 +65,9 @@ public class Visitor {
         return visitorId;
     }
 
+    public boolean addExperiment(VisitorExperiment visitorExperiment)  {
+        return experiments.add(visitorExperiment);
+    }
 
     public void setExperiments(Set<VisitorExperiment> experiments) {
         this.experiments = experiments;
