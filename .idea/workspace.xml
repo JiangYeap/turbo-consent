@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="858eab6b-3367-4031-baad-4fd46f9e7742" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java" afterPath="$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/VisitorExperimentServiceTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/Controller.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/DAO/ExperimentDao.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/DAO/ExperimentDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentService.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentServiceInterface.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentServiceInterface.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/JunitTestSuite.class" afterPath="$PROJECT_DIR$/target/test-classes/JunitTestSuite.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ExperimentDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ExperimentDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/AccountServiceTests.java" afterPath="$PROJECT_DIR$/src/test/java/AccountServiceTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/JunitTestSuite.java" afterPath="$PROJECT_DIR$/src/test/java/JunitTestSuite.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,17 +26,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConsentService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConsentService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="112" column="44" lean-forward="false" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="44" />
+            <state relative-caret-position="441">
+              <caret line="147" column="4" lean-forward="false" selection-start-line="147" selection-start-column="4" selection-end-line="147" selection-end-column="4" />
               <folding>
                 <element signature="e#650#660#0" expanded="false" />
                 <element signature="e#734#744#0" expanded="false" />
                 <element signature="e#818#828#0" expanded="false" />
                 <element signature="e#912#921#0" expanded="false" />
                 <element signature="method#ConsentService#0;class#ConsentService#0" expanded="false" />
+                <element signature="e#977#1010#0" expanded="false" />
                 <element signature="method#addNewAccount#0;class#ConsentService#0" expanded="false" />
                 <element signature="method#getAccountID#0;class#ConsentService#0" expanded="false" />
                 <element signature="method#checkAccountLogin#0;class#ConsentService#0" expanded="false" />
@@ -32,47 +45,9 @@
                 <element signature="method#updateAccountConsent#0;class#ConsentService#0" expanded="false" />
                 <element signature="method#addNewVisitor#0;class#ConsentService#0" expanded="false" />
                 <element signature="method#updateVisitorConsent#0;class#ConsentService#0" expanded="false" />
-                <element signature="e#3632#3633#0" expanded="true" />
-                <element signature="e#3684#3685#0" expanded="true" />
-                <element signature="e#3745#3746#0" expanded="true" />
-                <element signature="e#3794#3795#0" expanded="true" />
-                <element signature="e#3861#3862#0" expanded="true" />
-                <element signature="e#3907#3908#0" expanded="true" />
                 <element signature="method#getVisitorExperiments#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#doExperiment#0;class#ConsentService#0" expanded="false" />
                 <element signature="method#getExperimentConsent#0;class#ConsentService#0" expanded="false" />
                 <element signature="method#updateExperimentConsent#0;class#ConsentService#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConsentServiceInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountServiceTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/AccountServiceTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="116" column="32" lean-forward="false" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
-              <folding>
-                <element signature="class#ConsentServiceImplTestContextConfiguration#0;class#AccountServiceTests#0" expanded="false" />
-                <element signature="method#setup#0;class#AccountServiceTests#0" expanded="false" />
-                <element signature="method#getAccount_withValidId#0;class#AccountServiceTests#0" expanded="false" />
-                <element signature="method#getAccount_withInvalidId#0;class#AccountServiceTests#0" expanded="false" />
-                <element signature="method#getAccountId_withValidEmail#0;class#AccountServiceTests#0" expanded="false" />
-                <element signature="method#getAccountId_withInvalidEmail#0;class#AccountServiceTests#0" expanded="false" />
-                <element signature="method#checkAccountLogin_withValidLogin#0;class#AccountServiceTests#0" expanded="false" />
-                <element signature="method#checkAccountLogin_withInvalidLogin#0;class#AccountServiceTests#0" expanded="false" />
-                <element signature="method#addNewAccount_success#0;class#AccountServiceTests#0" expanded="false" />
-                <element signature="method#updateAccountConsent_validConsentLevel#0;class#AccountServiceTests#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,8 +56,8 @@
       <file leaf-file-name="ExperimentServiceTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="257">
+              <caret line="54" column="42" lean-forward="false" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
               <folding>
                 <element signature="method#getExperiment_withValidId#0;class#ExperimentServiceTests#0" expanded="false" />
                 <element signature="method#getExperiment_withInvalidId#0;class#ExperimentServiceTests#0" expanded="false" />
@@ -91,18 +66,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VisitorServiceTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/VisitorServiceTests.java">
+      <file leaf-file-name="AccountDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/AccountDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="51" column="11" lean-forward="true" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
+            <state relative-caret-position="162">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExperimentDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ExperimentDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Experiment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VisitorExperimentServiceTests.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/VisitorExperimentServiceTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding>
-                <element signature="method#setup#0;class#VisitorServiceTests#0" expanded="false" />
-                <element signature="method#addNewVisitor_success#0;class#VisitorServiceTests#0" expanded="false" />
-                <element signature="method#getVisitor_withValidId#0;class#VisitorServiceTests#0" expanded="false" />
-                <element signature="method#getVisitor_withInvalidId#0;class#VisitorServiceTests#0" expanded="false" />
-                <element signature="method#updateVisitorConsent_validConsentLevel#0;class#VisitorServiceTests#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="class#ConsentServiceImplTestContextConfiguration#0;class#VisitorExperimentServiceTests#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VisitorDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,12 +139,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ExperimentDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/MockEntityFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/JunitTestSuite.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ExperimentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/VisitorExperimentTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/AccountServiceTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/VisitorExperimentServiceTests.java" />
       </list>
     </option>
   </component>
@@ -143,7 +159,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1919" />
+    <option name="x" value="-1" />
     <option name="y" value="-11" />
     <option name="width" value="1922" />
     <option name="height" value="1092" />
@@ -263,7 +279,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JunitTestSuite">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="JunitTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="TurboConsent" />
@@ -390,8 +406,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JunitTestSuite" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.JunitTestSuite" />
       </list>
     </recent_temporary>
   </component>
@@ -433,10 +449,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1944000" />
+    <option name="totallyTimeSpent" value="3450000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="-11" width="1922" height="1092" extended-state="6" />
+    <frame x="-1" y="-11" width="1922" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -447,20 +463,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885417" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997955" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997955" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -504,7 +520,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/JunitTestSuite.java</url>
-          <line>12</line>
+          <line>13</line>
           <properties />
         </line-breakpoint>
       </breakpoints>
@@ -523,6 +539,7 @@
             <element signature="e#818#828#0" expanded="false" />
             <element signature="e#912#921#0" expanded="false" />
             <element signature="method#ConsentService#0;class#ConsentService#0" expanded="false" />
+            <element signature="e#977#1010#0" expanded="false" />
             <element signature="method#addNewAccount#0;class#ConsentService#0" expanded="false" />
             <element signature="method#getAccountID#0;class#ConsentService#0" expanded="false" />
             <element signature="method#checkAccountLogin#0;class#ConsentService#0" expanded="false" />
@@ -530,14 +547,7 @@
             <element signature="method#updateAccountConsent#0;class#ConsentService#0" expanded="false" />
             <element signature="method#addNewVisitor#0;class#ConsentService#0" expanded="false" />
             <element signature="method#updateVisitorConsent#0;class#ConsentService#0" expanded="false" />
-            <element signature="e#3632#3633#0" expanded="true" />
-            <element signature="e#3684#3685#0" expanded="true" />
-            <element signature="e#3745#3746#0" expanded="true" />
-            <element signature="e#3794#3795#0" expanded="true" />
-            <element signature="e#3861#3862#0" expanded="true" />
-            <element signature="e#3907#3908#0" expanded="true" />
             <element signature="method#getVisitorExperiments#0;class#ConsentService#0" expanded="false" />
-            <element signature="method#doExperiment#0;class#ConsentService#0" expanded="false" />
             <element signature="method#getExperimentConsent#0;class#ConsentService#0" expanded="false" />
             <element signature="method#updateExperimentConsent#0;class#ConsentService#0" expanded="false" />
           </folding>
@@ -583,7 +593,6 @@
         <state relative-caret-position="1260">
           <caret line="96" column="5" lean-forward="false" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
           <folding>
-            <element signature="method#setup#0;class#VisitorServiceTests#0" expanded="false" />
             <element signature="method#addNewVisitor_success#0;class#VisitorServiceTests#0" expanded="false" />
             <element signature="method#getVisitor_withValidId#0;class#VisitorServiceTests#0" expanded="false" />
             <element signature="method#getVisitor_withInvalidId#0;class#VisitorServiceTests#0" expanded="false" />
@@ -597,8 +606,8 @@
         <state relative-caret-position="1620">
           <caret line="115" column="4" lean-forward="false" selection-start-line="115" selection-start-column="4" selection-end-line="120" selection-end-column="5" />
           <folding>
-            <element signature="class#ConsentServiceImplTestContextConfiguration#0;class#AccountServiceTests#0" expanded="false" />
-            <element signature="method#setup#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="e#1368#1369#0" expanded="true" />
+            <element signature="e#1419#1420#0" expanded="true" />
             <element signature="method#getAccount_withValidId#0;class#AccountServiceTests#0" expanded="false" />
             <element signature="method#getAccount_withInvalidId#0;class#AccountServiceTests#0" expanded="false" />
             <element signature="method#getAccountId_withValidEmail#0;class#AccountServiceTests#0" expanded="false" />
@@ -670,6 +679,7 @@
             <element signature="e#818#828#0" expanded="false" />
             <element signature="e#912#921#0" expanded="false" />
             <element signature="method#ConsentService#0;class#ConsentService#0" expanded="false" />
+            <element signature="e#977#1010#0" expanded="false" />
             <element signature="method#addNewAccount#0;class#ConsentService#0" expanded="false" />
             <element signature="method#getAccountID#0;class#ConsentService#0" expanded="false" />
             <element signature="method#checkAccountLogin#0;class#ConsentService#0" expanded="false" />
@@ -677,14 +687,7 @@
             <element signature="method#updateAccountConsent#0;class#ConsentService#0" expanded="false" />
             <element signature="method#addNewVisitor#0;class#ConsentService#0" expanded="false" />
             <element signature="method#updateVisitorConsent#0;class#ConsentService#0" expanded="false" />
-            <element signature="e#3632#3633#0" expanded="true" />
-            <element signature="e#3684#3685#0" expanded="true" />
-            <element signature="e#3745#3746#0" expanded="true" />
-            <element signature="e#3794#3795#0" expanded="true" />
-            <element signature="e#3861#3862#0" expanded="true" />
-            <element signature="e#3907#3908#0" expanded="true" />
             <element signature="method#getVisitorExperiments#0;class#ConsentService#0" expanded="false" />
-            <element signature="method#doExperiment#0;class#ConsentService#0" expanded="false" />
             <element signature="method#getExperimentConsent#0;class#ConsentService#0" expanded="false" />
             <element signature="method#updateExperimentConsent#0;class#ConsentService#0" expanded="false" />
           </folding>
@@ -699,19 +702,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDao.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/MockEntityFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="475">
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -723,38 +720,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ExperimentDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        <state relative-caret-position="154">
+          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/JunitTestSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MockEntityFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/VisitorServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="51" column="11" lean-forward="true" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
+        <state relative-caret-position="261">
+          <caret line="51" column="4" lean-forward="true" selection-start-line="51" selection-start-column="4" selection-end-line="67" selection-end-column="5" />
           <folding>
-            <element signature="method#setup#0;class#VisitorServiceTests#0" expanded="false" />
             <element signature="method#addNewVisitor_success#0;class#VisitorServiceTests#0" expanded="false" />
             <element signature="method#getVisitor_withValidId#0;class#VisitorServiceTests#0" expanded="false" />
             <element signature="method#getVisitor_withInvalidId#0;class#VisitorServiceTests#0" expanded="false" />
@@ -763,10 +741,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/JunitTestSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="46" column="11" lean-forward="false" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="147" column="4" lean-forward="false" selection-start-line="147" selection-start-column="4" selection-end-line="147" selection-end-column="4" />
+          <folding>
+            <element signature="e#650#660#0" expanded="false" />
+            <element signature="e#734#744#0" expanded="false" />
+            <element signature="e#818#828#0" expanded="false" />
+            <element signature="e#912#921#0" expanded="false" />
+            <element signature="method#ConsentService#0;class#ConsentService#0" expanded="false" />
+            <element signature="e#977#1010#0" expanded="false" />
+            <element signature="method#addNewAccount#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getAccountID#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#checkAccountLogin#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getAccountsVisitors#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updateAccountConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#addNewVisitor#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updateVisitorConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getVisitorExperiments#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#getExperimentConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="method#updateExperimentConsent#0;class#ConsentService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ExperimentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="257">
+          <caret line="54" column="42" lean-forward="false" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
           <folding>
             <element signature="method#getExperiment_withValidId#0;class#ExperimentServiceTests#0" expanded="false" />
             <element signature="method#getExperiment_withInvalidId#0;class#ExperimentServiceTests#0" expanded="false" />
@@ -776,11 +811,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/AccountServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="116" column="32" lean-forward="false" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
+        <state relative-caret-position="432">
+          <caret line="56" column="40" lean-forward="false" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
           <folding>
-            <element signature="class#ConsentServiceImplTestContextConfiguration#0;class#AccountServiceTests#0" expanded="false" />
-            <element signature="method#setup#0;class#AccountServiceTests#0" expanded="false" />
+            <element signature="e#1368#1369#0" expanded="true" />
+            <element signature="e#1419#1420#0" expanded="true" />
             <element signature="method#getAccount_withValidId#0;class#AccountServiceTests#0" expanded="false" />
             <element signature="method#getAccount_withInvalidId#0;class#AccountServiceTests#0" expanded="false" />
             <element signature="method#getAccountId_withValidEmail#0;class#AccountServiceTests#0" expanded="false" />
@@ -793,41 +828,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/VisitorExperimentServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="112" column="44" lean-forward="false" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="44" />
+        <state relative-caret-position="421">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
-            <element signature="e#650#660#0" expanded="false" />
-            <element signature="e#734#744#0" expanded="false" />
-            <element signature="e#818#828#0" expanded="false" />
-            <element signature="e#912#921#0" expanded="false" />
-            <element signature="method#ConsentService#0;class#ConsentService#0" expanded="false" />
-            <element signature="method#addNewAccount#0;class#ConsentService#0" expanded="false" />
-            <element signature="method#getAccountID#0;class#ConsentService#0" expanded="false" />
-            <element signature="method#checkAccountLogin#0;class#ConsentService#0" expanded="false" />
-            <element signature="method#getAccountsVisitors#0;class#ConsentService#0" expanded="false" />
-            <element signature="method#updateAccountConsent#0;class#ConsentService#0" expanded="false" />
-            <element signature="method#addNewVisitor#0;class#ConsentService#0" expanded="false" />
-            <element signature="method#updateVisitorConsent#0;class#ConsentService#0" expanded="false" />
-            <element signature="e#3632#3633#0" expanded="true" />
-            <element signature="e#3684#3685#0" expanded="true" />
-            <element signature="e#3745#3746#0" expanded="true" />
-            <element signature="e#3794#3795#0" expanded="true" />
-            <element signature="e#3861#3862#0" expanded="true" />
-            <element signature="e#3907#3908#0" expanded="true" />
-            <element signature="method#getVisitorExperiments#0;class#ConsentService#0" expanded="false" />
-            <element signature="method#doExperiment#0;class#ConsentService#0" expanded="false" />
-            <element signature="method#getExperimentConsent#0;class#ConsentService#0" expanded="false" />
-            <element signature="method#updateExperimentConsent#0;class#ConsentService#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="class#ConsentServiceImplTestContextConfiguration#0;class#VisitorExperimentServiceTests#0" expanded="false" />
           </folding>
         </state>
       </provider>

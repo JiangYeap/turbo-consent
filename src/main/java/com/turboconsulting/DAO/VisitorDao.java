@@ -3,6 +3,7 @@ package com.turboconsulting.DAO;
 import com.turboconsulting.Entity.Account;
 import com.turboconsulting.Entity.LoginDetails;
 import com.turboconsulting.Entity.Visitor;
+import com.turboconsulting.Entity.VisitorExperiment;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

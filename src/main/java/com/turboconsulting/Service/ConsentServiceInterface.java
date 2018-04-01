@@ -44,7 +44,7 @@ public interface ConsentServiceInterface {
     //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
     Iterable<Experiment> getVisitorExperiments(int id);
 
-    void doExperiment(int visitorId, int experimentId);
+    boolean doExperiment(int visitorId, int experimentId);
 
     String getExperimentConsent(int id, int experimentID);
 }

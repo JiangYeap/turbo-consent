@@ -7,7 +7,8 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         AccountServiceTests.class,
         VisitorServiceTests.class,
-        ExperimentServiceTests.class
+        ExperimentServiceTests.class,
+        VisitorExperimentServiceTests.class
 })
 
 public class JunitTestSuite {
