@@ -1,6 +1,5 @@
 package com.turboconsulting.DAO;
 
-import com.turboconsulting.Entity.Account;
 import com.turboconsulting.Entity.Experiment;
 import com.turboconsulting.Entity.Visitor;
 import com.turboconsulting.Entity.VisitorExperiment;
@@ -8,12 +7,14 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
+
 @Repository
-@Qualifier("sqlExperimentData")
-public interface ExperimentDao extends CrudRepository<Experiment, Integer> {
+@Qualifier("sqlVisitorExperimentData")
+public interface VisitorExperimentDao extends CrudRepository<VisitorExperiment, Integer>{
 
-    Experiment findById(int id);
+    VisitorExperiment findByVisitorAndExperiment(Visitor v, Experiment e);
 
-    Iterable<Experiment> findAllByVisitors(VisitorExperiment v);
+    Iterable<VisitorExperiment> findAllByVisitor(Visitor v);
 
 }

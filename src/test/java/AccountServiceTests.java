@@ -1,7 +1,9 @@
 import com.turboconsulting.DAO.AccountDao;
 import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
+import com.turboconsulting.DAO.VisitorExperimentDao;
 import com.turboconsulting.Entity.Account;
+import com.turboconsulting.Entity.ConsentLevel;
 import com.turboconsulting.Entity.LoginDetails;
 import com.turboconsulting.Service.ConsentService;
 import com.turboconsulting.Service.ConsentServiceInterface;
@@ -27,15 +29,14 @@ public class AccountServiceTests {
 
     @Autowired
     private ConsentService consentService;
-
     @MockBean
     private AccountDao accountDao;
-
     @MockBean
     private ExperimentDao experimentDao;
     @MockBean
     private VisitorDao visitorDao;
-
+    @MockBean
+    private VisitorExperimentDao visitorExperimentDao;
 
     @TestConfiguration
     static class ConsentServiceImplTestContextConfiguration {
@@ -49,29 +50,14 @@ public class AccountServiceTests {
 
     @Before
     public void setup() {
+
+        MockEntityFactory mockEntityFactory = new MockEntityFactory();
         ArrayList<Account> accounts = new ArrayList<>();
-        Account newAccount = new Account("Harry", "harry@bristol.ac.uk", "password");
-        newAccount.setAccountId(1);
-        accounts.add(newAccount);
-        Mockito.when(accountDao.findByAccountId(newAccount.getAccountId())).thenReturn(newAccount);
-        Mockito.when(accountDao.findByEmail(newAccount.getEmail())).thenReturn(newAccount);
 
-
-        newAccount = new Account("Finn", "finn@bristol.ac.uk", "password");
-        newAccount.setAccountId(2);
-        accounts.add(newAccount);
-        Mockito.when(accountDao.findByAccountId(newAccount.getAccountId())).thenReturn(newAccount);
-        Mockito.when(accountDao.findByEmail(newAccount.getEmail())).thenReturn(newAccount);
-
-        newAccount = new Account("Yeap", "yeap@bristol.ac.uk", "password");
-        newAccount.setAccountId(3);
-        accounts.add(newAccount);
-        Mockito.when(accountDao.findByAccountId(newAccount.getAccountId())).thenReturn(newAccount);
-        Mockito.when(accountDao.findByEmail(newAccount.getEmail())).thenReturn(newAccount);
-
+        accounts.add(mockEntityFactory.mockAccount(accountDao, "Harry", "harry@bristol.ac.uk", "password", 1));
+        accounts.add(mockEntityFactory.mockAccount(accountDao, "Finn", "finn@bristol.ac.uk", "password", 2));
+        accounts.add(mockEntityFactory.mockAccount(accountDao, "Yeap", "yeap@bristol.ac.uk", "password", 3));
         Mockito.when(accountDao.save(any(Account.class))).thenAnswer(AdditionalAnswers.<Account>returnsFirstArg());
-
-
         Mockito.when(accountDao.findAll()).thenReturn(accounts);
     }
 
@@ -121,11 +107,17 @@ public class AccountServiceTests {
         assertFalse(consentService.checkAccountLogin(loginDetails));
     }
 
-
     @Test
     public void addNewAccount_success()  {
         Account a = new Account("Harry", "harry@bristol.ac.uk", "password");
         assertTrue(consentService.addNewAccount(a));
+    }
+
+    @Test
+    public void updateAccountConsent_validConsentLevel()  {
+        Account found = consentService.getAccount(1);
+        assertEquals(found.getConsentLevel(), ConsentLevel.RESTRICTED);
+        assertTrue(consentService.updateAccountConsent(found.getAccountId(), ConsentLevel.NONE));
     }
 
 

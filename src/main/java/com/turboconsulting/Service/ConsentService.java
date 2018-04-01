@@ -3,15 +3,14 @@ package com.turboconsulting.Service;
 import com.turboconsulting.DAO.AccountDao;
 import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
+import com.turboconsulting.DAO.VisitorExperimentDao;
 import com.turboconsulting.Entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.GregorianCalendar;
 
 @Service
@@ -22,6 +21,10 @@ public class ConsentService implements ConsentServiceInterface {
     private VisitorDao visitorDao;
 
     @Autowired
+    @Qualifier("sqlVisitorExperimentData")
+    private VisitorExperimentDao visitorExperimentDao;
+
+    @Autowired
     @Qualifier("sqlAccountData")
     private AccountDao accountDao;
 
@@ -29,21 +32,20 @@ public class ConsentService implements ConsentServiceInterface {
     @Qualifier("sqlExperimentData")
     private ExperimentDao experimentDao;
 
-
     @Override
     @PostConstruct
     public void ConsentService() {
 
-//        accountDao.deleteAll();
-//        experimentDao.deleteAll();
-//        Account newAccount = new Account("Harry", "hw16471@bristol.ac.uk", "password");
-//        addNewAccount(newAccount);
-//
-//        Visitor newVisitor = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ), ConsentLevel.RESTRICTED);
-//        addNewVisitor(newVisitor, newAccount.getAccountId());
-//        Experiment newExperiment = new Experiment("Physics Experiment", "A lovely desciption.");
-//        addNewExperiment(newExperiment);
-//        doExperiment(newVisitor.getVisitorId(), newExperiment.getId());
+        accountDao.deleteAll();
+        experimentDao.deleteAll();
+        Account newAccount = new Account("Harry", "hw16471@bristol.ac.uk", "password");
+        addNewAccount(newAccount);
+
+        Visitor newVisitor = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ), ConsentLevel.RESTRICTED);
+        addNewVisitor(newVisitor, newAccount.getAccountId());
+        Experiment newExperiment = new Experiment("Physics Experiment", "A lovely desciption.");
+        addNewExperiment(newExperiment);
+        doExperiment(newVisitor.getVisitorId(), newExperiment.getId());
 
     }
 
@@ -67,7 +69,7 @@ public class ConsentService implements ConsentServiceInterface {
     }
     @Override
     public Iterable<Visitor> getAccountsVisitors(int aID) {
-        return accountDao.findOne(aID).getVisitors();
+        return visitorDao.findAllByAccount(accountDao.findOne(aID));
     }
     @Override
     public Iterable<Account> getAllAccounts(){
@@ -78,86 +80,90 @@ public class ConsentService implements ConsentServiceInterface {
         return accountDao.findByAccountId(id);
     }
     @Override
-    public void updateAccountConsent(int id, ConsentLevel c)  {
-        Account a = accountDao.findOne(id);
+    public boolean updateAccountConsent(int id, ConsentLevel c)  {
+        Account a = accountDao.findByAccountId(id);
         a.setConsentLevel(c);
-        accountDao.save(a);
+        return accountDao.save(a) != null;
     }
 
 
     //////////////////////////////////////////////////////////////////////////VISITOR FUNCTIONS
     @Override
-    public void addNewVisitor(Visitor v, int accountID)  {
-        v.setAccount(accountDao.findOne(accountID));
-        visitorDao.save(v);
+    public boolean addNewVisitor(Visitor v, int accountID)  {
+        v.setAccount(getAccount(accountID));
+        return visitorDao.save(v) != null;
     }
     @Override
     public Visitor getVisitor(int id)  {
-        return visitorDao.findOne(id);
+        return visitorDao.findByVisitorId(id);
     }
     @Override
     public Iterable<Visitor> getAllVisitors(){
         return visitorDao.findAll();
     }
     @Override
-    public void updateVisitorConsent(int id, ConsentLevel c)  {
-        Visitor v = visitorDao.findOne(id);
+    public boolean updateVisitorConsent(int id, ConsentLevel c)  {
+        Visitor v = getVisitor(id);
         v.setDefaultConsent(c);
-        visitorDao.save(v);
+        return visitorDao.save(v) != null;
     }
 
 
     //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
     @Override
-    public void addNewExperiment(Experiment e){
-        experimentDao.save(e);
+    public boolean addNewExperiment(Experiment e){
+        return experimentDao.save(e) != null;
     }
     @Override
     public Experiment getExperiment(int id)  {
-        return experimentDao.findOne(id);
+        return experimentDao.findById(id);
     }
     @Override
     public Iterable<Experiment> getAllExperiments(){
         return experimentDao.findAll();
     }
-    @Override
-    public void updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID)  {
-        Visitor v = visitorDao.findOne(visitorId);
-        for (VisitorExperiment ve : v.getExperiments())  {
-            if (ve.getExperiment().getId() == experimentID)  {
-                ve.setConsentLevel(c);
-                v.doExperiment(ve);
-            }
-        }
-        visitorDao.save(v);
-    }
+
 
 
     //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
     @Override
     public Iterable<Experiment> getVisitorExperiments(int id)  {
-        Collection<Experiment> experiments = new ArrayList<>();
-
-        Visitor v = visitorDao.findOne(id);
-        for (VisitorExperiment e :v.getExperiments())  {
-            experiments.add(e.getExperiment());
-        }
+        ArrayList<Experiment> experiments = new ArrayList<>();
+        visitorExperimentDao.findAllByVisitor(visitorDao.findByVisitorId(id)).forEach((ve)-> experiments.add(ve.getExperiment()));
         return experiments;
     }
     @Override
-    public void doExperiment(int visitorId, int experimentId)  {
-        VisitorExperiment e = new VisitorExperiment(visitorDao.findOne(visitorId), experimentDao.findOne(experimentId), ConsentLevel.RESTRICTED);
-        experimentDao.findOne(experimentId).doExperiment(e);
-        Visitor v = visitorDao.findOne(visitorId);
+    public boolean doExperiment(int visitorId, int experimentId)  {
+        VisitorExperiment e = new VisitorExperiment( visitorDao.findByVisitorId(visitorId),
+                                                     experimentDao.findById(experimentId));
+
+        experimentDao.findById(experimentId).doExperiment(e);
+        Visitor v = visitorDao.findByVisitorId(visitorId);
         v.doExperiment(e);
-        visitorDao.save(v);
+        return visitorDao.save(v) != null;
     }
     @Override
-    public String getExperimentConsent(int id, int experimentID)  {
-        Visitor v = visitorDao.findOne(id);
-        for (VisitorExperiment ve : v.getExperiments())  {
-            if (ve.getExperiment().getId() == experimentID)  return ve.getConsentLevel().toString();
-        }
-        return "NULL";
+    public String getExperimentConsent(int visitorID, int experimentID)  {
+        Visitor v = visitorDao.findByVisitorId(visitorID);
+        Experiment e = experimentDao.findById(experimentID);
+        VisitorExperiment visitorExperiment = visitorExperimentDao.findByVisitorAndExperiment(v, e);
+        return visitorExperiment == null ? "NULL" : visitorExperiment.getConsentLevel().toString();
+    }
+    @Override
+    public boolean updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID)  {
+        Visitor v = visitorDao.findByVisitorId(visitorId);
+        Experiment e = experimentDao.findById(experimentID);
+        if ( v == null || e == null )  return false;
+        VisitorExperiment visitorExperiment = visitorExperimentDao.findByVisitorAndExperiment(v, e);
+        visitorExperiment.setConsentLevel(c);
+        v.doExperiment(visitorExperiment);
+        return visitorDao.save(v) != null;
+    }
+    @Override
+    public int getPendingExperiments(int id)  {
+        int count = 0;
+        for (VisitorExperiment ve : visitorExperimentDao.findAllByVisitor(visitorDao.findByVisitorId(id)))  count += ve.getConsentChanged()? 1 : 0;
+        return count;
+
     }
 }
