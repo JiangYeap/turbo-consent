@@ -34,16 +34,16 @@ public class ConsentService implements ConsentServiceInterface {
     @PostConstruct
     public void ConsentService() {
 
-        accountDao.deleteAll();
-        experimentDao.deleteAll();
-        Account newAccount = new Account("Harry", "hw16471@bristol.ac.uk", "password");
-        addNewAccount(newAccount);
-
-        Visitor newVisitor = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ), ConsentLevel.RESTRICTED);
-        addNewVisitor(newVisitor, newAccount.getAccountId());
-        Experiment newExperiment = new Experiment("Physics Experiment", "A lovely desciption.");
-        addNewExperiment(newExperiment);
-        doExperiment(newVisitor.getVisitorId(), newExperiment.getId());
+//        accountDao.deleteAll();
+//        experimentDao.deleteAll();
+//        Account newAccount = new Account("Harry", "hw16471@bristol.ac.uk", "password");
+//        addNewAccount(newAccount);
+//
+//        Visitor newVisitor = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ), ConsentLevel.RESTRICTED);
+//        addNewVisitor(newVisitor, newAccount.getAccountId());
+//        Experiment newExperiment = new Experiment("Physics Experiment", "A lovely desciption.");
+//        addNewExperiment(newExperiment);
+//        doExperiment(newVisitor.getVisitorId(), newExperiment.getId());
 
     }
 
@@ -109,28 +109,18 @@ public class ConsentService implements ConsentServiceInterface {
 
     //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
     @Override
-    public void addNewExperiment(Experiment e){
-        experimentDao.save(e);
+    public boolean addNewExperiment(Experiment e){
+        return experimentDao.save(e) != null;
     }
     @Override
     public Experiment getExperiment(int id)  {
-        return experimentDao.findOne(id);
+        return experimentDao.findById(id);
     }
     @Override
     public Iterable<Experiment> getAllExperiments(){
         return experimentDao.findAll();
     }
-    @Override
-    public void updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID)  {
-        Visitor v = visitorDao.findOne(visitorId);
-        for (VisitorExperiment ve : v.getExperiments())  {
-            if (ve.getExperiment().getId() == experimentID)  {
-                ve.setConsentLevel(c);
-                v.doExperiment(ve);
-            }
-        }
-        visitorDao.save(v);
-    }
+
 
 
     //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
@@ -159,5 +149,16 @@ public class ConsentService implements ConsentServiceInterface {
             if (ve.getExperiment().getId() == experimentID)  return ve.getConsentLevel().toString();
         }
         return "NULL";
+    }
+    @Override
+    public void updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID)  {
+        Visitor v = visitorDao.findOne(visitorId);
+        for (VisitorExperiment ve : v.getExperiments())  {
+            if (ve.getExperiment().getId() == experimentID)  {
+                ve.setConsentLevel(c);
+                v.doExperiment(ve);
+            }
+        }
+        visitorDao.save(v);
     }
 }

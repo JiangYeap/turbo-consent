@@ -33,7 +33,7 @@ public interface ConsentServiceInterface {
     boolean updateVisitorConsent(int id, ConsentLevel c);
 
     //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
-    void addNewExperiment(Experiment e);
+    boolean addNewExperiment(Experiment e);
 
     Experiment getExperiment(int id);
 

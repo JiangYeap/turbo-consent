@@ -1,7 +1,9 @@
 import com.turboconsulting.DAO.AccountDao;
+import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
 import com.turboconsulting.Entity.Account;
 import com.turboconsulting.Entity.ConsentLevel;
+import com.turboconsulting.Entity.Experiment;
 import com.turboconsulting.Entity.Visitor;
 import org.mockito.Mockito;
 
@@ -23,6 +25,14 @@ public class MockEntityFactory {
         newVisitor.setAccount(account);
         Mockito.when(visitorDao.findByVisitorId(newVisitor.getVisitorId())).thenReturn(newVisitor);
         return newVisitor;
+    }
+
+    public Experiment mockExperiment(ExperimentDao experimentDao, String name, String description, int id)  {
+        Experiment newExperiment = new Experiment(name, description);
+        newExperiment.setId(id);
+        Mockito.when(experimentDao.findById(newExperiment.getId())).thenReturn(newExperiment);
+        return newExperiment;
+
     }
 
 }

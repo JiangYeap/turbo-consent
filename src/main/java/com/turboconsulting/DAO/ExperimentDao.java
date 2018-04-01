@@ -10,5 +10,6 @@ import org.springframework.stereotype.Repository;
 @Qualifier("sqlExperimentData")
 public interface ExperimentDao extends CrudRepository<Experiment, Integer> {
 
+    Experiment findById(int id);
 
 }
