@@ -21,6 +21,4 @@ public interface VisitorDao extends CrudRepository<Visitor, Integer> {
 
     Iterable<Visitor> findAllByAccount(Account account);
 
-    @Query("select name from visitor where visitor_id=:id")
-    String findNameByVisitorId(int id);
 }

@@ -3,6 +3,7 @@ package com.turboconsulting.Service;
 import com.turboconsulting.DAO.AccountDao;
 import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
+import com.turboconsulting.DAO.VisitorExperimentDao;
 import com.turboconsulting.Entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -20,6 +21,10 @@ public class ConsentService implements ConsentServiceInterface {
     @Autowired
     @Qualifier("sqlVisitorData")
     private VisitorDao visitorDao;
+
+    @Autowired
+    @Qualifier("sqlVisitorExperimentData")
+    private VisitorExperimentDao visitorExperimentDao;
 
     @Autowired
     @Qualifier("sqlAccountData")
