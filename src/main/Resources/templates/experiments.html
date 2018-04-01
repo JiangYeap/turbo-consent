@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/responsive-tables.css}" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/responsive-tables.js}"></script>
     <script async="async" type="text/javascript" th:src="@{/js/bulma.js}"></script>
     <script async="async" type="text/javascript" th:src="@{/js/session.js}"></script>
 </head>
@@ -110,7 +112,7 @@
 
     <section class="section">
         <form class="consent-pending" th:method="post">
-            <table class="features table is-hoverable is-fullwidth is-striped">
+            <table class="features table is-hoverable is-fullwidth is-striped responsive">
                 <thead class="thead">
                     <nav class="breadcrumb is-large" aria-label="breadcrumbs">
                         <ul>
@@ -121,7 +123,7 @@
                 </thead>
                 <tbody class="tbody">
                     <tr>
-                        <th class="hentry"><a class="button toggle-p is-size-6">Select All</a></th>
+                        <th class="hentry is-size-6"><a class="button toggle-p is-hidden-mobile">Select All</a><span class="is-hidden-desktop">Select</span></th>
                         <th class="hentry is-size-6" style="vertical-align: middle">Experiment Title</th>
                         <th class="hentry is-size-6" style="vertical-align: middle">Experiment Date</th>
                         <th class="hentry is-size-6" style="vertical-align: middle">Consent Status</th>
@@ -160,8 +162,8 @@
             </div>
         </form>
 
-        <form class="reviewed is-hidden">
-            <table class="table is-hoverable is-fullwidth is-striped" align="center">
+        <form class="reviewed is-hidden" method="post">
+            <table class="features table is-hoverable is-fullwidth is-striped responsive">
                 <thead class="thead">
                     <nav class="breadcrumb is-large" aria-label="breadcrumbs">
                         <ul>
@@ -172,7 +174,7 @@
                 </thead>
                 <tbody class="tbody">
                     <tr>
-                        <th class="hentry"><a class="button toggle-r is-size-6">Select All</a></th>
+                        <th class="hentry is-size-6"><a class="button toggle-r is-hidden-mobile">Select All</a><span class="is-hidden-desktop">Select</span></th>
                         <th class="hentry is-size-6" style="vertical-align: middle">Experiment Title</th>
                         <th class="hentry is-size-6" style="vertical-align: middle">Experiment Date</th>
                         <th class="hentry is-size-6" style="vertical-align: middle">Consent Status</th>
