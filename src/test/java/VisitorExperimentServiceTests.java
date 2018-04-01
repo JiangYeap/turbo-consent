@@ -4,9 +4,11 @@ import com.turboconsulting.DAO.VisitorDao;
 import com.turboconsulting.Entity.Account;
 import com.turboconsulting.Entity.Experiment;
 import com.turboconsulting.Entity.Visitor;
+import com.turboconsulting.Entity.VisitorExperiment;
 import com.turboconsulting.Service.ConsentService;
 import com.turboconsulting.Service.ConsentServiceInterface;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.AdditionalAnswers;
 import org.mockito.Mockito;
@@ -18,6 +20,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 
 @RunWith(SpringRunner.class)
@@ -51,6 +55,7 @@ public class VisitorExperimentServiceTests {
         ArrayList<Account> accounts = new ArrayList<>();
         ArrayList<Visitor> visitors = new ArrayList<>();
         ArrayList<Experiment> experiments = new ArrayList<>();
+        ArrayList<VisitorExperiment> visitorExperiments = new ArrayList<>();
 
 
         accounts.add(mockEntityFactory.mockAccount(accountDao, "Harry", "harry@bristol.ac.uk", "password",1));
@@ -69,7 +74,31 @@ public class VisitorExperimentServiceTests {
         Mockito.when(experimentDao.save(any(Experiment.class))).thenAnswer(AdditionalAnswers.<Account>returnsFirstArg());
         Mockito.when(experimentDao.findAll()).thenReturn(experiments);
 
+        visitorExperiments.add(mockEntityFactory.mockVisitorExperiment(visitorDao, experimentDao, 1, 1));
+        visitorExperiments.add(mockEntityFactory.mockVisitorExperiment(visitorDao, experimentDao, 1, 1));
+
     }
 
+    @Test
+    public void getVisitorExperiments_success()  {
+        Iterable<Experiment> experiments = consentService.getVisitorExperiments(1);
+        for ( Experiment experiment : experiments)  {
+            assertEquals(experiment.getName(), "Physics Experiment");
+        }
+    }
+
+    @Test
+    public void addVisitorExperiment_success()  {
+        assertTrue(consentService.doExperiment(1, 2));
+        Iterable<Experiment> experiments = consentService.getVisitorExperiments(1);
+        ArrayList<String> experimentNames = new ArrayList<>();
+        experimentNames.add("Physics Experiment");
+        experimentNames.add("Physics Experiment");
+        experimentNames.add("Chemistry Experiment");
+        for ( Experiment experiment : experiments)  {
+            experimentNames.remove(experiment.getName());
+        }
+        assertEquals(experimentNames.size(), 0);
+    }
 
 }

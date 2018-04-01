@@ -147,7 +147,7 @@ public class ConsentService implements ConsentServiceInterface {
     }
     @Override
     public String getExperimentConsent(int id, int experimentID)  {
-        Visitor v = visitorDao.findOne(id);
+        Visitor v = visitorDao.findByVisitorId(id);
         for (VisitorExperiment ve : v.getExperiments())  {
             if (ve.getExperiment().getId() == experimentID)  return ve.getConsentLevel().toString();
         }
