@@ -31,7 +31,7 @@ public class VisitorExperiment {
         this.visitor = v;
         this.experiment = e;
         this.consentLevel = v.getDefaultConsent();
-        changedConsent = false;
+        this.changedConsent = false;
     }
 
     public void setVisitor(Visitor visitor) {
