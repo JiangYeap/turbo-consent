@@ -1,6 +1,7 @@
 import com.turboconsulting.DAO.AccountDao;
 import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
+import com.turboconsulting.DAO.VisitorExperimentDao;
 import com.turboconsulting.Entity.*;
 import org.mockito.Mockito;
 
@@ -35,12 +36,15 @@ public class MockEntityFactory {
         return newExperiment;
     }
 
-    public VisitorExperiment mockVisitorExperiment(VisitorDao visitorDao, ExperimentDao experimentDao, int visitorId, int experimentId)  {
+    public VisitorExperiment mockVisitorExperiment(VisitorDao visitorDao, ExperimentDao experimentDao, VisitorExperimentDao visitorExperimentDao, int visitorId, int experimentId)  {
         VisitorExperiment visitorExperiment = new VisitorExperiment(
                 visitorDao.findByVisitorId(visitorId),
-                experimentDao.findById(experimentId),
-                visitorDao.findByVisitorId(visitorId).getDefaultConsent());
-        visitorDao.findByVisitorId(visitorId).addExperiment(visitorExperiment);
+                experimentDao.findById(experimentId));
+        Visitor v = visitorDao.findByVisitorId(visitorId);
+        Experiment e = experimentDao.findById(experimentId);
+        v.addExperiment(visitorExperiment);
+        Mockito.when(visitorExperimentDao.findAllByVisitor(v)).thenReturn(v.getExperiments());
+        Mockito.when(visitorExperimentDao.findByVisitorAndExperiment(v, e)).thenReturn(visitorExperiment);
         return visitorExperiment;
     }
 

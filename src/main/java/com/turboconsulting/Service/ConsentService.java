@@ -7,12 +7,10 @@ import com.turboconsulting.DAO.VisitorExperimentDao;
 import com.turboconsulting.Entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.GregorianCalendar;
 
 @Service
@@ -33,7 +31,6 @@ public class ConsentService implements ConsentServiceInterface {
     @Autowired
     @Qualifier("sqlExperimentData")
     private ExperimentDao experimentDao;
-
 
     @Override
     @PostConstruct
@@ -131,19 +128,14 @@ public class ConsentService implements ConsentServiceInterface {
     //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
     @Override
     public Iterable<Experiment> getVisitorExperiments(int id)  {
-        Collection<Experiment> experiments = new ArrayList<>();
-
-        Visitor v = visitorDao.findByVisitorId(id);
-        for (VisitorExperiment e : v.getExperiments())  {
-            experiments.add(e.getExperiment());
-        }
+        ArrayList<Experiment> experiments = new ArrayList<>();
+        visitorExperimentDao.findAllByVisitor(visitorDao.findByVisitorId(id)).forEach((ve)-> experiments.add(ve.getExperiment()));
         return experiments;
     }
     @Override
     public boolean doExperiment(int visitorId, int experimentId)  {
         VisitorExperiment e = new VisitorExperiment( visitorDao.findByVisitorId(visitorId),
-                                                     experimentDao.findById(experimentId),
-                                                     visitorDao.findByVisitorId(visitorId).getDefaultConsent());
+                                                     experimentDao.findById(experimentId));
 
         experimentDao.findById(experimentId).doExperiment(e);
         Visitor v = visitorDao.findByVisitorId(visitorId);
@@ -151,22 +143,27 @@ public class ConsentService implements ConsentServiceInterface {
         return visitorDao.save(v) != null;
     }
     @Override
-    public String getExperimentConsent(int id, int experimentID)  {
-        Visitor v = visitorDao.findByVisitorId(id);
-        for (VisitorExperiment ve : v.getExperiments())  {
-            if (ve.getExperiment().getId() == experimentID)  return ve.getConsentLevel().toString();
-        }
-        return "NULL";
+    public String getExperimentConsent(int visitorID, int experimentID)  {
+        Visitor v = visitorDao.findByVisitorId(visitorID);
+        Experiment e = experimentDao.findById(experimentID);
+        VisitorExperiment visitorExperiment = visitorExperimentDao.findByVisitorAndExperiment(v, e);
+        return visitorExperiment == null ? "NULL" : visitorExperiment.getConsentLevel().toString();
     }
     @Override
-    public void updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID)  {
-        Visitor v = visitorDao.findOne(visitorId);
-        for (VisitorExperiment ve : v.getExperiments())  {
-            if (ve.getExperiment().getId() == experimentID)  {
-                ve.setConsentLevel(c);
-                v.doExperiment(ve);
-            }
-        }
-        visitorDao.save(v);
+    public boolean updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID)  {
+        Visitor v = visitorDao.findByVisitorId(visitorId);
+        Experiment e = experimentDao.findById(experimentID);
+        if ( v == null || e == null )  return false;
+        VisitorExperiment visitorExperiment = visitorExperimentDao.findByVisitorAndExperiment(v, e);
+        visitorExperiment.setConsentLevel(c);
+        v.doExperiment(visitorExperiment);
+        return visitorDao.save(v) != null;
+    }
+    @Override
+    public int getPendingExperiments(int id)  {
+        int count = 0;
+        for (VisitorExperiment ve : visitorExperimentDao.findAllByVisitor(visitorDao.findByVisitorId(id)))  count += ve.getConsentChanged()? 1 : 0;
+        return count;
+
     }
 }

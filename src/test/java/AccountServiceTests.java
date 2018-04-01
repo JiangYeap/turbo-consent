@@ -1,6 +1,7 @@
 import com.turboconsulting.DAO.AccountDao;
 import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
+import com.turboconsulting.DAO.VisitorExperimentDao;
 import com.turboconsulting.Entity.Account;
 import com.turboconsulting.Entity.ConsentLevel;
 import com.turboconsulting.Entity.LoginDetails;
@@ -28,15 +29,14 @@ public class AccountServiceTests {
 
     @Autowired
     private ConsentService consentService;
-
     @MockBean
     private AccountDao accountDao;
-
     @MockBean
     private ExperimentDao experimentDao;
     @MockBean
     private VisitorDao visitorDao;
-
+    @MockBean
+    private VisitorExperimentDao visitorExperimentDao;
 
     @TestConfiguration
     static class ConsentServiceImplTestContextConfiguration {

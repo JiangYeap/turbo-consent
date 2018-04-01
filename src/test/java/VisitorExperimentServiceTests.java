@@ -1,10 +1,8 @@
 import com.turboconsulting.DAO.AccountDao;
 import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
-import com.turboconsulting.Entity.Account;
-import com.turboconsulting.Entity.Experiment;
-import com.turboconsulting.Entity.Visitor;
-import com.turboconsulting.Entity.VisitorExperiment;
+import com.turboconsulting.DAO.VisitorExperimentDao;
+import com.turboconsulting.Entity.*;
 import com.turboconsulting.Service.ConsentService;
 import com.turboconsulting.Service.ConsentServiceInterface;
 import org.junit.Before;
@@ -20,6 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 
+import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
@@ -29,14 +28,14 @@ public class VisitorExperimentServiceTests {
 
     @Autowired
     private ConsentService consentService;
-
     @MockBean
     private AccountDao accountDao;
-
     @MockBean
     private ExperimentDao experimentDao;
     @MockBean
     private VisitorDao visitorDao;
+    @MockBean
+    private VisitorExperimentDao visitorExperimentDao;
 
 
     @TestConfiguration
@@ -74,8 +73,8 @@ public class VisitorExperimentServiceTests {
         Mockito.when(experimentDao.save(any(Experiment.class))).thenAnswer(AdditionalAnswers.<Account>returnsFirstArg());
         Mockito.when(experimentDao.findAll()).thenReturn(experiments);
 
-        visitorExperiments.add(mockEntityFactory.mockVisitorExperiment(visitorDao, experimentDao, 1, 1));
-        visitorExperiments.add(mockEntityFactory.mockVisitorExperiment(visitorDao, experimentDao, 1, 1));
+        visitorExperiments.add(mockEntityFactory.mockVisitorExperiment(visitorDao, experimentDao, visitorExperimentDao,  1, 1));
+        visitorExperiments.add(mockEntityFactory.mockVisitorExperiment(visitorDao, experimentDao, visitorExperimentDao, 1, 1));
 
     }
 
@@ -99,6 +98,35 @@ public class VisitorExperimentServiceTests {
             experimentNames.remove(experiment.getName());
         }
         assertEquals(experimentNames.size(), 0);
+    }
+
+    @Test
+    public void getExperimentConsent_success()  {
+        assertEquals(consentService.getExperimentConsent(1, 1), "RESTRICTED");
+
+    }
+    @Test
+    public void getExperimentConsent_failure()  {
+        assertEquals(consentService.getExperimentConsent(1000, 1), "NULL");
+        assertEquals(consentService.getExperimentConsent(-1, 1000), "NULL");
+        assertEquals(consentService.getExperimentConsent(1000, -1), "NULL");
+        assertEquals(consentService.getExperimentConsent(-1, -1), "NULL");
+
+    }
+
+    @Test
+    public void updateExperimentConsent_success()  {
+        assertEquals(consentService.getExperimentConsent(1, 1), "RESTRICTED");
+        assertTrue(consentService.updateExperimentConsent(1, ConsentLevel.NONE, 1));
+        assertEquals(consentService.getExperimentConsent(1, 1), "NONE");
+        assertTrue(consentService.updateExperimentConsent(1, ConsentLevel.UNRESTRICTED, 1));
+        assertEquals(consentService.getExperimentConsent(1, 1), "UNRESTRICTED");
+    }
+    @Test
+    public void updateExperimentConsent_failure()  {
+        assertEquals(consentService.getExperimentConsent(1, 1), "RESTRICTED");
+        assertFalse(consentService.updateExperimentConsent(1, ConsentLevel.NONE, -1));
+        assertEquals(consentService.getExperimentConsent(1, 1), "RESTRICTED");
     }
 
 }

@@ -19,12 +19,19 @@ public class VisitorExperiment {
 
     private ConsentLevel consentLevel;
 
+    public Visitor getVisitor() {
+        return visitor;
+    }
+
+    private boolean changedConsent;
+
     public VisitorExperiment(){}
 
-    public VisitorExperiment(Visitor v, Experiment e, ConsentLevel consentLevel) {
+    public VisitorExperiment(Visitor v, Experiment e) {
         this.visitor = v;
-        this.experiment=e;
+        this.experiment = e;
         this.consentLevel = v.getDefaultConsent();
+        this.changedConsent = false;
     }
 
     public void setVisitor(Visitor visitor) {
@@ -39,6 +46,7 @@ public class VisitorExperiment {
         return consentLevel;
     }
     public void setConsentLevel(ConsentLevel consentLevel) {
+        changedConsent = true;
         this.consentLevel = consentLevel;
     }
 
@@ -47,6 +55,13 @@ public class VisitorExperiment {
     }
     public void setCompoundKey(int compoundKey) {
         this.compoundKey = compoundKey;
+    }
+
+    public boolean getConsentChanged() {
+        return changedConsent;
+    }
+    public void setChangedConsent(boolean changedConsent) {
+        this.changedConsent = changedConsent;
     }
 
     public Experiment getExperiment() {
