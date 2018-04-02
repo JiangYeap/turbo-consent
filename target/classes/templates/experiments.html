@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/responsive-tables.css}" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/responsive-tables.js}"></script>
     <script async="async" type="text/javascript" th:src="@{/js/bulma.js}"></script>
     <script async="async" type="text/javascript" th:src="@{/js/session.js}"></script>
 </head>
 <body>
 
-<!-- Navigation bar start -->
+    <!-- Navigation bar start -->
     <nav class="navbar is-dark has-shadow">
         <div class="container">
             <div class="navbar-brand">
@@ -78,7 +81,7 @@
         <div class="modal-background" onclick="closeModal()"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title has-text-weight-semibold is-size-3-desktop">Know Your Consents</p>
+                <p class="modal-card-title has-text-weight-semibold is-size-3-desktop">Your Options</p>
                 <button class="delete is-medium" onclick="closeModal()" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
@@ -108,76 +111,119 @@
     </div>
 
     <section class="section">
-        <form th:method="post">
-            <table class="features table is-hoverable is-fullwidth is-striped">
+        <form class="consent-pending" th:method="post">
+            <table class="features table is-hoverable is-fullwidth is-striped responsive">
                 <thead class="thead">
-                    <h1 class="title is-size-2">Consent-Pending Experiments</h1>
+                    <nav class="breadcrumb is-large" aria-label="breadcrumbs">
+                        <ul>
+                            <li class="is-active"><a>Consent-Pending Experiments</a></li>
+                            <li><a onclick="showR()">Reviewed Experiments</a></li>
+                        </ul>
+                    </nav>
                 </thead>
                 <tbody class="tbody">
                     <tr>
-                        <th class="hentry">Select</th>
-                        <th class="hentry">Experiment Title</th>
-                        <th class="hentry">Experiment Date</th>
-                        <th class="hentry">Consent Status</th>
+                        <th class="hentry is-size-6"><a class="button toggle-p is-hidden-mobile">Select All</a><span class="is-hidden-desktop">Select</span></th>
+                        <th class="hentry is-size-6" style="vertical-align: middle">Experiment Title</th>
+                        <th class="hentry is-size-6" style="vertical-align: middle">Experiment Date</th>
+                        <th class="hentry is-size-6" style="vertical-align: middle">Consent Status</th>
                     </tr>
 
                     <tr th:each="e:${experiments}">
-                        <td class="dentry"><input type="checkbox" name="selected" th:value="${e.id}" /></td>
-                        <td class="dentry"><a th:href="@{/{aID}/visitors/{vID}/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${e.id})}" th:text="${e.name}">Physics Experiment</a></td>
-                        <td class="dentry">19/3/2018</td>
-                        <td class="dentry">Pending</td>
+                        <td class="dentry is-size-6"><input class="pending" type="checkbox" name="selected" th:value="${e.id}" /></td>
+                        <td class="dentry is-size-6"><a th:href="@{/{aID}/visitors/{vID}/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${e.id})}" th:text="${e.name}">Physics Experiment</a></td>
+                        <td class="dentry is-size-6">19/3/2018</td>
+                        <td class="dentry is-size-6">Pending</td>
                     </tr>
                 </tbody>
             </table>
 
-            <div class="control">
-                <label class="radio"><input type="radio" name="clevel" value="2" />&nbsp;Full Consent</label>
-                <label class="radio"><input type="radio" name="clevel" value="1" />&nbsp;Anonymous</label>
-                <label class="radio"><input type="radio" name="clevel" value="0" />&nbsp;No Consent</label>
-                <label class="radio" th:classappend="${true ? null : 'is-hidden'}"><input type="radio" name="clevel" value="3" />&nbsp;Custom Consent</label>
+            <div class="box">
+                <h1 class="subtitle" >
+                    Select Consent Level For <span id="p-selected"></span> Experiment(s)&nbsp;
+                    <a class="fa fa-question-circle" onclick="openModal()"></a>
+                </h1>
+                <ul>
+                    <li>
+                        <label class="radio"><input type="radio" name="clevel" value="2" />&nbsp;Full Consent</label>
+                    </li>
+                    <li>
+                        <label class="radio"><input type="radio" name="clevel" value="1" />&nbsp;Anonymous</label>
+                    </li>
+                    <li>
+                        <label class="radio"><input type="radio" name="clevel" value="0" />&nbsp;No Consent</label>
+                    </li>
+                    <li>
+                        <label class="radio" th:classappend="${true ? null : 'is-hidden'}"><input type="radio" name="clevel" value="3" />&nbsp;Custom Consent</label>
+                    </li>
+                </ul>
+                <br />
+                <button type="submit" class="button is-link">Apply Consent Option</button>
             </div>
-
-            <button type="submit" class="button">Submit Consents</button>
         </form>
 
-        <form>
-            <table class="table is-hoverable is-fullwidth is-striped" align="center">
+        <form class="reviewed is-hidden" method="post">
+            <table class="features table is-hoverable is-fullwidth is-striped responsive">
                 <thead class="thead">
-                <h1 class="title is-size-2">Reviewed Experiments</h1>
+                    <nav class="breadcrumb is-large" aria-label="breadcrumbs">
+                        <ul>
+                            <li><a onclick="showCP()">Consent-Pending Experiments</a></li>
+                            <li class="is-active"><a>Reviewed Experiments</a></li>
+                        </ul>
+                    </nav>
                 </thead>
                 <tbody class="tbody">
-                <tr>
-                    <th>Select</th>
-                    <th>Experiment Title</th>
-                    <th>Experiment Date</th>
-                    <th>Consent Status</th>
-                </tr>
+                    <tr>
+                        <th class="hentry is-size-6"><a class="button toggle-r is-hidden-mobile">Select All</a><span class="is-hidden-desktop">Select</span></th>
+                        <th class="hentry is-size-6" style="vertical-align: middle">Experiment Title</th>
+                        <th class="hentry is-size-6" style="vertical-align: middle">Experiment Date</th>
+                        <th class="hentry is-size-6" style="vertical-align: middle">Consent Status</th>
+                    </tr>
 
-                <tr>
-                    <td><input type="checkbox" /></td>
-                    <td>Physics Experiment</td>
-                    <td>19/3/2018</td>
-                    <td>Full Consent</td>
-                </tr>
-
-                <tr>
-                    <td><input type="checkbox" /></td>
-                    <td>Physics Experiment</td>
-                    <td>19/3/2018</td>
-                    <td>Anonymous</td>
-                </tr>
+                    <tr th:each="e:${experiments}">
+                        <td class="dentry is-size-6"><input class="rev" type="checkbox" name="selected" th:value="${e.id}" /></td>
+                        <td class="dentry is-size-6"><a th:href="@{/{aID}/visitors/{vID}/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${e.id})}" th:text="${e.name}">Physics Experiment</a></td>
+                        <td class="dentry is-size-6">19/3/2018</td>
+                        <td class="dentry is-size-6">Pending</td>
+                    </tr>
                 </tbody>
             </table>
-            <div class="control">
-                <label class="radio"><input type="radio" name="clevel" value="2" />&nbsp;Full Consent</label>
-                <label class="radio"><input type="radio" name="clevel" value="1" />&nbsp;Anonymous</label>
-                <label class="radio"><input type="radio" name="clevel" value="0" />&nbsp;No Consent</label>
-                <label class="radio"><input type="radio" name="clevel" value="3" disabled="disabled" />&nbsp;Custom Consent</label>
-            </div>
 
-            <button type="submit" class="button">Update Consents</button>
+            <div class="box">
+                <h1 class="subtitle" >
+                    Update Consent Level For <span id="r-selected"></span> Experiment(s)&nbsp;
+                    <a class="fa fa-question-circle" onclick="openModal()"></a>
+                </h1>
+                <ul>
+                    <li>
+                        <label class="radio"><input type="radio" name="clevel" value="2" />&nbsp;Full Consent</label>
+                    </li>
+                    <li>
+                        <label class="radio"><input type="radio" name="clevel" value="1" />&nbsp;Anonymous</label>
+                    </li>
+                    <li>
+                        <label class="radio"><input type="radio" name="clevel" value="0" />&nbsp;No Consent</label>
+                    </li>
+                    <li>
+                        <label class="radio" th:classappend="${true ? null : 'is-hidden'}"><input type="radio" name="clevel" value="3" />&nbsp;Custom Consent</label>
+                    </li>
+                </ul>
+                <br />
+                <button type="submit" class="button is-link">Apply Consent Option</button>
+            </div>
         </form>
     </section>
 
+    <!-- Footer start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>Copyright © 2018 Turbo Consulting</p>
+                <a href="#">Terms of Use</a> &nbsp;·&nbsp;
+                <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+                <a href="#">Accessibility</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

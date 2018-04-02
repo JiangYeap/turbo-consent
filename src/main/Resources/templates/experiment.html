@@ -1,19 +1,73 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>Experiment</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    </head>
-    <tbody>
-        <h1>Experiment Page</h1>
-        <p th:text="'Experiment Name: ' + ${eDetails.name}" />
-        <p th:text="'Experiment Details: ' + ${eDetails.description}" />
-        <p th:text="'Current Experiment Consent: ' + ${consentValue} "/>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experiment | Turbo Consent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
+    <script async="async" type="text/javascript" th:src="@{/js/bulma.js}"></script>
+</head>
+<body>
+    <!-- Navigation bar start -->
+    <nav class="navbar is-dark has-shadow">
+        <div class="container">
+            <div class="navbar-brand">
+                <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                    <img src="" th:src="@{/media/wtc_logo.gif}" alt="Logo" />
+                    <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
+                </a>
+                <span class="navbar-burger burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                        Home
+                    </a>
+                    <a th:href="@{/{aID}/visitors(aID=${aID})}" class="navbar-item">
+                        Visitors
+                    </a>
+                    <a th:href="@{/{aID}/settings(aID=${aID})}" class="navbar-item">
+                        Settings
+                    </a>
+                    <a th:href="@{/login}" class="navbar-item has-text-danger is-hidden-desktop">
+                        Log Out
+                    </a>
+                    <span class="navbar-item is-hidden-touch">
+                        <a th:href="@{/login}" class="button is-danger is-inverted is-outlined">Log Out</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-        <form th:action="@{/{aID}/visitors/{vID}/experiments/{eID}/updateConsent(aID=${aID}, vID=${vID}, eID=${eID})}" th:method="post">
-            <p>Default Consent Level: <input name="consent" id="consent" type="text" th:value="${consent}"  /></p>
-            <button type="submit">submit</button>
-        </form>
+    <!-- Banner start -->
+    <section class="hero is-warning is-2 is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title" th:text="${eDetails.name}">
+                    Experiment Title
+                </h1>
+                <h2 class="subtitle">
+                    Together with We The Curious, we make sure your data are consented
+                    before being used in research. Keeping them safe and secured is our
+                    uppermost priority.
+                </h2>
+            </div>
+        </div>
+    </section>
 
-    </tbody>
-</html>
+    <div class="box cta">
+        <p class="has-text-centered">
+            <span class="tag has-text-weight-semibold is-danger" th:inline="text">New !</span>
+            &nbsp;You have a total of [[$]] unconsented data, check them out under the
+            <a th:href="@{/{aID}/visitors(aID=${aID})}">Visitors</a> section now&nbsp;!
+        </p>
+    </div>
+</body>
