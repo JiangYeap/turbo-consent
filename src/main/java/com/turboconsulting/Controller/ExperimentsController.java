@@ -24,6 +24,7 @@ public class ExperimentsController {
 
         m.addAttribute("experiments", consentService.getVisitorExperiments(vID));
         m.addAttribute("name", consentService.getVisitor(vID).getName());
+        m.addAttribute("pendingExperiments", consentService.getPendingExperiments(vID));
         return "experiments";
     }
 

@@ -160,10 +160,9 @@ public class ConsentService implements ConsentServiceInterface {
         return visitorDao.save(v) != null;
     }
     @Override
-    public int getPendingExperiments(int id)  {
-        int count = 0;
-        for (VisitorExperiment ve : visitorExperimentDao.findAllByVisitor(visitorDao.findByVisitorId(id)))  count += ve.getConsentChanged()? 1 : 0;
-        return count;
+    public int getPendingExperiments(int visitorId)  {
+        return visitorDao.findByVisitorId(visitorId).getPendingExperiments();
 
     }
+
 }

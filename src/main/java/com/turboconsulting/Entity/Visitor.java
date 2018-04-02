@@ -84,5 +84,11 @@ public class Visitor {
         this.account = account;
     }
 
+    public int getPendingExperiments()  {
+        int count = 0;
+        for (VisitorExperiment ve : experiments)
+            count += ve.getConsentChanged()? 0 : 1;
+        return count;
+    }
 
 }
