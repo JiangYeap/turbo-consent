@@ -1,5 +1,7 @@
 package com.turboconsulting.Controller;
 
+import com.turboconsulting.Entity.Experiment;
+import com.turboconsulting.Entity.VisitorExperiment;
 import com.turboconsulting.Service.ConsentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.ArrayList;
+
 @Controller
 public class ExperimentsController {
 
@@ -21,10 +25,9 @@ public class ExperimentsController {
     public String experimentsPage(Model m,
                            @PathVariable(value="aID") int aID,
                            @PathVariable(value="vID") int vID  ) {
-
         m.addAttribute("experiments", consentService.getVisitorExperiments(vID));
+
         m.addAttribute("name", consentService.getVisitor(vID).getName());
-        m.addAttribute("pendingExperiments", consentService.getPendingExperiments(vID));
         return "experiments";
     }
 

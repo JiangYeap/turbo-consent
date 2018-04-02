@@ -71,4 +71,10 @@ public class VisitorExperiment {
         return experiment;
     }
 
+    public GregorianCalendar getDate() {
+        return date;
+    }
+    public void setDate(GregorianCalendar date) {
+        this.date = date;
+    }
 }

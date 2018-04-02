@@ -127,10 +127,10 @@ public class ConsentService implements ConsentServiceInterface {
 
     //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
     @Override
-    public Iterable<Experiment> getVisitorExperiments(int id)  {
+    public Iterable<VisitorExperiment> getVisitorExperiments(int id)  {
         ArrayList<Experiment> experiments = new ArrayList<>();
-        visitorExperimentDao.findAllByVisitor(visitorDao.findByVisitorId(id)).forEach((ve)-> experiments.add(ve.getExperiment()));
-        return experiments;
+        visitorExperimentDao.findAllByVisitor(visitorDao.findByVisitorId(id));
+        return visitorExperimentDao.findAllByVisitor(visitorDao.findByVisitorId(id));
     }
     @Override
     public boolean doExperiment(int visitorId, int experimentId)  {

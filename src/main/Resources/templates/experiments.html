@@ -131,9 +131,9 @@
 
                     <tr th:each="e:${experiments}">
                         <td class="dentry is-size-6"><input class="pending" type="checkbox" name="selected" th:value="${e.id}" /></td>
-                        <td class="dentry is-size-6"><a th:href="@{/{aID}/visitors/{vID}/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${e.id})}" th:text="${e.name}">Physics Experiment</a></td>
-                        <td class="dentry is-size-6">19/3/2018</td>
-                        <td class="dentry is-size-6">Pending</td>
+                        <!--<td class="dentry is-size-6"><a th:href="@{/{aID}/visitors/{vID}/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${e.id})}" th:text="${e.name}">Physics Experiment</a></td>-->
+                        <!--<td class="dentry is-size-6">19/3/2018</td>-->
+                        <!--<td class="dentry is-size-6">Pending</td>-->
                     </tr>
                 </tbody>
             </table>

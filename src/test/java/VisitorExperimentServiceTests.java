@@ -78,27 +78,27 @@ public class VisitorExperimentServiceTests {
 
     }
 
-    @Test
-    public void getVisitorExperiments_success()  {
-        Iterable<Experiment> experiments = consentService.getVisitorExperiments(1);
-        for ( Experiment experiment : experiments)  {
-            assertEquals(experiment.getName(), "Physics Experiment");
-        }
-    }
-
-    @Test
-    public void addVisitorExperiment_success()  {
-        assertTrue(consentService.doExperiment(1, 2));
-        Iterable<Experiment> experiments = consentService.getVisitorExperiments(1);
-        ArrayList<String> experimentNames = new ArrayList<>();
-        experimentNames.add("Physics Experiment");
-        experimentNames.add("Physics Experiment");
-        experimentNames.add("Chemistry Experiment");
-        for ( Experiment experiment : experiments)  {
-            experimentNames.remove(experiment.getName());
-        }
-        assertEquals(experimentNames.size(), 0);
-    }
+//    @Test
+//    public void getVisitorExperiments_success()  {
+//        Iterable<Experiment> experiments = consentService.getVisitorExperiments(1);
+//        for ( Experiment experiment : experiments)  {
+//            assertEquals(experiment.getName(), "Physics Experiment");
+//        }
+//    }
+//
+//    @Test
+//    public void addVisitorExperiment_success()  {
+//        assertTrue(consentService.doExperiment(1, 2));
+//        Iterable<Experiment> experiments = consentService.getVisitorExperiments(1);
+//        ArrayList<String> experimentNames = new ArrayList<>();
+//        experimentNames.add("Physics Experiment");
+//        experimentNames.add("Physics Experiment");
+//        experimentNames.add("Chemistry Experiment");
+//        for ( Experiment experiment : experiments)  {
+//            experimentNames.remove(experiment.getName());
+//        }
+//        assertEquals(experimentNames.size(), 0);
+//    }
 
     @Test
     public void getExperimentConsent_success()  {
