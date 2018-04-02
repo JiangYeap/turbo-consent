@@ -48,26 +48,72 @@
     </nav>
 
     <!-- Banner start -->
-    <section class="hero is-warning is-2 is-bold">
+    <section class="hero is-danger is-2 is-bold">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h1 class="title" th:text="${eDetails.name}">
-                    Experiment Title
+                <h1 class="title" th:text="${eDetails.name} + ' - ' ${name}">
+                    Experiment Title - Visitor Name
                 </h1>
                 <h2 class="subtitle">
-                    Together with We The Curious, we make sure your data are consented
-                    before being used in research. Keeping them safe and secured is our
-                    uppermost priority.
+                    You can view the description and choose consent options for
+                    your participated experiments individually here.
                 </h2>
             </div>
         </div>
     </section>
 
-    <div class="box cta">
-        <p class="has-text-centered">
-            <span class="tag has-text-weight-semibold is-danger" th:inline="text">New !</span>
-            &nbsp;You have a total of [[$]] unconsented data, check them out under the
-            <a th:href="@{/{aID}/visitors(aID=${aID})}">Visitors</a> section now&nbsp;!
-        </p>
-    </div>
+    <!-- Main content start -->
+    <section class="section">
+        <div class="box feature">
+            <div class="content">
+                <h1 class="subtitle">
+                    Experiment Description
+                </h1>
+                <p th:text="${eDetails.description}">desc here</p>
+                <h1 class="subtitle">
+                    Date Participated
+                </h1>
+                <p th:text="${DATE}">date here</p>
+                <h1 class="subtitle">
+                    Consent Option
+                </h1>
+                <p th:text="${eDetails.consent}">current consent level</p>
+            </div>
+
+            <form th:method="post">
+                <h1 class="subtitle" >
+                    Select Consent Level For <span id="p-selected"></span> Experiment(s)&nbsp;
+                    <a class="fa fa-question-circle" onclick="openModal()"></a>
+                </h1>
+                <ul>
+                    <li>
+                        <label class="radio"><input type="radio" name="clevel" value="2" />&nbsp;Full Consent</label>
+                    </li>
+                    <li>
+                        <label class="radio"><input type="radio" name="clevel" value="1" />&nbsp;Anonymous</label>
+                    </li>
+                    <li>
+                        <label class="radio"><input type="radio" name="clevel" value="0" />&nbsp;No Consent</label>
+                    </li>
+                    <li>
+                        <label class="radio" th:classappend="${true ? null : 'is-hidden'}"><input type="radio" name="clevel" value="3" />&nbsp;Custom Consent</label>
+                    </li>
+                </ul>
+                <br />
+                <button type="submit" class="button is-link" th:text="${true ? 'Apply ' : 'Update '} + 'Consent Option'">Consent Option</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>Copyright © 2018 Turbo Consulting</p>
+                <a href="#">Terms of Use</a> &nbsp;·&nbsp;
+                <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+                <a href="#">Accessibility</a>
+            </div>
+        </div>
+    </footer>
 </body>
