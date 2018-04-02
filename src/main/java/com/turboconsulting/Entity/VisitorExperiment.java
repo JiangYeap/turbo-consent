@@ -1,6 +1,7 @@
 package com.turboconsulting.Entity;
 
 import javax.persistence.*;
+import java.util.GregorianCalendar;
 
 @Entity
 public class VisitorExperiment {
@@ -18,6 +19,7 @@ public class VisitorExperiment {
     private Experiment experiment;
 
     private ConsentLevel consentLevel;
+    private GregorianCalendar date;
 
     public Visitor getVisitor() {
         return visitor;
@@ -32,6 +34,7 @@ public class VisitorExperiment {
         this.experiment = e;
         this.consentLevel = v.getDefaultConsent();
         this.changedConsent = false;
+        this.date = new GregorianCalendar(1997, 10, 10);
     }
 
     public void setVisitor(Visitor visitor) {
