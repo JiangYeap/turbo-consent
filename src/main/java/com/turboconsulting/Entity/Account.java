@@ -72,4 +72,13 @@ public class Account {
     public void setVisitors(Set<Visitor> visitors) {
         this.visitors = visitors;
     }
+
+    public int getTotalPendingExperiments()  {
+        int count = 0;
+        for (Visitor v : visitors)  {
+            count += v.getPendingExperiments();
+        }
+        return count;
+    }
+
 }
