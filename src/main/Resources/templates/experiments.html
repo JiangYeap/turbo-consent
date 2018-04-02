@@ -15,7 +15,6 @@
     <script async="async" type="text/javascript" th:src="@{/js/session.js}"></script>
 </head>
 <body>
-
     <!-- Navigation bar start -->
     <nav class="navbar is-dark has-shadow">
         <div class="container">
@@ -25,17 +24,17 @@
                     <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
                 </a>
                 <span class="navbar-burger burger" data-target="navbarMenu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
                     <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
                         Home
                     </a>
-                    <a th:href="@{/{aID}/visitors(aID=${aID})}" class="navbar-item is-active">
+                    <a th:href="@{/{aID}/visitors(aID=${aID})}" class="navbar-item">
                         Visitors
                     </a>
                     <a th:href="@{/{aID}/settings(aID=${aID})}" class="navbar-item">
@@ -45,7 +44,7 @@
                         Log Out
                     </a>
                     <span class="navbar-item is-hidden-touch">
-                <a th:href="@{/login}" class="button is-danger is-inverted is-outlined">Log Out</a>
+                        <a th:href="@{/login}" class="button is-danger is-inverted is-outlined">Log Out</a>
                     </span>
                 </div>
             </div>
