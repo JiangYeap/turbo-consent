@@ -1,19 +1,120 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>Experiment</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    </head>
-    <tbody>
-        <h1>Experiment Page</h1>
-        <p th:text="'Experiment Name: ' + ${eDetails.name}" />
-        <p th:text="'Experiment Details: ' + ${eDetails.description}" />
-        <p th:text="'Current Experiment Consent: ' + ${consentValue} "/>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experiment | Turbo Consent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
+    <script async="async" type="text/javascript" th:src="@{/js/bulma.js}"></script>
+</head>
+<body>
+    <!-- Navigation bar start -->
+    <nav class="navbar is-dark has-shadow">
+        <div class="container">
+            <div class="navbar-brand">
+                <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                    <img src="" th:src="@{/media/wtc_logo.gif}" alt="Logo" />
+                    <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
+                </a>
+                <span class="navbar-burger burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                        Home
+                    </a>
+                    <a th:href="@{/{aID}/visitors(aID=${aID})}" class="navbar-item">
+                        Visitors
+                    </a>
+                    <a th:href="@{/{aID}/settings(aID=${aID})}" class="navbar-item">
+                        Settings
+                    </a>
+                    <a th:href="@{/login}" class="navbar-item has-text-danger is-hidden-desktop">
+                        Log Out
+                    </a>
+                    <span class="navbar-item is-hidden-touch">
+                        <a th:href="@{/login}" class="button is-danger is-inverted is-outlined">Log Out</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-        <form th:action="@{/{aID}/visitors/{vID}/experiments/{eID}/updateConsent(aID=${aID}, vID=${vID}, eID=${eID})}" th:method="post">
-            <p>Default Consent Level: <input name="consent" id="consent" type="text" th:value="${consent}"  /></p>
-            <button type="submit">submit</button>
-        </form>
+    <!-- Banner start -->
+    <section class="hero is-danger is-2 is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title" th:text="${eDetails.name} + ' - ' ${name}">
+                    Experiment Title - Visitor Name
+                </h1>
+                <h2 class="subtitle">
+                    You can view the description and choose consent options for
+                    your participated experiments individually here.
+                </h2>
+            </div>
+        </div>
+    </section>
 
-    </tbody>
+    <!-- Main content start -->
+    <section class="section">
+        <div class="box feature">
+            <div class="content">
+                <h1 class="subtitle">
+                    Experiment Description
+                </h1>
+                <p th:text="${eDetails.description}">desc here</p>
+                <h1 class="subtitle">
+                    Date Participated
+                </h1>
+                <p th:text="${DATE}">date here</p>
+                <h1 class="subtitle">
+                    Consent Option
+                </h1>
+                <p th:text="${eDetails.consent}">current consent level</p>
+            </div>
+
+            <form th:method="post">
+                <h1 class="subtitle" >
+                    Select Consent Level For <span id="p-selected"></span> Experiment(s)&nbsp;
+                    <a class="fa fa-question-circle" onclick="openModal()"></a>
+                </h1>
+                <ul>
+                    <li>
+                        <label class="radio"><input type="radio" name="clevel" value="2" />&nbsp;Full Consent</label>
+                    </li>
+                    <li>
+                        <label class="radio"><input type="radio" name="clevel" value="1" />&nbsp;Anonymous</label>
+                    </li>
+                    <li>
+                        <label class="radio"><input type="radio" name="clevel" value="0" />&nbsp;No Consent</label>
+                    </li>
+                    <li>
+                        <label class="radio" th:classappend="${true ? null : 'is-hidden'}"><input type="radio" name="clevel" value="3" />&nbsp;Custom Consent</label>
+                    </li>
+                </ul>
+                <br />
+                <button type="submit" class="button is-link" th:text="${true ? 'Apply ' : 'Update '} + 'Consent Option'">Consent Option</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>Copyright © 2018 Turbo Consulting</p>
+                <a href="#">Terms of Use</a> &nbsp;·&nbsp;
+                <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+                <a href="#">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

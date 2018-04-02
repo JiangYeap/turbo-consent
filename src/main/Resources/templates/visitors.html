@@ -83,7 +83,9 @@
                     </div>
                     <div class="card-footer">
                         <div class="card-footer-item">
-                            <span class="tag has-text-weight-semibold is-medium is-rounded" th:classappend="${true} ? 'is-danger' : 'is-success'" th:text="${v.getPendingExperiments()}"></span>
+                            <span class="tag has-text-weight-semibold is-medium is-rounded"
+                                  th:classappend="${v.getPendingExperiments()} ? 'is-danger' : 'is-success'"
+                                  th:text="${v.getPendingExperiments()} + ' Pending Experiment(s)'"></span>
                         </div>
                         <div class="card-footer-item has-text-centered">
                             <a th:href="@{/{aID}/visitors/{vID}/experiments(aID=${aID}, vID=${v.visitorId})}">
