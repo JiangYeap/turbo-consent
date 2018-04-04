@@ -124,13 +124,13 @@
                 </h1>
                 <ul>
                     <li>
-                        <label class="radio"><input type="radio" name="consentLevel" value="2" />&nbsp;Full Consent</label>
+                        <label class="radio"><input type="radio" name="consentLevel" value="UNRESTRICTED" />&nbsp;Full Consent</label>
                     </li>
                     <li>
-                        <label class="radio"><input type="radio" name="consentLevel" value="1" />&nbsp;Anonymous</label>
+                        <label class="radio"><input type="radio" name="consentLevel" value="RESTRICTED" />&nbsp;Anonymous</label>
                     </li>
                     <li>
-                        <label class="radio"><input type="radio" name="consentLevel" value="0" />&nbsp;No Consent</label>
+                        <label class="radio"><input type="radio" name="consentLevel" value="NONE" />&nbsp;No Consent</label>
                     </li>
                     <li>
                         <label class="radio" th:classappend="${true ? null : 'is-hidden'}"><input type="radio" name="consentLevel" value="3" />&nbsp;Custom Consent</label>

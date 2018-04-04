@@ -25,8 +25,8 @@ public class ExperimentsController {
                            @PathVariable(value="aID") int aID,
                            @PathVariable(value="vID") int vID  ) {
 
-        m.addAttribute("experiments", consentService.getVisitorExperiments(vID));
-        m.addAttribute("name", consentService.getVisitor(vID).getName());
+        m.addAttribute("visitorExps", consentService.getVisitorExperiments(vID));
+        m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
 
         return "experiments";
     }
