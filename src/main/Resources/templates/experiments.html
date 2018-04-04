@@ -111,7 +111,7 @@
     </div>
 
     <section class="section">
-        <form class="consent-pending" th:method="post">
+        <form class="consent-pending" th:action="@{/{aID}/visitors/{vID}/experiments/updateConsent(aID=${aID}, vID=${vID})}" th:method="post">
             <table class="features table is-hoverable is-fullwidth is-striped responsive">
                 <thead class="thead">
                     <nav class="breadcrumb is-large" aria-label="breadcrumbs">
@@ -165,7 +165,7 @@
             </div>
         </form>
 
-        <form class="reviewed is-hidden" th:method="post">
+        <form class="reviewed is-hidden" th:action="@{/{aID}/visitors/{vID}/experiments/updateConsent(aID=${aID}, vID=${vID})}" th:method="post">
             <table class="features table is-hoverable is-fullwidth is-striped responsive">
                 <thead class="thead">
                     <nav class="breadcrumb is-large" aria-label="breadcrumbs">

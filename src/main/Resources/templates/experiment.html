@@ -82,7 +82,7 @@
                 <p th:text="${eDetails.consent}">current consent level</p>
             </div>
 
-            <form th:method="post">
+            <form th:action="@{/{aID}/visitors/{vID}/experiments/{eID}/updateConsent(aID=${aID}, vID=${vID}, eID=${eID})}" th:method="post">
                 <h1 class="subtitle" >
                     Select Consent Level For <span id="p-selected"></span> Experiment(s)&nbsp;
                     <a class="fa fa-question-circle" onclick="openModal()"></a>
