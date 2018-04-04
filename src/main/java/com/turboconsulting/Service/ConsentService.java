@@ -133,6 +133,13 @@ public class ConsentService implements ConsentServiceInterface {
         return visitorExperimentDao.findAllByVisitor(visitorDao.findByVisitorId(id));
     }
     @Override
+    public VisitorExperiment getVisitorExperiment(int visitorID, int experimentID)  {
+        ArrayList<Experiment> experiments = new ArrayList<>();
+        Visitor v = visitorDao.findByVisitorId(visitorID);
+        Experiment e = experimentDao.findById(experimentID);
+        return visitorExperimentDao.findByVisitorAndExperiment(v, e);
+    }
+    @Override
     public boolean doExperiment(int visitorId, int experimentId)  {
         VisitorExperiment e = new VisitorExperiment( visitorDao.findByVisitorId(visitorId),
                                                      experimentDao.findById(experimentId));

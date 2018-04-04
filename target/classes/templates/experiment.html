@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script async="async" type="text/javascript" th:src="@{/js/bulma.js}"></script>
+    <script async="async" type="text/javascript" th:src="@{/js/form-validation.js}"></script>
 </head>
 <body>
     <!-- Navigation bar start -->
@@ -51,8 +53,8 @@
     <section class="hero is-danger is-2 is-bold">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h1 class="title" th:text="${eDetails.name} + ' - ' ${name}">
-                    Experiment Title - Visitor Name
+                <h1 class="title" th:inline="text">
+                    [[${visitorExp.experiment.name}]] by [[${visitorName}]]
                 </h1>
                 <h2 class="subtitle">
                     You can view the description and choose consent options for
@@ -63,40 +65,75 @@
     </section>
 
     <!-- Main content start -->
+    <div class="modal">
+        <div class="modal-background" onclick="closeModal()"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title has-text-weight-semibold is-size-3-desktop">Your Options</p>
+                <button class="delete is-medium" onclick="closeModal()" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="content">
+                    <ul style="list-style-type:disc" class="has-text-left is-size-5-desktop">
+                        <li><p>
+                            <strong>Full Consent:</strong> All your details as well as experiments results will be given.
+                        </p></li>
+                        <li><p>
+                            <strong>Anonymous:</strong> Only your results will be given, your identity will be hidden.
+                        </p></li>
+                        <li><p>
+                            <strong>No Consent:</strong> The experiment results will not be submitted.
+                        </p></li>
+                        <li><p>
+                            <strong>Custom Consent:</strong> Custom set consent option, can be configured in
+                            <a th:href="@{/{aID}/settings(aID=${aID})}">Settings</a>.
+                        </p></li>
+                    </ul>
+                </div>
+                <hr />
+                <div class="content has-text-centered" onclick="closeModal()" id="close-modal">
+                    <a class="is-size-4 is-size-5-mobile">OK</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
     <section class="section">
         <div class="box feature">
             <div class="content">
                 <h1 class="subtitle">
                     Experiment Description
                 </h1>
-                <p th:text="${eDetails.description}">desc here</p>
+                <p th:text="${visitorExp.experiment.description}">desc here</p>
                 <h1 class="subtitle">
                     Date Participated
                 </h1>
-                <p th:text="${DATE}">date here</p>
+                <p th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">date here</p>
                 <h1 class="subtitle">
                     Consent Option
                 </h1>
-                <p th:text="${eDetails.consent}">current consent level</p>
+                <p th:text="${visitorExp.consentLevel}">current consent level</p>
             </div>
 
-            <form th:method="post">
+            <hr />
+
+            <form th:action="@{/{aID}/visitors/{vID}/experiments/{eID}/updateConsent(aID=${aID}, vID=${vID}, eID=${eID})}" th:method="post">
                 <h1 class="subtitle" >
                     Select Consent Level For <span id="p-selected"></span> Experiment(s)&nbsp;
                     <a class="fa fa-question-circle" onclick="openModal()"></a>
                 </h1>
                 <ul>
                     <li>
-                        <label class="radio"><input type="radio" name="clevel" value="2" />&nbsp;Full Consent</label>
+                        <label class="radio"><input type="radio" name="consentLevel" value="2" />&nbsp;Full Consent</label>
                     </li>
                     <li>
-                        <label class="radio"><input type="radio" name="clevel" value="1" />&nbsp;Anonymous</label>
+                        <label class="radio"><input type="radio" name="consentLevel" value="1" />&nbsp;Anonymous</label>
                     </li>
                     <li>
-                        <label class="radio"><input type="radio" name="clevel" value="0" />&nbsp;No Consent</label>
+                        <label class="radio"><input type="radio" name="consentLevel" value="0" />&nbsp;No Consent</label>
                     </li>
                     <li>
-                        <label class="radio" th:classappend="${true ? null : 'is-hidden'}"><input type="radio" name="clevel" value="3" />&nbsp;Custom Consent</label>
+                        <label class="radio" th:classappend="${true ? null : 'is-hidden'}"><input type="radio" name="consentLevel" value="3" />&nbsp;Custom Consent</label>
                     </li>
                 </ul>
                 <br />

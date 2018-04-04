@@ -45,14 +45,13 @@ var counter = Session.get("counter") || {
 
 // onload
 window.onload = function() {
-    // update previous visits
-    var d = new Date();
+    // var d = new Date();
     counter.visits++;
-    counter.time.push(Pad(d.getHours()) + ":" + Pad(d.getMinutes()) + ":" + Pad(d.getSeconds()));
-    if (counter.time.length > 10) counter.time = counter.time.slice(1);
+    // counter.time.push(Pad(d.getHours()) + ":" + Pad(d.getMinutes()) + ":" + Pad(d.getSeconds()));
+    // if (counter.time.length > 10) counter.time = counter.time.slice(1);
 
     var modal = document.querySelector('.modal');
-    if (counter.visits > 1) modal.classList.remove('is-active');
+    if (counter.visits < 2) modal.classList.add('is-active');
 
     // store value in session
     Session.set("counter", counter);
@@ -77,4 +76,3 @@ $(document).ready(function() {
         }
     });
 });
-

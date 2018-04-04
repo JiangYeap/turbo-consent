@@ -129,7 +129,7 @@ html, body {
   flex-direction: column; }
 
 .name-card {
-  font-family: "Merriweather", serif; }
+  font-family: "Quicksand", sans-serif; }
 
 .modal-card-head a, .modal-card-head p, .modal-card-foot a, .modal-card-foot p {
   color: rgba(0, 0, 0, 0.7) !important; }
@@ -150,8 +150,8 @@ hr {
   margin-top: 1em;
   padding: 0; }
 
-.hentry {
-  text-align: center; }
+.options {
+  margin-top: 3em !important; }
 
 /*! bulma.io v0.6.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
@@ -2907,7 +2907,7 @@ a.box:active {
 
 .notification {
   background-color: whitesmoke;
-  border-radius: 3px;
+  border-radius: 1.5px;
   padding: 1.25rem 2.5rem 1.25rem 1.5rem;
   position: relative; }
   .notification:not(:last-child) {

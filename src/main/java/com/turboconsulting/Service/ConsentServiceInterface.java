@@ -30,6 +30,7 @@ public interface ConsentServiceInterface {
 
     //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
     Iterable<VisitorExperiment> getVisitorExperiments(int id);
+    VisitorExperiment getVisitorExperiment(int visitorID, int experimentID);
     boolean doExperiment(int visitorId, int experimentId);
     String getExperimentConsent(int id, int experimentID);
     boolean updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID);

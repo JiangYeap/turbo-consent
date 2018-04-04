@@ -3,9 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="1d359951-eaa4-4d23-bbdc-b5beef41842e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboConsent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TurboConsent.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/static/css/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/css/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/static/js/session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/js/session.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/visitors.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/visitors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/ExperimentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/ExperimentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/ExperimentsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/output.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/table-switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/table-switch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/experiment.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/experiment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/experiments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/experiments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/visitors.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/visitors.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,14 +38,23 @@
       <file leaf-file-name="experiments.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2550">
-              <caret line="150" column="43" selection-start-line="150" selection-start-column="38" selection-end-line="150" selection-end-column="43" />
+            <state relative-caret-position="1275">
+              <caret line="75" column="10" lean-forward="true" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#2;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1522753092123" expanded="true" signature="6908:7245" ph="..." />
+                <marker date="1522867334469" expanded="true" signature="6978:7315" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="output.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/static/css/output.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="4791" column="4" selection-start-line="4791" selection-start-column="4" selection-end-line="4791" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -36,26 +62,50 @@
       <file leaf-file-name="session.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/session.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+            <state relative-caret-position="31">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="table-switch.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js">
+      <file leaf-file-name="bulma.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+            <state relative-caret-position="153">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExperimentsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+            <state relative-caret-position="216">
+              <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Visitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Visitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="643">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+              <folding>
+                <element signature="e#1560#1561#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visitors.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/visitors.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="86" lean-forward="true" selection-start-line="8" selection-start-column="86" selection-end-line="8" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -63,26 +113,17 @@
       <file leaf-file-name="ExperimentController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="399">
+              <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form-validation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/form-validation.js">
+      <file leaf-file-name="ConsentLevel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentLevel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="responsive-tables.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/responsive-tables.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+            <state relative-caret-position="34">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -90,28 +131,10 @@
       <file leaf-file-name="experiment.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="91" column="64" lean-forward="true" selection-start-line="91" selection-start-column="64" selection-end-line="91" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConsentService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+            <state relative-caret-position="522">
+              <caret line="81" column="118" lean-forward="true" selection-start-line="81" selection-start-column="118" selection-end-line="81" selection-end-column="118" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,36 +156,42 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Experiments</find>
-      <find>visitors</find>
-      <find>fav</find>
-      <find>href</find>
-      <find>responsi</find>
-      <find>fa-fa</find>
-      <find>e.</find>
-      <find>button</find>
-      <find>true</find>
-      <find>0</find>
-      <find>Pending</find>
-      <find>not</find>
-      <find>[chan</find>
-      <find>getC</find>
-      <find>changed</find>
-      <find>ve.da</find>
-      <find>[</find>
-      <find>method=</find>
-      <find>with</find>
-      <find>pending</find>
-      <find>No Ecp</find>
-      <find>reviewe</find>
-      <find>To Sh</find>
+      <find>Not</find>
+      <find>Not P</find>
+      <find>Post</find>
+      <find>n</find>
+      <find>hr</find>
+      <find>findByVisitorAndExperiment</find>
+      <find>ve.</find>
+      <find>eDe</find>
+      <find>-</find>
+      <find>da</find>
+      <find>No E</find>
+      <find>You</find>
+      <find>tag</find>
+      <find>modal</find>
+      <find>emsp</find>
+      <find>visitorexp</find>
+      <find>{name}</find>
       <find>form</find>
-      <find>radio</find>
-      <find>consent</find>
-      <find>consent-p</find>
+      <find>clevel</find>
+      <find>[[</find>
+      <find>value</find>
+      <find>Sele</find>
+      <find>Your</find>
+      <find>Tog</find>
+      <find>Sel</find>
+      <find>&lt;a</find>
+      <find>Thank</find>
+      <find>box</find>
+      <find>close-mod</find>
+      <find>page</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>visitorExp</replace>
+      <replace>visitorName</replace>
+      <replace>consentLevel</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/Resources/static/css</dir>
@@ -175,7 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Service/ConsentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ExperimentConsent.java" />
@@ -205,10 +233,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/Profile.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Visitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentLevel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/profile.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ProfileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/HomeController.java" />
@@ -216,16 +241,20 @@
         <option value="$PROJECT_DIR$/turbo-consent.iml" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java" />
-        <option value="$PROJECT_DIR$/src/main/Resources/static/js/session.js" />
         <option value="$PROJECT_DIR$/src/main/Resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/home.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/visitors.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/static/js/form-validation.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/Resources/static/js/session.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/visitors.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/home.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentLevel.java" />
       </list>
     </option>
   </component>
@@ -289,16 +318,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="turboconsulting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="turboconsulting" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
@@ -377,7 +396,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="consentS&#9;FILE&#9;file://D:/Work/Uni/spe/turbo-consent/src/main/java/com/turboconsulting/Service/ConsentService.java" />
+    <property name="SearchEverywhereHistoryKey" value="consentle&#9;FILE&#9;file://D:/Work/Uni/spe/turbo-consent/src/main/java/com/turboconsulting/Entity/ConsentLevel.java&#10;consentservicein&#9;PSI&#9;JAVA://com.turboconsulting.Service.ConsentServiceInterface&#10;consentser&#9;PSI&#9;JAVA://com.turboconsulting.Service.ConsentService&#10;consentS&#9;FILE&#9;file://D:/Work/Uni/spe/turbo-consent/src/main/java/com/turboconsulting/Service/ConsentService.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -392,14 +411,15 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.turboconsulting.DAO" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\Uni\spe\turbo-consent\src\main\Resources\static\css" />
+      <recent name="$PROJECT_DIR$/src/main/Resources/templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Work\Uni\spe\turbo-consent\src\main\Resources\static\css" />
       <recent name="D:\Work\Uni\spe\turbo-consent\src\main\Resources\static" />
       <recent name="$PROJECT_DIR$/src/main/Resources" />
       <recent name="$PROJECT_DIR$/src/main/Resources/static" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/Resources/templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -567,7 +587,7 @@
       <workItem from="1521669401230" duration="635000" />
       <workItem from="1521717579032" duration="2142000" />
       <workItem from="1522750572726" duration="5252000" />
-      <workItem from="1522857782631" duration="325000" />
+      <workItem from="1522857782631" duration="9965000" />
     </task>
     <servers />
   </component>
@@ -580,7 +600,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132490000" />
+    <option name="totallyTimeSpent" value="142130000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -598,26 +618,26 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.3997955" />
       <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="Messages" order="1" weight="0.32905984" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Java Enterprise" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.46066135" />
-      <window_info anchor="bottom" id="Spring" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.47578347" />
+      <window_info anchor="bottom" id="Spring" order="3" weight="0.32905984" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.83760685" />
       <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.22013423" />
       <window_info anchor="right" id="Bean Validation" order="4" />
       <window_info id="Web" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.41737893" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.32924336" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32822084" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="2" />
@@ -684,28 +704,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ExperimentConsent.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/index.html" />
     <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/result.html" />
     <entry file="file://$PROJECT_DIR$/src/test/java/VisitorTest.java" />
@@ -718,20 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Visitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
@@ -800,13 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorExperimentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MockEntityFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -835,20 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="69" column="26" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -856,31 +819,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/visitors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="91" selection-start-line="11" selection-start-column="91" selection-end-line="11" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="34" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -898,19 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2550">
-          <caret line="150" column="43" selection-start-line="150" selection-start-column="38" selection-end-line="150" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1522753092123" expanded="true" signature="6908:7245" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/responsive-tables.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -925,45 +854,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/session.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="91" column="64" lean-forward="true" selection-start-line="91" selection-start-column="64" selection-end-line="91" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -974,6 +868,150 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#1072#1073#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="69" column="26" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/AccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="64" column="44" lean-forward="true" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorExperimentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="24" column="62" lean-forward="true" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1870">
+          <caret line="135" column="28" selection-start-line="135" selection-start-column="28" selection-end-line="135" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/session.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="81" column="118" lean-forward="true" selection-start-line="81" selection-start-column="118" selection-end-line="81" selection-end-column="118" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Visitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="e#1560#1561#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/visitors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="86" lean-forward="true" selection-start-line="8" selection-start-column="86" selection-end-line="8" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/css/output.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="4791" column="4" selection-start-line="4791" selection-start-column="4" selection-end-line="4791" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="10" lean-forward="true" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1522867334469" expanded="true" signature="6978:7315" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
         </state>
       </provider>
     </entry>
