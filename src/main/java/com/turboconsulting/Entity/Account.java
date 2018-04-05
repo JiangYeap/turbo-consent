@@ -18,7 +18,7 @@ public class Account {
     private String name, password;
     private ConsentLevel consentLevel;
 
-    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval=true)
+    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Visitor> visitors;
 
     public Account(){}

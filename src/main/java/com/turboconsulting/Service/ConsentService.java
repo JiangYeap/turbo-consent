@@ -1,15 +1,18 @@
 package com.turboconsulting.Service;
 
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 import com.turboconsulting.DAO.AccountDao;
 import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
 import com.turboconsulting.DAO.VisitorExperimentDao;
 import com.turboconsulting.Entity.*;
+import org.springframework.beans.factory.UnsatisfiedDependencyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import javax.validation.ConstraintViolationException;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
@@ -53,7 +56,7 @@ public class ConsentService implements ConsentServiceInterface {
     //////////////////////////////////////////////////////////////////////////ACCOUNT FUNCTIONS
     @Override
     public boolean addNewAccount(Account a)  {
-        return accountDao.save(a) != null;
+        return (accountDao.findByEmail(a.getEmail()) == null) && (accountDao.save(a) != null);
 
     }
     @Override
