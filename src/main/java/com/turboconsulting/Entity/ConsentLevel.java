@@ -1,9 +1,9 @@
 package com.turboconsulting.Entity;
 
 public enum ConsentLevel {
-    NONE("NONE"),
-    RESTRICTED("RESTRICTED"),
-    UNRESTRICTED("UNRESTRICTED");
+    NONE("No Consent"),
+    RESTRICTED("Anonymous"),
+    UNRESTRICTED("Full Consent");
 
     private final String text;
 

@@ -25,7 +25,14 @@ public class ExperimentsController {
                            @PathVariable(value="aID") int aID,
                            @PathVariable(value="vID") int vID  ) {
 
-        m.addAttribute("visitorExps", consentService.getVisitorExperiments(vID));
+        Iterable<VisitorExperiment> visitorExperiments = consentService.getVisitorExperiments(vID);
+
+        List<VisitorExperiment> ves = new ArrayList<>();
+        visitorExperiments.forEach(ves::add);
+
+        ves.sort((ve1, ve2) -> ve2.getDate().compareTo(ve1.getDate()));
+
+        m.addAttribute("visitorExps", ves);
         m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
 
         return "experiments";
