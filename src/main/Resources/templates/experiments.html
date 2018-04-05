@@ -56,13 +56,12 @@
     <section class="hero is-success is-2 is-bold">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h1 class="title" th:text="${name} + '\'s Experiments'">
+                <h1 class="title" th:text="${visitorName} + '\'s Experiments'">
                     Your Experiments
                 </h1>
                 <h2 class="subtitle">
-                    Select the consent level for each experiment, or give
-                    them in bulk. Your time here is greatly appreciated by the
-                    us and the researchers in partner with We The Curious.
+                    Select experiments with the checkboxes, and choose a consent level option for
+                    them at the bottom of the page. Or view experiments individually by clicking on their titles.
                 </h2>
             </div>
         </div>
@@ -77,11 +76,11 @@
     </div>
 
     <!-- Main Content start -->
-    <div class="modal is-active">
+    <div class="modal">
         <div class="modal-background" onclick="closeModal()"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title has-text-weight-semibold is-size-3-desktop">Your Options</p>
+                <p class="modal-card-title has-text-weight-semibold is-size-3-desktop">Consent Level Options</p>
                 <button class="delete is-medium" onclick="closeModal()" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
@@ -121,7 +120,7 @@
                         </ul>
                     </nav>
                 </thead>
-                <tbody class="tbody" th:with="pending = ${experiments.?[not consentChanged]}">
+                <tbody class="tbody" th:with="pending = ${visitorExps.?[not consentChanged]}">
                     <tr>
                         <th class="hentry is-size-6"><a class="button toggle-p is-hidden-mobile">Select All</a><span class="is-hidden-desktop">Select</span></th>
                         <th class="hentry is-size-6" style="vertical-align: middle">Experiment Title</th>
@@ -129,10 +128,10 @@
                         <th class="hentry is-size-6" style="vertical-align: middle">Consent Status</th>
                     </tr>
 
-                    <tr th:each="ve : ${pending}">
-                        <td class="dentry is-size-6"><input class="pending" type="checkbox" name="selected" th:value="${ve.experiment.id}" /></td>
-                        <td class="dentry is-size-6"><a th:href="@{/{aID}/visitors/{vID}/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${ve.experiment.id})}" th:text="${ve.experiment.name}">Physics Experiment</a></td>
-                        <td class="dentry is-size-6" th:text="${#dates.format(ve.date, 'dd/MM/YYYY')}">19/3/2018</td>
+                    <tr th:each="visitorExp : ${pending}">
+                        <td class="dentry is-size-6"><input class="pending" type="checkbox" name="selected" th:value="${visitorExp.experiment.id}" /></td>
+                        <td class="dentry is-size-6"><a th:href="@{/{aID}/visitors/{vID}/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}" th:text="${visitorExp.experiment.name}">Physics Experiment</a></td>
+                        <td class="dentry is-size-6" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">19/3/2018</td>
                         <td class="dentry is-size-6">Pending</td>
                     </tr>
                     <tr th:if="${#lists.isEmpty(pending)}">
@@ -141,23 +140,23 @@
                 </tbody>
             </table>
 
-            <div class="box">
+            <div class="box options">
                 <h1 class="subtitle" >
                     Select Consent Level For <span id="p-selected"></span> Experiment(s)&nbsp;
                     <a class="fa fa-question-circle" onclick="openModal()"></a>
                 </h1>
                 <ul>
                     <li>
-                        <label class="radio"><input type="radio" name="clevel" value="2" />&nbsp;Full Consent</label>
+                        <label class="radio"><input type="radio" name="consentLevel" value="UNRESTRICTED" />&nbsp;Full Consent</label>
                     </li>
                     <li>
-                        <label class="radio"><input type="radio" name="clevel" value="1" />&nbsp;Anonymous</label>
+                        <label class="radio"><input type="radio" name="consentLevel" value="RESTRICTED" />&nbsp;Anonymous</label>
                     </li>
                     <li>
-                        <label class="radio"><input type="radio" name="clevel" value="0" />&nbsp;No Consent</label>
+                        <label class="radio"><input type="radio" name="consentLevel" value="NONE" />&nbsp;No Consent</label>
                     </li>
                     <li>
-                        <label class="radio" th:classappend="${true ? null : 'is-hidden'}"><input type="radio" name="clevel" value="3" />&nbsp;Custom Consent</label>
+                        <label class="radio" th:classappend="${true ? null : 'is-hidden'}"><input type="radio" name="consentLevel" value="3" />&nbsp;Custom Consent</label>
                     </li>
                 </ul>
                 <br />
@@ -175,7 +174,7 @@
                         </ul>
                     </nav>
                 </thead>
-                <tbody class="tbody" th:with="reviewed = ${experiments.?[consentChanged]}">
+                <tbody class="tbody" th:with="reviewed = ${visitorExps.?[consentChanged]}">
                     <tr>
                         <th class="hentry is-size-6"><a class="button toggle-r is-hidden-mobile">Select All</a><span class="is-hidden-desktop">Select</span></th>
                         <th class="hentry is-size-6" style="vertical-align: middle">Experiment Title</th>
@@ -183,35 +182,35 @@
                         <th class="hentry is-size-6" style="vertical-align: middle">Consent Status</th>
                     </tr>
 
-                    <tr th:each="ve : ${reviewed}">
-                        <td class="dentry is-size-6"><input class="rev" type="checkbox" name="selected" th:value="${ve.experiment.id}" /></td>
-                        <td class="dentry is-size-6"><a th:href="@{/{aID}/visitors/{vID}/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${ve.experiment.id})}" th:text="${ve.experiment.name}">Physics Experiment</a></td>
-                        <td class="dentry is-size-6" th:text="${#dates.format(ve.date, 'dd/MM/YYYY')}">19/3/2018</td>
-                        <td class="dentry is-size-6" th:text="${ve.consentLevel}">Not Pending</td>
+                    <tr th:each="visitorExp : ${reviewed}">
+                        <td class="dentry is-size-6"><input class="rev" type="checkbox" name="selected" th:value="${visitorExp.experiment.id}" /></td>
+                        <td class="dentry is-size-6"><a th:href="@{/{aID}/visitors/{vID}/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}" th:text="${visitorExp.experiment.name}">Physics Experiment</a></td>
+                        <td class="dentry is-size-6" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">19/3/2018</td>
+                        <td class="dentry is-size-6" th:text="${visitorExp.consentLevel}">Not Pending</td>
                     </tr>
                     <tr th:if="${#lists.isEmpty(reviewed)}">
-                        <td class="dentry has-text-centered is-size-5" colspan="4">No Experiments To Show.</td>
+                        <td class="dentry has-text-centered is-size-6" colspan="4">No Experiments To Show.</td>
                     </tr>
                 </tbody>
             </table>
 
-            <div class="box">
+            <div class="box options">
                 <h1 class="subtitle" >
                     Update Consent Level For <span id="r-selected"></span> Experiment(s)&nbsp;
                     <a class="fa fa-question-circle" onclick="openModal()"></a>
                 </h1>
                 <ul>
                     <li>
-                        <label class="radio"><input type="radio" name="clevel" value="2" />&nbsp;Full Consent</label>
+                        <label class="radio"><input type="radio" name="consentLevel" value="UNRESTRICTED" />&nbsp;Full Consent</label>
                     </li>
                     <li>
-                        <label class="radio"><input type="radio" name="clevel" value="1" />&nbsp;Anonymous</label>
+                        <label class="radio"><input type="radio" name="consentLevel" value="RESTRICTED" />&nbsp;Anonymous</label>
                     </li>
                     <li>
-                        <label class="radio"><input type="radio" name="clevel" value="0" />&nbsp;No Consent</label>
+                        <label class="radio"><input type="radio" name="consentLevel" value="NONE" />&nbsp;No Consent</label>
                     </li>
                     <li>
-                        <label class="radio" th:classappend="${true ? null : 'is-hidden'}"><input type="radio" name="clevel" value="3" />&nbsp;Custom Consent</label>
+                        <label class="radio" th:classappend="${true ? null : 'is-hidden'}"><input type="radio" name="consentLevel" value="3" />&nbsp;Custom Consent</label>
                     </li>
                 </ul>
                 <br />

@@ -2,12 +2,12 @@
 const showCP = function() {
     $('.consent-pending').removeClass('is-hidden');
     $('.reviewed').addClass('is-hidden');
-}
+};
 
 const showR = function() {
     $('.consent-pending').addClass('is-hidden');
     $('.reviewed').removeClass('is-hidden');
-}
+};
 
 const updatePNo = function() {
     var numSelected = $('input[class=pending]:checked').length;

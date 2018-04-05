@@ -27,9 +27,8 @@ public class ExperimentController {
                                  @PathVariable("vID") int vID,
                                  @PathVariable("eID") int eID) {
 
-        m.addAttribute("consentValue", consentService.getExperimentConsent(vID, eID));
-        m.addAttribute("eDetails", consentService.getExperiment(eID));
-
+        m.addAttribute("visitorExp", consentService.getVisitorExperiment(vID, eID));
+        m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
 
         return "experiment";
     }
@@ -38,7 +37,7 @@ public class ExperimentController {
     public ModelAndView updateConsent(@PathVariable("aID") int aID,
                                       @PathVariable("vID") int vID,
                                       @PathVariable("eID") int eID,
-                                      @ModelAttribute("consent") String c)  {
+                                      @ModelAttribute("consentLevel") String c)  {
 
         consentService.updateExperimentConsent(vID, ConsentLevel.fromString(c), eID);
         ModelAndView mav = new ModelAndView();
