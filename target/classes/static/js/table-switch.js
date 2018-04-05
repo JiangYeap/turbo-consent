@@ -39,38 +39,32 @@ $(document).ready(function() {
     });
 
     $('.toggle-p').click(function() {
-        if ($(this).text() === 'Select All') {
-            $('.pending').each(function (_, e) {
-                e.checked = true;
-            })
-        }
+        let allPending = $('.pending');
 
-        if ($(this).text() === 'Unselect All') {
-            $('.pending').each(function (_, e) {
-                e.checked = false;
-            })
-        }
+        if ($(this).text() === 'Select All')
+            allPending.each((_, e) => e.checked = true);
+
+        if ($(this).text() === 'Unselect All')
+            allPending.each((_, e) => e.checked = false);
 
         if ($(this).text() === 'Select All') $(this).text('Unselect All');
+
         else $(this).text('Select All');
 
         updatePNo();
     });
 
     $('.toggle-r').click(function() {
-        if ($(this).text() === 'Select All') {
-            $('.rev').each(function (_, e) {
-                e.checked = true;
-            })
-        }
+        let allRev = $('.rev');
 
-        if ($(this).text() === 'Unselect All') {
-            $('.rev').each(function (_, e) {
-                e.checked = false;
-            })
-        }
+        if ($(this).text() === 'Select All')
+            allRev.each((_, e) => e.checked = true);
+
+        if ($(this).text() === 'Unselect All')
+            allRev.each((_, e) => e.checked = false);
 
         if ($(this).text() === 'Select All') $(this).text('Unselect All');
+
         else $(this).text('Select All');
 
         updateRNo();

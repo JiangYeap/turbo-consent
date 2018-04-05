@@ -10,7 +10,7 @@ const showR = function() {
 };
 
 const updateLabel = function() {
-    let tName = $('#t-switch').is(':checked') ? 'Reviewed Experiments' : 'Unreviewed Experiments';
+    let tName = $('#t-switch').is(':checked') ? 'Reviewed Experiments' : 'Consent-Pending Experiments';
     $('.current-table').text(tName);
 };
 
