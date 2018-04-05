@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1d359951-eaa4-4d23-bbdc-b5beef41842e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/Resources/static/css/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/css/output.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/static/js/bulma.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/js/bulma.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/login.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,16 +18,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="experiments.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="experiments.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="119" column="94" selection-start-line="119" selection-start-column="94" selection-end-line="119" selection-end-column="94" />
+            <state relative-caret-position="174">
+              <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#2;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1522926517097" expanded="true" signature="7498:7859" ph="..." />
+                <marker date="1522928431700" expanded="true" signature="7544:7905" ph="..." />
               </folding>
             </state>
           </provider>
@@ -70,8 +70,8 @@
       <file leaf-file-name="bulma.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="17">
+              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -85,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="table-switch.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="table-switch.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            <state relative-caret-position="374">
+              <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -110,9 +110,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ve.</find>
-      <find>defaultConsent</find>
-      <find>th:text</find>
       <find>name}</find>
       <find>form</find>
       <find>REST</find>
@@ -135,11 +132,14 @@
       <find>pending</find>
       <find>Back</find>
       <find>Post</find>
-      <find>close</find>
       <find>float</find>
       <find>is-hidden-mobile</find>
       <find>bread</find>
       <find>switch</find>
+      <find>close</find>
+      <find>checke</find>
+      <find>Revie</find>
+      <find>checkbox</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -196,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/Resources/static/js/form-validation.js" />
-        <option value="$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/static/js/session.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java" />
@@ -205,11 +204,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentLevel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/static/js/bulma.js" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/home.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/static/js/bulma.js" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js" />
       </list>
     </option>
   </component>
@@ -560,7 +560,7 @@
       <workItem from="1521717579032" duration="2142000" />
       <workItem from="1522750572726" duration="5252000" />
       <workItem from="1522857782631" duration="9965000" />
-      <workItem from="1522920180700" duration="6702000" />
+      <workItem from="1522920180700" duration="8303000" />
     </task>
     <servers />
   </component>
@@ -573,7 +573,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150200000" />
+    <option name="totallyTimeSpent" value="151801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -596,7 +596,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Java Enterprise" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" visible="true" weight="0.46438748" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" visible="true" weight="0.22222222" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.47578347" />
       <window_info anchor="bottom" id="Spring" order="3" weight="0.32905984" />
@@ -976,24 +976,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="43" column="86" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -1007,6 +993,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/static/css/output.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1016,14 +1009,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="119" column="94" selection-start-line="119" selection-start-column="94" selection-end-line="119" selection-end-column="94" />
+        <state relative-caret-position="174">
+          <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#2;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1522926517097" expanded="true" signature="7498:7859" ph="..." />
+            <marker date="1522928431700" expanded="true" signature="7544:7905" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
         </state>
       </provider>
     </entry>

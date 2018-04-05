@@ -9,55 +9,69 @@ const showR = function() {
     $('.reviewed').removeClass('is-hidden');
 };
 
+const updateLabel = function() {
+    let tName = $('#t-switch').is(':checked') ? 'Reviewed Experiments' : 'Unreviewed Experiments';
+    $('.current-table').text(tName);
+};
+
 const updatePNo = function() {
-    var numSelected = $('input[class=pending]:checked').length;
+    let numSelected = $('input[class=pending]:checked').length;
     $('#p-selected').text(numSelected);
 };
 
 const updateRNo = function() {
-    var numSelected = $('input[class=rev]:checked').length;
+    let numSelected = $('input[class=rev]:checked').length;
     $('#r-selected').text(numSelected);
 };
 
-$('.toggle-p').click(function() {
-    if ($(this).text() === 'Select All') {
-        $('.pending').each(function (_, e) {
-            e.checked = true;
-        })
-    }
+window.onpageshow = function(event) {
+    $('#t-switch').is(':checked') ? showR() : showCP();
+};
 
-    if ($(this).text() === 'Unselect All') {
-        $('.pending').each(function (_, e) {
-            e.checked = false;
-        })
-    }
-
-    if ($(this).text() === 'Select All') $(this).text('Unselect All');
-    else $(this).text('Select All');
-
-    updatePNo();
-});
-
-$('.toggle-r').click(function() {
-    if ($(this).text() === 'Select All') {
-        $('.rev').each(function (_, e) {
-            e.checked = true;
-        })
-    }
-
-    if ($(this).text() === 'Unselect All') {
-        $('.rev').each(function (_, e) {
-            e.checked = false;
-        })
-    }
-
-    if ($(this).text() === 'Select All') $(this).text('Unselect All');
-    else $(this).text('Select All');
-
-    updateRNo();
-});
-
-$('input[type=checkbox]').change(function() {
+$(document).ready(function() {
+    updateLabel();
     updatePNo();
     updateRNo();
+
+    $('#t-switch').change(function(){
+        $(this).is(':checked') ? showR() : showCP();
+        updateLabel();
+    });
+
+    $('.toggle-p').click(function() {
+        let allPending = $('.pending');
+
+        if ($(this).text() === 'Select All')
+            allPending.each((_, e) => e.checked = true);
+
+        if ($(this).text() === 'Unselect All')
+            allPending.each((_, e) => e.checked = false);
+
+        if ($(this).text() === 'Select All') $(this).text('Unselect All');
+
+        else $(this).text('Select All');
+
+        updatePNo();
+    });
+
+    $('.toggle-r').click(function() {
+        let allRev = $('.rev');
+
+        if ($(this).text() === 'Select All')
+            allRev.each((_, e) => e.checked = true);
+
+        if ($(this).text() === 'Unselect All')
+            allRev.each((_, e) => e.checked = false);
+
+        if ($(this).text() === 'Select All') $(this).text('Unselect All');
+
+        else $(this).text('Select All');
+
+        updateRNo();
+    });
+
+    $('input[type=checkbox]').change(function() {
+        updatePNo();
+        updateRNo();
+    });
 });
