@@ -115,7 +115,7 @@ public class ConsentService implements ConsentServiceInterface {
     //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
     @Override
     public boolean addNewExperiment(Experiment e){
-        return experimentDao.save(e) != null;
+        return (experimentDao.findByName(e.getName()) == null) && (experimentDao.save(e) != null);
     }
     @Override
     public Experiment getExperiment(int id)  {

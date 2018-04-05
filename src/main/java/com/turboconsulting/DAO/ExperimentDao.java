@@ -16,4 +16,6 @@ public interface ExperimentDao extends CrudRepository<Experiment, Integer> {
 
     Iterable<Experiment> findAllByVisitors(VisitorExperiment v);
 
+    Experiment findByName(String name);
+
 }

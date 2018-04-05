@@ -10,7 +10,11 @@ public class Experiment {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
-    private String name, description;
+
+    @Column(unique=true)
+    private String name;
+
+    private String description;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "experiment" )
     private Set<VisitorExperiment> visitors;
