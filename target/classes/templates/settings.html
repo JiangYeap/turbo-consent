@@ -1,16 +1,150 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Settings</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Settings | Turbo Consent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/bulma.js}"></script>
+    <script type="text/javascript" th:src="@{/js/apply-all.js}"></script>
 </head>
+<body>
+    <!-- Navigation bar start -->
+    <nav class="navbar is-dark has-shadow">
+        <div class="container">
+            <div class="navbar-brand">
+                <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                    <img src="" th:src="@{/media/wtc_logo.gif}" alt="Logo" />
+                    <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
+                </a>
+                <span class="navbar-burger burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                        Home
+                    </a>
+                    <a th:href="@{/{aID}/visitors(aID=${aID})}" class="navbar-item">
+                        Visitors
+                    </a>
+                    <a th:href="@{/{aID}/settings(aID=${aID})}" class="navbar-item is-active">
+                        Settings
+                    </a>
+                    <a th:href="@{/login}" class="navbar-item has-text-danger is-hidden-desktop">
+                        Log Out
+                    </a>
+                    <span class="navbar-item is-hidden-touch">
+                        <a th:href="@{/login}" class="button is-danger is-inverted is-outlined">Log Out</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner start -->
+    <section class="hero is-info is-2 is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    Settings
+                </h1>
+                <h2 class="subtitle">
+                    Change each visitor's Default Consent Level here. The set consent option will be applied to
+                    any new experiments participated.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <form th:action="@{/{aID}/settings/updateConsent(aID=${aID})}" th:method="post">
+        <div class="box master-panel">
+            <h1 class="subtitle">
+                Select Default Consent Level.
+                <a class="fa fa-question-circle open-modal"></a>
+            </h1>
+            <div class="select is-rounded master-option">
+                <select class="master-select">
+                    <option value="No Consent">No Consent</option>
+                    <option value="Anonymous">Anonymous</option>
+                    <option value="Full Consent">Full Consent</option>
+                </select>
+            </div>
+            <br />
+            <a class="button is-success is-outlined apply-master button-panel">Apply To All Visitors</a>
+            <button class="button is-danger button-panel" type="submit">Submit Changes</button>
+        </div>
+
+        <!-- Main content start -->
+        <section class="container">
+            <div class="columns features is-multiline">
+                <div class="column is-one-third" th:each="v : ${visitors}">
+                    <div class="card">
+                        <div class="card-content">
+                            <h1 class="title name-card" th:text="${v.name}"></h1>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-footer-item">
+                                <div class="select is-rounded">
+                                    <select class="child-select" name="defaultConsents">
+                                        <option th:value="${v.visitorId + '~No Consent'}">No Consent</option>
+                                        <option th:value="${v.visitorId + '~Anonymous'}">Anonymous</option>
+                                        <option th:value="${v.visitorId + '~Full Consent'}">Full Consent</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <!-- Modal start-->
+    <div class="modal">
+        <div class="modal-background close-modal"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title has-text-weight-semibold is-size-3-desktop">Consent Level Options</p>
+                <button class="delete is-medium close-modal is-hidden-touch" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="content">
+                    <ul style="list-style-type:disc" class="has-text-left is-size-5-desktop">
+                        <li><p>
+                            <strong>Full Consent:</strong> All your details as well as experiments results will be given.
+                        </p></li>
+                        <li><p>
+                            <strong>Anonymous:</strong> Only your results will be given, your identity will be hidden.
+                        </p></li>
+                        <li><p>
+                            <strong>No Consent:</strong> The experiment results will not be submitted.
+                        </p></li>
+                    </ul>
+                </div>
+                <hr />
+                <div class="content has-text-centered close-modal" id="ok-close">
+                    <a class="is-size-4 is-size-5-mobile">OK</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
     <tbody>
         <h1>Settings</h1>
-        <p th:text="'Welcome, ' + ${uname}" />
+        <p th:text="'Welcome, ' + ${uname}"></p>
 
         <form th:action="@{/{aID}/settings/updateConsent(aID=${aID})}" th:method="post">
             <p>Default Consent Level: <input name="consent" id="consent" type="text" th:value="${consent}"  /></p>
             <button type="submit">submit</button>
         </form>
     </tbody>
+</body>
 </html>

@@ -67,8 +67,8 @@ function Pad(n) {
 // prevents illegal submit
 $(document).ready(function() {
     $('button[type=submit]').click(function() {
-        checked1 = $('input[type=checkbox]:checked').length;
-        checked2 = $('input[type=radio]:checked').length;
+        let checked1 = $('input[type=checkbox]:checked').length;
+        let checked2 = $('input[type=radio]:checked').length;
 
         if(!checked1 || !checked2) {
             alert("You must select at least one experiment and exactly one consent option.");

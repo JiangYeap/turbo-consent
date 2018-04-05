@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d359951-eaa4-4d23-bbdc-b5beef41842e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/static/js/form-validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/js/form-validation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/static/js/session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/js/session.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Resources/static/js/apply-all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/static/css/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/css/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/SettingsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/SettingsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/form-validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/form-validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/session.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/table-switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/table-switch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/experiment.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/experiment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/experiments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/experiments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/settings.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,44 +30,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="experiments.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="experiments.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="53" column="24" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="24" />
+            <state relative-caret-position="2282">
+              <caret line="152" column="69" selection-start-line="152" selection-start-column="65" selection-end-line="152" selection-end-column="69" />
               <folding>
                 <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#2;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1522929115100" expanded="true" signature="7139:7500" ph="..." />
+                <marker date="1522931922631" expanded="true" signature="7143:7504" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/settings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="36" column="92" selection-start-line="36" selection-start-column="92" selection-end-line="36" selection-end-column="92" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="51" column="24" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="experiment.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiment.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="52" column="24" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="24" />
+            <state relative-caret-position="888">
+              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -64,20 +57,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="responsive-tables.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/responsive-tables.js">
+      <file leaf-file-name="bulma.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="17">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form-validation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/form-validation.js">
+      <file leaf-file-name="apply-all.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/apply-all.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="102">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -91,29 +84,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="39" column="24" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="visitors.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/visitors.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="53" column="24" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="table-switch.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="323">
+              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form-validation.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/form-validation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/SettingsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VisitorsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/VisitorsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="experiment.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiment.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="89" column="79" selection-start-line="89" selection-start-column="79" selection-end-line="89" selection-end-column="79" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,23 +148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>respon</find>
-      <find>(s)</find>
-      <find>Navigate</find>
-      <find>Consent</find>
-      <find>Looks</find>
-      <find>open</find>
-      <find>closeM</find>
-      <find>closeMo</find>
-      <find>modal</find>
-      <find>close-m</find>
-      <find>open-</find>
-      <find>asyn</find>
-      <find>burger</find>
-      <find>close-modal</find>
-      <find>Back</find>
-      <find>Post</find>
-      <find>float</find>
       <find>is-hidden-mobile</find>
       <find>bread</find>
       <find>switch</find>
@@ -163,7 +160,24 @@
       <find>Revie</find>
       <find>pending</find>
       <find>is-ac</find>
+      <find>Default Consent option</find>
+      <find>Unreviewed</find>
       <find>hero</find>
+      <find>form</find>
+      <find>box</find>
+      <find>modal</find>
+      <find>Select De</find>
+      <find>Default</find>
+      <find>quest</find>
+      <find>Defa</find>
+      <find>ok-c</find>
+      <find>master-pa</find>
+      <find>ok</find>
+      <find>options</find>
+      <find>apply</find>
+      <find>child</find>
+      <find>name</find>
+      <find>Anony</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -171,6 +185,8 @@
       <replace>visitorName</replace>
       <replace>consentLevel</replace>
       <replace>is-hidden-touch</replace>
+      <replace>Default Consent Option</replace>
+      <replace>Consent-Pending</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/Resources/static/css</dir>
@@ -183,8 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ExperimentDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/loginDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDaoImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/VisitorDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Researcher.java" />
@@ -228,12 +242,14 @@
         <option value="$PROJECT_DIR$/src/main/Resources/templates/home.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/static/js/bulma.js" />
-        <option value="$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/static/js/form-validation.js" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/static/js/session.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/SettingsController.java" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/settings.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/static/js/apply-all.js" />
+        <option value="$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js" />
       </list>
     </option>
   </component>
@@ -584,7 +600,7 @@
       <workItem from="1521717579032" duration="2142000" />
       <workItem from="1522750572726" duration="5252000" />
       <workItem from="1522857782631" duration="9965000" />
-      <workItem from="1522920180700" duration="9133000" />
+      <workItem from="1522920180700" duration="16757000" />
     </task>
     <servers />
   </component>
@@ -597,11 +613,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152631000" />
+    <option name="totallyTimeSpent" value="160255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
@@ -624,8 +639,8 @@
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.47578347" />
       <window_info anchor="bottom" id="Spring" order="3" weight="0.32905984" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.63532764" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.22416107" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.63532764" />
+      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.22416107" />
       <window_info anchor="right" id="Bean Validation" order="4" />
       <window_info id="Web" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.41737893" />
@@ -702,8 +717,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/result.html" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/VisitorTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/DpendendentController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/Resources/index.html" />
     <entry file="file://$PROJECT_DIR$/src/main/Resources/visitExp.html" />
@@ -768,13 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/VisitorsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -964,52 +970,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/css/output.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6619" column="11" selection-start-line="6619" selection-start-column="5" selection-end-line="6619" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/responsive-tables.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="29" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/form-validation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/session.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/settings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="36" column="92" selection-start-line="36" selection-start-column="92" selection-end-line="36" selection-end-column="92" />
         </state>
       </provider>
     </entry>
@@ -1029,30 +993,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/visitors.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="53" column="24" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="24" />
+        <state relative-caret-position="413">
+          <caret line="100" column="14" lean-forward="true" selection-start-line="78" selection-start-column="3" selection-end-line="100" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/VisitorsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/SettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="24" />
+        <state relative-caret-position="140">
+          <caret line="89" column="79" selection-start-line="89" selection-start-column="79" selection-end-line="89" selection-end-column="79" />
           <folding>
             <element signature="n#style#0;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/css/output.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="167" column="30" selection-start-line="165" selection-start-column="3" selection-end-line="165" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/form-validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/session.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="53" column="24" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="24" />
+        <state relative-caret-position="2282">
+          <caret line="152" column="69" selection-start-line="152" selection-start-column="65" selection-end-line="152" selection-end-column="69" />
           <folding>
             <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#2;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#form#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1522929115100" expanded="true" signature="7139:7500" ph="..." />
+            <marker date="1522931922631" expanded="true" signature="7143:7504" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/apply-all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/table-switch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

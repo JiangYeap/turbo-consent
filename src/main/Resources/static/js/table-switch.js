@@ -41,11 +41,9 @@ $(document).ready(function() {
     $('.toggle-p').click(function() {
         let allPending = $('.pending');
 
-        if ($(this).text() === 'Select All')
-            allPending.each((_, e) => e.checked = true);
+        if ($(this).text() === 'Select All') allPending.prop('checked', true);
 
-        if ($(this).text() === 'Unselect All')
-            allPending.each((_, e) => e.checked = false);
+        if ($(this).text() === 'Unselect All') allPending.prop('checked', false);
 
         if ($(this).text() === 'Select All') $(this).text('Unselect All');
 
@@ -57,11 +55,9 @@ $(document).ready(function() {
     $('.toggle-r').click(function() {
         let allRev = $('.rev');
 
-        if ($(this).text() === 'Select All')
-            allRev.each((_, e) => e.checked = true);
+        if ($(this).text() === 'Select All') allRev.prop('checked', true);
 
-        if ($(this).text() === 'Unselect All')
-            allRev.each((_, e) => e.checked = false);
+        if ($(this).text() === 'Unselect All') allRev.prop('checked', false);
 
         if ($(this).text() === 'Select All') $(this).text('Unselect All');
 

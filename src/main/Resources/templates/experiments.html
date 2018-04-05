@@ -68,7 +68,7 @@
     <div class="box cta">
         <p class="has-text-centered" th:if="${true}">
             <span class="tag has-text-weight-semibold is-info">Note:</span>
-            &nbsp;Looks like you don't have a Default Consent Option yet, set it up in the
+            &nbsp;Looks like you don't have a Default Consent Level yet, set it up in the
             <a th:href="@{/{aID}/settings(aID=${aID})}">Settings</a> section to automatically
             apply consent level to new experiments.
         </p>
@@ -143,7 +143,7 @@
                 </tbody>
             </table>
 
-            <div class="box options">
+            <div class="box exp-options">
                 <h1 class="subtitle" >
                     Select Consent Level For <span id="p-selected"></span> Experiment(s)&nbsp;
                     <a class="fa fa-question-circle open-modal"></a>
@@ -197,7 +197,7 @@
                 </tbody>
             </table>
 
-            <div class="box options">
+            <div class="box exp-options">
                 <h1 class="subtitle" >
                     Update Consent Level For <span id="r-selected"></span> Experiment(s)&nbsp;
                     <a class="fa fa-question-circle open-modal"></a>

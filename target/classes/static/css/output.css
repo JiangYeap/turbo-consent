@@ -83,7 +83,7 @@ html, body {
   line-height: 1.5; }
 
 .features {
-  padding: 5rem 0; }
+  padding: 3rem 0; }
 
 .box.cta {
   border-radius: 0;
@@ -150,9 +150,21 @@ hr {
   margin-top: 1em;
   padding: 0; }
 
-.options {
+.exp-options {
   margin-top: 3em !important; }
 
+.master-option {
+  margin-top: -0.8em !important; }
+
+.button-panel {
+  margin-top: 0.5em !important; }
+
+.apply-master {
+  margin-right: 0.8em !important; }
+
+@media screen and (min-width: 768px) {
+  .master-panel {
+    padding-left: 6em !important; } }
 /*! bulma.io v0.6.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
