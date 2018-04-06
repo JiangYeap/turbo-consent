@@ -15,6 +15,7 @@ import javax.annotation.PostConstruct;
 import javax.validation.ConstraintViolationException;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 @Service
 public class ConsentService implements ConsentServiceInterface {
@@ -172,6 +173,12 @@ public class ConsentService implements ConsentServiceInterface {
         visitorExperiment.setConsentLevel(c);
         v.doExperiment(visitorExperiment);
         return visitorDao.save(v) != null;
+    }
+    @Override
+    public boolean updateBatchExperimentConsents(int visitorId, ConsentLevel c, List<Integer> experimentIds)  {
+        boolean batchSuccess = true;
+        for (int eID : experimentIds)  batchSuccess = updateExperimentConsent(visitorId, c, eID) && batchSuccess;
+        return batchSuccess;
     }
     @Override
     public int getPendingExperiments(int visitorId)  {

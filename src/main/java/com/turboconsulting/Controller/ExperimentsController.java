@@ -20,10 +20,10 @@ public class ExperimentsController {
     @Autowired
     private ConsentService consentService;
 
-    @GetMapping("/{aID}/visitors/{vID}/experiments")
+    @GetMapping("/visitors/experiments")
     public String experimentsPage(Model m,
-                           @PathVariable(value="aID") int aID,
-                           @PathVariable(value="vID") int vID  ) {
+                           @RequestParam(value="aID") int aID,
+                           @RequestParam(value="vID") int vID  ) {
 
         m.addAttribute("visitorExps", consentService.getVisitorExperiments(vID));
         m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
@@ -31,16 +31,16 @@ public class ExperimentsController {
         return "experiments";
     }
 
-    @PostMapping("/{aID}/visitors/{vID}/experiments/updateConsent")
-    public ModelAndView updateConsent(@PathVariable("aID") int aID,
-                                      @PathVariable("vID") int vID,
+    @PostMapping("/visitors/experiments/updateConsent")
+    public ModelAndView updateConsent(@RequestParam("aID") int aID,
+                                      @RequestParam("vID") int vID,
                                       @ModelAttribute("selected") List<Integer> eIDs,
                                       @ModelAttribute("consentLevel") String c)  {
 
-        for (int eID : eIDs) consentService.updateExperimentConsent(vID, ConsentLevel.fromString(c), eID);
+        consentService.updateBatchExperimentConsents(vID, ConsentLevel.fromString(c), eIDs);
 
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("redirect:/"+ aID + "/visitors/" + vID + "/experiments");
+        mav.setViewName("redirect:/visitors/experiments?aID="+aID+"&vID="+vID);
 
         return mav;
     }

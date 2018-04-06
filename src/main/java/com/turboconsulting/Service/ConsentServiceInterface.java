@@ -3,6 +3,8 @@ package com.turboconsulting.Service;
 import com.turboconsulting.Entity.*;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.List;
 
 public interface ConsentServiceInterface {
     @PostConstruct
@@ -34,5 +36,6 @@ public interface ConsentServiceInterface {
     boolean doExperiment(int visitorId, int experimentId);
     String getExperimentConsent(int id, int experimentID);
     boolean updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID);
+    public boolean updateBatchExperimentConsents(int visitorId, ConsentLevel c, List<Integer> experimentIds);
     int getPendingExperiments(int id);
 }
