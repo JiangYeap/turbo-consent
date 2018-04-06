@@ -6,10 +6,7 @@ import com.turboconsulting.Service.ConsentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -21,11 +18,11 @@ public class ExperimentController {
     @Autowired
     private ConsentService consentService;
 
-    @GetMapping("/{aID}/visitors/{vID}/experiments/{eID}")
+    @GetMapping("/visitors/experiments/experiment")
     public String experimentPage(Model m,
-                                 @PathVariable("aID") int aID,
-                                 @PathVariable("vID") int vID,
-                                 @PathVariable("eID") int eID) {
+                                 @RequestParam("aID") int aID,
+                                 @RequestParam("vID") int vID,
+                                 @RequestParam("eID") int eID) {
 
         m.addAttribute("visitorExp", consentService.getVisitorExperiment(vID, eID));
         m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
@@ -33,15 +30,15 @@ public class ExperimentController {
         return "experiment";
     }
 
-    @PostMapping("/{aID}/visitors/{vID}/experiments/{eID}/updateConsent")
-    public ModelAndView updateConsent(@PathVariable("aID") int aID,
-                                      @PathVariable("vID") int vID,
-                                      @PathVariable("eID") int eID,
+    @PostMapping("/visitor/experiments/updateConsent")
+    public ModelAndView updateConsent(@RequestParam("aID") int aID,
+                                      @RequestParam("vID") int vID,
+                                      @RequestParam("eID") int eID,
                                       @ModelAttribute("consentLevel") String c)  {
 
         consentService.updateExperimentConsent(vID, ConsentLevel.fromString(c), eID);
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("redirect:/"+ aID + "/visitors/" + vID + "/experiments");
+        mav.setViewName("redirect:/visitors/experiments?aID="+aID+"&vID="+vID);
 
         return mav;
     }
