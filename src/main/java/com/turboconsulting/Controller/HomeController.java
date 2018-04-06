@@ -18,7 +18,7 @@ public class HomeController {
     public String homePage(Model m,
                            @RequestParam(value="aID") int accountID) {
         m.addAttribute("experimentsPending", consentService.getAccount(accountID).getTotalPendingExperiments());
-
+        m.addAttribute("aID", accountID);
         return "home";
     }
 

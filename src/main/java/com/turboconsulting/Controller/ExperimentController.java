@@ -25,6 +25,9 @@ public class ExperimentController {
                                  @RequestParam("eID") int eID) {
         m.addAttribute("visitorExp", consentService.getVisitorExperiment(vID, eID));
         m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
+        m.addAttribute("aID", aID);
+        m.addAttribute("vID", vID);
+        m.addAttribute("eID", eID);
         return "experiment";
     }
 

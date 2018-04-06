@@ -21,6 +21,7 @@ public class SettingsController {
         //if (uname.equals(""))  return "redirect:/login";
         m.addAttribute("consentOptions", ConsentLevel.values());
         m.addAttribute("visitors", consentService.getAccountsVisitors(aID));
+        m.addAttribute("aID", aID);
 
         return "settings";
     }
@@ -30,7 +31,7 @@ public class SettingsController {
                                       @ModelAttribute("consent") String c)  {
         consentService.updateAccountConsent(aID, ConsentLevel.fromString(c));
         ModelAndView m = new ModelAndView();
-        m.setViewName("redirect:/settings?aID="+aID);      
+        m.setViewName("redirect:/settings?aID="+aID);
         return m;
     }
 }

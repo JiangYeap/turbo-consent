@@ -18,6 +18,7 @@ public class VisitorsController {
     public String visitorsPage(Model m,
                                @RequestParam(value="aID") int aID)  {
         m.addAttribute("visitors", consentService.getAccountsVisitors(aID));
+        m.addAttribute("aID", aID);
         return "visitors";
     }
 }
