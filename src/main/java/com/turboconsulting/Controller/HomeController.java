@@ -14,9 +14,9 @@ public class HomeController {
     @Autowired
     private ConsentService consentService;
 
-    @GetMapping("/{aID}/home")
+    @GetMapping("/home")
     public String homePage(Model m,
-                           @PathVariable(value="aID") int accountID) {
+                           @RequestParam(value="aID") int accountID) {
         m.addAttribute("experimentsPending", consentService.getAccount(accountID).getTotalPendingExperiments());
 
         return "home";
