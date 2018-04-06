@@ -27,6 +27,8 @@ public class ExperimentsController {
 
         m.addAttribute("visitorExps", consentService.getVisitorExperiments(vID));
         m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
+        m.addAttribute("aID", aID);
+        m.addAttribute("vID", vID);
 
         return "experiments";
     }
