@@ -17,7 +17,7 @@
     <nav class="navbar is-dark has-shadow">
         <div class="container">
             <div class="navbar-brand">
-                <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                <a th:href="@{/home(aID=${aID})}" class="navbar-item">
                     <img src="" th:src="@{/media/wtc_logo.gif}" alt="Logo" />
                     <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
                 </a>
@@ -29,13 +29,13 @@
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/home(aID=${aID})}" class="navbar-item">
                         Home
                     </a>
-                    <a th:href="@{/{aID}/visitors(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/visitors(aID=${aID})}" class="navbar-item">
                         Visitors
                     </a>
-                    <a th:href="@{/{aID}/settings(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/settings(aID=${aID})}" class="navbar-item">
                         Settings
                     </a>
                     <a th:href="@{/login}" class="navbar-item has-text-danger is-hidden-desktop">
@@ -113,7 +113,7 @@
 
             <hr />
 
-            <form th:action="@{/{aID}/visitors/{vID}/experiments/{eID}/updateConsent(aID=${aID}, vID=${vID}, eID=${eID})}" th:method="post">
+            <form th:action="@{/visitors/experiments/{eID}/updateConsent(aID=${aID}, vID=${vID}, eID=${eID})}" th:method="post">
                 <h1 class="subtitle" >
                     Select Consent Level For Experiment&nbsp;
                     <a class="fa fa-question-circle open-modal"></a>
