@@ -63,16 +63,3 @@ function Pad(n) {
     return n.substr(n.length-2);
 }
 // ]]>
-
-// prevents illegal submit
-$(document).ready(function() {
-    $('button[type=submit]').click(function() {
-        let checked1 = $('input[type=checkbox]:checked').length;
-        let checked2 = $('input[type=radio]:checked').length;
-
-        if(!checked1 || !checked2) {
-            alert("You must select at least one experiment and exactly one consent option.");
-            return false;
-        }
-    });
-});

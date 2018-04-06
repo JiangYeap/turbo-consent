@@ -137,14 +137,26 @@
         </div>
     </div>
 
-    <tbody>
-        <h1>Settings</h1>
-        <p th:text="'Welcome, ' + ${uname}"></p>
+    <!--<tbody>-->
+        <!--<h1>Settings</h1>-->
+        <!--<p th:text="'Welcome, ' + ${uname}"></p>-->
 
-        <form th:action="@{/settings/updateConsent(aID=${aID})}" th:method="post">
-            <p>Default Consent Level: <input name="consent" id="consent" type="text" th:value="${consent}"  /></p>
-            <button type="submit">submit</button>
-        </form>
-    </tbody>
+        <!--<form th:action="@{/settings/updateConsent(aID=${aID})}" th:method="post">-->
+            <!--<p>Default Consent Level: <input name="consent" id="consent" type="text" th:value="${consent}"  /></p>-->
+            <!--<button type="submit">submit</button>-->
+        <!--</form>-->
+    <!--</tbody>-->
+
+    <!-- Footer start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>Copyright © 2018 Turbo Consulting</p>
+                <!--<a href="#">Terms of Use</a> &nbsp;·&nbsp;-->
+                <!--<a href="#">Privacy Policy</a> &nbsp;·&nbsp;-->
+                <!--<a href="#">Accessibility</a>-->
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

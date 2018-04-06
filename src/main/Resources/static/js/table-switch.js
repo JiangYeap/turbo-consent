@@ -39,6 +39,8 @@ $(document).ready(function() {
     });
 
     $('.toggle-p').click(function() {
+        if ($(this).attr('disabled')) return;
+
         let allPending = $('.pending');
 
         if ($(this).text() === 'Select All') allPending.prop('checked', true);
@@ -53,6 +55,8 @@ $(document).ready(function() {
     });
 
     $('.toggle-r').click(function() {
+        if ($(this).attr('disabled')) return;
+
         let allRev = $('.rev');
 
         if ($(this).text() === 'Select All') allRev.prop('checked', true);
