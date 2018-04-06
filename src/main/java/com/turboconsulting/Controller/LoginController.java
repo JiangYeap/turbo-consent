@@ -28,7 +28,7 @@ public class LoginController {
     public ModelAndView loginSubmit(@ModelAttribute LoginDetails loginDetails) {
         ModelAndView mav = new ModelAndView();
         if(consentService.checkAccountLogin(loginDetails))  {
-            mav.setViewName("redirect:/" + consentService.getAccountID(loginDetails.getEmail()) + "/home");
+            mav.setViewName("redirect:/home?aID=" + consentService.getAccountID(loginDetails.getEmail()));
             return mav;
         }
         mav.setViewName("redirect:/login");

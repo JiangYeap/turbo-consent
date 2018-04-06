@@ -30,7 +30,7 @@ public class SettingsController {
                                       @ModelAttribute("consent") String c)  {
         consentService.updateAccountConsent(aID, ConsentLevel.fromString(c));
         ModelAndView m = new ModelAndView();
-        m.setViewName("redirect:/settings?aID="+aID);
+        m.setViewName("redirect:/settings?aID="+aID);      
         return m;
     }
 }
