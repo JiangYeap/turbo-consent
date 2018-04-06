@@ -164,7 +164,7 @@ hr {
 
 @media screen and (min-width: 768px) {
   .master-panel {
-    padding-left: 6em !important; } }
+    padding: 2.5em 0em 2.5em 6em !important; } }
 /*! bulma.io v0.6.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
