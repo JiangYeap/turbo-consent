@@ -23,6 +23,7 @@ public class SettingsController {
                            @PathVariable("aID") int aID) {
         //if (uname.equals(""))  return "redirect:/login";
         m.addAttribute("consentOptions", ConsentLevel.values());
+        m.addAttribute("visitors", consentService.getAccountsVisitors(aID));
 
         return "settings";
     }

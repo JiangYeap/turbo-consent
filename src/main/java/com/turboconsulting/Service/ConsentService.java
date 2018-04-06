@@ -39,16 +39,16 @@ public class ConsentService implements ConsentServiceInterface {
     @PostConstruct
     public void ConsentService() {
 
-        accountDao.deleteAll();
-        experimentDao.deleteAll();
-        Account newAccount = new Account("Harry", "hw16471@bristol.ac.uk", "password");
-        addNewAccount(newAccount);
-
-        Visitor newVisitor = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ), ConsentLevel.RESTRICTED);
-        addNewVisitor(newVisitor, newAccount.getAccountId());
-        Experiment newExperiment = new Experiment("Physics Experiment", "A lovely desciption.");
-        addNewExperiment(newExperiment);
-        doExperiment(newVisitor.getVisitorId(), newExperiment.getId());
+//        accountDao.deleteAll();
+//        experimentDao.deleteAll();
+//        Account newAccount = new Account("Harry", "hw16471@bristol.ac.uk", "password");
+//        addNewAccount(newAccount);
+//
+//        Visitor newVisitor = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ), ConsentLevel.RESTRICTED);
+//        addNewVisitor(newVisitor, newAccount.getAccountId());
+//        Experiment newExperiment = new Experiment("Physics Experiment", "A lovely desciption.");
+//        addNewExperiment(newExperiment);
+//        doExperiment(newVisitor.getVisitorId(), newExperiment.getId());
 
     }
 

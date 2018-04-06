@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <script async="async" type="text/javascript" th:src="@{/js/bulma.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bulma.js}"></script>
 </head>
 <body>
     <!-- Navigation bar start -->
@@ -57,7 +57,7 @@
                 </h1>
                 <h2 class="subtitle">
                     Together with We The Curious, we make sure your data are consented
-                    before being used in research. Navigate to <a th:href="@{/{aID}/visitors(aID=${aID})}">Visitors</a>
+                    before being used in research. Navigate to <a class="has-text-link" th:href="@{/{aID}/visitors(aID=${aID})}">Visitors</a>
                     to start reviewing your experiments.
                 </h2>
             </div>
@@ -67,7 +67,7 @@
     <div class="box cta has-text-centered" th:inline="text">
         <p th:if="${experimentsPending gt 0}">
             <span class="tag has-text-weight-semibold is-danger">New !</span>
-            &nbsp;You have a total of [[${experimentsPending}]] pending experiments, check them out under the
+            &nbsp;You have a total of [[${experimentsPending}]] pending experiment(s), check them out under the
             <a class="has-text-link" th:href="@{/{aID}/visitors(aID=${aID})}">Visitors</a> section now&nbsp;!
         </p>
 
@@ -111,9 +111,9 @@
                         <div class="content">
                             <h4>Settings</h4>
                             <p>
-                                Change your account settings including setting Consent Defaults
-                                <em>(apply set consent options on multiple experiments)</em>
-                                and Dependent Visitors.
+                                Change your account settings including setting up Consent Defaults
+                                <em>(automatically apply set consent options to all new experiments)</em>
+                                for each Dependent Visitor.
                             </p>
                             <p>
                                 <a th:href="@{/{aID}/settings(aID=${aID})}"><i class="fa fa-location-arrow"></i>&nbsp;Go to Settings!</a>
