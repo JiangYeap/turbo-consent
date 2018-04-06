@@ -17,7 +17,7 @@
     <nav class="navbar is-dark has-shadow">
         <div class="container">
             <div class="navbar-brand">
-                <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                <a th:href="@{/home(aID=${aID})}" class="navbar-item">
                     <img src="" th:src="@{/media/wtc_logo.gif}" alt="Logo" />
                     <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
                 </a>
@@ -29,13 +29,13 @@
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/home(aID=${aID})}" class="navbar-item">
                         Home
                     </a>
-                    <a th:href="@{/{aID}/visitors(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/visitors(aID=${aID})}" class="navbar-item">
                         Visitors
                     </a>
-                    <a th:href="@{/{aID}/settings(aID=${aID})}" class="navbar-item is-active">
+                    <a th:href="@{/settings(aID=${aID})}" class="navbar-item is-active">
                         Settings
                     </a>
                     <a th:href="@{/login}" class="navbar-item has-text-danger is-hidden-desktop">
@@ -64,7 +64,7 @@
         </div>
     </section>
 
-    <form th:action="@{/{aID}/settings/updateConsent(aID=${aID})}" th:method="post">
+    <form th:action="@{/settings/updateConsent(aID=${aID})}" th:method="post">
         <div class="box master-panel">
             <h1 class="subtitle">
                 Select Default Consent Level.
@@ -141,7 +141,7 @@
         <h1>Settings</h1>
         <p th:text="'Welcome, ' + ${uname}"></p>
 
-        <form th:action="@{/{aID}/settings/updateConsent(aID=${aID})}" th:method="post">
+        <form th:action="@{/settings/updateConsent(aID=${aID})}" th:method="post">
             <p>Default Consent Level: <input name="consent" id="consent" type="text" th:value="${consent}"  /></p>
             <button type="submit">submit</button>
         </form>

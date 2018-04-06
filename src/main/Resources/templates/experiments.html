@@ -18,7 +18,7 @@
     <nav class="navbar is-dark has-shadow">
         <div class="container">
             <div class="navbar-brand">
-                <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                <a th:href="@{/home(aID=${aID})}" class="navbar-item">
                     <img src="" th:src="@{/media/wtc_logo.gif}" alt="Logo" />
                     <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
                 </a>
@@ -30,13 +30,13 @@
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a th:href="@{/{aID}/home(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/home(aID=${aID})}" class="navbar-item">
                         Home
                     </a>
-                    <a th:href="@{/{aID}/visitors(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/visitors(aID=${aID})}" class="navbar-item">
                         Visitors
                     </a>
-                    <a th:href="@{/{aID}/settings(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/settings(aID=${aID})}" class="navbar-item">
                         Settings
                     </a>
                     <a th:href="@{/login}" class="navbar-item has-text-danger is-hidden-desktop">
@@ -69,7 +69,7 @@
         <p class="has-text-centered" th:if="${true}">
             <span class="tag has-text-weight-semibold is-info">Note:</span>
             &nbsp;Looks like you don't have a Default Consent Level yet, set it up in the
-            <a th:href="@{/{aID}/settings(aID=${aID})}">Settings</a> section to automatically
+            <a th:href="@{/settings(aID=${aID})}">Settings</a> section to automatically
             apply consent level to new experiments.
         </p>
 
@@ -77,7 +77,7 @@
             <span class="tag has-text-weight-semibold is-info">Note:</span>
             &nbsp;[[${visitorName}]]'s current default consent for new experiments is [[${consentDefault}]].
             You can change it in the
-            <a th:href="@{/{aID}/settings(aID=${aID})}">Settings</a> section.
+            <a th:href="@{/settings(aID=${aID})}">Settings</a> section.
         </p>
     </div>
 
@@ -103,7 +103,7 @@
                         </p></li>
                         <!--<li><p>-->
                             <!--<strong>Custom Consent:</strong> Custom set consent option, can be configured in-->
-                            <!--<a th:href="@{/{aID}/settings(aID=${aID})}">Settings</a>.-->
+                            <!--<a th:href="@{/settings(aID=${aID})}">Settings</a>.-->
                         <!--</p></li>-->
                     </ul>
                 </div>
@@ -121,7 +121,7 @@
             <label for="t-switch"></label>
             <label class="current-table is-size-3">Consent-Pending Experiments</label>
         </div>
-        <form class="consent-pending" th:action="@{/{aID}/visitors/{vID}/experiments/updateConsent(aID=${aID}, vID=${vID})}" th:method="post">
+        <form class="consent-pending" th:action="@{/visitors/experiments/updateConsent(aID=${aID}, vID=${vID})}" th:method="post">
             <table class="features table is-hoverable is-fullwidth is-striped is-hidden-touch">
                 <tbody class="tbody" th:with="pending = ${visitorExps.?[not consentChanged]}">
                     <tr>
@@ -133,7 +133,7 @@
 
                     <tr th:each="visitorExp : ${pending}">
                         <td class="dentry is-size-6"><input class="pending" type="checkbox" name="selected" th:value="${visitorExp.experiment.id}" /></td>
-                        <td class="dentry is-size-6"><a th:href="@{/{aID}/visitors/{vID}/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}" th:text="${visitorExp.experiment.name}">Physics Experiment</a></td>
+                        <td class="dentry is-size-6"><a th:href="@{/visitors/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}" th:text="${visitorExp.experiment.name}">Physics Experiment</a></td>
                         <td class="dentry is-size-6" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">19/3/2018</td>
                         <td class="dentry is-size-6">Pending</td>
                     </tr>
@@ -167,7 +167,7 @@
             </div>
         </form>
 
-        <form class="reviewed is-hidden" th:action="@{/{aID}/visitors/{vID}/experiments/updateConsent(aID=${aID}, vID=${vID})}" th:method="post">
+        <form class="reviewed is-hidden" th:action="@{/visitors/experiments/updateConsent(aID=${aID}, vID=${vID})}" th:method="post">
             <table class="features table is-hoverable is-fullwidth is-striped is-hidden-touch">
                 <!--<thead class="thead">-->
                     <!--<nav class="breadcrumb is-large" aria-label="breadcrumbs">-->
@@ -187,7 +187,7 @@
 
                     <tr th:each="visitorExp : ${reviewed}">
                         <td class="dentry is-size-6"><input class="rev" type="checkbox" name="selected" th:value="${visitorExp.experiment.id}" /></td>
-                        <td class="dentry is-size-6"><a th:href="@{/{aID}/visitors/{vID}/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}" th:text="${visitorExp.experiment.name}">Physics Experiment</a></td>
+                        <td class="dentry is-size-6"><a th:href="@{/visitors/experiments/{eID}(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}" th:text="${visitorExp.experiment.name}">Physics Experiment</a></td>
                         <td class="dentry is-size-6" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">19/3/2018</td>
                         <td class="dentry is-size-6" th:text="${visitorExp.consentLevel}">Not Pending</td>
                     </tr>
