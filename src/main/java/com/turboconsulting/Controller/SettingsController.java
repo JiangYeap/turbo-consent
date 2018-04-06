@@ -4,10 +4,7 @@ import com.turboconsulting.Entity.ConsentLevel;
 import com.turboconsulting.Service.ConsentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -18,9 +15,9 @@ public class SettingsController {
     @Autowired
     private ConsentService consentService;
 
-    @GetMapping("/{aID}/settings")
+    @GetMapping("/settings")
     public String homePage(Model m,
-                           @PathVariable("aID") int aID) {
+                           @RequestParam("aID") int aID) {
         //if (uname.equals(""))  return "redirect:/login";
         m.addAttribute("consentOptions", ConsentLevel.values());
         m.addAttribute("visitors", consentService.getAccountsVisitors(aID));
@@ -28,12 +25,12 @@ public class SettingsController {
         return "settings";
     }
 
-    @PostMapping("/{aID}/settings/updateConsent")
-    public ModelAndView updateConsent(@PathVariable("aID") int aID,
+    @PostMapping("/settings/updateConsent")
+    public ModelAndView updateConsent(@RequestParam("aID") int aID,
                                       @ModelAttribute("consent") String c)  {
         consentService.updateAccountConsent(aID, ConsentLevel.fromString(c));
         ModelAndView m = new ModelAndView();
-        m.setViewName("redirect:/"+ aID +"/settings");
+        m.setViewName("redirect:/settings?aID="+aID);
         return m;
     }
 }

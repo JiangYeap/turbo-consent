@@ -23,10 +23,8 @@ public class ExperimentController {
                                  @RequestParam("aID") int aID,
                                  @RequestParam("vID") int vID,
                                  @RequestParam("eID") int eID) {
-
         m.addAttribute("visitorExp", consentService.getVisitorExperiment(vID, eID));
         m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
-
         return "experiment";
     }
 
@@ -39,7 +37,6 @@ public class ExperimentController {
         consentService.updateExperimentConsent(vID, ConsentLevel.fromString(c), eID);
         ModelAndView mav = new ModelAndView();
         mav.setViewName("redirect:/visitors/experiments?aID="+aID+"&vID="+vID);
-
         return mav;
     }
 }
