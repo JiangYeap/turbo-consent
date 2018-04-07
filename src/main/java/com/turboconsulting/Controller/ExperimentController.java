@@ -22,12 +22,15 @@ public class ExperimentController {
     public String experimentPage(Model m,
                                  @RequestParam("aID") int aID,
                                  @RequestParam("vID") int vID,
-                                 @RequestParam("eID") int eID) {
+                                 @RequestParam("eID") int eID,
+                                 @RequestParam(value = "update", required = false) boolean updateSuccess) {
         m.addAttribute("visitorExp", consentService.getVisitorExperiment(vID, eID));
         m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
         m.addAttribute("aID", aID);
         m.addAttribute("vID", vID);
         m.addAttribute("eID", eID);
+        m.addAttribute("updateSuccess", updateSuccess);
+
         return "experiment";
     }
 
@@ -36,10 +39,12 @@ public class ExperimentController {
                                       @RequestParam("vID") int vID,
                                       @RequestParam("eID") int eID,
                                       @ModelAttribute("consentLevel") String c)  {
-
-        consentService.updateExperimentConsent(vID, ConsentLevel.fromString(c), eID);
+        boolean updateSuccessful = false;
+        if(consentService.updateExperimentConsent(vID, ConsentLevel.fromString(c), eID))  {
+            updateSuccessful = true;
+        }
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("redirect:/visitors/experiments?aID="+aID+"&vID="+vID);
+        mav.setViewName("redirect:/visitors/experiments?aID="+aID+"&vID="+vID+"&update="+updateSuccessful);
         return mav;
     }
 }
