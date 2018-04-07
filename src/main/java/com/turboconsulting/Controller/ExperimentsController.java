@@ -30,6 +30,7 @@ public class ExperimentsController {
         m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
         m.addAttribute("aID", aID);
         m.addAttribute("vID", vID);
+        m.addAttribute("defaultConsent", consentService.getVisitor(vID).getDefaultConsent());
         m.addAttribute("updateSuccess", updateSuccess);
 
         return "experiments";
