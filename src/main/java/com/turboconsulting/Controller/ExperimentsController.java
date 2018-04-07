@@ -41,10 +41,7 @@ public class ExperimentsController {
                                       @ModelAttribute("selected") List<Integer> eIDs,
                                       @ModelAttribute("consentLevel") String c)  {
         ModelAndView mav = new ModelAndView();
-        boolean updateSuccessful = false;
-        if(consentService.updateBatchExperimentConsents(vID, ConsentLevel.fromString(c), eIDs))  {
-            updateSuccessful = true;
-        }
+        boolean updateSuccessful = consentService.updateBatchExperimentConsents(vID, ConsentLevel.fromString(c), eIDs);
 
         mav.setViewName("redirect:/visitors/experiments?aID="+aID+"&vID="+vID+"&update="+updateSuccessful);
 

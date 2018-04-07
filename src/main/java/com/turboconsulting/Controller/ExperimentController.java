@@ -39,10 +39,7 @@ public class ExperimentController {
                                       @RequestParam("vID") int vID,
                                       @RequestParam("eID") int eID,
                                       @ModelAttribute("consentLevel") String c)  {
-        boolean updateSuccessful = false;
-        if(consentService.updateExperimentConsent(vID, ConsentLevel.fromString(c), eID))  {
-            updateSuccessful = true;
-        }
+        boolean updateSuccessful = consentService.updateExperimentConsent(vID, ConsentLevel.fromString(c), eID);
         ModelAndView mav = new ModelAndView();
         mav.setViewName("redirect:/visitors/experiments?aID="+aID+"&vID="+vID+"&update="+updateSuccessful);
         return mav;

@@ -17,11 +17,14 @@ public class SettingsController {
 
     @GetMapping("/settings")
     public String homePage(Model m,
-                           @RequestParam("aID") int aID) {
+                           @RequestParam("aID") int aID,
+                           @RequestParam(value = "update", required = false) boolean updateSuccess) {
         //if (uname.equals(""))  return "redirect:/login";
         m.addAttribute("consentOptions", ConsentLevel.values());
         m.addAttribute("visitors", consentService.getAccountsVisitors(aID));
         m.addAttribute("aID", aID);
+        m.addAttribute("updateSuccess", updateSuccess);
+
 
         return "settings";
     }
@@ -29,9 +32,9 @@ public class SettingsController {
     @PostMapping("/settings/updateConsent")
     public ModelAndView updateConsent(@RequestParam("aID") int aID,
                                       @ModelAttribute("consent") String c)  {
-        consentService.updateAccountConsent(aID, ConsentLevel.fromString(c));
+        boolean updateSuccessful = consentService.updateAccountConsent(aID, ConsentLevel.fromString(c));
         ModelAndView m = new ModelAndView();
-        m.setViewName("redirect:/settings?aID="+aID);
+        m.setViewName("redirect:/settings?aID="+aID+"&update="+updateSuccessful);
         return m;
     }
 }
