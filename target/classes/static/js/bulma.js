@@ -19,4 +19,12 @@ $(document).ready(function() {
     $('.back').click(function() {
         window.history.back()
     });
+
+    $('.close-success').click(function() {
+        $('.success-flag').addClass('is-hidden');
+    });
+
+    $('.close-error').click(function() {
+        $('.error-flag').addClass('is-hidden');
+    });
 });

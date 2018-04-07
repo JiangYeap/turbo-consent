@@ -67,19 +67,29 @@
     </section>
 
     <div class="box cta">
-        <p class="has-text-centered" th:if="${true}">
-            <span class="tag has-text-weight-semibold is-info">Note:</span>
-            &nbsp;Looks like you don't have a Default Consent Level yet, set it up in the
-            <a th:href="@{/settings(aID=${aID})}">Settings</a> section to automatically
-            apply consent level to new experiments.
-        </p>
+        <!--<p class="has-text-centered" th:if="${true}">-->
+            <!--<span class="tag has-text-weight-semibold is-info">Note:</span>-->
+            <!--&nbsp;Looks like you don't have a Default Consent Level yet, set it up in the-->
+            <!--<a th:href="@{/settings(aID=${aID})}">Settings</a> section to automatically-->
+            <!--apply consent level to new experiments.-->
+        <!--</p>-->
 
-        <p class="has-text-centered" th:if="${false}" th:inline="text">
+        <p class="has-text-centered" th:inline="text">
             <span class="tag has-text-weight-semibold is-info">Note:</span>
-            &nbsp;[[${visitorName}]]'s current default consent for new experiments is [[${consentDefault}]].
-            You can change it in the
-            <a th:href="@{/settings(aID=${aID})}">Settings</a> section.
+            &nbsp;[[${visitorName}]]'s Default Consent Level is [[${consentDefault}]]. This will be applied
+            automatically to all new experiments.
         </p>
+    </div>
+
+    <!-- Update Notification start-->
+    <div class="notification is-danger has-text-centered error-flag" th:classappend="${updateFailure} ? '' : 'is-hidden'">
+        <p>Sorry, an error occurred! Please try again.</p>
+        <button class="delete is-medium close-danger"></button>
+    </div>
+
+    <div class="notification is-success has-text-centered success-flag" th:classappend="${updateSuccess} ? '' : 'is-hidden'">
+        <p>Changes saved successfully!</p>
+        <button class="delete is-medium close-success"></button>
     </div>
 
     <!-- Main Content start -->
@@ -120,8 +130,12 @@
         <div class="field">
             <input id="t-switch" type="checkbox" class="switch is-medium is-warning is-rounded" />
             <label for="t-switch"></label>
-            <label class="current-table is-size-3 is-size-4-touch">Consent-Pending Experiments</label>
+            <label class="current-table is-size-3 is-size-4-touch">Unreviewed Experiments</label>
         </div>
+
+        <form class="consent-pending" th:action="@{/visitors/experiments/toReviewed(aID=${aID}, vID=${vID})}" th:method="post">
+            <button class="button is-outlined is-warning move-all" type="submit" th:attrappend="disabled=${#lists.isEmpty(visitorExps.?[not consentChanged])} ? true : false">Move All To Reviewed</button>
+        </form>
 
         <!--<div class="field is-hidden-desktop">-->
             <!--<input id="t-switch-m" type="checkbox" class="switch is-warning is-rounded" />-->
@@ -132,7 +146,7 @@
         <form class="consent-pending" th:action="@{/visitors/experiments/updateConsent(aID=${aID}, vID=${vID})}" th:method="post" th:with="pending = ${visitorExps.?[not consentChanged]}">
             <div class="columns is-hidden-desktop">
                 <div class="column has-text-left">
-                    <a class="is-medium is-outlined is-primary button toggle-p is-hidden-desktop" th:attrappend="disabled=${#lists.isEmpty(pending)} ? true : false">Select All</a>
+                    <a class="is-outlined is-primary button toggle-p is-hidden-desktop" th:attrappend="disabled=${#lists.isEmpty(pending)} ? true : false">Select All</a>
                 </div>
             </div>
 
@@ -140,7 +154,7 @@
                 <div class="card-content medium-card">
                     <p class="subtitle tiny-subtitle has-text-weight-semibold" th:text="${visitorExp.experiment.name}">Physics Experiment With An Extremely Long Title</p>
                     <p>Date: <em class="has-text-grey-dark" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">6/4/2018</em></p>
-                    <p>Status: <em class="has-text-danger">Pending Consent</em></p>
+                    <p>Status: <em class="has-text-success" th:text="${visitorExp.consentLevel}">Pending Consent</em></p>
                 </div>
                 <div class="card-footer">
                     <div class="card-footer-item tiny-card">
@@ -174,7 +188,7 @@
                         <td class="dentry is-size-6"><input class="pending" type="checkbox" name="selected" th:value="${visitorExp.experiment.id}" /></td>
                         <td class="dentry is-size-6"><a th:href="@{/visitors/experiments/experiment(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}" th:text="${visitorExp.experiment.name}">Physics Experiment</a></td>
                         <td class="dentry is-size-6" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">19/3/2018</td>
-                        <td class="dentry is-size-6">Pending</td>
+                        <td class="dentry is-size-6" th:text="${visitorExp.consentLevel}">Pending</td>
                     </tr>
                     <tr th:if="${#lists.isEmpty(pending)}">
                         <td class="dentry has-text-centered is-size-6" colspan="4">No Experiments To Show.</td>
@@ -209,7 +223,7 @@
         <form class="reviewed is-hidden" th:action="@{/visitors/experiments/updateConsent(aID=${aID}, vID=${vID})}" th:method="post" th:with="reviewed = ${visitorExps.?[consentChanged]}">
             <div class="columns is-hidden-desktop">
                 <div class="column has-text-left">
-                    <a class="is-medium is-outlined is-primary button toggle-r is-hidden-desktop" th:attrappend="disabled=${#lists.isEmpty(reviewed)} ? true : false">Select All</a>
+                    <a class="is-outlined is-primary button toggle-r is-hidden-desktop" th:attrappend="disabled=${#lists.isEmpty(reviewed)} ? true : false">Select All</a>
                 </div>
             </div>
 

@@ -94,6 +94,18 @@
         </div>
     </div>
 
+    <!-- Update Notification start-->
+    <div class="notification is-danger has-text-centered error-flag" th:classappend="${updateFailure} ? '' : 'is-hidden'">
+        <p>Sorry, an error occurred! Please try again.</p>
+        <button class="delete is-medium close-danger"></button>
+    </div>
+
+    <div class="notification is-success has-text-centered success-flag" th:classappend="${updateSuccess} ? '' : 'is-hidden'">
+        <p>Changes saved successfully!</p>
+        <button class="delete is-medium close-success"></button>
+    </div>
+
+    <!-- Main Content start -->
     <section class="section">
         <div class="box feature">
             <div class="content">
@@ -133,7 +145,7 @@
                     </li>
                 </ul>
                 <br />
-                <button type="submit" class="button is-link single-submit" th:text="${true ? 'Apply ' : 'Update '} + 'Consent Option'">Consent Option</button>
+                <button type="submit" class="button is-link single-submit" th:text="${visitorExp.consentChanged ? 'Apply ' : 'Update '} + 'Consent Option'">Consent Option</button>
             </form>
         </div>
         <a class="back">Back to Experiments</a>

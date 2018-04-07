@@ -11,7 +11,6 @@ $(document).ready(function() {
     });
 
     $('.single-submit').click(function(e) {
-        e.preventDefault();
         let checked = $('input[type=radio]:checked').length;
 
         if(!checked) {
