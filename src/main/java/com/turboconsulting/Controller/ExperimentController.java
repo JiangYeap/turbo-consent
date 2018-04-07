@@ -22,19 +22,17 @@ public class ExperimentController {
     public String experimentPage(Model m,
                                  @RequestParam("aID") int aID,
                                  @RequestParam("vID") int vID,
-                                 @RequestParam("eID") int eID,
-                                 @RequestParam(value = "update", required = false) boolean updateSuccess) {
+                                 @RequestParam("eID") int eID) {
         m.addAttribute("visitorExp", consentService.getVisitorExperiment(vID, eID));
         m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
         m.addAttribute("aID", aID);
         m.addAttribute("vID", vID);
         m.addAttribute("eID", eID);
-        m.addAttribute("updateSuccess", updateSuccess);
 
         return "experiment";
     }
 
-    @PostMapping("/visitor/experiments/updateConsent")
+    @PostMapping("/visitor/experiments/experiment/updateConsent")
     public ModelAndView updateConsent(@RequestParam("aID") int aID,
                                       @RequestParam("vID") int vID,
                                       @RequestParam("eID") int eID,
