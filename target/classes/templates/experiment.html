@@ -50,15 +50,14 @@
     </nav>
 
     <!-- Banner start -->
-    <section class="hero is-danger is-2 is-bold">
+    <section class="hero is-link is-2 is-bold">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title" th:inline="text">
                     [[${visitorExp.experiment.name}]] by [[${visitorName}]]
                 </h1>
                 <h2 class="subtitle">
-                    You can view the description and choose consent options for
-                    your participated experiments individually here.
+                    View the detailed description of individual experiment and update its Consent Level.
                 </h2>
             </div>
         </div>
@@ -109,25 +108,25 @@
     <section class="section">
         <div class="box feature">
             <div class="content">
-                <h1 class="subtitle">
+                <h1 class="tiny-subtitle">
                     Experiment Description
                 </h1>
-                <p th:text="${visitorExp.experiment.description}">desc here</p>
-                <h1 class="subtitle">
+                <p class="has-text-grey" th:text="${visitorExp.experiment.description}">desc here</p>
+                <h1 class="tiny-subtitle">
                     Date Participated
                 </h1>
-                <p th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">date here</p>
-                <h1 class="subtitle">
-                    Consent Option
+                <p class="has-text-grey" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">date here</p>
+                <h1 class="tiny-subtitle">
+                    Current Consent Level
                 </h1>
-                <p th:text="${visitorExp.consentLevel}">current consent level</p>
+                <p class="has-text-grey" th:text="${visitorExp.consentLevel}">current consent level</p>
             </div>
 
             <hr />
 
             <form th:action="@{/visitors/experiments/experiment/updateConsent(aID=${aID}, vID=${vID}, eID=${eID})}" th:method="post">
                 <h1 class="subtitle" >
-                    Select Consent Level For Experiment&nbsp;
+                    Update Consent Level For Experiment&nbsp;
                     <a class="fa fa-question-circle open-modal"></a>
                 </h1>
                 <ul>
@@ -145,10 +144,10 @@
                     </li>
                 </ul>
                 <br />
-                <button type="submit" class="button is-link single-submit">Update Consent Level</button>
+                <button type="submit" class="button is-link is-outlined single-submit">Apply Consent Option</button>
             </form>
         </div>
-        <a class="back">Back to Experiments</a>
+        <a class="back has-text-danger">Back to Experiments</a>
     </section>
 
     <!-- Footer start -->

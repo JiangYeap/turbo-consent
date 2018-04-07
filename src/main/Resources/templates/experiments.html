@@ -52,7 +52,7 @@
     </nav>
 
     <!-- Banner start -->
-    <section class="hero is-success is-2 is-bold">
+    <section class="hero is-link is-2 is-bold">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title" th:text="${visitorName} + '\'s Experiments'">
@@ -60,7 +60,7 @@
                 </h1>
                 <h2 class="subtitle">
                     Review or update Consent Level of the experiments. You can toggle between Unreviewed/Reviewed
-                    Experiments by clicking the switch.
+                    Experiments by clicking on the switch.
                 </h2>
             </div>
         </div>
@@ -75,8 +75,8 @@
         <!--</p>-->
 
         <p class="has-text-centered" th:inline="text">
-            <span class="tag has-text-weight-semibold is-info">Note:</span>
-            &nbsp;[[${visitorName}]]'s Default Consent Level is <em>[[${consentDefault}]]</em>. This will be applied
+            <span class="tag has-text-weight-semibold is-warning">Note:</span>
+            &nbsp;[[${visitorName}]]'s Default Consent Level is <strong>[[${defaultConsent}]]</strong>. This will be applied
             automatically to all new experiments.
         </p>
     </div>
@@ -216,7 +216,7 @@
                     </li>
                 </ul>
                 <br />
-                <button type="submit" class="button is-link bulk-submit">Apply Consent Option</button>
+                <button type="submit" class="button is-link is-outlined bulk-submit">Apply Consent Option</button>
             </div>
         </form>
 
@@ -301,7 +301,7 @@
                     </li>
                 </ul>
                 <br />
-                <button type="submit" class="button is-link bulk-submit">Apply Consent Option</button>
+                <button type="submit" class="button is-link is-outlined bulk-submit">Apply Consent Option</button>
             </div>
         </form>
     </section>
