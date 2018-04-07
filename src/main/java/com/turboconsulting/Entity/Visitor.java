@@ -28,10 +28,10 @@ public class Visitor {
 
     public Visitor(){}
 
-    public Visitor(String name, GregorianCalendar dob, ConsentLevel c) {
+    public Visitor(String name, GregorianCalendar dob) {
         this.name = name;
         this.dob = dob;
-        this.defaultConsent = c;
+        this.defaultConsent = ConsentLevel.NONE;
         experiments = new HashSet<VisitorExperiment>();
 
     }

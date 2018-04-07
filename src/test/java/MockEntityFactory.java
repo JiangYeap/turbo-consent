@@ -22,7 +22,7 @@ public class MockEntityFactory {
     }
 
     public Visitor mockVisitor(VisitorDao visitorDao, String name, int id, Account account)  {
-        Visitor newVisitor = new Visitor( name, new GregorianCalendar(2000, 01, 01), ConsentLevel.RESTRICTED);
+        Visitor newVisitor = new Visitor( name, new GregorianCalendar(2000, 01, 01));
         newVisitor.setVisitorId(id);
         newVisitor.setAccount(account);
         Mockito.when(visitorDao.findByVisitorId(newVisitor.getVisitorId())).thenReturn(newVisitor);

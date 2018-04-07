@@ -44,7 +44,7 @@ public class Controller {
     @GetMapping(path = "/addVisitor")
     public @ResponseBody String addNewVisitor(@RequestParam String name,
                                               @RequestParam int accountID) {
-        Visitor v = new Visitor( name, new GregorianCalendar(1998, 05, 3), ConsentLevel.RESTRICTED);
+        Visitor v = new Visitor( name, new GregorianCalendar(1998, 05, 3));
         consentService.addNewVisitor(v, accountID);
         return "Saved Visitor\n";
     }
