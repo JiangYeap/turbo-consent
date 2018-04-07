@@ -7,6 +7,7 @@ import com.turboconsulting.Service.ConsentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -15,20 +16,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@SessionAttributes("aID")
 public class ExperimentsController {
 
     @Autowired
     private ConsentService consentService;
 
     @GetMapping("/visitors/experiments")
-    public String experimentsPage(Model m,
-                                  @RequestParam(value="aID") int aID,
+    public String experimentsPage(ModelMap m,
                                   @RequestParam(value="vID") int vID,
                                   @RequestParam(value="update", required = false) boolean updateSuccess) {
-
         m.addAttribute("visitorExps", consentService.getVisitorExperiments(vID));
         m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
-        m.addAttribute("aID", aID);
         m.addAttribute("vID", vID);
         m.addAttribute("updateSuccess", updateSuccess);
 
@@ -36,15 +35,10 @@ public class ExperimentsController {
     }
 
     @PostMapping("/visitors/experiments/updateConsent")
-    public ModelAndView updateConsent(@RequestParam("aID") int aID,
-                                      @RequestParam("vID") int vID,
+    public String updateConsent(ModelMap m, @RequestParam("vID") int vID,
                                       @ModelAttribute("selected") List<Integer> eIDs,
                                       @ModelAttribute("consentLevel") String c)  {
-        ModelAndView mav = new ModelAndView();
         boolean updateSuccessful = consentService.updateBatchExperimentConsents(vID, ConsentLevel.fromString(c), eIDs);
-
-        mav.setViewName("redirect:/visitors/experiments?aID="+aID+"&vID="+vID+"&update="+updateSuccessful);
-
-        return mav;
+        return "redirect:/visitors/experiments?vID="+vID+"&update="+updateSuccessful;
     }
 }

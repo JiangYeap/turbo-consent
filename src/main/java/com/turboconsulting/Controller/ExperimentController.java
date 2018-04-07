@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 @Controller
+@SessionAttributes("aID")
 public class ExperimentController {
 
 
@@ -20,26 +21,22 @@ public class ExperimentController {
 
     @GetMapping("/visitors/experiments/experiment")
     public String experimentPage(Model m,
-                                 @RequestParam("aID") int aID,
                                  @RequestParam("vID") int vID,
                                  @RequestParam("eID") int eID) {
         m.addAttribute("visitorExp", consentService.getVisitorExperiment(vID, eID));
         m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
-        m.addAttribute("aID", aID);
         m.addAttribute("vID", vID);
         m.addAttribute("eID", eID);
-
         return "experiment";
     }
 
     @PostMapping("/visitor/experiments/experiment/updateConsent")
-    public ModelAndView updateConsent(@RequestParam("aID") int aID,
-                                      @RequestParam("vID") int vID,
+    public ModelAndView updateConsent(@RequestParam("vID") int vID,
                                       @RequestParam("eID") int eID,
                                       @ModelAttribute("consentLevel") String c)  {
         boolean updateSuccessful = consentService.updateExperimentConsent(vID, ConsentLevel.fromString(c), eID);
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("redirect:/visitors/experiments?aID="+aID+"&vID="+vID+"&update="+updateSuccessful);
+        mav.setViewName("redirect:/visitors/experiments?vID="+vID+"&update="+updateSuccessful);
         return mav;
     }
 }
