@@ -15,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-@SessionAttributes("aID")
 public class SettingsController {
 
     @Autowired
@@ -27,8 +26,7 @@ public class SettingsController {
     @GetMapping("/settings")
     public String homePage(ModelMap m,
                            @RequestParam(value = "update", required = false) boolean updateSuccess) {
-        //if (uname.equals(""))  return "redirect:/login";
-        int aID = (int) m.get("aID");
+        int aID = getLoggedInAccountID();
         m.addAttribute("consentOptions", ConsentLevel.values());
         m.addAttribute("visitors", consentService.getAccountsVisitors(aID));
         m.addAttribute("updateSuccess", updateSuccess);
