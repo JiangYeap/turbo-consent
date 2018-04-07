@@ -58,7 +58,6 @@ public class ConsentService implements ConsentServiceInterface {
     @Override
     public boolean addNewAccount(Account a)  {
         return (accountDao.findByEmail(a.getEmail()) == null) && (accountDao.save(a) != null);
-
     }
     @Override
     public int getAccountID(String email)  {

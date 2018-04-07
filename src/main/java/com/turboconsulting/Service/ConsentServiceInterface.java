@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface ConsentServiceInterface {
+
     @PostConstruct
     void ConsentService();
 
