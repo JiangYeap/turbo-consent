@@ -129,7 +129,8 @@ html, body {
   flex-direction: column; }
 
 .name-card {
-  font-family: "Quicksand", sans-serif; }
+  font-size: 3rem !important;
+  font-family: "Poiret One", cursive; }
 
 .modal-card-head a, .modal-card-head p, .modal-card-foot a, .modal-card-foot p {
   color: rgba(0, 0, 0, 0.7) !important; }

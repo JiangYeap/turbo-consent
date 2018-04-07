@@ -7,6 +7,7 @@
     <title>Settings | Turbo Consent</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript" th:src="@{/js/bulma.js}"></script>
@@ -98,18 +99,19 @@
             <div class="columns features is-multiline">
                 <div class="column is-one-third" th:each="v : ${visitors}">
                     <div class="card">
-                        <div class="card-content">
+                        <div class="card-content medium-card">
                             <h1 class="title name-card" th:text="${v.name}"></h1>
                         </div>
                         <div class="card-footer">
-                            <div class="card-footer-item">
-                                <div class="select is-rounded">
-                                    <select class="child-select" name="defaultConsents">
+                            <div class="card-footer-item tiny-card has-text-left">
+                                <p style="vertical-align: middle">Default Consent Level:&emsp;</p>
+                                <span class="select is-rounded">
+                                    <select class="child-select" name="defaultConsents" th:selected="${v.defaultConsent}">
                                         <option th:value="${v.visitorId + '~No Consent'}">No Consent</option>
                                         <option th:value="${v.visitorId + '~Anonymous'}">Anonymous</option>
                                         <option th:value="${v.visitorId + '~Full Consent'}">Full Consent</option>
                                     </select>
-                                </div>
+                                </span>
                             </div>
                         </div>
                     </div>

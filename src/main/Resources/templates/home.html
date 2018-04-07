@@ -67,7 +67,7 @@
     <div class="box cta has-text-centered" th:inline="text">
         <p th:if="${experimentsPending gt 0}">
             <span class="tag has-text-weight-semibold is-danger">New !</span>
-            &nbsp;You have a total of [[${experimentsPending}]] unreviewed experiment(s), check them out under the
+            &nbsp;You have a total of [[${experimentsPending}]] Unreviewed Experiment(s), check them out under the
             <a class="has-text-link" th:href="@{/visitors(aID=${aID})}">Visitors</a> section now&nbsp;!
         </p>
 
@@ -113,7 +113,7 @@
                             <p>
                                 Change your account settings including setting up Consent Defaults
                                 <em>(automatically apply set consent options to all new experiments)</em>
-                                for each Dependent Visitor.
+                                for each <span class="tooltip" data-tooltip="Visitors you can give data consent on behalf of.">Dependent Visitor</span>.
                             </p>
                             <p>
                                 <a th:href="@{/settings(aID=${aID})}"><i class="fa fa-location-arrow"></i>&nbsp;Go to Settings!</a>

@@ -59,8 +59,8 @@
                     Your Experiments
                 </h1>
                 <h2 class="subtitle">
-                    Select experiments with the checkboxes, and choose a consent level option for
-                    them at the bottom of the page. Or view experiments individually by clicking on their titles.
+                    Review or update Consent Level of the experiments. You can toggle between Unreviewed/Reviewed
+                    Experiments by clicking the switch.
                 </h2>
             </div>
         </div>
@@ -76,7 +76,7 @@
 
         <p class="has-text-centered" th:inline="text">
             <span class="tag has-text-weight-semibold is-info">Note:</span>
-            &nbsp;[[${visitorName}]]'s Default Consent Level is [[${consentDefault}]]. This will be applied
+            &nbsp;[[${visitorName}]]'s Default Consent Level is <em>[[${consentDefault}]]</em>. This will be applied
             automatically to all new experiments.
         </p>
     </div>
@@ -164,7 +164,7 @@
                         </label>
                     </div>
                     <div class="card-footer-item tiny-card">
-                        <a class="tiny-a" th:href="@{/visitors/experiments/experiment(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}">View Experiment</a>
+                        <a class="tiny-a" th:href="@{/visitors/experiments/experiment(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}"><i class="fa fa-location-arrow"></i>&nbsp;View Experiment</a>
                     </div>
                 </div>
             </div>
@@ -198,7 +198,7 @@
 
             <div class="box exp-options">
                 <h1 class="subtitle" >
-                    Select Consent Level For <span id="p-selected"></span> Experiment(s)&nbsp;
+                    Update Consent Level For <span id="p-selected"></span> Experiment(s)&nbsp;
                     <a class="fa fa-question-circle open-modal"></a>
                 </h1>
                 <ul>
@@ -241,7 +241,7 @@
                         </label>
                     </div>
                     <div class="card-footer-item tiny-card">
-                        <a class="tiny-a" th:href="@{/visitors/experiments/experiment(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}">View Experiment</a>
+                        <a class="tiny-a" th:href="@{/visitors/experiments/experiment(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}"><i class="fa fa-location-arrow"></i>&nbsp;View Experiment</a>
                     </div>
                 </div>
             </div>

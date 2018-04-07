@@ -7,8 +7,10 @@
     <title>Visitors | Turbo Consent</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" />
+    <!--<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet" />-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet" />-->
     <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script async="async" type="text/javascript" th:src="@{/js/bulma.js}"></script>
@@ -80,16 +82,17 @@
         <div class="columns features is-multiline">
             <div class="column is-one-third" th:each="v : ${visitors}">
                 <div class="card">
-                    <div class="card-content">
+                    <div class="card-content medium-card">
                         <h1 class="title name-card" th:text="${v.name}"></h1>
                     </div>
                     <div class="card-footer">
-                        <div class="card-footer-item">
+                        <div class="card-footer-item tiny-card">
                             <span class="tag has-text-weight-semibold is-medium is-rounded"
                                   th:classappend="${v.getPendingExperiments()} ? 'is-danger' : 'is-success'"
-                                  th:text="${v.getPendingExperiments()} + ' Unreviewed'"></span>
+                                  th:text="${v.getPendingExperiments()} + ' Unreviewed Exp'">
+                            </span>
                         </div>
-                        <div class="card-footer-item has-text-centered">
+                        <div class="card-footer-item has-text-centered tiny-card">
                             <a th:href="@{/visitors/experiments(aID=${aID}, vID=${v.visitorId})}">
                                 <i class="fa fa-location-arrow"></i>&nbsp;View Experiments
                             </a>
