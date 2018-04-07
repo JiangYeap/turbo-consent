@@ -47,4 +47,15 @@ public class ExperimentsController {
 
         return mav;
     }
+
+    @PostMapping("visitors/experiments/toReviewed")
+    public ModelAndView reviewConsents(@RequestParam("aID") int aID,
+                                       @RequestParam("vID") int vID)  {
+        ModelAndView mav = new ModelAndView();
+
+        boolean updateSuccessful = consentService.moveAllToReviewed(vID);
+
+        mav.setViewName("redirect:/visitors/experiments?aID="+aID+"&vID="+vID+"&update="+updateSuccessful);
+        return mav;
+    }
 }

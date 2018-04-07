@@ -184,5 +184,14 @@ public class ConsentService implements ConsentServiceInterface {
         return visitorDao.findByVisitorId(visitorId).getPendingExperiments();
 
     }
+    @Override
+    public boolean moveAllToReviewed(int visitorId)  {
+        Iterable<VisitorExperiment> visitorExperiments = visitorExperimentDao.findAllByVisitor(getVisitor(visitorId));
+        for(VisitorExperiment ve : visitorExperiments)  {
+            ve.setChangedConsent(true);
+            visitorExperimentDao.save(ve);
+        }
+        return true;
+    }
 
 }
