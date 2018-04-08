@@ -66,13 +66,12 @@ public class ExperimentsController {
     }
 
     @PostMapping("visitors/experiments/toReviewed")
-    public ModelAndView reviewConsents(@RequestParam("aID") int aID,
-                                       @RequestParam("vID") int vID)  {
+    public ModelAndView reviewConsents(@RequestParam("vID") int vID) throws AccessDeniedException {
         ModelAndView mav = new ModelAndView();
-
+        int aID = getLoggedInAccountID();
+        checkAccountID(vID);
         boolean updateSuccessful = consentService.moveAllToReviewed(vID);
-
-        mav.setViewName("redirect:/visitors/experiments?aID="+aID+"&vID="+vID+"&update="+updateSuccessful);
+        mav.setViewName("redirect:/visitors/experiments?vID="+vID+"&update="+updateSuccessful);
         return mav;
     }
 }
