@@ -37,6 +37,7 @@ public class SettingsController {
     public String updateConsent(ModelMap m, @ModelAttribute("consent") String c)  {
         int aID = getLoggedInAccountID();
         boolean updateSuccessful = consentService.updateAccountConsent(aID, ConsentLevel.fromString(c));
+
         return "redirect:/settings?update="+updateSuccessful;
     }
 

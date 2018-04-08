@@ -100,6 +100,10 @@ public class ConsentService implements ConsentServiceInterface {
     @Override
     public boolean updateAccountConsent(int id, ConsentLevel c)  {
         Account a = accountDao.findByAccountId(id);
+        for (Visitor v : a.getVisitors())  {
+            v.setDefaultConsent(c);
+            visitorDao.save(v);
+        }
         a.setConsentLevel(c);
         return accountDao.save(a) != null;
     }
