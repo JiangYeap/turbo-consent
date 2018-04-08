@@ -1,7 +1,7 @@
 // prevents illegal submit
 $(document).ready(function() {
     $('.bulk-submit').click(function(e) {
-        let checked1 = $('input[type=checkbox]:visible:checked').not('#t-switch').length;
+        let checked1 = $('input[type=checkbox]:visible:checked').not('#t-switch').length || $('.is-checkradio:checked').length;
         let checked2 = $('input[type=radio]:visible:checked').length;
 
         if(!checked1 || !checked2) {
@@ -11,7 +11,7 @@ $(document).ready(function() {
     });
 
     $('.visitor-submit').click(function(e) {
-        let checked1 = $('input[type=checkbox]:visible:checked').length;
+        let checked1 = $('input[type=checkbox]:visible:checked').length || $('.is-checkradio:checked').length;
         let checked2 = $('input[type=radio]:visible:checked').length;
 
         if(!checked1 || !checked2) {

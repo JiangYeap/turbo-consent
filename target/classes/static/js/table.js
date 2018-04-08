@@ -19,18 +19,17 @@ const updateLabel = function() {
 };
 
 const updatePNo = function() {
-    let numSelected = $('input[class=pending]:visible:checked').length;
+    let numSelected = $('input[class=pending]:visible:checked').length || $('.is-checkradio:checked').length;
     $('#p-selected').text(numSelected);
 };
 
 const updateRNo = function() {
-    let numSelected = $('input[class=rev]:visible:checked').length;
+    let numSelected = $('input[class=rev]:visible:checked').length || $('.is-checkradio:checked').length;
     $('#r-selected').text(numSelected);
 };
 
 const updateVNo = function() {
-    alert('changed');
-    let numSelected = $('input[class*=visitor]:visible:checked').length;
+    let numSelected = $('input[class=visitor]:visible:checked').length || $('.is-checkradio:checked').length;
     $('#v-selected').text(numSelected);
 };
 
@@ -90,7 +89,6 @@ $(document).ready(function() {
 
         else $(this).text('Select All');
 
-        console.log('beforeupdate');
         updateVNo();
     });
 
@@ -102,11 +100,11 @@ $(document).ready(function() {
         updateRNo();
     });
 
-    // $('.visitor').change(function() {
-    //     updateVNo();
-    // });
+    $('.visitor').change(function() {
+        updateVNo();
+    });
 });
 
-$(document).on('change', 'input[class*=visitor]', function() {
-    updateVNo();
-});
+// $(document).on('change', 'input[class*=visitor]', function() {
+//     updateVNo();
+// });
