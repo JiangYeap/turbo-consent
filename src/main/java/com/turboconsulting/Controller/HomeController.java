@@ -16,7 +16,6 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@SessionAttributes("aID")
 public class HomeController {
 
     @Autowired
@@ -28,7 +27,6 @@ public class HomeController {
     @GetMapping("/")
     public String homePage(ModelMap m) {
         int aID = getLoggedInAccountID();
-        m.addAttribute("aID", aID);
         m.addAttribute("experimentsPending", consentService.getAccount(aID).getTotalPendingExperiments());
         return "home";
     }
