@@ -11,7 +11,8 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript" th:src="@{/js/bulma.js}"></script>
-    <script type="text/javascript" th:src="@{/js/apply-all.js}"></script>
+    <script type="text/javascript" th:src="@{/js/table.js}"></script>
+    <script type="text/javascript" th:src="@{/js/form-validation.js}"></script>
 </head>
 <body>
     <!-- Navigation bar start -->
@@ -65,62 +66,7 @@
         </div>
     </section>
 
-    <form th:action="@{/settings/updateConsent}" th:method="post">
-        <div class="box master-panel">
-            <h1 class="subtitle">
-                Select Default Consent Level.
-                <a class="fa fa-question-circle open-modal"></a>
-            </h1>
-            <div class="select is-rounded master-option">
-                <select class="master-select">
-                    <option value="No Consent">No Consent</option>
-                    <option value="Anonymous">Anonymous</option>
-                    <option value="Full Consent">Full Consent</option>
-                </select>
-            </div>
-            <br />
-            <a class="button is-success is-outlined apply-master button-panel">Apply To All Visitors</a>
-            <button class="button is-danger button-panel" type="submit">Submit Changes</button>
-        </div>
-
-        <!-- Update Notification start-->
-        <div class="notification is-danger has-text-centered error-flag" th:classappend="${updateFailure} ? '' : 'is-hidden'">
-            <p>Sorry, an error occurred! Please try again.</p>
-            <button class="delete is-medium close-danger"></button>
-        </div>
-
-        <div class="notification is-success has-text-centered success-flag" th:classappend="${updateSuccess} ? '' : 'is-hidden'">
-            <p>Changes saved successfully!</p>
-            <button class="delete is-medium close-success"></button>
-        </div>
-
-        <!-- Main content start -->
-        <section class="container">
-            <div class="columns features is-multiline">
-                <div class="column is-one-third" th:each="v : ${visitors}">
-                    <div class="card">
-                        <div class="card-content medium-card">
-                            <h1 class="title name-card" th:text="${v.name}"></h1>
-                        </div>
-                        <div class="card-footer">
-                            <div class="card-footer-item tiny-card">
-                                <p style="vertical-align: middle">Default Consent Level:&emsp;</p>
-                                <span class="select is-rounded">
-                                    <select class="child-select" name="defaultConsents" th:selected="${v.defaultConsent}">
-                                        <option th:value="${v.visitorId + '~No Consent'}">No Consent</option>
-                                        <option th:value="${v.visitorId + '~Anonymous'}">Anonymous</option>
-                                        <option th:value="${v.visitorId + '~Full Consent'}">Full Consent</option>
-                                    </select>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </form>
-
-    <!-- Modal start-->
+    <!-- Main Content start -->
     <div class="modal">
         <div class="modal-background close-modal"></div>
         <div class="modal-card">
@@ -140,25 +86,98 @@
                         <li><p>
                             <strong>No Consent:</strong> The experiment results will not be submitted.
                         </p></li>
+                        <!--<li><p>-->
+                        <!--<strong>Custom Consent:</strong> Custom set consent option, can be configured in-->
+                        <!--<a th:href="@{/settings}">Settings</a>.-->
+                        <!--</p></li>-->
                     </ul>
                 </div>
                 <hr />
-                <div class="content has-text-centered close-modal" id="ok-close">
+                <div id="ok-close" class="content has-text-centered close-modal">
                     <a class="is-size-4 is-size-5-mobile">OK</a>
                 </div>
             </section>
         </div>
     </div>
 
-    <!--<tbody>-->
-        <!--<h1>Settings</h1>-->
-        <!--<p th:text="'Welcome, ' + ${uname}"></p>-->
+    <section class="section">
+        <div class="field">
+            <h1 class="is-size-3 is-size-4-touch">
+                Your Dependent Visitors
+            </h1>
+        </div>
 
-        <!--<form th:action="@{/settings/updateConsent}" th:method="post">-->
-            <!--<p>Default Consent Level: <input name="consent" id="consent" type="text" th:value="${consent}"  /></p>-->
-            <!--<button type="submit">submit</button>-->
-        <!--</form>-->
-    <!--</tbody>-->
+        <form class="dependent-visitors" th:action="@{/settings/updateConsent}" th:method="post">
+            <div class="columns is-hidden-desktop">
+                <div class="column has-text-left">
+                    <a class="is-outlined is-primary button toggle-v is-hidden-desktop" th:attrappend="disabled=${#lists.isEmpty(visitors)} ? true : false">Select All</a>
+                </div>
+            </div>
+
+            <div class="card is-hidden-desktop mobile-exp" th:each="v : ${visitors}">
+                <div class="card-content medium-card">
+                    <p class="subtitle tiny-subtitle has-text-weight-semibold" th:text="${v.name}">Visitor Name</p>
+                    <p>Default Consent Level: <em class="has-text-success" th:text="${v.defaultConsent}">Consent Level</em></p>
+                </div>
+                <div class="card-footer">
+                    <div class="card-footer-item tiny-card">
+                        <input th:id="${v.visitorId}" class="is-checkradio is-block is-primary visitor" type="checkbox" name="vSelected" th:value="${v.visitorId}" />
+                        <label class="tiny-label" th:for="${v.visitorId}">
+                            Select
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card is-hidden-desktop mobile-exp" th:if="${#lists.isEmpty(visitors)}">
+                <div class="card-content medium-card">
+                    <p class="subtitle title has-text-weight-semibold">No Visitors To Show</p>
+                </div>
+            </div>
+
+            <table class="features table is-hoverable is-fullwidth is-striped is-hidden-touch">
+                <tbody class="tbody">
+                <tr>
+                    <th class="hentry is-size-6"><a class="button toggle-v" th:attrappend="disabled=${#lists.isEmpty(visitors)} ? true : false">Select All</a></th>
+                    <th class="hentry is-size-6" style="vertical-align: middle">Visitor Name</th>
+                    <th class="hentry is-size-6" style="vertical-align: middle">Default Consent Level</th>
+                </tr>
+
+                <tr th:each="v : ${visitors}">
+                    <td class="dentry is-size-6"><input class="visitor" type="checkbox" name="vSelected" th:value="${v.visitorId}" /></td>
+                    <td class="dentry is-size-6" th:text="${v.name}">Physics Experiment</td>
+                    <td class="dentry is-size-6" th:text="${v.defaultConsent}">Consent</td>
+                </tr>
+                <tr th:if="${#lists.isEmpty(visitors)}">
+                    <td class="dentry has-text-centered is-size-6" colspan="4">No Visitors To Show.</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="box exp-options">
+                <h1 class="subtitle">
+                    Update Default Consent Level For <span id="v-selected"></span> Visitor(s)&nbsp;
+                    <a class="fa fa-question-circle open-modal"></a>
+                </h1>
+                <ul>
+                    <li>
+                        <label class="radio"><input type="radio" name="dConsentLevel" value="Full Consent" />&nbsp;Full Consent</label>
+                    </li>
+                    <li>
+                        <label class="radio"><input type="radio" name="dConsentLevel" value="Anonymous" />&nbsp;Anonymous</label>
+                    </li>
+                    <li>
+                        <label class="radio"><input type="radio" name="dConsentLevel" value="No Consent" />&nbsp;No Consent</label>
+                    </li>
+                    <li>
+                        <label class="radio" th:if="${false}"><input type="radio" name="consentLevel" value="3" />&nbsp;Custom Consent</label>
+                    </li>
+                </ul>
+                <br />
+                <button type="submit" class="button is-link is-outlined visitor-submit">Apply Consent Option</button>
+            </div>
+        </form>
+    </section>
 
     <!-- Footer start -->
     <footer class="footer">

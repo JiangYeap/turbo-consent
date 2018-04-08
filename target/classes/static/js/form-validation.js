@@ -10,6 +10,16 @@ $(document).ready(function() {
         }
     });
 
+    $('.visitor-submit').click(function(e) {
+        let checked1 = $('input[type=checkbox]:visible:checked').length;
+        let checked2 = $('input[type=radio]:visible:checked').length;
+
+        if(!checked1 || !checked2) {
+            alert("You must select at least one visitor and exactly one consent option.");
+            e.preventDefault();
+        }
+    });
+
     $('.single-submit').click(function(e) {
         let checked = $('input[type=radio]:checked').length;
 

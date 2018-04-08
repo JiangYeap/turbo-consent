@@ -1,4 +1,8 @@
 // changing tables for experiments
+window.onpageshow = function(event) {
+    $('#t-switch').is(':checked') ? showR() : showCP();
+};
+
 const showCP = function() {
     $('.consent-pending').removeClass('is-hidden');
     $('.reviewed').addClass('is-hidden');
@@ -15,23 +19,26 @@ const updateLabel = function() {
 };
 
 const updatePNo = function() {
-    let numSelected = $('input[class=pending]:checked').length;
+    let numSelected = $('input[class=pending]:visible:checked').length;
     $('#p-selected').text(numSelected);
 };
 
 const updateRNo = function() {
-    let numSelected = $('input[class=rev]:checked').length;
+    let numSelected = $('input[class=rev]:visible:checked').length;
     $('#r-selected').text(numSelected);
 };
 
-window.onpageshow = function(event) {
-    $('#t-switch').is(':checked') ? showR() : showCP();
+const updateVNo = function() {
+    alert('changed');
+    let numSelected = $('input[class*=visitor]:visible:checked').length;
+    $('#v-selected').text(numSelected);
 };
 
 $(document).ready(function() {
     updateLabel();
     updatePNo();
     updateRNo();
+    updateVNo();
 
     $('#t-switch').change(function(){
         $(this).is(':checked') ? showR() : showCP();
@@ -70,8 +77,35 @@ $(document).ready(function() {
         updateRNo();
     });
 
-    $('input[type=checkbox]').change(function() {
+    $('.toggle-v').click(function() {
+        if ($(this).attr('disabled')) return;
+
+        let allVisitor = $('.visitor');
+
+        if ($(this).text() === 'Select All') allVisitor.prop('checked', true);
+
+        if ($(this).text() === 'Unselect All') allVisitor.prop('checked', false);
+
+        if ($(this).text() === 'Select All') $(this).text('Unselect All');
+
+        else $(this).text('Select All');
+
+        updateVNo();
+    });
+
+    $('.pending').change(function() {
         updatePNo();
+    });
+
+    $('.rev').change(function() {
         updateRNo();
     });
+
+    $('.visitor').change(function() {
+        updateVNo();
+    });
 });
+
+// $(document).on('change', 'input[class*=visitor]', function() {
+//     updateVNo();
+// });

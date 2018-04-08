@@ -11,7 +11,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript" th:src="@{/js/bulma.js}"></script>
     <script type="text/javascript" th:src="@{/js/session.js}"></script>
-    <script type="text/javascript" th:src="@{/js/table-switch.js}"></script>
+    <script type="text/javascript" th:src="@{/js/table.js}"></script>
     <script type="text/javascript" th:src="@{/js/form-validation.js}"></script>
 </head>
 <body>
@@ -134,7 +134,7 @@
         </div>
 
         <form class="consent-pending" th:action="@{/visitors/experiments/toReviewed(vID=${vID})}" th:method="post">
-            <button class="button is-outlined is-danger move-all" type="submit" th:attrappend="disabled=${#lists.isEmpty(visitorExps.?[not consentChanged])} ? true : false">Move All To Reviewed</button>
+            <button class="button is-outlined is-danger move-all" type="submit" th:attrappend="disabled=${#lists.isEmpty(visitorExps.?[not consentChanged])} ? true : false">Review All</button>
         </form>
 
         <!--<div class="field is-hidden-desktop">-->
@@ -197,7 +197,7 @@
             </table>
 
             <div class="box exp-options">
-                <h1 class="subtitle" >
+                <h1 class="subtitle">
                     Update Consent Level For <span id="p-selected"></span> Experiment(s)&nbsp;
                     <a class="fa fa-question-circle open-modal"></a>
                 </h1>
@@ -282,7 +282,7 @@
             </table>
 
             <div class="box exp-options">
-                <h1 class="subtitle" >
+                <h1 class="subtitle">
                     Update Consent Level For <span id="r-selected"></span> Experiment(s)&nbsp;
                     <a class="fa fa-question-circle open-modal"></a>
                 </h1>
