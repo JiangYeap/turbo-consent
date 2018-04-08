@@ -24,7 +24,7 @@ public interface ConsentServiceInterface {
 
     Account getAccount(int id);
 
-    boolean updateAccountConsent(int id, ConsentLevel c);
+    boolean updateAccountConsent(List<Integer> vIds, ConsentLevel c);
 
     //////////////////////////////////////////////////////////////////////////VISITOR FUNCTIONS
     boolean addNewVisitor(Visitor v, int accountID);

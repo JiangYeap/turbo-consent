@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 
 @Controller
 public class SettingsController {
@@ -34,9 +36,10 @@ public class SettingsController {
     }
 
     @PostMapping("/settings/updateConsent")
-    public String updateConsent(ModelMap m, @ModelAttribute("consent") String c)  {
-        int aID = getLoggedInAccountID();
-        boolean updateSuccessful = consentService.updateAccountConsent(aID, ConsentLevel.fromString(c));
+    public String updateConsent(ModelMap m,
+                                @ModelAttribute("vSelected") List<Integer> vIDs,
+                                @ModelAttribute("dConsentLevel") String c)  {
+        boolean updateSuccessful = consentService.updateAccountConsent(vIDs, ConsentLevel.fromString(c));
 
         return "redirect:/settings?update="+updateSuccessful;
     }

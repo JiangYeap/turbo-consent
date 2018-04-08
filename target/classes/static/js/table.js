@@ -104,7 +104,3 @@ $(document).ready(function() {
         updateVNo();
     });
 });
-
-// $(document).on('change', 'input[class*=visitor]', function() {
-//     updateVNo();
-// });

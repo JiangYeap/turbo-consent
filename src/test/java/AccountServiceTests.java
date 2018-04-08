@@ -113,12 +113,12 @@ public class AccountServiceTests {
         assertTrue(consentService.addNewAccount(a));
     }
 
-    @Test
-    public void updateAccountConsent_validConsentLevel()  {
-        Account found = consentService.getAccount(1);
-        assertEquals(found.getConsentLevel(), ConsentLevel.RESTRICTED);
-        assertTrue(consentService.updateAccountConsent(found.getAccountId(), ConsentLevel.NONE));
-    }
+//    @Test
+//    public void updateAccountConsent_validConsentLevel()  {
+//        Account found = consentService.getAccount(1);
+//        assertEquals(found.getConsentLevel(), ConsentLevel.RESTRICTED);
+//        assertTrue(consentService.updateAccountConsent(found.getAccountId(), ConsentLevel.NONE));
+//    }
 
 
 }
