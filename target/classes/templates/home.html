@@ -68,7 +68,7 @@
         <p th:if="${experimentsPending gt 0}">
             <span class="tag has-text-weight-semibold is-danger">New !</span>
             &nbsp;You have a total of [[${experimentsPending}]] Unreviewed Experiment(s), check them out under the
-            <a class="has-text-link" th:href="@{/visitors(aID=${aID})}">Visitors</a> section now&nbsp;!
+            <a class="has-text-link" th:href="@{/visitors}">Visitors</a> section now&nbsp;!
         </p>
 
         <p th:if="${experimentsPending == 0}">

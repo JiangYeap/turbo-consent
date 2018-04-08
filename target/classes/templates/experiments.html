@@ -70,7 +70,7 @@
         <!--<p class="has-text-centered" th:if="${true}">-->
             <!--<span class="tag has-text-weight-semibold is-info">Note:</span>-->
             <!--&nbsp;Looks like you don't have a Default Consent Level yet, set it up in the-->
-            <!--<a th:href="@{/settings(aID=${aID})}">Settings</a> section to automatically-->
+            <!--<a th:href="@{/settings}">Settings</a> section to automatically-->
             <!--apply consent level to new experiments.-->
         <!--</p>-->
 
@@ -133,7 +133,7 @@
             <label class="current-table is-size-3 is-size-4-touch">Unreviewed Experiments</label>
         </div>
 
-        <form class="consent-pending" th:action="@{/visitors/experiments/toReviewed(aID=${aID}, vID=${vID})}" th:method="post">
+        <form class="consent-pending" th:action="@{/visitors/experiments/toReviewed(vID=${vID})}" th:method="post">
             <button class="button is-outlined is-danger move-all" type="submit" th:attrappend="disabled=${#lists.isEmpty(visitorExps.?[not consentChanged])} ? true : false">Move All To Reviewed</button>
         </form>
 
@@ -164,7 +164,7 @@
                         </label>
                     </div>
                     <div class="card-footer-item tiny-card">
-                        <a class="tiny-a" th:href="@{/visitors/experiments/experiment(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}"><i class="fa fa-location-arrow"></i>&nbsp;View Experiment</a>
+                        <a class="tiny-a" th:href="@{/visitors/experiments/experiment(vID=${vID}, eID=${visitorExp.experiment.id})}"><i class="fa fa-location-arrow"></i>&nbsp;View Experiment</a>
                     </div>
                 </div>
             </div>
@@ -241,7 +241,7 @@
                         </label>
                     </div>
                     <div class="card-footer-item tiny-card">
-                        <a class="tiny-a" th:href="@{/visitors/experiments/experiment(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}"><i class="fa fa-location-arrow"></i>&nbsp;View Experiment</a>
+                        <a class="tiny-a" th:href="@{/visitors/experiments/experiment(vID=${vID}, eID=${visitorExp.experiment.id})}"><i class="fa fa-location-arrow"></i>&nbsp;View Experiment</a>
                     </div>
                 </div>
             </div>
