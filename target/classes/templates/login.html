@@ -43,10 +43,13 @@
                 <div class="box" style="opacity:0.95">
                     <p class="title is-3 has-text-grey-dark">Login</p>
                     <p class="subtitle has-text-grey" style="margin-top:-45px">Please login to proceed.</p>
-                    <form name="Login" action="#" th:action="@{/login}" th:object="${loginDetails}" method="POST">
+                    <form name="Login" action="#" th:action="@{/login}" method="POST">
+                        <div th:if="${param.error}" class="alert alert-error">
+                            Invalid username and password.
+                        </div>
                         <div class="field">
                             <div class="control has-icons-left" data-validate="Email is required">
-                                <input class="input is-medium" type="email" th:field="*{email}" placeholder="We The Curious Email" autofocus="" />
+                                <input class="input is-medium" type="text" id="username" name="username" placeholder="We The Curious Email" autofocus="" />
                                 <span class="icon is-small is-left">
                                     <i class="fa fa-envelope"></i>
                                 </span>
@@ -55,7 +58,8 @@
 
                         <div class="field">
                             <div class="control has-icons-left" data-validate="Email is required">
-                                <input class="input is-medium" type="password" th:field="*{pword}" placeholder="Password" />
+                                <!--<input class="input is-medium" type="password" th:field="*{pword}" placeholder="Password" />-->
+                                <input class="input is-medium" type="password" id="password" name="password" placeholder="Password" />
                                 <span class="icon is-small is-left">
                                     <i class="fa fa-lock"></i>
                                 </span>

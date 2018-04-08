@@ -5,6 +5,7 @@ import com.turboconsulting.Entity.Experiment;
 import com.turboconsulting.Entity.Visitor;
 import com.turboconsulting.Service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.GregorianCalendar;
@@ -15,6 +16,9 @@ public class AdminController {
 
     @Autowired
     private AdminService adminService;
+
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 
     @GetMapping(path = "/accounts")
@@ -35,7 +39,7 @@ public class AdminController {
     @GetMapping(path = "/addAccount")
     public @ResponseBody String addNewAccount(@RequestParam String name,
                                               @RequestParam String email) {
-        Account a = new Account(name, email, "password");
+        Account a = new Account(name, email, bCryptPasswordEncoder.encode("password"));
         adminService.addNewAccount(a);
         return "Saved Account\n";
     }

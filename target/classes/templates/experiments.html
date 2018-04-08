@@ -19,7 +19,7 @@
     <nav class="navbar is-dark has-shadow">
         <div class="container">
             <div class="navbar-brand">
-                <a th:href="@{/home(aID=${aID})}" class="navbar-item">
+                <a th:href="@{/}" class="navbar-item">
                     <img src="" th:src="@{/media/wtc_logo.gif}" alt="Logo" />
                     <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
                 </a>
@@ -31,20 +31,20 @@
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a th:href="@{/home(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/}" class="navbar-item">
                         Home
                     </a>
-                    <a th:href="@{/visitors(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/visitors}" class="navbar-item">
                         Visitors
                     </a>
-                    <a th:href="@{/settings(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/settings}" class="navbar-item">
                         Settings
                     </a>
-                    <a th:href="@{/login}" class="navbar-item has-text-danger is-hidden-desktop">
+                    <a th:href="@{/logout}" class="navbar-item has-text-danger is-hidden-desktop">
                         Log Out
                     </a>
                     <span class="navbar-item is-hidden-touch">
-                        <a th:href="@{/login}" class="button is-danger is-inverted is-outlined">Log Out</a>
+                        <a th:href="@{/logout}" class="button is-danger is-inverted is-outlined">Log Out</a>
                     </span>
                 </div>
             </div>
@@ -114,7 +114,7 @@
                         </p></li>
                         <!--<li><p>-->
                             <!--<strong>Custom Consent:</strong> Custom set consent option, can be configured in-->
-                            <!--<a th:href="@{/settings(aID=${aID})}">Settings</a>.-->
+                            <!--<a th:href="@{/settings}">Settings</a>.-->
                         <!--</p></li>-->
                     </ul>
                 </div>
@@ -143,7 +143,7 @@
             <!--<label class="current-table-m is-size-4">Consent-Pending Experiments</label>-->
         <!--</div>-->
 
-        <form class="consent-pending" th:action="@{/visitors/experiments/updateConsent(aID=${aID}, vID=${vID})}" th:method="post" th:with="pending = ${visitorExps.?[not consentChanged]}">
+        <form class="consent-pending" th:action="@{/visitors/experiments/updateConsent(vID=${vID})}" th:method="post" th:with="pending = ${visitorExps.?[not consentChanged]}">
             <div class="columns is-hidden-desktop">
                 <div class="column has-text-left">
                     <a class="is-outlined is-primary button toggle-p is-hidden-desktop" th:attrappend="disabled=${#lists.isEmpty(pending)} ? true : false">Select All</a>
@@ -186,7 +186,7 @@
 
                     <tr th:each="visitorExp : ${pending}">
                         <td class="dentry is-size-6"><input class="pending" type="checkbox" name="selected" th:value="${visitorExp.experiment.id}" /></td>
-                        <td class="dentry is-size-6"><a th:href="@{/visitors/experiments/experiment(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}" th:text="${visitorExp.experiment.name}">Physics Experiment</a></td>
+                        <td class="dentry is-size-6"><a th:href="@{/visitors/experiments/experiment(vID=${vID}, eID=${visitorExp.experiment.id})}" th:text="${visitorExp.experiment.name}">Physics Experiment</a></td>
                         <td class="dentry is-size-6" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">19/3/2018</td>
                         <td class="dentry is-size-6" th:text="${visitorExp.consentLevel}">Pending</td>
                     </tr>
@@ -220,7 +220,7 @@
             </div>
         </form>
 
-        <form class="reviewed is-hidden" th:action="@{/visitors/experiments/updateConsent(aID=${aID}, vID=${vID})}" th:method="post" th:with="reviewed = ${visitorExps.?[consentChanged]}">
+        <form class="reviewed is-hidden" th:action="@{/visitors/experiments/updateConsent(vID=${vID})}" th:method="post" th:with="reviewed = ${visitorExps.?[consentChanged]}">
             <div class="columns is-hidden-desktop">
                 <div class="column has-text-left">
                     <a class="is-outlined is-primary button toggle-r is-hidden-desktop" th:attrappend="disabled=${#lists.isEmpty(reviewed)} ? true : false">Select All</a>
@@ -271,7 +271,7 @@
 
                     <tr th:each="visitorExp : ${reviewed}">
                         <td class="dentry is-size-6"><input class="rev" type="checkbox" name="selected" th:value="${visitorExp.experiment.id}" /></td>
-                        <td class="dentry is-size-6"><a th:href="@{/visitors/experiments/experiment(aID=${aID}, vID=${vID}, eID=${visitorExp.experiment.id})}" th:text="${visitorExp.experiment.name}">Physics Experiment</a></td>
+                        <td class="dentry is-size-6"><a th:href="@{/visitors/experiments/experiment(vID=${vID}, eID=${visitorExp.experiment.id})}" th:text="${visitorExp.experiment.name}">Physics Experiment</a></td>
                         <td class="dentry is-size-6" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">19/3/2018</td>
                         <td class="dentry is-size-6" th:text="${visitorExp.consentLevel}">Not Pending</td>
                     </tr>

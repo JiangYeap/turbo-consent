@@ -1,5 +1,8 @@
 package com.turboconsulting.Entity;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
 import javax.persistence.*;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
@@ -71,6 +74,12 @@ public class Account {
     }
     public void setVisitors(Set<Visitor> visitors) {
         this.visitors = visitors;
+    }
+
+    public Set<GrantedAuthority> getAuthorities() {
+        Set<GrantedAuthority> authorities = new HashSet<>();
+        authorities.add(new SimpleGrantedAuthority("USER"));
+        return authorities;
     }
 
     public int getTotalPendingExperiments()  {

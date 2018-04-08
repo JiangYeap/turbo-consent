@@ -17,7 +17,7 @@
     <nav class="navbar is-dark has-shadow">
         <div class="container">
             <div class="navbar-brand">
-                <a th:href="@{/home(aID=${aID})}" class="navbar-item">
+                <a th:href="@{/}" class="navbar-item">
                     <img src="" th:src="@{/media/wtc_logo.gif}" alt="Logo" />
                     <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
                 </a>
@@ -29,20 +29,20 @@
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a th:href="@{/home(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/}" class="navbar-item">
                         Home
                     </a>
-                    <a th:href="@{/visitors(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/visitors}" class="navbar-item">
                         Visitors
                     </a>
-                    <a th:href="@{/settings(aID=${aID})}" class="navbar-item">
+                    <a th:href="@{/settings}" class="navbar-item">
                         Settings
                     </a>
-                    <a th:href="@{/login}" class="navbar-item has-text-danger is-hidden-desktop">
+                    <a th:href="@{/logout}" class="navbar-item has-text-danger is-hidden-desktop">
                         Log Out
                     </a>
                     <span class="navbar-item is-hidden-touch">
-                        <a th:href="@{/login}" class="button is-danger is-inverted is-outlined">Log Out</a>
+                        <a th:href="@{/logout}" class="button is-danger is-inverted is-outlined">Log Out</a>
                     </span>
                 </div>
             </div>
@@ -124,7 +124,7 @@
 
             <hr />
 
-            <form th:action="@{/visitors/experiments/experiment/updateConsent(aID=${aID}, vID=${vID}, eID=${eID})}" th:method="post">
+            <form th:action="@{/visitors/experiments/experiment/updateConsent(vID=${vID}, eID=${eID})}" th:method="post">
                 <h1 class="subtitle" >
                     Update Consent Level For Experiment&nbsp;
                     <a class="fa fa-question-circle open-modal"></a>

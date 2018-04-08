@@ -83,6 +83,7 @@ public class Visitor {
     public void setAccount(Account account) {
         this.account = account;
     }
+    public Account getAccount() { return account; }
 
     public int getPendingExperiments()  {
         int count = 0;
