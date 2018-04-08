@@ -34,7 +34,7 @@ public class VisitorExperiment {
         this.experiment = e;
         this.consentLevel = v.getDefaultConsent();
         this.changedConsent = false;
-        this.date = new GregorianCalendar(1997, 10, 10);
+        this.date = new GregorianCalendar();
     }
 
     public void setVisitor(Visitor visitor) {
