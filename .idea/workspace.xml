@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d359951-eaa4-4d23-bbdc-b5beef41842e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Resources/templates/vexp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/static/js/session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/js/session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/static/js/bulma.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/js/bulma.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/admin-home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/admin-home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/vexp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/vexp.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,8 +23,8 @@
       <file leaf-file-name="admin-home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="143" column="32" lean-forward="true" selection-start-line="143" selection-start-column="32" selection-end-line="143" selection-end-column="32" />
+            <state relative-caret-position="256">
+              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
               <folding>
                 <element signature="n#style#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -33,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-accounts.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin-accounts.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+            <state relative-caret-position="341">
+              <caret line="93" column="37" lean-forward="true" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -54,11 +53,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="bulma.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="admin-visitors.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="113" column="14" lean-forward="true" selection-start-line="70" selection-start-column="3" selection-end-line="113" selection-end-column="14" />
+            <state relative-caret-position="-63">
+              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
               <folding>
                 <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -69,8 +77,8 @@
       <file leaf-file-name="admin-experiments.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-431">
-              <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
+            <state relative-caret-position="2057">
+              <caret line="121" column="7" lean-forward="true" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
               <folding>
                 <element signature="e#1123#1129#0" expanded="true" />
                 <element signature="n#style#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -79,7 +87,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vexp.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vexp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/vexp.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -119,15 +127,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -141,7 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>is-prim</find>
       <find>is-warning</find>
       <find>&lt;p</find>
       <find>tiny0</find>
@@ -166,11 +164,12 @@
       <find>Post</find>
       <find>Visitors - Experiments</find>
       <find>Admin</find>
-      <find>is-a</find>
       <find>&gt;</find>
-      <find>Pag</find>
       <find>comp</find>
       <find>get</find>
+      <find>is-a</find>
+      <find>Pag</find>
+      <find>delete-account</find>
     </findStrings>
     <replaceStrings>
       <replace>visitorExp</replace>
@@ -182,6 +181,7 @@
       <replace>Visitor Experiments</replace>
       <replace />
       <replace>&gt;</replace>
+      <replace>delete-entry</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/Resources/static/css</dir>
@@ -213,7 +213,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentLevel.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/static/js/apply-all.js" />
         <option value="$PROJECT_DIR$/src/main/Resources/static/js/session.js" />
-        <option value="$PROJECT_DIR$/src/main/Resources/static/js/bulma.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Visitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/Controller.java" />
@@ -240,11 +239,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/error.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ErrorController.java" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-home.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/vexp.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-home.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/static/js/bulma.js" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html" />
       </list>
     </option>
   </component>
@@ -602,7 +602,7 @@
       <workItem from="1523186183867" duration="5726000" />
       <workItem from="1523192374734" duration="1730000" />
       <workItem from="1523201634380" duration="74000" />
-      <workItem from="1523260177738" duration="10788000" />
+      <workItem from="1523260177738" duration="11393000" />
     </task>
     <servers />
   </component>
@@ -615,10 +615,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196803000" />
+    <option name="totallyTimeSpent" value="197408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5013423" weight="0.37179488" />
@@ -640,8 +641,8 @@
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" weight="0.37179488" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.7885906" visible="true" weight="0.5655271" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21677852" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.7885906" weight="0.22364673" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21677852" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -937,13 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/settings.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -969,26 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="143" column="32" lean-forward="true" selection-start-line="143" selection-start-column="32" selection-end-line="143" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="113" column="14" lean-forward="true" selection-start-line="70" selection-start-column="3" selection-end-line="113" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -1000,27 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-431">
-          <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
-          <folding>
-            <element signature="e#1123#1129#0" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1044,6 +997,54 @@
           <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
           <folding>
             <element signature="e#1154#1160#0" expanded="true" />
+            <element signature="n#style#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2057">
+          <caret line="121" column="7" lean-forward="true" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+          <folding>
+            <element signature="e#1123#1129#0" expanded="true" />
+            <element signature="n#style#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/static/js/bulma.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="93" column="37" lean-forward="true" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+          <folding>
             <element signature="n#style#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
