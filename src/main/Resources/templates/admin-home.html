@@ -40,6 +40,9 @@
                     <a th:href="@{/adming/experiments}" class="navbar-item">
                         Experiments
                     </a>
+                    <a th:href="@{/adming/vexp}" class="navbar-item">
+                        Visitor Experiments
+                    </a>
                     <a th:href="@{/logout}" class="navbar-item has-text-danger is-hidden-desktop">
                         Log Out
                     </a>
@@ -68,7 +71,7 @@
     <!-- Main Content start -->
     <section class="container" style="margin-top:24px">
         <div class="columns features">
-            <div class="column is-4">
+            <div class="column is-3">
                 <div class="card">
                     <div class="card-image has-text-centered">
                         <i class="fa fa-key" id="accounts"></i>
@@ -87,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="column is-4">
+            <div class="column is-3">
                 <div class="card">
                     <div class="card-image has-text-centered">
                         <i class="fa fa-user" id="accounts"></i>
@@ -106,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="column is-4">
+            <div class="column is-3">
                 <div class="card">
                     <div class="card-image has-text-centered">
                         <i class="fa fa-flask" id="experimetns"></i>
@@ -119,6 +122,25 @@
                             </p>
                             <p>
                                 <a th:href="@{/admin/experiments}"><i class="fa fa-location-arrow"></i>&nbsp;Go to Experiments!</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-image has-text-centered">
+                        <i class="fa fa-lightbulb" id="vexp"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h4>Visitor Experiments</h4>
+                            <p>
+                                View all Visitor Experiments and add/remove Visitor Experiments entries here.
+                            </p>
+                            <p>
+                                <a th:href="@{/admin/experiments}"><i class="fa fa-location-arrow"></i>&nbsp;Go to Visitor Experiments!</a>
                             </p>
                         </div>
                     </div>

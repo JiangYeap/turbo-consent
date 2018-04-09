@@ -48,7 +48,7 @@ window.onload = function() {
     // var d = new Date();
     counter.visits++;
     // counter.time.push(Pad(d.getHours()) + ":" + Pad(d.getMinutes()) + ":" + Pad(d.getSeconds()));
-    // if (counter.time.length > 10) counter.time = counter.time.slice(1);
+    // if (counter.time.length 10) counter.time = counter.time.slice(1);
 
     var modal = document.querySelector('.modal');
     if (counter.visits < 2) modal.classList.add('is-active');

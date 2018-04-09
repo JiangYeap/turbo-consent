@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Accounts | Turbo Consent</title>
+    <title>Visitors | Turbo Consent</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
@@ -21,20 +21,20 @@
                     <p id="brand-title"><strong>&ensp;&nbsp;Turbo Consent</strong></p>
                 </a>
                 <span class="navbar-burger burger" data-target="navbarMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
                     <a th:href="@{/}" class="navbar-item">
                         Home
                     </a>
-                    <a th:href="@{/admin/accounts}" class="navbar-item is-active">
+                    <a th:href="@{/admin/accounts}" class="navbar-item">
                         Accounts
                     </a>
-                    <a th:href="@{/admin/visitors}" class="navbar-item">
+                    <a th:href="@{/admin/visitors}" class="navbar-item is-active">
                         Visitors
                     </a>
                     <a th:href="@{/adming/experiments}" class="navbar-item">
@@ -47,8 +47,8 @@
                         Log Out
                     </a>
                     <span class="navbar-item is-hidden-touch">
-                        <a th:href="@{/logout}" class="button is-danger is-inverted is-outlined">Log Out</a>
-                    </span>
+                            <a th:href="@{/logout}" class="button is-danger is-inverted is-outlined">Log Out</a>
+                        </span>
                 </div>
             </div>
         </div>
@@ -59,10 +59,10 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title">
-                    Admin - Accounts.
+                    Admin - Visitors.
                 </h1>
                 <h2 class="subtitle">
-                    View all Accounts and add/remove Account entries here.
+                    View all Visitors and add/remove Visitor entries here.
                 </h2>
             </div>
         </div>
@@ -74,33 +74,38 @@
             <table class="features table is-hoverable is-fullwidth is-striped is-hidden-touch">
                 <tbody class="tbody">
                 <tr>
-                    <th class="hentry is-size-6">Account ID</th>
-                    <th class="hentry is-size-6">Username</th>
-                    <th class="hentry is-size-6">Email</th>
+                    <th class="hentry is-size-6">Visitor ID</th>
+                    <th class="hentry is-size-6">Visitor Name</th>
+                    <th class="hentry is-size-6">Parent Account ID</th>
+                    <th class="hentry is-size-6">Date of Birth</th>
                     <th class="hentry is-size-6">Delete</th>
                 </tr>
 
-                <tr th:each="a : ${accounts}">
-                    <th class="hentry is-size-6" th:text="${a.id}">Account ID</th>
-                    <th class="hentry is-size-6" th:text="${a.name}">Username</th>
-                    <th class="hentry is-size-6" th:text="${a.email}">Email</th>
+                <tr th:each="v : ${visitors}">
+                    <th class="hentry is-size-6" th:text="${v.visitorId}">Visitor ID</th>
+                    <th class="hentry is-size-6" th:text="${v.name}">Visitor Name</th>
+                    <th class="hentry is-size-6" th:text="${v.account.accountId}">Parent Account ID</th>
+                    <th class="hentry is-size-6" th:text="${v.dob}">Date of Birth</th>
                     <th class="hentry is-size-6"><a class="delete-account">Delete</a></th>
                 </tr>
-
                 </tbody>
             </table>
 
             <div class="box exp-options">
                 <h1 class="subtitle"
-                    Add a new Account
+                    Add a new Visitor
                 </h1>
 
                 <div class="field">
-                    <label>Name of user:&nbsp;<input type="text" name="name" /></label>
+                    <label>Name of visitor:&nbsp;<input type="text" name="name" /></label>
                 </div>
 
                 <div class="field">
-                    <labelEmail:&nbsp;<input type="email" name="email" /></label>
+                    <labelParent Account ID:&nbsp;<input type="text" name="accountId" /></label>
+                </div>
+
+                <div class="field">
+                    <labelDate of Birth:&nbsp;<input type="text" name="dob" /></label>
                 </div>
 
                 <button type="submit" class="button is-link">Create</button>
