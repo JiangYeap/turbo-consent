@@ -191,6 +191,9 @@ label.tiny-label {
   .move-all {
     float: right;
     margin: 0px !important; } }
+.footer {
+  padding-bottom: 48px !important; }
+
 /*! bulma.io v0.6.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {

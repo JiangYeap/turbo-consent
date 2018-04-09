@@ -44,25 +44,25 @@ public class ConsentService implements ConsentServiceInterface {
     @PostConstruct
     public void ConsentService() {
 
-        accountDao.deleteAll();
-        experimentDao.deleteAll();
-
-        Account account1 = new Account("Harry", "hw16471@bristol.ac.uk", bCryptPasswordEncoder.encode("password"));
-        addNewAccount(account1);
-        Visitor visitor1 = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ));
-        addNewVisitor(visitor1, account1.getAccountId());
-        Experiment experiment1 = new Experiment("Physics Experiment", "A lovely desciption.");
-        addNewExperiment(experiment1);
-        doExperiment(visitor1.getVisitorId(), experiment1.getId());
-
-        Account account2 = new Account("Finn", "user@turboconsent.com", bCryptPasswordEncoder.encode("password"));
-        addNewAccount(account2);
-        Visitor visitor2 = new Visitor("Finn", new GregorianCalendar(0, 0, 0 ));
-        addNewVisitor(visitor2, account2.getAccountId());
-        Experiment experiment2 = new Experiment("Chemistry Experiment", "A lovely desciption.");
-        addNewExperiment(experiment2);
-        doExperiment(visitor2.getVisitorId(), experiment1.getId());
-        doExperiment(visitor2.getVisitorId(), experiment2.getId());
+//        accountDao.deleteAll();
+//        experimentDao.deleteAll();
+//
+//        Account account1 = new Account("Harry", "hw16471@bristol.ac.uk", bCryptPasswordEncoder.encode("password"));
+//        addNewAccount(account1);
+//        Visitor visitor1 = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ));
+//        addNewVisitor(visitor1, account1.getAccountId());
+//        Experiment experiment1 = new Experiment("Physics Experiment", "A lovely desciption.");
+//        addNewExperiment(experiment1);
+//        doExperiment(visitor1.getVisitorId(), experiment1.getId());
+//
+//        Account account2 = new Account("Finn", "user@turboconsent.com", bCryptPasswordEncoder.encode("password"));
+//        addNewAccount(account2);
+//        Visitor visitor2 = new Visitor("Finn", new GregorianCalendar(0, 0, 0 ));
+//        addNewVisitor(visitor2, account2.getAccountId());
+//        Experiment experiment2 = new Experiment("Chemistry Experiment", "A lovely desciption.");
+//        addNewExperiment(experiment2);
+//        doExperiment(visitor2.getVisitorId(), experiment1.getId());
+//        doExperiment(visitor2.getVisitorId(), experiment2.getId());
 
 
 
