@@ -27,4 +27,11 @@ $(document).ready(function() {
     $('.close-error').click(function() {
         $('.error-flag').addClass('is-hidden');
     });
+
+    $('.delete-entry').click(function(e) {
+        e.preventDefault();
+        let choice = confirm(this.getAttribute('data-confirm'));
+
+        if (choice) window.location.href = this.getAttribute('href');
+    });
 });

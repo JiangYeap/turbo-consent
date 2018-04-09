@@ -52,7 +52,7 @@
     </nav>
 
     <!-- Banner start -->
-    <section class="hero is-info is-2 is-bold">
+    <section class="hero is-warning is-2 is-limey">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title">
@@ -65,6 +65,13 @@
             </div>
         </div>
     </section>
+
+    <div class="box cta">
+        <p class="has-text-centered">
+            <span class="tag has-text-weight-semibold is-info">Note:</span>
+            &nbsp;Changing the Default Consent Level will not affect consent level of any participated experiment.
+        </p>
+    </div>
 
     <!-- Update Notification start-->
     <div class="notification is-danger has-text-centered error-flag" th:classappend="${updateFailure} ? '' : 'is-hidden'">

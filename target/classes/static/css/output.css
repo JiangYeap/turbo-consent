@@ -194,6 +194,12 @@ label.tiny-label {
 .footer {
   padding-bottom: 48px !important; }
 
+.is-spacey {
+  background: linear-gradient(-38deg, #2753b6, #25006d); }
+
+.is-limey {
+  background: linear-gradient(-50deg, #f8ee49, #62d179); }
+
 /*! bulma.io v0.6.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
