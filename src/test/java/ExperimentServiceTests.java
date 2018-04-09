@@ -18,6 +18,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -78,7 +80,7 @@ public class ExperimentServiceTests {
 
     @Test
     public void addNewExperiment_sucess() {
-        Experiment e = new Experiment("Harry", "harry@bristol.ac.uk");
+        Experiment e = new Experiment("Harry", "harry@bristol.ac.uk", new HashSet<>());
         assertTrue(consentService.addNewExperiment(e));
     }
 

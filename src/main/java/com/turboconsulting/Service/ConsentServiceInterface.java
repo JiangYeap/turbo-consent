@@ -24,7 +24,7 @@ public interface ConsentServiceInterface {
 
     Account getAccount(int id);
 
-    boolean updateAccountConsent(List<Integer> vIds, ConsentLevel c);
+    boolean updateAccountConsent(List<Integer> vIds, ConsentOption c);
 
     //////////////////////////////////////////////////////////////////////////VISITOR FUNCTIONS
     boolean addNewVisitor(Visitor v, int accountID);
@@ -33,7 +33,7 @@ public interface ConsentServiceInterface {
 
     Iterable<Visitor> getAllVisitors();
 
-    boolean updateVisitorConsent(int id, ConsentLevel c);
+    boolean updateVisitorConsent(int id, ConsentOption c);
 
     //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
     boolean addNewExperiment(Experiment e);
@@ -51,9 +51,9 @@ public interface ConsentServiceInterface {
 
     String getExperimentConsent(int id, int experimentID);
 
-    boolean updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID);
+    boolean updateExperimentConsent(int visitorId, ConsentOption c, int experimentID);
 
-    boolean updateBatchExperimentConsents(int visitorId, ConsentLevel c, List<Integer> experimentIds);
+    boolean updateBatchExperimentConsents(int visitorId, ConsentOption c, List<Integer> experimentIds);
 
     int getPendingExperiments(int id);
 

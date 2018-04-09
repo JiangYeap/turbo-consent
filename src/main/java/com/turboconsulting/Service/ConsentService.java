@@ -1,22 +1,17 @@
 package com.turboconsulting.Service;
 
-import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 import com.turboconsulting.DAO.AccountDao;
 import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
 import com.turboconsulting.DAO.VisitorExperimentDao;
 import com.turboconsulting.Entity.*;
-import org.springframework.beans.factory.UnsatisfiedDependencyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import javax.validation.ConstraintViolationException;
-import java.util.ArrayList;
-import java.util.GregorianCalendar;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class ConsentService implements ConsentServiceInterface {
@@ -46,12 +41,12 @@ public class ConsentService implements ConsentServiceInterface {
 
         accountDao.deleteAll();
         experimentDao.deleteAll();
-
+//
         Account account1 = new Account("Harry", "hw16471@bristol.ac.uk", bCryptPasswordEncoder.encode("password"));
         addNewAccount(account1);
         Visitor visitor1 = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ));
         addNewVisitor(visitor1, account1.getAccountId());
-        Experiment experiment1 = new Experiment("Physics Experiment", "A lovely desciption.");
+        Experiment experiment1 = new Experiment("Physics Experiment", "A lovely desciption.", new HashSet<>());
         addNewExperiment(experiment1);
         doExperiment(visitor1.getVisitorId(), experiment1.getId());
 
@@ -59,7 +54,7 @@ public class ConsentService implements ConsentServiceInterface {
         addNewAccount(account2);
         Visitor visitor2 = new Visitor("Finn", new GregorianCalendar(0, 0, 0 ));
         addNewVisitor(visitor2, account2.getAccountId());
-        Experiment experiment2 = new Experiment("Chemistry Experiment", "A lovely desciption.");
+        Experiment experiment2 = new Experiment("Chemistry Experiment", "A lovely desciption.", new HashSet<>());
         addNewExperiment(experiment2);
         doExperiment(visitor2.getVisitorId(), experiment1.getId());
         doExperiment(visitor2.getVisitorId(), experiment2.getId());
@@ -98,7 +93,7 @@ public class ConsentService implements ConsentServiceInterface {
         return accountDao.findByAccountId(id);
     }
     @Override
-    public boolean updateAccountConsent(List<Integer> vIds, ConsentLevel c)  {
+    public boolean updateAccountConsent(List<Integer> vIds, ConsentOption c)  {
         for (int vId : vIds)  {
             Visitor v = visitorDao.findByVisitorId(vId);
             v.setDefaultConsent(c);
@@ -123,7 +118,7 @@ public class ConsentService implements ConsentServiceInterface {
         return visitorDao.findAll();
     }
     @Override
-    public boolean updateVisitorConsent(int id, ConsentLevel c)  {
+    public boolean updateVisitorConsent(int id, ConsentOption c)  {
         Visitor v = getVisitor(id);
         v.setDefaultConsent(c);
         return visitorDao.save(v) != null;
@@ -179,20 +174,20 @@ public class ConsentService implements ConsentServiceInterface {
         Visitor v = visitorDao.findByVisitorId(visitorID);
         Experiment e = experimentDao.findById(experimentID);
         VisitorExperiment visitorExperiment = visitorExperimentDao.findByVisitorAndExperiment(v, e);
-        return visitorExperiment == null ? "NULL" : visitorExperiment.getConsentLevel().toString();
+        return visitorExperiment == null ? "NULL" : visitorExperiment.getConsentOption().getName();
     }
     @Override
-    public boolean updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID)  {
+    public boolean updateExperimentConsent(int visitorId, ConsentOption c, int experimentID)  {
         Visitor v = visitorDao.findByVisitorId(visitorId);
         Experiment e = experimentDao.findById(experimentID);
         if ( v == null || e == null )  return false;
         VisitorExperiment visitorExperiment = visitorExperimentDao.findByVisitorAndExperiment(v, e);
-        visitorExperiment.setConsentLevel(c);
+        visitorExperiment.setConsentOption(c);
         v.doExperiment(visitorExperiment);
         return visitorDao.save(v) != null;
     }
     @Override
-    public boolean updateBatchExperimentConsents(int visitorId, ConsentLevel c, List<Integer> experimentIds)  {
+    public boolean updateBatchExperimentConsents(int visitorId, ConsentOption c, List<Integer> experimentIds)  {
         boolean batchSuccess = true;
         for (int eID : experimentIds)  batchSuccess = updateExperimentConsent(visitorId, c, eID) && batchSuccess;
         return batchSuccess;

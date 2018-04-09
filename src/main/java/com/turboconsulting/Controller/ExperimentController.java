@@ -1,6 +1,6 @@
 package com.turboconsulting.Controller;
 
-import com.turboconsulting.Entity.ConsentLevel;
+import com.turboconsulting.Entity.ConsentOption;
 import com.turboconsulting.Entity.Experiment;
 import com.turboconsulting.Security.MyUser;
 import com.turboconsulting.Security.MyUserDetailsService;
@@ -44,7 +44,7 @@ public class ExperimentController {
                                       @RequestParam("eID") int eID,
                                       @ModelAttribute("consentLevel") String c) throws AccessDeniedException {
         checkAccountID(vID);
-        boolean updateSuccessful = consentService.updateExperimentConsent(vID, ConsentLevel.fromString(c), eID);
+        boolean updateSuccessful = consentService.updateExperimentConsent(vID, new ConsentOption(c, "Description"), eID);
         ModelAndView mav = new ModelAndView();
         mav.setViewName("redirect:/visitors/experiments?vID="+vID+"&update="+updateSuccessful);
         return mav;

@@ -1,6 +1,6 @@
 package com.turboconsulting.Controller;
 
-import com.turboconsulting.Entity.ConsentLevel;
+import com.turboconsulting.Entity.ConsentOption;
 import com.turboconsulting.Entity.Experiment;
 import com.turboconsulting.Entity.VisitorExperiment;
 import com.turboconsulting.Security.MyUser;
@@ -49,7 +49,7 @@ public class ExperimentsController {
                                       @ModelAttribute("selected") List<Integer> eIDs,
                                       @ModelAttribute("consentLevel") String c) throws AccessDeniedException {
         checkAccountID(vID);
-        boolean updateSuccessful = consentService.updateBatchExperimentConsents(vID, ConsentLevel.fromString(c), eIDs);
+        boolean updateSuccessful = consentService.updateBatchExperimentConsents(vID, new ConsentOption(c, "Description"), eIDs);
         return "redirect:/visitors/experiments?vID="+vID+"&update="+updateSuccessful;
     }
 

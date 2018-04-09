@@ -3,7 +3,7 @@ import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
 import com.turboconsulting.DAO.VisitorExperimentDao;
 import com.turboconsulting.Entity.Account;
-import com.turboconsulting.Entity.ConsentLevel;
+import com.turboconsulting.Entity.ConsentOption;
 import com.turboconsulting.Entity.LoginDetails;
 import com.turboconsulting.Service.ConsentService;
 import com.turboconsulting.Service.ConsentServiceInterface;

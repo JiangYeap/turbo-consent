@@ -117,15 +117,15 @@ public class VisitorExperimentServiceTests {
     @Test
     public void updateExperimentConsent_success()  {
         assertEquals(consentService.getExperimentConsent(1, 1), "RESTRICTED");
-        assertTrue(consentService.updateExperimentConsent(1, ConsentLevel.NONE, 1));
+        assertTrue(consentService.updateExperimentConsent(1, new ConsentOption("No Consent", "Description"), 1));
         assertEquals(consentService.getExperimentConsent(1, 1), "NONE");
-        assertTrue(consentService.updateExperimentConsent(1, ConsentLevel.UNRESTRICTED, 1));
+        assertTrue(consentService.updateExperimentConsent(1, new ConsentOption("No Consent", "Description"), 1));
         assertEquals(consentService.getExperimentConsent(1, 1), "UNRESTRICTED");
     }
     @Test
     public void updateExperimentConsent_failure()  {
         assertEquals(consentService.getExperimentConsent(1, 1), "RESTRICTED");
-        assertFalse(consentService.updateExperimentConsent(1, ConsentLevel.NONE, -1));
+        assertFalse(consentService.updateExperimentConsent(1, new ConsentOption("Full Consent", "Description"), -1));
         assertEquals(consentService.getExperimentConsent(1, 1), "RESTRICTED");
     }
 

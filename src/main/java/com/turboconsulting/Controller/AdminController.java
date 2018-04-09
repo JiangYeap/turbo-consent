@@ -9,6 +9,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.HashSet;
 
 @RestController
 @RequestMapping("/admin")
@@ -54,7 +56,7 @@ public class AdminController {
 
     @GetMapping(path = "/addExperiment")
     public @ResponseBody String addNewExperiment(@RequestParam String name) {
-        Experiment e = new Experiment(name, "Sample Desciption");
+        Experiment e = new Experiment(name, "Sample Desciption", new HashSet<>());
         adminService.addNewExperiment(e);
         return "Saved Experiment\n";
     }

@@ -21,7 +21,8 @@ public class Visitor {
     private String name;
     private GregorianCalendar dob;
 
-    private ConsentLevel defaultConsent;
+    @Transient
+    private ConsentOption defaultConsent;
 
     @OneToMany(mappedBy = "visitor", cascade = CascadeType.ALL, orphanRemoval=true, fetch = FetchType.EAGER)
     private Set<VisitorExperiment> experiments;
@@ -31,7 +32,7 @@ public class Visitor {
     public Visitor(String name, GregorianCalendar dob) {
         this.name = name;
         this.dob = dob;
-        this.defaultConsent = ConsentLevel.NONE;
+        this.defaultConsent = new ConsentOption("NO CONSENT", "This option means you do not give consent for We the Curious to use any of your data");
         experiments = new HashSet<VisitorExperiment>();
 
     }
@@ -44,10 +45,10 @@ public class Visitor {
         return name;
     }
 
-    public ConsentLevel getDefaultConsent() {
+    public ConsentOption getDefaultConsent() {
         return defaultConsent;
     }
-    public void setDefaultConsent(ConsentLevel defaultConsent) {
+    public void setDefaultConsent(ConsentOption defaultConsent) {
         this.defaultConsent = defaultConsent;
     }
 

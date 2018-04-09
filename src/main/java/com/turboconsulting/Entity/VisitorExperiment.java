@@ -18,7 +18,9 @@ public class VisitorExperiment {
     @JoinColumn(name="experimentId", nullable = false)
     private Experiment experiment;
 
-    private ConsentLevel consentLevel;
+    @Transient
+    private ConsentOption consentOption;
+
     private GregorianCalendar date;
 
     public Visitor getVisitor() {
@@ -32,7 +34,7 @@ public class VisitorExperiment {
     public VisitorExperiment(Visitor v, Experiment e) {
         this.visitor = v;
         this.experiment = e;
-        this.consentLevel = v.getDefaultConsent();
+        this.consentOption = v.getDefaultConsent();
         this.changedConsent = false;
         this.date = new GregorianCalendar();
     }
@@ -45,12 +47,15 @@ public class VisitorExperiment {
         this.experiment = experiment;
     }
 
-    public ConsentLevel getConsentLevel() {
-        return consentLevel;
+    public ConsentOption getConsentOption() {
+        return consentOption;
     }
-    public void setConsentLevel(ConsentLevel consentLevel) {
+
+    public boolean setConsentOption(ConsentOption consentLevel) {
+        if(!experiment.getConsentOptions().contains(consentLevel))  return false;
         changedConsent = true;
-        this.consentLevel = consentLevel;
+        this.consentOption = consentLevel;
+        return true;
     }
 
     public int getCompoundKey() {

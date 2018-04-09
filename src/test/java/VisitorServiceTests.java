@@ -3,7 +3,7 @@ import com.turboconsulting.DAO.ExperimentDao;
 import com.turboconsulting.DAO.VisitorDao;
 import com.turboconsulting.DAO.VisitorExperimentDao;
 import com.turboconsulting.Entity.Account;
-import com.turboconsulting.Entity.ConsentLevel;
+import com.turboconsulting.Entity.ConsentOption;
 import com.turboconsulting.Entity.Visitor;
 import com.turboconsulting.Service.ConsentService;
 import com.turboconsulting.Service.ConsentServiceInterface;
@@ -93,8 +93,8 @@ public class VisitorServiceTests {
     @Test
     public void updateVisitorConsent_validConsentLevel()  {
         Visitor found = consentService.getVisitor(1);
-        assertEquals(found.getDefaultConsent(), ConsentLevel.RESTRICTED);
-        assertTrue(consentService.updateVisitorConsent(found.getVisitorId(), ConsentLevel.NONE));
+        assertEquals(found.getDefaultConsent(), new ConsentOption("No Consent", "Description"));
+        assertTrue(consentService.updateVisitorConsent(found.getVisitorId(), new ConsentOption("No Consent", "Description")));
     }
 
 
