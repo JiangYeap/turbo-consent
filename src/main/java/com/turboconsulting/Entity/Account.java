@@ -19,7 +19,6 @@ public class Account {
     private String email;
 
     private String name, password;
-    private ConsentLevel consentLevel;
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Visitor> visitors;
@@ -30,7 +29,6 @@ public class Account {
         this.name = name;
         this.email = email;
         this.password = password;
-        this.consentLevel = ConsentLevel.RESTRICTED;
         visitors = new HashSet<>();
     }
 
@@ -62,12 +60,6 @@ public class Account {
         this.password = password;
     }
 
-    public ConsentLevel getConsentLevel() {
-        return consentLevel;
-    }
-    public void setConsentLevel(ConsentLevel consentLevel) {
-        this.consentLevel = consentLevel;
-    }
 
     public Set<Visitor> getVisitors() {
         return visitors;

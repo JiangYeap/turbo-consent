@@ -18,7 +18,10 @@ public class VisitorExperiment {
     @JoinColumn(name="experimentId", nullable = false)
     private Experiment experiment;
 
-    private ConsentLevel consentLevel;
+    @ManyToOne
+    @JoinColumn(name="consentId", nullable = false)
+    private ConsentOption consentOption;
+
     private GregorianCalendar date;
 
     public Visitor getVisitor() {
@@ -32,7 +35,7 @@ public class VisitorExperiment {
     public VisitorExperiment(Visitor v, Experiment e) {
         this.visitor = v;
         this.experiment = e;
-        this.consentLevel = v.getDefaultConsent();
+        this.consentOption = visitor.getDefaultConsent();
         this.changedConsent = false;
         this.date = new GregorianCalendar();
     }
@@ -40,17 +43,8 @@ public class VisitorExperiment {
     public void setVisitor(Visitor visitor) {
         this.visitor = visitor;
     }
-
     public void setExperiment(Experiment experiment) {
         this.experiment = experiment;
-    }
-
-    public ConsentLevel getConsentLevel() {
-        return consentLevel;
-    }
-    public void setConsentLevel(ConsentLevel consentLevel) {
-        changedConsent = true;
-        this.consentLevel = consentLevel;
     }
 
     public int getCompoundKey() {
@@ -60,7 +54,7 @@ public class VisitorExperiment {
         this.compoundKey = compoundKey;
     }
 
-    public boolean getConsentChanged() {
+    public boolean getChangedConsent() {
         return changedConsent;
     }
     public void setChangedConsent(boolean changedConsent) {
@@ -76,5 +70,12 @@ public class VisitorExperiment {
     }
     public void setDate(GregorianCalendar date) {
         this.date = date;
+    }
+
+    public ConsentOption getConsentOption() {
+        return consentOption;
+    }
+    public void setConsentOption(ConsentOption consentOption) {
+        this.consentOption = consentOption;
     }
 }

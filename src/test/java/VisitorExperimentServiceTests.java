@@ -68,10 +68,10 @@ public class VisitorExperimentServiceTests {
         Mockito.when(visitorDao.findAll()).thenReturn(visitors);
 
 
-        experiments.add(mockEntityFactory.mockExperiment(experimentDao, "Physics Experiment", "Description 1", 1));
-        experiments.add(mockEntityFactory.mockExperiment(experimentDao, "Chemistry Experiment", "Description 2", 2));
-        Mockito.when(experimentDao.save(any(Experiment.class))).thenAnswer(AdditionalAnswers.<Account>returnsFirstArg());
-        Mockito.when(experimentDao.findAll()).thenReturn(experiments);
+//        experiments.add(mockEntityFactory.mockExperiment(experimentDao, "Physics Experiment", "Description 1", 1));
+//        experiments.add(mockEntityFactory.mockExperiment(experimentDao, "Chemistry Experiment", "Description 2", 2));
+//        Mockito.when(experimentDao.save(any(Experiment.class))).thenAnswer(AdditionalAnswers.<Account>returnsFirstArg());
+//        Mockito.when(experimentDao.findAll()).thenReturn(experiments);
 
         visitorExperiments.add(mockEntityFactory.mockVisitorExperiment(visitorDao, experimentDao, visitorExperimentDao,  1, 1));
         visitorExperiments.add(mockEntityFactory.mockVisitorExperiment(visitorDao, experimentDao, visitorExperimentDao, 1, 1));
@@ -88,7 +88,7 @@ public class VisitorExperimentServiceTests {
 //
 //    @Test
 //    public void addVisitorExperiment_success()  {
-//        assertTrue(consentService.doExperiment(1, 2));
+//        assertTrue(consentService.addVisitorExperiment(1, 2));
 //        Iterable<Experiment> experiments = consentService.getVisitorExperiments(1);
 //        ArrayList<String> experimentNames = new ArrayList<>();
 //        experimentNames.add("Physics Experiment");
@@ -117,15 +117,15 @@ public class VisitorExperimentServiceTests {
     @Test
     public void updateExperimentConsent_success()  {
         assertEquals(consentService.getExperimentConsent(1, 1), "RESTRICTED");
-        assertTrue(consentService.updateExperimentConsent(1, ConsentLevel.NONE, 1));
+        assertTrue(consentService.updateExperimentConsent(1, new ConsentOption("No Consent", "Description"), 1));
         assertEquals(consentService.getExperimentConsent(1, 1), "NONE");
-        assertTrue(consentService.updateExperimentConsent(1, ConsentLevel.UNRESTRICTED, 1));
+        assertTrue(consentService.updateExperimentConsent(1, new ConsentOption("No Consent", "Description"), 1));
         assertEquals(consentService.getExperimentConsent(1, 1), "UNRESTRICTED");
     }
     @Test
     public void updateExperimentConsent_failure()  {
         assertEquals(consentService.getExperimentConsent(1, 1), "RESTRICTED");
-        assertFalse(consentService.updateExperimentConsent(1, ConsentLevel.NONE, -1));
+        assertFalse(consentService.updateExperimentConsent(1, new ConsentOption("Full Consent", "Description"), -1));
         assertEquals(consentService.getExperimentConsent(1, 1), "RESTRICTED");
     }
 

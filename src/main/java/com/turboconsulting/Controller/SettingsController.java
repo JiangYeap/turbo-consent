@@ -1,6 +1,7 @@
 package com.turboconsulting.Controller;
 
-import com.turboconsulting.Entity.ConsentLevel;
+import com.turboconsulting.Entity.ConsentOption;
+import com.turboconsulting.Entity.ConsentOption;
 import com.turboconsulting.Security.MyUser;
 import com.turboconsulting.Security.MyUserDetailsService;
 import com.turboconsulting.Service.ConsentService;
@@ -29,7 +30,7 @@ public class SettingsController {
     public String homePage(ModelMap m,
                            @RequestParam(value = "update", required = false) boolean updateSuccess) {
         int aID = getLoggedInAccountID();
-        m.addAttribute("consentOptions", ConsentLevel.values());
+        //m.addAttribute("consentOptions", ConsentOption.values());
         m.addAttribute("visitors", consentService.getAccountsVisitors(aID));
         m.addAttribute("updateSuccess", updateSuccess);
         return "settings";
@@ -39,7 +40,7 @@ public class SettingsController {
     public String updateConsent(ModelMap m,
                                 @ModelAttribute("vSelected") List<Integer> vIDs,
                                 @ModelAttribute("dConsentLevel") String c)  {
-        boolean updateSuccessful = consentService.updateAccountConsent(vIDs, ConsentLevel.fromString(c));
+        boolean updateSuccessful = consentService.updateAccountConsent(vIDs, new ConsentOption(c, "Description"));
 
         return "redirect:/settings?update="+updateSuccessful;
     }

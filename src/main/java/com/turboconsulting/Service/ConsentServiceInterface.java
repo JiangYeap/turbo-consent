@@ -4,6 +4,7 @@ import com.turboconsulting.Entity.*;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public interface ConsentServiceInterface {
@@ -24,7 +25,7 @@ public interface ConsentServiceInterface {
 
     Account getAccount(int id);
 
-    boolean updateAccountConsent(List<Integer> vIds, ConsentLevel c);
+    boolean updateAccountConsent(List<Integer> vIds, ConsentOption c);
 
     //////////////////////////////////////////////////////////////////////////VISITOR FUNCTIONS
     boolean addNewVisitor(Visitor v, int accountID);
@@ -33,10 +34,10 @@ public interface ConsentServiceInterface {
 
     Iterable<Visitor> getAllVisitors();
 
-    boolean updateVisitorConsent(int id, ConsentLevel c);
+    boolean updateVisitorConsent(int id, ConsentOption c);
 
     //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
-    boolean addNewExperiment(Experiment e);
+    boolean addNewExperiment(Experiment e, HashSet<ConsentOption> newConsentOptions);
 
     Experiment getExperiment(int id);
 
@@ -47,13 +48,13 @@ public interface ConsentServiceInterface {
 
     VisitorExperiment getVisitorExperiment(int visitorID, int experimentID);
 
-    boolean doExperiment(int visitorId, int experimentId);
+    boolean addVisitorExperiment(int visitorId, int experimentId);
 
     String getExperimentConsent(int id, int experimentID);
 
-    boolean updateExperimentConsent(int visitorId, ConsentLevel c, int experimentID);
+    boolean updateExperimentConsent(int visitorId, ConsentOption c, int experimentID);
 
-    boolean updateBatchExperimentConsents(int visitorId, ConsentLevel c, List<Integer> experimentIds);
+    boolean updateBatchExperimentConsents(int visitorId, ConsentOption c, List<Integer> experimentIds);
 
     int getPendingExperiments(int id);
 

@@ -18,20 +18,21 @@ public class Visitor {
     @JoinColumn(name="accountId", nullable = false)
     private Account account;
 
-    private String name;
-    private GregorianCalendar dob;
-
-    private ConsentLevel defaultConsent;
+    @ManyToOne
+    @JoinColumn(name="consentId", nullable = false)
+    private ConsentOption defaultConsent;
 
     @OneToMany(mappedBy = "visitor", cascade = CascadeType.ALL, orphanRemoval=true, fetch = FetchType.EAGER)
     private Set<VisitorExperiment> experiments;
 
-    public Visitor(){}
 
+    private String name;
+    private GregorianCalendar dob;
+
+    public Visitor(){}
     public Visitor(String name, GregorianCalendar dob) {
         this.name = name;
         this.dob = dob;
-        this.defaultConsent = ConsentLevel.NONE;
         experiments = new HashSet<VisitorExperiment>();
 
     }
@@ -44,10 +45,11 @@ public class Visitor {
         return name;
     }
 
-    public ConsentLevel getDefaultConsent() {
+
+    public ConsentOption getDefaultConsent() {
         return defaultConsent;
     }
-    public void setDefaultConsent(ConsentLevel defaultConsent) {
+    public void setDefaultConsent(ConsentOption defaultConsent) {
         this.defaultConsent = defaultConsent;
     }
 
@@ -88,7 +90,7 @@ public class Visitor {
     public int getPendingExperiments()  {
         int count = 0;
         for (VisitorExperiment ve : experiments)
-            count += ve.getConsentChanged()? 0 : 1;
+            count += ve.getChangedConsent()? 0 : 1;
         return count;
     }
 

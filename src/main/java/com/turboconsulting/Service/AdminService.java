@@ -75,7 +75,7 @@ public class AdminService implements AdminServiceInterface {
         VisitorExperiment e = new VisitorExperiment( visitorDao.findByVisitorId(visitorId),
                 experimentDao.findById(experimentId));
 
-        experimentDao.findById(experimentId).doExperiment(e);
+        experimentDao.findById(experimentId).addVisitorExperiment(e);
         Visitor v = visitorDao.findByVisitorId(visitorId);
         v.doExperiment(e);
         return visitorDao.save(v) != null;
