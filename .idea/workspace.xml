@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d359951-eaa4-4d23-bbdc-b5beef41842e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ConsentExperimentDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ConsentOptionDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentExperiment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/AdminController.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Controller/AdminController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Entity/ConsentOption.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Entity/ConsentOption.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Entity/Experiment.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Entity/Experiment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Entity/Visitor.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Entity/Visitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Entity/VisitorExperiment.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Entity/VisitorExperiment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/AdminService.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/AdminService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentService.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentServiceInterface.class" afterPath="$PROJECT_DIR$/target/classes/com/turboconsulting/Service/ConsentServiceInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/ExperimentServiceTests.class" afterPath="$PROJECT_DIR$/target/test-classes/ExperimentServiceTests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/MockEntityFactory.class" afterPath="$PROJECT_DIR$/target/test-classes/MockEntityFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/VisitorExperimentServiceTests.class" afterPath="$PROJECT_DIR$/target/test-classes/VisitorExperimentServiceTests.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/AdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentOption.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentOption.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Visitor.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Visitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/AdminService.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/AdminService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentServiceInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java" afterPath="$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/MockEntityFactory.java" afterPath="$PROJECT_DIR$/src/test/java/MockEntityFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/VisitorExperimentServiceTests.java" afterPath="$PROJECT_DIR$/src/test/java/VisitorExperimentServiceTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/experiments.html" afterPath="$PROJECT_DIR$/target/classes/templates/experiments.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,45 +17,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConsentService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
+      <file leaf-file-name="experiments.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="223" column="69" lean-forward="false" selection-start-line="223" selection-start-column="53" selection-end-line="223" selection-end-column="69" />
-              <folding>
-                <element signature="e#568#578#0" expanded="false" />
-                <element signature="e#652#662#0" expanded="false" />
-                <element signature="e#766#776#0" expanded="false" />
-                <element signature="e#1153#1162#0" expanded="false" />
-                <element signature="method#addNewAccount#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#getAccountID#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#checkAccountLogin#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#getAccountsVisitors#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#updateAccountConsent#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#addNewVisitor#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#updateVisitorConsent#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#addNewExperiment#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#getVisitorExperiments#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#getVisitorExperiment#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#addVisitorExperiment#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#getExperimentConsent#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#updateBatchExperimentConsents#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#getPendingExperiments#0;class#ConsentService#0" expanded="false" />
-                <element signature="method#moveAllToReviewed#0;class#ConsentService#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Experiment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="16" column="91" lean-forward="false" selection-start-line="16" selection-start-column="91" selection-end-line="16" selection-end-column="91" />
-              <folding>
-                <element signature="method#getId#0;class#Experiment#0" expanded="false" />
-                <element signature="method#setConsentExperiments#0;class#Experiment#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="191">
+              <caret line="80" column="12" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,13 +30,23 @@
       <file leaf-file-name="VisitorExperiment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
+            <state relative-caret-position="666">
               <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="method#VisitorExperiment#1;class#VisitorExperiment#0" expanded="false" />
                 <element signature="e#1114#1115#0" expanded="true" />
                 <element signature="e#1158#1159#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExperimentController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,7 +63,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hero</find>
       <find>is-su</find>
       <find>is-link</find>
       <find>Apply</find>
@@ -141,6 +92,7 @@
       <find>Select</find>
       <find>ConsentLevel</find>
       <find>HashSet</find>
+      <find>consentOption</find>
     </findStrings>
     <replaceStrings>
       <replace>visitorExp</replace>
@@ -203,7 +155,6 @@
         <option value="$PROJECT_DIR$/src/test/java/VisitorServiceTests.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/test/java/MockEntityFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/ExperimentServiceTests.java" />
@@ -218,6 +169,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
       </list>
     </option>
   </component>
@@ -619,7 +571,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223623000" />
+    <option name="totallyTimeSpent" value="224372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1084" extended-state="6" />
@@ -641,7 +593,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21779141" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21370143" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -893,14 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="156" column="110" lean-forward="false" selection-start-line="156" selection-start-column="110" selection-end-line="156" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -976,14 +920,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,29 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="method#VisitorExperiment#1;class#VisitorExperiment#0" expanded="false" />
-            <element signature="e#1114#1115#0" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="16" column="91" lean-forward="false" selection-start-line="16" selection-start-column="91" selection-end-line="16" selection-end-column="91" />
-          <folding>
-            <element signature="method#getId#0;class#Experiment#0" expanded="false" />
-            <element signature="method#setConsentExperiments#0;class#Experiment#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/ConsentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
@@ -1179,6 +1092,45 @@
             <element signature="method#getPendingExperiments#0;class#ConsentService#0" expanded="false" />
             <element signature="method#moveAllToReviewed#0;class#ConsentService#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/Experiment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="91" lean-forward="false" selection-start-line="16" selection-start-column="91" selection-end-line="16" selection-end-column="91" />
+          <folding>
+            <element signature="method#getId#0;class#Experiment#0" expanded="false" />
+            <element signature="method#setConsentExperiments#0;class#Experiment#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="method#VisitorExperiment#1;class#VisitorExperiment#0" expanded="false" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="80" column="12" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
