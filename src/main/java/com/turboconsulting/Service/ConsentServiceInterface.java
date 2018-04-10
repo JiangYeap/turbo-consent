@@ -4,6 +4,7 @@ import com.turboconsulting.Entity.*;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public interface ConsentServiceInterface {
@@ -36,7 +37,7 @@ public interface ConsentServiceInterface {
     boolean updateVisitorConsent(int id, ConsentOption c);
 
     //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
-    boolean addNewExperiment(Experiment e);
+    boolean addNewExperiment(Experiment e, HashSet<ConsentOption> newConsentOptions);
 
     Experiment getExperiment(int id);
 
@@ -47,7 +48,7 @@ public interface ConsentServiceInterface {
 
     VisitorExperiment getVisitorExperiment(int visitorID, int experimentID);
 
-    boolean doExperiment(int visitorId, int experimentId);
+    boolean addVisitorExperiment(int visitorId, int experimentId);
 
     String getExperimentConsent(int id, int experimentID);
 

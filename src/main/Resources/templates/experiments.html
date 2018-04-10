@@ -154,7 +154,7 @@
                 <div class="card-content medium-card">
                     <p class="subtitle tiny-subtitle has-text-weight-semibold" th:text="${visitorExp.experiment.name}">Physics Experiment With An Extremely Long Title</p>
                     <p>Date: <em class="has-text-grey-dark" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">6/4/2018</em></p>
-                    <p>Status: <em class="has-text-success" th:text="${visitorExp.consentLevel}">Pending Consent</em></p>
+                    <p>Status: <em class="has-text-success" th:text="${visitorExp.getConsentOption().getName()}">Pending Consent</em></p>
                 </div>
                 <div class="card-footer">
                     <div class="card-footer-item tiny-card">

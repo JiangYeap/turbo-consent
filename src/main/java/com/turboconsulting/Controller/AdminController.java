@@ -56,8 +56,9 @@ public class AdminController {
 
     @GetMapping(path = "/addExperiment")
     public @ResponseBody String addNewExperiment(@RequestParam String name) {
-        Experiment e = new Experiment(name, "Sample Desciption", new HashSet<>());
-        adminService.addNewExperiment(e);
+//        Experiment e = new Experiment(name, "Sample Desciption", new HashSet<>());
+//        adminService.addNewExperiment(e);
+//        return "Saved Experiment\n";
         return "Saved Experiment\n";
     }
 
