@@ -59,6 +59,9 @@ public class Experiment {
     public void setVisitors(Set<VisitorExperiment> visitors) {
         this.visitors = visitors;
     }
+    public Set<VisitorExperiment> getVisitors() {
+        return visitors;
+    }
     public void addVisitorExperiment(VisitorExperiment e) {
         visitors.add(e);
     }

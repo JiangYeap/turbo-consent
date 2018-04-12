@@ -75,7 +75,7 @@ public class AdminService implements AdminServiceInterface {
     }
 
 
-
+    //////////////////////////////////////////////////////////////////////////ACCOUNT FUNCTIONS
     @Override
     public boolean addNewAccount(Account a)  {
         return (accountDao.findByEmail(a.getEmail()) == null) && (accountDao.save(a) != null);
@@ -84,7 +84,17 @@ public class AdminService implements AdminServiceInterface {
     public Iterable<Account> getAllAccounts(){
         return accountDao.findAll();
     }
+    @Override
+    public boolean deleteAccount(int accountId) {
+        boolean successful = true;
+        for(Visitor visitor : accountDao.findByAccountId(accountId).getVisitors())  {
+            successful = successful & deleteVisitor(visitor.getVisitorId());
+        }
+        accountDao.delete(accountId);
+        return successful;
+    }
 
+    //////////////////////////////////////////////////////////////////////////VISITOR FUNCTIONS
     @Override
     public boolean addNewVisitor(Visitor v, int accountID)  {
         v.setAccount(accountDao.findByAccountId(accountID));
@@ -96,7 +106,17 @@ public class AdminService implements AdminServiceInterface {
     public Iterable<Visitor> getAllVisitors(){
         return visitorDao.findAll();
     }
+    @Override
+    public boolean deleteVisitor(int visitorId) {
+        boolean successful = true;
+        for (VisitorExperiment visitorExperiment : visitorDao.findByVisitorId(visitorId).getExperiments())  {
+            successful = successful & deleteVisitorExperiment(visitorExperiment.getCompoundKey());
+        }
+        visitorDao.delete(visitorId);
+        return successful;
+    }
 
+    //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
     @Override
     public boolean addNewExperiment(Experiment e, HashSet<ConsentOption> newConsentOptions){
         if( experimentDao.findByName(e.getName()) != null  )  return false;
@@ -123,7 +143,19 @@ public class AdminService implements AdminServiceInterface {
     public Iterable<Experiment> getAllExperiments(){
         return experimentDao.findAll();
     }
+    @Override
+    public boolean deleteExperiment(int experimentId) {
+        for(VisitorExperiment visitorExperiment: experimentDao.findById(experimentId).getVisitors())  {
+            visitorExperimentDao.delete(visitorExperiment.getCompoundKey());
+        }
+        for(ConsentExperiment consentExperiment : experimentDao.findById(experimentId).getConsentExperiments())  {
+            consentExperimentDao.delete(consentExperiment.getCompoundKey());
+        }
+        experimentDao.delete(experimentId);
+        return true;
+    }
 
+    //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
     @Override
     public ArrayList<VisitorExperiment> getVisitorExperiments(int id)  {
         ArrayList<VisitorExperiment> visitorExperimentsList = new ArrayList<>();
@@ -150,7 +182,9 @@ public class AdminService implements AdminServiceInterface {
     public Iterable<VisitorExperiment> getAllVisitorExperiments()  {
         return visitorExperimentDao.findAll();
     }
-
-
-
+    @Override
+    public boolean deleteVisitorExperiment(int visitorExperimentId) {
+        visitorExperimentDao.delete(visitorExperimentId);
+        return true;
+    }
 }

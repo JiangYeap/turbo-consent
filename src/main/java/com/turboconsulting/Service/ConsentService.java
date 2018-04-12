@@ -14,9 +14,6 @@ import java.util.*;
 public class ConsentService implements ConsentServiceInterface {
 
     @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-
-    @Autowired
     @Qualifier("sqlVisitorData")
     private VisitorDao visitorDao;
 
