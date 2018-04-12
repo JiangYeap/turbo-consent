@@ -21,8 +21,6 @@ public interface ConsentServiceInterface {
 
     Iterable<Visitor> getAccountsVisitors(int aID);
 
-    Iterable<Account> getAllAccounts();
-
     Account getAccount(int id);
 
     boolean updateAccountConsent(List<Integer> vIds, ConsentOption c);
@@ -32,8 +30,6 @@ public interface ConsentServiceInterface {
 
     Visitor getVisitor(int id);
 
-    Iterable<Visitor> getAllVisitors();
-
     boolean updateVisitorConsent(int id, ConsentOption c);
 
     //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
@@ -41,7 +37,6 @@ public interface ConsentServiceInterface {
 
     Experiment getExperiment(int id);
 
-    Iterable<Experiment> getAllExperiments();
 
     public Iterable<ConsentOption> getExperimentsConsentOptions(int eId);
 

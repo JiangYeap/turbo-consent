@@ -97,10 +97,6 @@ public class ConsentService implements ConsentServiceInterface {
         return visitorDao.findAllByAccount(accountDao.findOne(aID));
     }
     @Override
-    public Iterable<Account> getAllAccounts(){
-        return accountDao.findAll();
-    }
-    @Override
     public Account getAccount(int id)  {
         return accountDao.findByAccountId(id);
     }
@@ -124,10 +120,6 @@ public class ConsentService implements ConsentServiceInterface {
     @Override
     public Visitor getVisitor(int id)  {
         return visitorDao.findByVisitorId(id);
-    }
-    @Override
-    public Iterable<Visitor> getAllVisitors(){
-        return visitorDao.findAll();
     }
     @Override
     public boolean updateVisitorConsent(int id, ConsentOption c)  {
@@ -164,10 +156,6 @@ public class ConsentService implements ConsentServiceInterface {
     @Override
     public Experiment getExperiment(int id)  {
         return experimentDao.findById(id);
-    }
-    @Override
-    public Iterable<Experiment> getAllExperiments(){
-        return experimentDao.findAll();
     }
     @Override
     public Iterable<ConsentOption> getExperimentsConsentOptions(int eId)  {
