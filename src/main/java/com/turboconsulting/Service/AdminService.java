@@ -44,6 +44,8 @@ public class AdminService implements AdminServiceInterface {
     @Override
     public boolean addNewVisitor(Visitor v, int accountID)  {
         v.setAccount(accountDao.findByAccountId(accountID));
+        v.setDefaultConsent(consentOptionDao.findByName("NO CONSENT"));
+        consentOptionDao.findByName("NO CONSENT").addVisitor(v);
         return visitorDao.save(v) != null;
     }
     @Override
@@ -89,13 +91,15 @@ public class AdminService implements AdminServiceInterface {
         return visitorExperimentsList;
     }
     @Override
-    public boolean doExperiment(int visitorId, int experimentId)  {
-        VisitorExperiment e = new VisitorExperiment( visitorDao.findByVisitorId(visitorId),
+    public boolean addVisitorExperiment(int visitorId, int experimentId)  {
+        VisitorExperiment visitorExperiment = new VisitorExperiment( visitorDao.findByVisitorId(visitorId),
                 experimentDao.findById(experimentId));
 
-        experimentDao.findById(experimentId).addVisitorExperiment(e);
+        experimentDao.findById(experimentId).addVisitorExperiment(visitorExperiment);
         Visitor v = visitorDao.findByVisitorId(visitorId);
-        v.doExperiment(e);
+        v.doExperiment(visitorExperiment);
+        visitorExperiment.getConsentOption().addExperiment(visitorExperiment);
+        //consentOptionDao.save(visitorExperiment.getConsentOption());
         return visitorDao.save(v) != null;
     }
     @Override

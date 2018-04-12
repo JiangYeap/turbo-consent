@@ -1,5 +1,7 @@
 package com.turboconsulting.Controller;
 
+import com.turboconsulting.Entity.Account;
+import com.turboconsulting.Entity.Visitor;
 import com.turboconsulting.Security.MyUser;
 import com.turboconsulting.Security.MyUserDetailsService;
 import com.turboconsulting.Service.AdminService;
@@ -10,6 +12,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.GregorianCalendar;
 
 @Controller
 public class AdminAddVisitorExperimentController {
@@ -29,6 +36,17 @@ public class AdminAddVisitorExperimentController {
         int aID = getLoggedInAccountID();
         return "admin-vexp";
     }
+
+    @PostMapping("/admin/vexp/add")
+    public ModelAndView addAccount(@ModelAttribute("visitorId") int visitorId,
+                                   @ModelAttribute("experimentId") int experimentId)  {
+        adminService.addVisitorExperiment(visitorId, experimentId);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("redirect:/admin/vexp");
+        return mav;
+    }
+
+
 
     private int getLoggedInAccountID() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

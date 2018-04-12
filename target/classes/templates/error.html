@@ -41,13 +41,12 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    Error!
+                    Something went wrong!
                 </h1>
                 <h2 class="subtitle">
                     <ul>
-                        <li th:inline="text">Error Details: [[${errorMessage}]]</li>
-                        <li th:inline="text">Status: [[${status}]]</li>
-                        <li th:inline="text">URL: [[${url}]]</li>
+                        <li th:inline="text">HTTP Error Code: [[${status}]]</li>
+                        <li th:inline="text">Please contact support@turboconsent.com</li>
                     </ul>
                 </h2>
             </div>

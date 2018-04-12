@@ -47,8 +47,6 @@ public class AdminAddExperimentController {
         HashSet<ConsentOption> consentOptions = new HashSet<>();
         for(int i = 0; i < consentNames.size(); i++)  consentOptions.add(new ConsentOption(consentNames.get(i),
                                                                                            consentDescriptions.get(i)));
-
-
         adminService.addNewExperiment(new Experiment(name, description),  consentOptions);
         ModelAndView mav = new ModelAndView();
         mav.setViewName("redirect:/admin/experiments");

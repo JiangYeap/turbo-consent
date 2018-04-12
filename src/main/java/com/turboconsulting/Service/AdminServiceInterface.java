@@ -14,7 +14,8 @@ public interface AdminServiceInterface {
     boolean addNewExperiment(Experiment e, HashSet<ConsentOption> newConsentOptions);
     Iterable<Experiment> getAllExperiments();
 
-    boolean doExperiment(int visitorId, int experimentId);
+
+    public boolean addVisitorExperiment(int visitorId, int experimentId);
     Iterable<VisitorExperiment> getVisitorExperiments(int id);
     Iterable<VisitorExperiment>getAllVisitorExperiments();
 
