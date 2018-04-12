@@ -40,7 +40,7 @@ public class SettingsController {
     public String updateConsent(ModelMap m,
                                 @ModelAttribute("vSelected") List<Integer> vIDs,
                                 @ModelAttribute("dConsentLevel") String c)  {
-        boolean updateSuccessful = consentService.updateAccountConsent(vIDs, new ConsentOption(c, "Description"));
+        boolean updateSuccessful = consentService.updateAccountConsent(vIDs, new ConsentOption(c.toUpperCase(), "Description"));
 
         return "redirect:/settings?update="+updateSuccessful;
     }

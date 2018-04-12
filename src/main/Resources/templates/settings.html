@@ -135,7 +135,7 @@
             <div class="card is-hidden-desktop mobile-exp" th:each="v : ${visitors}">
                 <div class="card-content medium-card">
                     <p class="subtitle tiny-subtitle has-text-weight-semibold" th:text="${v.name}">Visitor Name</p>
-                    <p>Default Consent Level: <em class="has-text-success" th:text="${v.defaultConsent}">Consent Level</em></p>
+                    <p>Default Consent Level: <em class="has-text-success" th:text="${v.getDefaultConsent().getName()}">Consent Level</em></p>
                 </div>
                 <div class="card-footer">
                     <div class="card-footer-item tiny-card">
@@ -164,7 +164,7 @@
                 <tr th:each="v : ${visitors}">
                     <td class="dentry is-size-6"><input class="visitor" type="checkbox" name="vSelected" th:value="${v.visitorId}" /></td>
                     <td class="dentry is-size-6" th:text="${v.name}">Physics Experiment</td>
-                    <td class="dentry is-size-6" th:text="${v.defaultConsent}">Consent</td>
+                    <td class="dentry is-size-6" th:text="${v.getDefaultConsent().getName()}">Consent</td>
                 </tr>
                 <tr th:if="${#lists.isEmpty(visitors)}">
                     <td class="dentry has-text-centered is-size-6" colspan="4">No Visitors To Show.</td>
