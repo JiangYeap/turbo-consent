@@ -44,6 +44,14 @@ public class AdminAddAccountController {
         return mav;
     }
 
+    @PostMapping("/admin/accounts/delete")
+    public ModelAndView deleteAccount(@ModelAttribute("deleteId") int accountId)  {
+        adminService.deleteAccount(accountId);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("redirect:/admin/accounts");
+        return mav;
+    }
+
 
     private int getLoggedInAccountID() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

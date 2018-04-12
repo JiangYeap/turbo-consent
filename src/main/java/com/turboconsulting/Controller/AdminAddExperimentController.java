@@ -53,6 +53,14 @@ public class AdminAddExperimentController {
         return mav;
     }
 
+    @PostMapping("/admin/experiments/delete")
+    public ModelAndView deleteExperiment(@ModelAttribute("deleteId") int experimentsId)  {
+        adminService.deleteExperiment(experimentsId);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("redirect:/admin/experiments");
+        return mav;
+    }
+
     private int getLoggedInAccountID() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         MyUser userDetails = (MyUser)userService.loadUserByUsername(auth.getName());

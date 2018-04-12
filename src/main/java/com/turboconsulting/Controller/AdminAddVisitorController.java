@@ -47,6 +47,14 @@ public class AdminAddVisitorController {
         return mav;
     }
 
+    @PostMapping("/admin/visitors/delete")
+    public ModelAndView deleteVisitor(@ModelAttribute("deleteId") int visitorId)  {
+        adminService.deleteVisitor(visitorId);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("redirect:/admin/visitors");
+        return mav;
+    }
+
     private int getLoggedInAccountID() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         MyUser userDetails = (MyUser)userService.loadUserByUsername(auth.getName());

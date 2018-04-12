@@ -46,6 +46,13 @@ public class AdminAddVisitorExperimentController {
         return mav;
     }
 
+    @PostMapping("/admin/vexp/delete")
+    public ModelAndView deleteVisitorExperiment(@ModelAttribute("deleteId") int visitorExperimentId)  {
+        adminService.deleteVisitorExperiment(visitorExperimentId);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("redirect:/admin/vexp");
+        return mav;
+    }
 
 
     private int getLoggedInAccountID() {
