@@ -43,6 +43,9 @@ public interface ConsentServiceInterface {
 
     Iterable<Experiment> getAllExperiments();
 
+    public Iterable<ConsentOption> getExperimentsConsentOptions(int eId);
+
+
     //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
     Iterable<VisitorExperiment> getVisitorExperiments(int id);
 

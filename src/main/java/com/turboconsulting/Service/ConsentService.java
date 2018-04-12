@@ -168,7 +168,16 @@ public class ConsentService implements ConsentServiceInterface {
     public Iterable<Experiment> getAllExperiments(){
         return experimentDao.findAll();
     }
+    @Override
+    public Iterable<ConsentOption> getExperimentsConsentOptions(int eId)  {
+        ArrayList<ConsentOption> consentOptions = new ArrayList<>();
+        Experiment experiment = experimentDao.findById(eId);
+        for (ConsentExperiment consentExperiment : experiment.getConsentExperiments())  {
+            consentOptions.add(consentExperiment.getConsentOption());
+        }
+        return consentOptions;
 
+    }
 
 
     //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS

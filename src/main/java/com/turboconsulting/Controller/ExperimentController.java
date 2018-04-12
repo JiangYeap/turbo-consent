@@ -34,6 +34,7 @@ public class ExperimentController {
         checkAccountID(vID);
         m.addAttribute("visitorExp", consentService.getVisitorExperiment(vID, eID));
         m.addAttribute("visitorName", consentService.getVisitor(vID).getName());
+        m.addAttribute("customConsentOptions", consentService.getExperimentsConsentOptions(eID));
         m.addAttribute("vID", vID);
         m.addAttribute("eID", eID);
         return "experiment";
