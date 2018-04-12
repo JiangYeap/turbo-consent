@@ -74,19 +74,21 @@
         <form th:action="@{/admin/experiments/add}" th:method="post">
             <table class="features table is-hoverable is-fullwidth is-striped is-hidden-touch">
                 <tbody class="tbody">
-                <tr>
-                    <th class="hentry is-size-6">Experiment ID</th>
-                    <th class="hentry is-size-6">Experiment Name</th>
-                    <th class="hentry is-size-6">Experiment Description</th>
-                    <th class="hentry is-size-6">Delete</th>
-                </tr>
+                    <tr>
+                        <th class="hentry is-size-6">Experiment ID</th>
+                        <th class="hentry is-size-6">Experiment Name</th>
+                        <th class="hentry is-size-6">Experiment Description</th>
+                        <th class="hentry is-size-6">Delete</th>
+                    </tr>
 
-                <tr th:each="e : ${experiments}">
-                    <th class="hentry is-size-6" th:text="${e.id}">Experiment ID</th>
-                    <th class="hentry is-size-6" th:text="${e.name}">Experiment Name</th>
-                    <th class="hentry is-size-6" th:text="${e.description}">Experiment Description</th>
-                    <th class="hentry is-size-6"><a class="delete-entry" data-confirm="Are you sure you want to delete this item?">Delete</a></th>
-                </tr>
+                    <tr th:each="e : ${experiments}">
+                        <td class="hentry is-size-6" th:text="${e.id}">Experiment ID</td>
+                        <td class="hentry is-size-6" th:text="${e.name}">Experiment Name</td>
+                        <td class="hentry is-size-6" th:text="${e.description}">Experiment Description</td>
+                        <td class="hentry is-size-6">
+                            <a class="delete-entry" th:id="${e.id}" data-type="experiments" data-confirm="Are you sure you want to delete this item?">Delete</a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
 
@@ -96,12 +98,14 @@
                 </h1>
 
                 <div class="field">
-                    <label>Experiment Name:&nbsp;<input class="input" type="text" name="name" /></label>
+                    <label>Experiment Name:&nbsp;<input class="input" type="text" name="name" required="required" /></label>
                 </div>
 
                 <div class="field">
-                    <label>Experiment Description:&nbsp;<textarea class="textarea" name="description"></textarea></label>
+                    <label>Experiment Description:&nbsp;<textarea class="textarea" name="description" required="required"></textarea></label>
                 </div>
+
+                <br />
 
                 <div class="field">
                     <a class="button is-warning add-cc-entry">
@@ -114,12 +118,14 @@
 
                 <div class="add-exp">
                     <div class="cc-entry field">
-                        <label>Custom Consent Level (Apart from Full and No Consent):&nbsp;<input class="input" type="text" name="consentNames" /></label>
+                        <label>Custom Consent Level (Apart from Full and No Consent):&nbsp;<input class="input" type="text" name="consentNames" required="required" /></label>
                     </div>
                     <div class="cc-entry field">
-                        <label>Custom Consent Level Description:&nbsp;<textarea class="textarea" name="consentDescriptions"></textarea></label>
+                        <label>Custom Consent Level Description:&nbsp;<textarea class="textarea" name="consentDescriptions" required="required"></textarea></label>
                     </div>
                 </div>
+
+                <br />
 
                 <button type="submit" class="button is-link">Create</button>
             </div>

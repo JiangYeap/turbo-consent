@@ -30,8 +30,9 @@ $(document).ready(function() {
 
     $('.delete-entry').click(function(e) {
         e.preventDefault();
-        let choice = confirm(this.getAttribute('data-confirm'));
+        let choice = confirm($(this).attr('data-confirm'));
+        let url = '/admin/' + $(this).attr('data-type') + '/delete';
 
-        if (choice) window.location.href = this.getAttribute('href');
+        if (choice) $.post(url, { deleteId: $(this).attr('id') });
     });
 });

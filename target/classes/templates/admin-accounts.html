@@ -73,20 +73,21 @@
         <form th:action="@{/admin/accounts/add}" th:method="post">
             <table class="features table is-hoverable is-fullwidth is-striped is-hidden-touch">
                 <tbody class="tbody">
-                <tr>
-                    <th class="hentry is-size-6">Account ID</th>
-                    <th class="hentry is-size-6">Username</th>
-                    <th class="hentry is-size-6">Email</th>
-                    <th class="hentry is-size-6">Delete</th>
-                </tr>
+                    <tr>
+                        <th class="hentry is-size-6">Account ID</th>
+                        <th class="hentry is-size-6">Username</th>
+                        <th class="hentry is-size-6">Email</th>
+                        <th class="hentry is-size-6">Delete</th>
+                    </tr>
 
-                <tr th:each="a : ${accounts}">
-                    <th class="hentry is-size-6" th:text="${a.accountId}">Account ID</th>
-                    <th class="hentry is-size-6" th:text="${a.name}">Username</th>
-                    <th class="hentry is-size-6" th:text="${a.email}">Email</th>
-                    <th class="hentry is-size-6"><a class="delete-entry">Delete</a></th>
-                </tr>
-
+                    <tr th:each="a : ${accounts}">
+                        <td class="hentry is-size-6" th:text="${a.accountId}">Account ID</td>
+                        <td class="hentry is-size-6" th:text="${a.name}">Username</td>
+                        <td class="hentry is-size-6" th:text="${a.email}">Email</td>
+                        <td class="hentry is-size-6">
+                            <a class="delete-entry" th:id="${a.accountId}" data-type="accounts" data-confirm="Are you sure you want to delete this item?">Delete</a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
 
@@ -96,16 +97,18 @@
                 </h1>
 
                 <div class="field">
-                    <label>Name of user:&nbsp;<input class="input" type="text" name="name" /></label>
+                    <label>Name of user:&nbsp;<input class="input" type="text" name="name" required="required" /></label>
                 </div>
 
                 <div class="field">
-                    <label>Email:&nbsp;<input class="input" type="email" name="email" /></label>
+                    <label>Email:&nbsp;<input class="input" type="email" name="email" required="required" /></label>
                 </div>
 
                 <div class="field">
-                    <label>Password:&nbsp;<input class="input" type="text" name="password" /></label>
+                    <label>Password:&nbsp;<input class="input" type="text" name="password" required="required" /></label>
                 </div>
+
+                <br />
 
                 <button type="submit" class="button is-link">Create</button>
             </div>

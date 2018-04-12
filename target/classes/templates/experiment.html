@@ -128,7 +128,7 @@
             <form th:action="@{/visitor/experiments/experiment/updateConsent(vID=${vID}, eID=${eID})}" th:method="post">
                 <h1 class="subtitle">
                     Update Consent Level For Experiment&nbsp;
-                    <a class="fa fa-question-circle open-modal"></a>
+                    <a class="open-modal"><i class="fa fa-question-circle"></i></a>
                 </h1>
                 <ul>
                     <li th:each="cco : ${customConsentOptions}">
