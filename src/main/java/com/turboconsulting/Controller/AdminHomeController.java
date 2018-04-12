@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 @Controller
-public class AdminController {
+public class AdminHomeController {
 
     @Autowired
     private AdminService adminService;
