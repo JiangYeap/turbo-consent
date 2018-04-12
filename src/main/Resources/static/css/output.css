@@ -90,8 +90,8 @@ html, body {
   border-left: none;
   border-right: none; }
 
-.card-image > .fa {
-  font-size: 8rem;
+.card-image > .sicon {
+  font-size: 12rem;
   padding-top: 2.5rem;
   padding-bottom: 0.7rem; }
 

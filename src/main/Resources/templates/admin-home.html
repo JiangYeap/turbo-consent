@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home | Turbo Consent</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript" th:src="@{/js/bulma.js}"></script>
 </head>
@@ -28,7 +28,7 @@
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a th:href="@{/}" class="navbar-item is-active">
+                    <a th:href="@{/admin}" class="navbar-item is-active">
                         Home
                     </a>
                     <a th:href="@{/admin/accounts}" class="navbar-item">
@@ -74,7 +74,7 @@
             <div class="column is-3">
                 <div class="card">
                     <div class="card-image has-text-centered">
-                        <i class="fa fa-key" id="accounts"></i>
+                        <i class="sicon fa fa-key" id="accounts"></i>
                     </div>
                     <div class="card-content">
                         <div class="content">
@@ -93,7 +93,7 @@
             <div class="column is-3">
                 <div class="card">
                     <div class="card-image has-text-centered">
-                        <i class="fa fa-user" id="visitors"></i>
+                        <i class="sicon fa fa-user" id="visitors"></i>
                     </div>
                     <div class="card-content">
                         <div class="content">
@@ -112,7 +112,7 @@
             <div class="column is-3">
                 <div class="card">
                     <div class="card-image has-text-centered">
-                        <i class="fa fa-flask" id="experimetns"></i>
+                        <i class="sicon fa fa-flask" id="experimetns"></i>
                     </div>
                     <div class="card-content">
                         <div class="content">
@@ -131,7 +131,7 @@
             <div class="column is-3">
                 <div class="card">
                     <div class="card-image has-text-centered">
-                        <i class="fa fa-lightbulb" id="vexp"></i>
+                        <i class="sicon fa fa-lightbulb" id="vexp"></i>
                     </div>
                     <div class="card-content">
                         <div class="content">
@@ -140,7 +140,7 @@
                                 View all Visitor Experiments and add/remove Visitor Experiments entries here.
                             </p>
                             <p>
-                                <a th:href="@{/admin/experiments}"><i class="fa fa-location-arrow"></i>&nbsp;Go to Visitor Experiments!</a>
+                                <a th:href="@{/admin/vexp}"><i class="fa fa-location-arrow"></i>&nbsp;Go to Visitor Experiments!</a>
                             </p>
                         </div>
                     </div>

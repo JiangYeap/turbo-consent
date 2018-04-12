@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Experiments | Turbo Consent</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/output.css}" />
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript" th:src="@{/js/bulma.js}"></script>
+    <script type="text/javascript" th:src="@{/js/cc-entry.js}"></script>
 </head>
 <body>
     <!-- Navigation bar start -->
@@ -28,7 +29,7 @@
             </div>
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a th:href="@{/}" class="navbar-item">
+                    <a th:href="@{/admin}" class="navbar-item">
                         Home
                     </a>
                     <a th:href="@{/admin/accounts}" class="navbar-item">
@@ -70,7 +71,7 @@
 
     <!-- Main Content start -->
     <section class="container" style="margin-top:24px">
-        <form>
+        <form th:action="@{/admin/experiments/add}" th:method="post">
             <table class="features table is-hoverable is-fullwidth is-striped is-hidden-touch">
                 <tbody class="tbody">
                 <tr>
@@ -95,11 +96,29 @@
                 </h1>
 
                 <div class="field">
-                    <label>Name of visitor:&nbsp;<input type="text" name="name" /></label>
+                    <label>Experiment Name:&nbsp;<input class="input" type="text" name="name" /></label>
                 </div>
 
                 <div class="field">
-                    <label>Parent Account ID:&nbsp;<input type="text" name="description" /></label>
+                    <label>Experiment Description:&nbsp;<textarea class="textarea" name="description"></textarea></label>
+                </div>
+
+                <div class="field">
+                    <a class="button is-warning add-cc-entry">
+                        <span class="icon">
+                            <i class="fa fa-angle-down"></i>
+                        </span>
+                        <span>Add More Custom Consent Level</span>
+                    </a>
+                </div>
+
+                <div class="add-exp">
+                    <div class="cc-entry field">
+                        <label>Custom Consent Level (Apart from Full and No Consent):&nbsp;<input class="input" type="text" name="consentNames" /></label>
+                    </div>
+                    <div class="cc-entry field">
+                        <label>Custom Consent Level Description:&nbsp;<textarea class="textarea" name="consentDescriptions"></textarea></label>
+                    </div>
                 </div>
 
                 <button type="submit" class="button is-link">Create</button>
