@@ -200,6 +200,12 @@ label.tiny-label {
 .is-limey {
   background: linear-gradient(-50deg, #f8ee49, #62d179); }
 
+.modal-list {
+  list-style-type: disc !important; }
+
+.hentry {
+  vertical-align: middle !important; }
+
 /*! bulma.io v0.6.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {

@@ -94,20 +94,17 @@
             </header>
             <section class="modal-card-body">
                 <div class="content">
-                    <ul style="list-style-type:disc" class="has-text-left is-size-5-desktop">
+                    <ul class="modal-list has-text-left is-size-5-desktop">
                         <li><p>
-                            <strong>Full Consent:</strong> All your details as well as experiments results will be given.
-                        </p></li>
-                        <li><p>
-                            <strong>Anonymous:</strong> Only your results will be given, your identity will be hidden.
+                            <strong>Full Consent:</strong> All your experiments' results will be given to We The Curious.
                         </p></li>
                         <li><p>
                             <strong>No Consent:</strong> The experiment results will not be submitted.
                         </p></li>
-                        <!--<li><p>-->
-                        <!--<strong>Custom Consent:</strong> Custom set consent option, can be configured in-->
-                        <!--<a th:href="@{/settings}">Settings</a>.-->
-                        <!--</p></li>-->
+                        <li><p>
+                            <em><strong class="has-text-danger">Note:</strong> Every experiment has specific consent
+                                levels which can be given when viewed individually.</em>
+                        </p></li>
                     </ul>
                 </div>
                 <hr />
@@ -135,7 +132,7 @@
             <div class="card is-hidden-desktop mobile-exp" th:each="v : ${visitors}">
                 <div class="card-content medium-card">
                     <p class="subtitle tiny-subtitle has-text-weight-semibold" th:text="${v.name}">Visitor Name</p>
-                    <p>Default Consent Level: <em class="has-text-success" th:text="${v.getDefaultConsent().getName()}">Consent Level</em></p>
+                    <p>Default Consent Level: <em class="has-text-success" th:text="${v.defaultConsent.name}">Consent Level</em></p>
                 </div>
                 <div class="card-footer">
                     <div class="card-footer-item tiny-card">
@@ -157,14 +154,14 @@
                 <tbody class="tbody">
                 <tr>
                     <th class="hentry is-size-6"><a class="button toggle-v" th:attrappend="disabled=${#lists.isEmpty(visitors)} ? true : false">Select All</a></th>
-                    <th class="hentry is-size-6" style="vertical-align: middle">Visitor Name</th>
-                    <th class="hentry is-size-6" style="vertical-align: middle">Default Consent Level</th>
+                    <th class="hentry is-size-6">Visitor Name</th>
+                    <th class="hentry is-size-6">Default Consent Level</th>
                 </tr>
 
                 <tr th:each="v : ${visitors}">
                     <td class="dentry is-size-6"><input class="visitor" type="checkbox" name="vSelected" th:value="${v.visitorId}" /></td>
                     <td class="dentry is-size-6" th:text="${v.name}">Physics Experiment</td>
-                    <td class="dentry is-size-6" th:text="${v.getDefaultConsent().getName()}">Consent</td>
+                    <td class="dentry is-size-6" th:text="${v.defaultConsent.name}">Consent</td>
                 </tr>
                 <tr th:if="${#lists.isEmpty(visitors)}">
                     <td class="dentry has-text-centered is-size-6" colspan="4">No Visitors To Show.</td>
@@ -182,13 +179,7 @@
                         <label class="radio"><input type="radio" name="dConsentLevel" value="Full Consent" />&nbsp;Full Consent</label>
                     </li>
                     <li>
-                        <label class="radio"><input type="radio" name="dConsentLevel" value="Anonymous" />&nbsp;Anonymous</label>
-                    </li>
-                    <li>
                         <label class="radio"><input type="radio" name="dConsentLevel" value="No Consent" />&nbsp;No Consent</label>
-                    </li>
-                    <li>
-                        <label class="radio" th:if="${false}"><input type="radio" name="consentLevel" value="3" />&nbsp;Custom Consent</label>
                     </li>
                 </ul>
                 <br />
