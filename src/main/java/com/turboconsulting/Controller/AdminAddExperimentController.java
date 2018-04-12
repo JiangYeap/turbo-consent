@@ -24,6 +24,8 @@ public class AdminAddExperimentController {
 
     @GetMapping("/admin/experiments")
     public String adminExperimentsPage(ModelMap m) {
+        m.addAttribute("experiments", adminService.getAllExperiments());
+
         int aID = getLoggedInAccountID();
         return "admin-experiments";
     }

@@ -24,8 +24,10 @@ public class AdminAddVisitorExperimentController {
 
     @GetMapping("/admin/vexp")
     public String adminVisitorExperimentsPage(ModelMap m) {
+        m.addAttribute("visitorExperiments", adminService.getAllVisitorExperiments());
+
         int aID = getLoggedInAccountID();
-        return "vexp";
+        return "admin-vexp";
     }
 
     private int getLoggedInAccountID() {

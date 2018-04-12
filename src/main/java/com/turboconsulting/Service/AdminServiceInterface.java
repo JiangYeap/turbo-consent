@@ -17,6 +17,6 @@ public interface AdminServiceInterface {
 
     boolean doExperiment(int visitorId, int experimentId);
     Iterable<VisitorExperiment> getVisitorExperiments(int id);
-
+    Iterable<VisitorExperiment>getAllVisitorExperiments();
 
 }

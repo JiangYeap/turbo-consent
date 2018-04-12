@@ -80,6 +80,10 @@ public class AdminService implements AdminServiceInterface {
         v.doExperiment(e);
         return visitorDao.save(v) != null;
     }
+    @Override
+    public Iterable<VisitorExperiment> getAllVisitorExperiments()  {
+        return visitorExperimentDao.findAll();
+    }
 
 
 

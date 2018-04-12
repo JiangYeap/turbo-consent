@@ -49,10 +49,11 @@ public class ConsentService implements ConsentServiceInterface {
         consentOptionDao.deleteAll();
         consentExperimentDao.deleteAll();
 
-        consentOptionDao.save(new ConsentOption("NO CONSENT",
-                "This option means you do not give consent for We the Curious to use any of your data"));
         consentOptionDao.save(new ConsentOption("FULL CONSENT",
                 "This option means you give consent for We the Curious to use all of your data"));
+        consentOptionDao.save(new ConsentOption("NO CONSENT",
+                "This option means you do not give consent for We the Curious to use any of your data"));
+
 
         Account account1 = new Account("Harry", "hw16471@bristol.ac.uk", bCryptPasswordEncoder.encode("password"));
         addNewAccount(account1);

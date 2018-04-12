@@ -24,6 +24,8 @@ public class AdminAddVisitorController {
 
     @GetMapping("/admin/visitors")
     public String adminVisitorsPage(ModelMap m) {
+        m.addAttribute("visitors", adminService.getAllVisitors());
+
         int aID = getLoggedInAccountID();
         return "admin-visitors";
     }
