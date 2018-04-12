@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d359951-eaa4-4d23-bbdc-b5beef41842e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/static/js/bulma.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/static/js/bulma.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/admin-vexp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/admin-vexp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/settings.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,8 +18,8 @@
       <file leaf-file-name="admin-accounts.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="87" column="94" selection-start-line="87" selection-start-column="94" selection-end-line="87" selection-end-column="94" />
+            <state relative-caret-position="137">
+              <caret line="99" column="52" selection-start-line="99" selection-start-column="47" selection-end-line="99" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -34,8 +27,8 @@
       <file leaf-file-name="admin-experiments.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="88" column="90" selection-start-line="88" selection-start-column="90" selection-end-line="88" selection-end-column="90" />
+            <state relative-caret-position="267">
+              <caret line="81" column="25" lean-forward="true" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -61,19 +54,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-visitors.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin-visitors.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+            <state relative-caret-position="205">
+              <caret line="105" column="84" selection-start-line="105" selection-start-column="84" selection-end-line="105" selection-end-column="84" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminAddExperimentController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdminAddExperimentController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/AdminAddExperimentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
+            <state relative-caret-position="354">
               <caret line="51" column="55" lean-forward="true" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -133,10 +126,10 @@
       <find>settings</find>
       <find>fa-quest</find>
       <find>fa</find>
-      <find>input</find>
       <find>prevent</find>
       <find>data-confirm</find>
       <find>Delete</find>
+      <find>input</find>
     </findStrings>
     <replaceStrings>
       <replace>visitorExp</replace>
@@ -205,10 +198,10 @@
         <option value="$PROJECT_DIR$/src/main/Resources/templates/home.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/settings.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/static/js/bulma.js" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html" />
-        <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-vexp.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html" />
+        <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html" />
       </list>
     </option>
   </component>
@@ -547,7 +540,7 @@
       <workItem from="1523376133006" duration="11000" />
       <workItem from="1523376192284" duration="394000" />
       <workItem from="1523532057258" duration="2996000" />
-      <workItem from="1523549926089" duration="10735000" />
+      <workItem from="1523549926089" duration="11031000" />
     </task>
     <servers />
   </component>
@@ -560,7 +553,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239956000" />
+    <option name="totallyTimeSpent" value="240252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -584,9 +577,9 @@
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35612535" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3005698" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3062678" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3062678" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21677852" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" side_tool="true" />
@@ -969,27 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="88" column="90" selection-start-line="88" selection-start-column="90" selection-end-line="88" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="87" column="94" selection-start-line="87" selection-start-column="94" selection-end-line="87" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/AdminAddVisitorExperimentController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
@@ -1009,11 +981,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/AdminAddExperimentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
+        <state relative-caret-position="354">
           <caret line="51" column="55" lean-forward="true" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-experiments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="81" column="25" lean-forward="true" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-accounts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="99" column="52" selection-start-line="99" selection-start-column="47" selection-end-line="99" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-visitors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="105" column="84" selection-start-line="105" selection-start-column="84" selection-end-line="105" selection-end-column="84" />
         </state>
       </provider>
     </entry>
