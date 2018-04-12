@@ -44,7 +44,7 @@ public class ExperimentController {
                                       @RequestParam("eID") int eID,
                                       @ModelAttribute("consentLevel") String c) throws AccessDeniedException {
         checkAccountID(vID);
-        boolean updateSuccessful = consentService.updateExperimentConsent(vID, new ConsentOption(c, "Description"), eID);
+        boolean updateSuccessful = consentService.updateExperimentConsent(vID, new ConsentOption(c.toUpperCase(), "Description"), eID);
         ModelAndView mav = new ModelAndView();
         mav.setViewName("redirect:/visitors/experiments?vID="+vID+"&update="+updateSuccessful);
         return mav;

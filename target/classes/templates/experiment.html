@@ -119,7 +119,7 @@
                 <h1 class="tiny-subtitle is-size-4">
                     Current Consent Level
                 </h1>
-                <p class="has-text-grey" th:text="${visitorExp.consentLevel}">current consent level</p>
+                <p class="has-text-grey" th:text="${visitorExp.getConsentOption().getName()}">current consent level</p>
             </div>
 
             <hr />
