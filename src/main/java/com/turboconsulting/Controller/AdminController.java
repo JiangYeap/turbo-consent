@@ -3,17 +3,22 @@ package com.turboconsulting.Controller;
 import com.turboconsulting.Entity.Account;
 import com.turboconsulting.Entity.Experiment;
 import com.turboconsulting.Entity.Visitor;
+import com.turboconsulting.Security.MyUser;
+import com.turboconsulting.Security.MyUserDetailsService;
 import com.turboconsulting.Service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.HashSet;
 
-@RestController
-@RequestMapping("/admin")
+@Controller
 public class AdminController {
 
     @Autowired
@@ -22,52 +27,19 @@ public class AdminController {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    @Autowired
+    private MyUserDetailsService userService;
 
-    @GetMapping(path = "/accounts")
-    public @ResponseBody Iterable<Account> getAllAccounts() {
-        return adminService.getAllAccounts();
+    @GetMapping("/admin")
+    public String adminHomePage(ModelMap m) {
+        int aID = getLoggedInAccountID();
+        return "admin-home";
     }
 
-    @GetMapping(path = "/visitors")
-    public @ResponseBody Iterable<Visitor> getAllVisitors() {
-        return adminService.getAllVisitors();
-    }
-
-    @GetMapping(path = "/experiments")
-    public @ResponseBody Iterable<Experiment> getAllExperiments() {
-        return adminService.getAllExperiments();
-    }
-
-    @GetMapping(path = "/addAccount")
-    public @ResponseBody String addNewAccount(@RequestParam String name,
-                                              @RequestParam String email) {
-        Account a = new Account(name, email, bCryptPasswordEncoder.encode("password"));
-        adminService.addNewAccount(a);
-        return "Saved Account\n";
-    }
-
-    @GetMapping(path = "/addVisitor")
-    public @ResponseBody String addNewVisitor(@RequestParam String name,
-                                              @RequestParam int accountID) {
-        Visitor v = new Visitor( name, new GregorianCalendar(1998, 05, 3));
-        adminService.addNewVisitor(v, accountID);
-        return "Saved Visitor\n";
-    }
-
-    @GetMapping(path = "/addExperiment")
-    public @ResponseBody String addNewExperiment(@RequestParam String name) {
-//        Experiment e = new Experiment(name, "Sample Desciption", new HashSet<>());
-//        adminService.addNewExperiment(e);
-//        return "Saved Experiment\n";
-        return "Saved Experiment\n";
-    }
-
-
-    @GetMapping(path = "/doExperiment")
-    public @ResponseBody String doExperiment(@RequestParam int visitorId,
-                                             @RequestParam int experimentId) {
-        adminService.doExperiment(visitorId, experimentId);
-        return "Visitor had done experiment\n";
+    private int getLoggedInAccountID() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        MyUser userDetails = (MyUser)userService.loadUserByUsername(auth.getName());
+        return userDetails.getUser().getAccountId();
     }
 
 }
