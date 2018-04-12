@@ -24,6 +24,7 @@ public class AdminAddAccountController {
 
     @GetMapping("/admin/accounts")
     public String adminAccountsPage(ModelMap m) {
+        m.addAttribute("accounts", adminService.getAllAccounts());
         int aID = getLoggedInAccountID();
         return "admin-accounts";
     }
