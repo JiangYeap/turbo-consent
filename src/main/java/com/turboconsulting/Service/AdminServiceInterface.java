@@ -2,9 +2,14 @@ package com.turboconsulting.Service;
 
 import com.turboconsulting.Entity.*;
 
+import javax.annotation.PostConstruct;
 import java.util.HashSet;
 
 public interface AdminServiceInterface {
+
+    @PostConstruct
+    void AdminService();
+
     boolean addNewAccount(Account a);
     Iterable<Account> getAllAccounts();
 

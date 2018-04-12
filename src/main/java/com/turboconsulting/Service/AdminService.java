@@ -4,14 +4,21 @@ import com.turboconsulting.DAO.*;
 import com.turboconsulting.Entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.Set;
 
 @Service
 public class AdminService implements AdminServiceInterface {
+
+
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
     @Autowired
     @Qualifier("sqlVisitorData")
     private VisitorDao visitorDao;
@@ -30,6 +37,43 @@ public class AdminService implements AdminServiceInterface {
     @Autowired
     @Qualifier("sqlConsentExperimentData")
     private ConsentExperimentDao consentExperimentDao;
+
+
+
+    @Override
+    @PostConstruct
+    public void AdminService() {
+
+        accountDao.deleteAll();
+        experimentDao.deleteAll();
+        consentOptionDao.deleteAll();
+        consentExperimentDao.deleteAll();
+
+        consentOptionDao.save(new ConsentOption("FULL CONSENT",
+                "This option means you give consent for We the Curious to use all of your data"));
+        consentOptionDao.save(new ConsentOption("NO CONSENT",
+                "This option means you do not give consent for We the Curious to use any of your data"));
+
+
+        Account account1 = new Account("Harry", "hw16471@bristol.ac.uk", bCryptPasswordEncoder.encode("password"));
+        addNewAccount(account1);
+        Visitor visitor1 = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ));
+        addNewVisitor(visitor1, account1.getAccountId());
+        Experiment experiment1 = new Experiment("Physics Experiment", "A lovely desciption.");
+        addNewExperiment(experiment1, new HashSet<>());
+        addVisitorExperiment(visitor1.getVisitorId(), experiment1.getId());
+
+        Account account2 = new Account("Finn", "user@turboconsent.com", bCryptPasswordEncoder.encode("password"));
+        addNewAccount(account2);
+        Visitor visitor2 = new Visitor("Finn", new GregorianCalendar(0, 0, 0 ));
+        addNewVisitor(visitor2, account2.getAccountId());
+        Experiment experiment2 = new Experiment("Chemistry Experiment", "A lovely desciption.");
+        addNewExperiment(experiment2, new HashSet<>());
+        addVisitorExperiment(visitor2.getVisitorId(), experiment1.getId());
+        addVisitorExperiment(visitor2.getVisitorId(), experiment2.getId());
+
+    }
+
 
 
     @Override

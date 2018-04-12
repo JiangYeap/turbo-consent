@@ -9,11 +9,8 @@ import java.util.List;
 
 public interface ConsentServiceInterface {
 
-    @PostConstruct
-    void ConsentService();
 
     //////////////////////////////////////////////////////////////////////////ACCOUNT FUNCTIONS
-    boolean addNewAccount(Account a);
 
     int getAccountID(String email);
 
@@ -26,27 +23,23 @@ public interface ConsentServiceInterface {
     boolean updateAccountConsent(List<Integer> vIds, ConsentOption c);
 
     //////////////////////////////////////////////////////////////////////////VISITOR FUNCTIONS
-    boolean addNewVisitor(Visitor v, int accountID);
 
     Visitor getVisitor(int id);
 
     boolean updateVisitorConsent(int id, ConsentOption c);
 
     //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
-    boolean addNewExperiment(Experiment e, HashSet<ConsentOption> newConsentOptions);
 
     Experiment getExperiment(int id);
 
 
-    public Iterable<ConsentOption> getExperimentsConsentOptions(int eId);
+    Iterable<ConsentOption> getExperimentsConsentOptions(int eId);
 
 
     //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
     Iterable<VisitorExperiment> getVisitorExperiments(int id);
 
     VisitorExperiment getVisitorExperiment(int visitorID, int experimentID);
-
-    boolean addVisitorExperiment(int visitorId, int experimentId);
 
     String getExperimentConsent(int id, int experimentID);
 

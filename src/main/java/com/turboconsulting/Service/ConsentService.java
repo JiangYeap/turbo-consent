@@ -40,47 +40,9 @@ public class ConsentService implements ConsentServiceInterface {
     @Qualifier("sqlConsentExperimentData")
     private ConsentExperimentDao consentExperimentDao;
 
-    @Override
-    @PostConstruct
-    public void ConsentService() {
-
-        accountDao.deleteAll();
-        experimentDao.deleteAll();
-        consentOptionDao.deleteAll();
-        consentExperimentDao.deleteAll();
-
-        consentOptionDao.save(new ConsentOption("FULL CONSENT",
-                "This option means you give consent for We the Curious to use all of your data"));
-        consentOptionDao.save(new ConsentOption("NO CONSENT",
-                "This option means you do not give consent for We the Curious to use any of your data"));
-
-
-        Account account1 = new Account("Harry", "hw16471@bristol.ac.uk", bCryptPasswordEncoder.encode("password"));
-        addNewAccount(account1);
-        Visitor visitor1 = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ));
-        addNewVisitor(visitor1, account1.getAccountId());
-        Experiment experiment1 = new Experiment("Physics Experiment", "A lovely desciption.");
-        addNewExperiment(experiment1, new HashSet<>());
-        addVisitorExperiment(visitor1.getVisitorId(), experiment1.getId());
-        updateExperimentConsent(visitor1.getVisitorId(), consentOptionDao.findByName("FULL CONSENT"), experiment1.getId());
-
-        Account account2 = new Account("Finn", "user@turboconsent.com", bCryptPasswordEncoder.encode("password"));
-        addNewAccount(account2);
-        Visitor visitor2 = new Visitor("Finn", new GregorianCalendar(0, 0, 0 ));
-        addNewVisitor(visitor2, account2.getAccountId());
-        Experiment experiment2 = new Experiment("Chemistry Experiment", "A lovely desciption.");
-        addNewExperiment(experiment2, new HashSet<>());
-        addVisitorExperiment(visitor2.getVisitorId(), experiment1.getId());
-        addVisitorExperiment(visitor2.getVisitorId(), experiment2.getId());
-
-    }
 
 
     //////////////////////////////////////////////////////////////////////////ACCOUNT FUNCTIONS
-    @Override
-    public boolean addNewAccount(Account a)  {
-        return (accountDao.findByEmail(a.getEmail()) == null) && (accountDao.save(a) != null);
-    }
     @Override
     public int getAccountID(String email)  {
         if(accountDao.findByEmail(email) != null)
@@ -111,13 +73,6 @@ public class ConsentService implements ConsentServiceInterface {
 
     //////////////////////////////////////////////////////////////////////////VISITOR FUNCTIONS
     @Override
-    public boolean addNewVisitor(Visitor v, int accountID)  {
-        v.setAccount(getAccount(accountID));
-        v.setDefaultConsent(consentOptionDao.findByName("NO CONSENT"));
-        consentOptionDao.findByName("NO CONSENT").addVisitor(v);
-        return visitorDao.save(v) != null;
-    }
-    @Override
     public Visitor getVisitor(int id)  {
         return visitorDao.findByVisitorId(id);
     }
@@ -132,27 +87,6 @@ public class ConsentService implements ConsentServiceInterface {
 
 
     //////////////////////////////////////////////////////////////////////////EXPERIMENT FUNCTIONS
-    @Override
-    public boolean addNewExperiment(Experiment e, HashSet<ConsentOption> newConsentOptions){
-        if( experimentDao.findByName(e.getName()) != null  )  return false;
-
-        Set<ConsentExperiment> consentExperiments = new HashSet<>();
-        consentExperiments.add(new ConsentExperiment(consentOptionDao.findByName("NO CONSENT"), e));
-        consentExperiments.add(new ConsentExperiment(consentOptionDao.findByName("FULL CONSENT"), e));
-        for (ConsentOption c : newConsentOptions)  {
-            if (consentOptionDao.findByName(c.getName()) == null)  {
-                consentOptionDao.save(c);
-            }
-            consentExperiments.add(new ConsentExperiment(consentOptionDao.findByName(c.getName()), e));
-        }
-        e.setConsentExperiments(consentExperiments);
-        experimentDao.save(e);
-        for(ConsentExperiment consentExperiment : consentExperiments)  {
-            consentExperiment.getConsentOption().addConsentExperiment(consentExperiment);
-            consentOptionDao.save(consentExperiment.getConsentOption());
-        }
-        return true;
-    }
     @Override
     public Experiment getExperiment(int id)  {
         return experimentDao.findById(id);
@@ -186,18 +120,6 @@ public class ConsentService implements ConsentServiceInterface {
         Visitor v = visitorDao.findByVisitorId(visitorID);
         Experiment e = experimentDao.findById(experimentID);
         return visitorExperimentDao.findByVisitorAndExperiment(v, e);
-    }
-    @Override
-    public boolean addVisitorExperiment(int visitorId, int experimentId)  {
-        VisitorExperiment visitorExperiment = new VisitorExperiment( visitorDao.findByVisitorId(visitorId),
-                                                     experimentDao.findById(experimentId));
-
-        experimentDao.findById(experimentId).addVisitorExperiment(visitorExperiment);
-        Visitor v = visitorDao.findByVisitorId(visitorId);
-        v.doExperiment(visitorExperiment);
-        visitorExperiment.getConsentOption().addExperiment(visitorExperiment);
-        //consentOptionDao.save(visitorExperiment.getConsentOption());
-        return visitorDao.save(v) != null;
     }
     @Override
     public String getExperimentConsent(int visitorID, int experimentID)  {
