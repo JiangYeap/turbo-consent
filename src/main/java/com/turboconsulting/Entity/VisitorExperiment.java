@@ -76,6 +76,7 @@ public class VisitorExperiment {
         return consentOption;
     }
     public void setConsentOption(ConsentOption consentOption) {
+        changedConsent = true;
         this.consentOption = consentOption;
     }
 }

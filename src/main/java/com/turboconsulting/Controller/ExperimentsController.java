@@ -49,7 +49,7 @@ public class ExperimentsController {
                                       @ModelAttribute("selected") List<Integer> eIDs,
                                       @ModelAttribute("consentLevel") String c) throws AccessDeniedException {
         checkAccountID(vID);
-        boolean updateSuccessful = consentService.updateBatchExperimentConsents(vID, new ConsentOption(c, "Description"), eIDs);
+        boolean updateSuccessful = consentService.updateBatchExperimentConsents(vID, new ConsentOption(c.toUpperCase(), "Description"), eIDs);
         return "redirect:/visitors/experiments?vID="+vID+"&update="+updateSuccessful;
     }
 
