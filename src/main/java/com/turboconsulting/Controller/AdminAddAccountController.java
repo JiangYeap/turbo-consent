@@ -38,7 +38,7 @@ public class AdminAddAccountController {
     public ModelAndView addAccount(@ModelAttribute("name") String name,
                                    @ModelAttribute("email") String email,
                                    @ModelAttribute("password") String pword)  {
-        adminService.addNewAccount(new Account(name, email, pword));
+        adminService.addNewAccount(new Account(name, email, bCryptPasswordEncoder.encode(pword)));
         ModelAndView mav = new ModelAndView();
         mav.setViewName("redirect:/admin/accounts");
         return mav;
