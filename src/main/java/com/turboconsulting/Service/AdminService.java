@@ -50,23 +50,25 @@ public class AdminService implements AdminServiceInterface {
         consentExperimentDao.deleteAll();
 
         consentOptionDao.save(new ConsentOption("FULL CONSENT",
-                "This option means you give consent for We the Curious to use all of your data"));
+                "This option means you give consent for We The Curious and the involved researched to use all of the data collected when you participated in this experiment."));
         consentOptionDao.save(new ConsentOption("NO CONSENT",
-                "This option means you do not give consent for We the Curious to use any of your data"));
+                "This option means you do not give consent for We The Curious or any other parties to use any of the data collected when you participated in this experiment."));
 
-
-        Account account1 = new Account("Harry", "hw16471@bristol.ac.uk", bCryptPasswordEncoder.encode("password"));
+        Account account1 = new Account("Admin", "admin@turboconsent.com", bCryptPasswordEncoder.encode("tcadmin123"));
         addNewAccount(account1);
+
+        Account account2 = new Account("Harry", "hw16471@bristol.ac.uk", bCryptPasswordEncoder.encode("password"));
+        addNewAccount(account2);
         Visitor visitor1 = new Visitor("Harry", new GregorianCalendar(0, 0, 0 ));
-        addNewVisitor(visitor1, account1.getAccountId());
+        addNewVisitor(visitor1, account2.getAccountId());
         Experiment experiment1 = new Experiment("Physics Experiment", "A lovely desciption.");
         addNewExperiment(experiment1, new HashSet<>());
         addVisitorExperiment(visitor1.getVisitorId(), experiment1.getId());
 
-        Account account2 = new Account("Finn", "user@turboconsent.com", bCryptPasswordEncoder.encode("password"));
-        addNewAccount(account2);
+        Account account3 = new Account("Finn", "user@turboconsent.com", bCryptPasswordEncoder.encode("password"));
+        addNewAccount(account3);
         Visitor visitor2 = new Visitor("Finn", new GregorianCalendar(0, 0, 0 ));
-        addNewVisitor(visitor2, account2.getAccountId());
+        addNewVisitor(visitor2, account3.getAccountId());
         Experiment experiment2 = new Experiment("Chemistry Experiment", "A lovely desciption.");
         addNewExperiment(experiment2, new HashSet<>());
         addVisitorExperiment(visitor2.getVisitorId(), experiment1.getId());
