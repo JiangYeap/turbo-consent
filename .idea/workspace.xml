@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1d359951-eaa4-4d23-bbdc-b5beef41842e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/responsive-tables.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/responsive-tables.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-accounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-accounts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-experiments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-experiments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-vexp.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-vexp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-visitors.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin-visitors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentOption.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,16 +52,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/AdminService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
-              <caret line="191" selection-start-line="191" selection-end-line="191" />
+              <caret line="211" selection-start-line="211" selection-end-line="211" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-vexp.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin-vexp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-vexp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
+            <state relative-caret-position="255">
+              <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -74,11 +69,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConsentOption.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentOption.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="experiments.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="132" column="115" lean-forward="true" selection-start-line="132" selection-start-column="115" selection-end-line="132" selection-end-column="115" />
+            <state relative-caret-position="141">
+              <caret line="151" column="116" selection-start-line="151" selection-start-column="111" selection-end-line="151" selection-end-column="116" />
             </state>
           </provider>
         </entry>
@@ -108,7 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>consentOption</find>
       <find>consentLevel</find>
       <find>post</find>
       <find>updateSuccess</find>
@@ -134,10 +146,11 @@
       <find>input</find>
       <find>Delete</find>
       <find>data-type</find>
-      <find>is-hidden</find>
-      <find>is-hidden-desktop</find>
       <find>is-hidden-touch</find>
       <find>Review All</find>
+      <find>is-hidden-desktop</find>
+      <find>is-hidden</find>
+      <find>.name</find>
     </findStrings>
     <replaceStrings>
       <replace>visitorExp</replace>
@@ -147,6 +160,7 @@
       <replace>Default Consent Option</replace>
       <replace>Consent-Pending</replace>
       <replace />
+      <replace>is-hidden-tablet</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/Resources/static/css</dir>
@@ -178,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ConsentOptionDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentExperiment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/DAO/ConsentExperimentDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentOption.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/VisitorExperiment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Controller/ExperimentsController.java" />
@@ -208,6 +221,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/AdminService.java" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/experiments.html" />
         <option value="$PROJECT_DIR$/src/main/Resources/templates/admin-vexp.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentOption.java" />
       </list>
     </option>
   </component>
@@ -267,6 +281,33 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="turboconsulting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="turbo-consent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="turboconsulting" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TurboConsent" type="b2602c69:ProjectViewProjectNode" />
@@ -516,7 +557,7 @@
       <workItem from="1523795053136" duration="16568000" />
       <workItem from="1523868490058" duration="161000" />
       <workItem from="1523872017965" duration="2570000" />
-      <workItem from="1523875441360" duration="2281000" />
+      <workItem from="1523875441360" duration="3564000" />
     </task>
     <servers />
   </component>
@@ -529,7 +570,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246103000" />
+    <option name="totallyTimeSpent" value="247386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -553,9 +594,9 @@
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2991453" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2905983" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3064771" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.6039886" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21946308" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" side_tool="true" />
@@ -651,7 +692,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/AdminService.java</url>
-          <line>191</line>
+          <line>211</line>
           <properties />
           <option name="timeStamp" value="106" />
         </line-breakpoint>
@@ -665,13 +706,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="61" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -796,13 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
           <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentOption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
@@ -999,7 +1026,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/AdminService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
-          <caret line="191" selection-start-line="191" selection-end-line="191" />
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
         </state>
       </provider>
     </entry>
@@ -1010,20 +1037,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="132" column="115" lean-forward="true" selection-start-line="132" selection-start-column="115" selection-end-line="132" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/admin-vexp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
+        <state relative-caret-position="255">
+          <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Resources/templates/experiments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="151" column="116" selection-start-line="151" selection-start-column="111" selection-end-line="151" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/turboconsulting/Entity/ConsentOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>

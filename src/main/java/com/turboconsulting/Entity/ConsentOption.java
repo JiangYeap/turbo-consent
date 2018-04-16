@@ -1,6 +1,9 @@
 package com.turboconsulting.Entity;
 
 import org.apache.tomcat.util.bcel.Const;
+import org.apache.commons.text.WordUtils;
+
+
 
 import javax.persistence.*;
 import java.util.Set;
@@ -38,7 +41,7 @@ public class ConsentOption {
     }
 
     public String getName() {
-        return name;
+        return WordUtils.capitalizeFully(name);
     }
     public void setName(String name) {
         this.name = name;
