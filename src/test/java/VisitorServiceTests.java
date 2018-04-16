@@ -84,11 +84,11 @@ public class VisitorServiceTests {
 
     }
 
-    @Test
-    public void addNewVisitor_success()  {
-        Visitor visitor = new Visitor( "Tony", new GregorianCalendar(2000, 01, 01));
-        //assertTrue(consentService.addNewVisitor(visitor, 1));
-    }
+//    @Test
+//    public void addNewVisitor_success()  {
+//        Visitor visitor = new Visitor( "Tony", new GregorianCalendar(2000, 01, 01));
+//        //assertTrue(consentService.addNewVisitor(visitor, 1));
+//    }
 
     @Test
     public void getVisitor_withValidId() {
@@ -108,9 +108,24 @@ public class VisitorServiceTests {
 
     @Test
     public void updateVisitorConsent_validConsentLevel()  {
+        consentService.updateVisitorConsent(1, new ConsentOption("Full Consent", " "));
+        Visitor v = consentService.getVisitor(1);
+        assertEquals("Full Consent", v.getDefaultConsent().getName());
+
+    }
+    @Test
+    public void updateVisitorConsent_invalidConsentLevel()  {
+        consentService.updateVisitorConsent(1, new ConsentOption("Invalid Consent", " "));
+        Visitor v = consentService.getVisitor(1);
+        assertEquals("No Consent", v.getDefaultConsent().getName());
+
+    }
+    @Test
+    public void checkInitialVisitorConsent_isNoConsent()  {
         Visitor found = consentService.getVisitor(1);
-        assertEquals(found.getDefaultConsent(), new ConsentOption("No Consent", "Description"));
-        assertTrue(consentService.updateVisitorConsent(found.getVisitorId(), new ConsentOption("No Consent", "Description")));
+        assertEquals("No Consent", found.getDefaultConsent().getName());
+        found = consentService.getVisitor(2);
+        assertEquals("No Consent", found.getDefaultConsent().getName());
     }
 
 

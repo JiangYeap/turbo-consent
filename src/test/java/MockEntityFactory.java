@@ -27,12 +27,12 @@ public class MockEntityFactory {
         return newVisitor;
     }
 
-//    public Experiment mockExperiment(ExperimentDao experimentDao, String name, String description, int id)  {
-//        Experiment newExperiment = new Experiment(name, description, new HashSet<>());
-//        newExperiment.setId(id);
-//        Mockito.when(experimentDao.findById(newExperiment.getId())).thenReturn(newExperiment);
-//        return newExperiment;
-//    }
+    public Experiment mockExperiment(ExperimentDao experimentDao, String name, String description, int id)  {
+        Experiment newExperiment = new Experiment(name, description);
+        newExperiment.setId(id);
+        Mockito.when(experimentDao.findById(newExperiment.getId())).thenReturn(newExperiment);
+        return newExperiment;
+    }
 
     public VisitorExperiment mockVisitorExperiment(VisitorDao visitorDao, ExperimentDao experimentDao, VisitorExperimentDao visitorExperimentDao, int visitorId, int experimentId)  {
         VisitorExperiment visitorExperiment = new VisitorExperiment(
