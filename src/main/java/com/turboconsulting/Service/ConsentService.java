@@ -47,13 +47,8 @@ public class ConsentService implements ConsentServiceInterface {
         return -1;
     }
     @Override
-    public boolean checkAccountLogin(LoginDetails loginDetails)  {
-        Account a = accountDao.findByEmail(loginDetails.getEmail());
-        return a != null && a.getPassword().equals(loginDetails.getPword());
-    }
-    @Override
     public Iterable<Visitor> getAccountsVisitors(int aID) {
-        return visitorDao.findAllByAccount(accountDao.findOne(aID));
+        return visitorDao.findAllByAccount(getAccount(aID));
     }
     @Override
     public Account getAccount(int id)  {

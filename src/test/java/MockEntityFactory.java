@@ -22,7 +22,11 @@ public class MockEntityFactory {
         Visitor newVisitor = new Visitor( name, new GregorianCalendar(2000, 01, 01));
         newVisitor.setVisitorId(id);
         newVisitor.setAccount(account);
+        newVisitor.setDefaultConsent(new ConsentOption("NO CONSENT", "No consent given."));
         Mockito.when(visitorDao.findByVisitorId(newVisitor.getVisitorId())).thenReturn(newVisitor);
+        Set<Visitor> visitors = account.getVisitors();
+        visitors.add(newVisitor);
+        account.setVisitors(visitors);
         return newVisitor;
     }
 

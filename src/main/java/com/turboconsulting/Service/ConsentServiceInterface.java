@@ -14,8 +14,6 @@ public interface ConsentServiceInterface {
 
     int getAccountID(String email);
 
-    boolean checkAccountLogin(LoginDetails loginDetails);
-
     Iterable<Visitor> getAccountsVisitors(int aID);
 
     Account getAccount(int id);

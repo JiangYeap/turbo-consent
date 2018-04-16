@@ -40,7 +40,8 @@ public class AdminAddExperimentController {
     }
 
     @PostMapping("/admin/experiments/add")
-    public ModelAndView addAccount(@ModelAttribute("name") String name,
+    public String addAccount(ModelMap m,
+                                   @ModelAttribute("name") String name,
                                    @ModelAttribute("description") String description,
                                    @ModelAttribute("consentNames") List<String> consentNames,
                                    @ModelAttribute("consentDescriptions") List<String> consentDescriptions)  {
@@ -48,9 +49,7 @@ public class AdminAddExperimentController {
         for(int i = 0; i < consentNames.size(); i++)  consentOptions.add(new ConsentOption(consentNames.get(i),
                                                                                            consentDescriptions.get(i)));
         adminService.addNewExperiment(new Experiment(name, description),  consentOptions);
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("redirect:/admin/experiments");
-        return mav;
+        return "redirect:/admin/experiments";
     }
 
     @PostMapping("/admin/experiments/delete")

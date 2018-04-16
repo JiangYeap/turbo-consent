@@ -5,7 +5,6 @@ import com.turboconsulting.Security.MyUser;
 import com.turboconsulting.Security.MyUserDetailsService;
 import com.turboconsulting.Service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mock.staticmock.MockStaticEntityMethods;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
