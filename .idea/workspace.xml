@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d359951-eaa4-4d23-bbdc-b5beef41842e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/TurboConsent.iml" afterPath="$PROJECT_DIR$/TurboConsent.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/AdminService.java" afterPath="$PROJECT_DIR$/src/main/java/com/turboconsulting/Service/AdminService.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/output.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/responsive-tables.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/apply-all.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bulma.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/cc-entry.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/form-validation.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/session.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/table.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/media/wethecurious.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/media/wtc_logo.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-accounts.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-experiments.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-home.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-vexp.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin-visitors.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/experiment.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/experiments.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/settings.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/visitors.html" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -553,7 +525,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249336000" />
+    <option name="totallyTimeSpent" value="249650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="134" y="35" width="3706" height="2125" extended-state="6" />
