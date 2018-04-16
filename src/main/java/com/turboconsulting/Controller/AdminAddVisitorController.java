@@ -43,12 +43,11 @@ public class AdminAddVisitorController {
     public ModelAndView addAccount(ModelMap m,
                                    @ModelAttribute("accountId") int accountId,
                                    @ModelAttribute("name") String name,
-                                   @ModelAttribute("email") GregorianCalendar date,
-                                   @RequestParam("updateSuccess") boolean update)  {
+                                   @ModelAttribute("email") GregorianCalendar date)  {
         adminService.addNewVisitor(new Visitor(name, date), accountId );
         ModelAndView mav = new ModelAndView();
 
-        mav.setViewName("redirect:/admin/visitors");
+        mav.setViewName("redirect:/admin/visitors?updateSuccess=true");
         return mav;
     }
 

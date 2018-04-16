@@ -39,13 +39,11 @@ public class AdminAddAccountController {
     public ModelAndView addAccount(ModelMap m,
                                    @ModelAttribute("name") String name,
                                    @ModelAttribute("email") String email,
-                                   @ModelAttribute("password") String pword,
-                                   @RequestParam("updateSuccess") boolean update)  {
+                                   @ModelAttribute("password") String pword)  {
         adminService.addNewAccount(new Account(name, email, bCryptPasswordEncoder.encode(pword)));
-        m.addAttribute("updateSuccess", update);
 
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("redirect:/admin/accounts");
+        mav.setViewName("redirect:/admin/accounts?updateSuccess=true");
         return mav;
     }
 

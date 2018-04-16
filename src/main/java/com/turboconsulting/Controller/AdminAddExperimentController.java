@@ -51,7 +51,7 @@ public class AdminAddExperimentController {
         for(int i = 0; i < consentNames.size(); i++)  consentOptions.add(new ConsentOption(consentNames.get(i),
                                                                                            consentDescriptions.get(i)));
         adminService.addNewExperiment(new Experiment(name, description),  consentOptions);
-        return "redirect:/admin/experiments";
+        return "redirect:/admin/experiments?updateSuccess=true";
     }
 
     @PostMapping("/admin/experiments/delete")

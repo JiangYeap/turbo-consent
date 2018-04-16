@@ -45,7 +45,7 @@ public class AdminAddVisitorExperimentController {
                                    @ModelAttribute("experimentId") int experimentId)  {
         adminService.addVisitorExperiment(visitorId, experimentId);
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("redirect:/admin/vexp");
+        mav.setViewName("redirect:/admin/vexp?updateSuccess=true");
         return mav;
     }
 

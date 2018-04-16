@@ -6,6 +6,7 @@ import org.apache.commons.text.WordUtils;
 
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -34,6 +35,9 @@ public class ConsentOption {
     public ConsentOption(String name, String description) {
         this.name = WordUtils.capitalizeFully(name);
         this.description = description;
+        this.consentExperiments = new HashSet<>();
+        this.visitors = new HashSet<>();
+        this.visitorExperiments = new HashSet<>();
     }
 
     public void setConsentId(int consentId) {
