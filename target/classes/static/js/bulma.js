@@ -33,6 +33,8 @@ $(document).ready(function() {
         let choice = confirm($(this).attr('data-confirm'));
         let url = '/admin/' + $(this).attr('data-type') + '/delete';
 
-        if (choice) $.post(url, { deleteId: $(this).attr('id') });
+        if (choice) $.post(url, { deleteId: $(this).attr('id') }, function() {
+            location.reload();
+        });
     });
 });
