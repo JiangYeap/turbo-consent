@@ -1,7 +1,4 @@
-import com.turboconsulting.DAO.AccountDao;
-import com.turboconsulting.DAO.ExperimentDao;
-import com.turboconsulting.DAO.VisitorDao;
-import com.turboconsulting.DAO.VisitorExperimentDao;
+import com.turboconsulting.DAO.*;
 import com.turboconsulting.Entity.Account;
 import com.turboconsulting.Entity.ConsentOption;
 import com.turboconsulting.Entity.Visitor;
@@ -38,6 +35,10 @@ public class VisitorServiceTests {
     private VisitorDao visitorDao;
     @MockBean
     private VisitorExperimentDao visitorExperimentDao;
+    @MockBean
+    private ConsentOptionDao consentOptionDao;
+    @MockBean
+    private ConsentExperimentDao consentExperimentDao;
 
 
     @TestConfiguration

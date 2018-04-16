@@ -1,7 +1,4 @@
-import com.turboconsulting.DAO.AccountDao;
-import com.turboconsulting.DAO.ExperimentDao;
-import com.turboconsulting.DAO.VisitorDao;
-import com.turboconsulting.DAO.VisitorExperimentDao;
+import com.turboconsulting.DAO.*;
 import com.turboconsulting.Entity.Account;
 import com.turboconsulting.Entity.Experiment;
 import com.turboconsulting.Service.ConsentService;
@@ -27,6 +24,7 @@ import static org.mockito.Matchers.any;
 
 @RunWith(SpringRunner.class)
 public class ExperimentServiceTests {
+
     @Autowired
     private ConsentService consentService;
     @MockBean
@@ -37,6 +35,10 @@ public class ExperimentServiceTests {
     private VisitorDao visitorDao;
     @MockBean
     private VisitorExperimentDao visitorExperimentDao;
+    @MockBean
+    private ConsentOptionDao consentOptionDao;
+    @MockBean
+    private ConsentExperimentDao consentExperimentDao;
 
 
     @TestConfiguration

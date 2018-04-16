@@ -10,6 +10,8 @@ import java.util.Set;
 
 @Entity
 public class ConsentOption {
+
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int consentId;
@@ -34,7 +36,9 @@ public class ConsentOption {
         this.description = description;
     }
 
-
+    public void setConsentId(int consentId) {
+        this.consentId = consentId;
+    }
 
     public int getConsentId() {
         return consentId;

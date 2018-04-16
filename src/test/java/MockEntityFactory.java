@@ -1,7 +1,4 @@
-import com.turboconsulting.DAO.AccountDao;
-import com.turboconsulting.DAO.ExperimentDao;
-import com.turboconsulting.DAO.VisitorDao;
-import com.turboconsulting.DAO.VisitorExperimentDao;
+import com.turboconsulting.DAO.*;
 import com.turboconsulting.Entity.*;
 import org.mockito.Mockito;
 
@@ -49,4 +46,11 @@ public class MockEntityFactory {
         return visitorExperiment;
     }
 
+
+    public ConsentOption mockConsentOption(String name, String description, ConsentOptionDao consentOptionDao, int id)  {
+        ConsentOption newConsentOption = new ConsentOption(name, description);
+        newConsentOption.setConsentId(id);
+        Mockito.when(consentOptionDao.findByName(name)).thenReturn(newConsentOption);
+        return newConsentOption;
+    }
 }
