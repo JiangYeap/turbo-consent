@@ -65,6 +65,9 @@ public class Experiment {
     public void addVisitorExperiment(VisitorExperiment e) {
         visitors.add(e);
     }
+    public void removeVisitor(VisitorExperiment visitorExperiment)  {
+        visitors.remove(visitorExperiment);
+    }
 
     public Set<ConsentExperiment> getConsentExperiments() {
         return consentExperiments;
