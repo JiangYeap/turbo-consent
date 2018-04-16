@@ -49,7 +49,7 @@ public class AdminAddAccountController {
 
     @PostMapping("/admin/accounts/delete")
     public ModelAndView deleteAccount(@ModelAttribute("deleteId") int accountId)  {
-        adminService.deleteAccount(accountId);
+        if (accountId != getLoggedInAccountID()) adminService.deleteAccount(accountId);
         ModelAndView mav = new ModelAndView();
         mav.setViewName("redirect:/admin/accounts");
         return mav;
