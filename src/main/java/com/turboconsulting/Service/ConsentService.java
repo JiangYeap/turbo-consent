@@ -95,7 +95,7 @@ public class ConsentService implements ConsentServiceInterface {
     }
 
 
-    //////////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
+    //////////////////////////////////////////////////////////////////////VISITOR_EXPERIMENT FUNCTIONS
     @Override
     public ArrayList<VisitorExperiment> getVisitorExperiments(int id)  {
         ArrayList<VisitorExperiment> visitorExperimentsList = new ArrayList<>();

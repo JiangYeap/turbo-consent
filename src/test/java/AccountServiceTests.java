@@ -140,7 +140,7 @@ public class AccountServiceTests {
         }
     }
     @Test
-    public void checkUpdateAccountConsent()  {
+    public void checkUpdateAccountConsent_validConsent()  {
         ArrayList<Integer> vIds = new ArrayList<>();
         vIds.add(1);  vIds.add(2);
         consentService.updateAccountConsent(vIds, new ConsentOption("Full Consent", " "));
@@ -149,20 +149,17 @@ public class AccountServiceTests {
             assertEquals("Full Consent", v.getDefaultConsent().getName());
         }
     }
+    @Test
+    public void checkUpdateAccountConsent_invalidConsent()  {
+        ArrayList<Integer> vIds = new ArrayList<>();
+        vIds.add(1);  vIds.add(2);
+        consentService.updateAccountConsent(vIds, new ConsentOption("Invalid Consent", " "));
+        Account a = consentService.getAccount(1);
+        for(Visitor v : a.getVisitors())  {
+            assertEquals("No Consent", v.getDefaultConsent().getName());
+        }
+    }
 
-
-//    @Test
-//    public void addNewAccount_success()  {
-//        Account a = new Account("Harry", "harry@bristol.ac.uk", "password");
-//        //assertTrue(consentService.addNewAccount(a));
-//    }
-
-//    @Test
-//    public void updateAccountConsent_validConsentLevel()  {
-//        Account found = consentService.getAccount(1);
-//        assertEquals(found.getConsentLevel(), ConsentLevel.RESTRICTED);
-//        assertTrue(consentService.updateAccountConsent(found.getAccountId(), ConsentLevel.NONE));
-//    }
 
 
 }

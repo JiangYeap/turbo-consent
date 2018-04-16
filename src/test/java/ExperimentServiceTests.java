@@ -1,8 +1,11 @@
 import com.turboconsulting.DAO.*;
 import com.turboconsulting.Entity.Account;
+import com.turboconsulting.Entity.ConsentExperiment;
+import com.turboconsulting.Entity.ConsentOption;
 import com.turboconsulting.Entity.Experiment;
 import com.turboconsulting.Service.ConsentService;
 import com.turboconsulting.Service.ConsentServiceInterface;
+import org.assertj.core.util.Lists;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -54,12 +57,19 @@ public class ExperimentServiceTests {
     @Before
     public void setup() {
 
-//        MockEntityFactory mockAccountFactory = new MockEntityFactory();
-//        ArrayList<Experiment> experiments = new ArrayList<>();
-//
-//        experiments.add(mockAccountFactory.mockExperiment(experimentDao, "Physics Experiment", "Description 1", 1));
-//        experiments.add(mockAccountFactory.mockExperiment(experimentDao, "Chemistry Experiment", "Description 2", 2));
-//
+        MockEntityFactory mockEntityFactory = new MockEntityFactory();
+        ArrayList<Experiment> experiments = new ArrayList<>();
+        ArrayList<ConsentOption> consentOptions = new ArrayList<>();
+
+        experiments.add(mockEntityFactory.mockExperiment(experimentDao, "Physics Experiment", "Description 1", 1));
+        experiments.add(mockEntityFactory.mockExperiment(experimentDao, "Chemistry Experiment", "Description 2", 2));
+
+        consentOptions.add(mockEntityFactory.mockConsentOption("No Consent", " ", consentOptionDao, 1));
+        consentOptions.add(mockEntityFactory.mockConsentOption("Full Consent", " ", consentOptionDao, 2));
+
+        experiments.get(0).addConsentOption(new ConsentExperiment(consentOptions.get(0), experiments.get(0)));
+        experiments.get(0).addConsentOption(new ConsentExperiment(consentOptions.get(1), experiments.get(0)));
+
 //        Mockito.when(experimentDao.save(any(Experiment.class))).thenAnswer(AdditionalAnswers.<Account>returnsFirstArg());
 //        Mockito.when(experimentDao.findAll()).thenReturn(experiments);
     }
@@ -79,11 +89,11 @@ public class ExperimentServiceTests {
         assertEquals(consentService.getExperiment(1000), null);
 
     }
-
-//    @Test
-//    public void addNewExperiment_sucess() {
-//        Experiment e = new Experiment("Harry", "harry@bristol.ac.uk", new HashSet<>());
-//        assertTrue(consentService.addNewExperiment(e));
-//    }
+    @Test
+    public void getExperimentsConsentOptions()  {
+        ArrayList<ConsentOption> consentOptions = Lists.newArrayList(consentService.getExperimentsConsentOptions(1));
+        assertEquals("No Consent", consentOptions.get(0).getName());
+        assertEquals("Full Consent", consentOptions.get(1).getName());
+    }
 
 }
