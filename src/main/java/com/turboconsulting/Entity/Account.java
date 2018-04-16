@@ -67,6 +67,9 @@ public class Account {
     public void setVisitors(Set<Visitor> visitors) {
         this.visitors = visitors;
     }
+    public void removeVisitor(Visitor v)  {
+        visitors.remove(v);
+    }
 
     public Set<GrantedAuthority> getAuthorities() {
         Set<GrantedAuthority> authorities = new HashSet<>();

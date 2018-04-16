@@ -8,10 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
-import java.util.GregorianCalendar;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class AdminService implements AdminServiceInterface {
@@ -111,9 +108,14 @@ public class AdminService implements AdminServiceInterface {
     @Override
     public boolean deleteVisitor(int visitorId) {
         boolean successful = true;
-        for (VisitorExperiment visitorExperiment : visitorDao.findByVisitorId(visitorId).getExperiments())  {
+        Visitor v = visitorDao.findByVisitorId(visitorId);
+        Collection<VisitorExperiment> visitorExperiments = new ArrayList<>();
+        visitorExperiments.addAll(v.getExperiments());
+        for (VisitorExperiment visitorExperiment : visitorExperiments)  {
             successful = successful & deleteVisitorExperiment(visitorExperiment.getCompoundKey());
         }
+        v.getAccount().removeVisitor(v);
+        v.getDefaultConsent().removeVisitor(v);
         visitorDao.delete(visitorId);
         return successful;
     }
@@ -188,6 +190,7 @@ public class AdminService implements AdminServiceInterface {
     public boolean deleteVisitorExperiment(int visitorExperimentId) {
         visitorExperimentDao.findOne(visitorExperimentId).getExperiment().removeVisitor(visitorExperimentDao.findOne(visitorExperimentId));
         visitorExperimentDao.findOne(visitorExperimentId).getVisitor().removeExperiment(visitorExperimentDao.findOne(visitorExperimentId));
+        visitorExperimentDao.findOne(visitorExperimentId).getConsentOption().removeVisitorExperiment(visitorExperimentDao.findOne(visitorExperimentId));
         visitorExperimentDao.delete(visitorExperimentId);
         return true;
     }
