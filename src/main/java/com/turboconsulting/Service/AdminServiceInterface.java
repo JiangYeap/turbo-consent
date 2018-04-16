@@ -32,5 +32,7 @@ public interface AdminServiceInterface {
     boolean deleteVisitorExperiment(int visitorExperimentId);
 
 
+    //////////////////////////////////////////////////////////////////////////CONSENT_EXPERIMENT FUNCTIONS
+    boolean deleteConsentExperiment(int consentExperimentId);
 
 }

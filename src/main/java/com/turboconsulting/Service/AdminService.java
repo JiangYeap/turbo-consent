@@ -8,10 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
-import java.util.GregorianCalendar;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class AdminService implements AdminServiceInterface {
@@ -89,7 +86,9 @@ public class AdminService implements AdminServiceInterface {
     @Override
     public boolean deleteAccount(int accountId) {
         boolean successful = true;
-        for(Visitor visitor : accountDao.findByAccountId(accountId).getVisitors())  {
+        Collection<Visitor> visitors = new ArrayList<>();
+        visitors.addAll(accountDao.findByAccountId(accountId).getVisitors());
+        for(Visitor visitor : visitors)  {
             successful = successful & deleteVisitor(visitor.getVisitorId());
         }
         accountDao.delete(accountId);
@@ -111,9 +110,14 @@ public class AdminService implements AdminServiceInterface {
     @Override
     public boolean deleteVisitor(int visitorId) {
         boolean successful = true;
-        for (VisitorExperiment visitorExperiment : visitorDao.findByVisitorId(visitorId).getExperiments())  {
+        Visitor v = visitorDao.findByVisitorId(visitorId);
+        Collection<VisitorExperiment> visitorExperiments = new ArrayList<>();
+        visitorExperiments.addAll(v.getExperiments());
+        for (VisitorExperiment visitorExperiment : visitorExperiments)  {
             successful = successful & deleteVisitorExperiment(visitorExperiment.getCompoundKey());
         }
+        v.getAccount().removeVisitor(v);
+        v.getDefaultConsent().removeVisitor(v);
         visitorDao.delete(visitorId);
         return successful;
     }
@@ -147,12 +151,20 @@ public class AdminService implements AdminServiceInterface {
     }
     @Override
     public boolean deleteExperiment(int experimentId) {
-        for(VisitorExperiment visitorExperiment: experimentDao.findById(experimentId).getVisitors())  {
-            visitorExperimentDao.delete(visitorExperiment.getCompoundKey());
+        Experiment e = experimentDao.findById(experimentId);
+
+        Collection<VisitorExperiment> visitorExperiments = new ArrayList<>();
+        visitorExperiments.addAll(e.getVisitors());
+        for(VisitorExperiment visitorExperiment: visitorExperiments)  {
+            deleteVisitorExperiment(visitorExperiment.getCompoundKey());
         }
-        for(ConsentExperiment consentExperiment : experimentDao.findById(experimentId).getConsentExperiments())  {
-            consentExperimentDao.delete(consentExperiment.getCompoundKey());
+
+        Collection<ConsentExperiment> consentExperiments = new ArrayList<>();
+        consentExperiments.addAll(e.getConsentExperiments());
+        for(ConsentExperiment consentExperiment : consentExperiments)  {
+            deleteConsentExperiment(consentExperiment.getCompoundKey());
         }
+
         experimentDao.delete(experimentId);
         return true;
     }
@@ -188,7 +200,15 @@ public class AdminService implements AdminServiceInterface {
     public boolean deleteVisitorExperiment(int visitorExperimentId) {
         visitorExperimentDao.findOne(visitorExperimentId).getExperiment().removeVisitor(visitorExperimentDao.findOne(visitorExperimentId));
         visitorExperimentDao.findOne(visitorExperimentId).getVisitor().removeExperiment(visitorExperimentDao.findOne(visitorExperimentId));
+        visitorExperimentDao.findOne(visitorExperimentId).getConsentOption().removeVisitorExperiment(visitorExperimentDao.findOne(visitorExperimentId));
         visitorExperimentDao.delete(visitorExperimentId);
+        return true;
+    }
+    @Override
+    public boolean deleteConsentExperiment(int consentExperimentId)  {
+        consentExperimentDao.findOne(consentExperimentId).getConsentOption().removeConsentExperiment(consentExperimentDao.findOne(consentExperimentId));
+        consentExperimentDao.findOne(consentExperimentId).getExperiment().removeConsentExperiment(consentExperimentDao.findOne(consentExperimentId));
+        consentExperimentDao.delete(consentExperimentId);
         return true;
     }
 }
