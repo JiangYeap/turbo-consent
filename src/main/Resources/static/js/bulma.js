@@ -31,10 +31,11 @@ $(document).ready(function() {
     $('.delete-entry').click(function(e) {
         e.preventDefault();
         let choice = confirm($(this).attr('data-confirm'));
-        let url = '/admin/' + $(this).attr('data-type') + '/delete';
+        let section = $(this).attr('data-type');
+        let url = '/admin/' + section + '/delete';
 
         if (choice) $.post(url, { deleteId: $(this).attr('id') }, function() {
-            location.reload();
+            location.href='/admin/' + section + '?updateSuccess=true';
         });
     });
 });
