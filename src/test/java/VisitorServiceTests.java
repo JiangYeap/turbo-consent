@@ -9,6 +9,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.AdditionalAnswers;
 import org.mockito.Mockito;
+import org.mockito.invocation.InvocationOnMock;
+import org.mockito.stubbing.Answer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -21,6 +23,7 @@ import static org.mockito.Matchers.any;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.Set;
 
 @RunWith(SpringRunner.class)
 public class VisitorServiceTests {
@@ -57,15 +60,27 @@ public class VisitorServiceTests {
         ArrayList<Account> accounts = new ArrayList<>();
         ArrayList<Visitor> visitors = new ArrayList<>();
 
-        accounts.add(mockEntityFactory.mockAccount(accountDao, "Harry", "harry@bristol.ac.uk", "password",1));
+        accounts.add(mockEntityFactory.mockAccount(accountDao, "Harry", "harry@bristol.ac.uk", "password", 1));
         accounts.add(mockEntityFactory.mockAccount(accountDao, "Finn", "finn@bristol.ac.uk", "password", 2));
-        Mockito.when(accountDao.save(any(Account.class))).thenAnswer(AdditionalAnswers.<Account>returnsFirstArg());
-        Mockito.when(accountDao.findAll()).thenReturn(accounts);
+        accounts.add(mockEntityFactory.mockAccount(accountDao, "Yeap", "yeap@bristol.ac.uk", "password", 3));
+        //Mockito.when(accountDao.save(any(Account.class))).thenAnswer(AdditionalAnswers.<Account>returnsFirstArg());
+        //Mockito.when(accountDao.findAll()).thenReturn(accounts);
 
         visitors.add(mockEntityFactory.mockVisitor(visitorDao, "Harry Visitor 1", 1, accounts.get(0)));
         visitors.add(mockEntityFactory.mockVisitor(visitorDao, "Harry Visitor 2", 2, accounts.get(0)));
-        Mockito.when(visitorDao.save(any(Visitor.class))).thenAnswer(AdditionalAnswers.<Visitor>returnsFirstArg());
-        Mockito.when(visitorDao.findAll()).thenReturn(visitors);
+        //Mockito.when(visitorDao.save(any(Visitor.class))).thenAnswer(AdditionalAnswers.<Visitor>returnsFirstArg());
+        //Mockito.when(visitorDao.findAll()).thenReturn(visitors);
+
+        Mockito.when(visitorDao.findAllByAccount(any(Account.class))).thenAnswer(new Answer<Set<Visitor>>() {
+            @Override
+            public Set<Visitor> answer(InvocationOnMock invocation) throws Throwable {
+                Object[] args = invocation.getArguments();
+                return ((Account) args[0]).getVisitors();
+            }
+        });
+
+        mockEntityFactory.mockConsentOption("No Consent", "Description", consentOptionDao, 1);
+        mockEntityFactory.mockConsentOption("Full Consent", "Description", consentOptionDao, 2);
 
     }
 
