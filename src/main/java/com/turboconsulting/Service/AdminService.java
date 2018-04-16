@@ -186,11 +186,10 @@ public class AdminService implements AdminServiceInterface {
                 experimentDao.findById(experimentId));
 
         experimentDao.findById(experimentId).addVisitorExperiment(visitorExperiment);
-        Visitor v = visitorDao.findByVisitorId(visitorId);
-        v.doExperiment(visitorExperiment);
+        visitorDao.findByVisitorId(visitorId).doExperiment(visitorExperiment);
         visitorExperiment.getConsentOption().addExperiment(visitorExperiment);
         //consentOptionDao.save(visitorExperiment.getConsentOption());
-        return visitorDao.save(v) != null;
+        return visitorExperimentDao.save(visitorExperiment) != null;
     }
     @Override
     public Iterable<VisitorExperiment> getAllVisitorExperiments()  {
