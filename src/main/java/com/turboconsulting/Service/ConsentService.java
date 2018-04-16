@@ -72,7 +72,7 @@ public class ConsentService implements ConsentServiceInterface {
     public boolean updateVisitorConsent(int id, ConsentOption c)  {
         Visitor v = getVisitor(id);
         if(consentOptionDao.findByName(c.getName()) == null)  return false;
-        if(!c.getName().equals("NO CONSENT") && !c.getName().equals("FULL CONSENT"))  return false;
+        if(!c.getName().equals("No Consent") && !c.getName().equals("Full Consent"))  return false;
         v.setDefaultConsent(consentOptionDao.findByName(c.getName()));
         return visitorDao.save(v) != null;
     }

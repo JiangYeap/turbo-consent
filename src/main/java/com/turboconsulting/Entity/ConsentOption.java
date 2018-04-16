@@ -30,7 +30,7 @@ public class ConsentOption {
 
     public ConsentOption() {};
     public ConsentOption(String name, String description) {
-        this.name = name;
+        this.name = WordUtils.capitalizeFully(name);
         this.description = description;
     }
 
@@ -44,7 +44,7 @@ public class ConsentOption {
         return WordUtils.capitalizeFully(name);
     }
     public void setName(String name) {
-        this.name = name;
+        this.name = WordUtils.capitalizeFully(name);
     }
 
     public String getDescription() {

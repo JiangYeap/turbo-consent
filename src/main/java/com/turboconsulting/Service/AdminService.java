@@ -46,9 +46,9 @@ public class AdminService implements AdminServiceInterface {
         consentOptionDao.deleteAll();
         consentExperimentDao.deleteAll();
 
-        consentOptionDao.save(new ConsentOption("FULL CONSENT",
+        consentOptionDao.save(new ConsentOption("Full Consent",
                 "This option means you give consent for We The Curious and the involved researched to use all of the data collected when you participated in this experiment."));
-        consentOptionDao.save(new ConsentOption("NO CONSENT",
+        consentOptionDao.save(new ConsentOption("No Consent",
                 "This option means you do not give consent for We The Curious or any other parties to use any of the data collected when you participated in this experiment."));
 
         Account account1 = new Account("Admin", "admin@turboconsent.com", bCryptPasswordEncoder.encode("tcadmin123"));
@@ -99,8 +99,8 @@ public class AdminService implements AdminServiceInterface {
     @Override
     public boolean addNewVisitor(Visitor v, int accountID)  {
         v.setAccount(accountDao.findByAccountId(accountID));
-        v.setDefaultConsent(consentOptionDao.findByName("NO CONSENT"));
-        consentOptionDao.findByName("NO CONSENT").addVisitor(v);
+        v.setDefaultConsent(consentOptionDao.findByName("No Consent"));
+        consentOptionDao.findByName("No Consent").addVisitor(v);
         return visitorDao.save(v) != null;
     }
     @Override
@@ -128,8 +128,8 @@ public class AdminService implements AdminServiceInterface {
         if( experimentDao.findByName(e.getName()) != null  )  return false;
 
         Set<ConsentExperiment> consentExperiments = new HashSet<>();
-        consentExperiments.add(new ConsentExperiment(consentOptionDao.findByName("FULL CONSENT"), e));
-        consentExperiments.add(new ConsentExperiment(consentOptionDao.findByName("NO CONSENT"), e));
+        consentExperiments.add(new ConsentExperiment(consentOptionDao.findByName("Full Consent"), e));
+        consentExperiments.add(new ConsentExperiment(consentOptionDao.findByName("No Consent"), e));
 
         for (ConsentOption c : newConsentOptions)  {
             if (consentOptionDao.findByName(c.getName()) == null)  {
