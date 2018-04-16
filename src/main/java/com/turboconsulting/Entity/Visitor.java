@@ -77,10 +77,14 @@ public class Visitor {
     public Collection<VisitorExperiment> getExperiments() {
         return experiments;
     }
+    public void removeExperiment(VisitorExperiment visitorExperiment)  {
+        experiments.remove(visitorExperiment);
+    }
 
     public void doExperiment(VisitorExperiment e) {
         experiments.add(e);
     }
+
 
     public void setAccount(Account account) {
         this.account = account;

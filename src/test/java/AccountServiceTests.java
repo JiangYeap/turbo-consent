@@ -48,7 +48,7 @@ public class AccountServiceTests {
     static class ConsentServiceImplTestContextConfiguration {
 
         @Bean
-        public ConsentServiceInterface consentService(){
+        public ConsentServiceInterface consentService() {
             return new ConsentService();
         }
 
@@ -76,7 +76,7 @@ public class AccountServiceTests {
             @Override
             public Set<Visitor> answer(InvocationOnMock invocation) throws Throwable {
                 Object[] args = invocation.getArguments();
-                return ((Account)args[0]).getVisitors();
+                return ((Account) args[0]).getVisitors();
             }
         });
 
@@ -92,6 +92,7 @@ public class AccountServiceTests {
         assertEquals(found.getName(), "Yeap");
 
     }
+
     @Test
     public void getAccount_withInvalidId() {
         assertEquals(consentService.getAccount(-1), null);
@@ -106,6 +107,7 @@ public class AccountServiceTests {
         assertEquals(2, consentService.getAccountID("finn@bristol.ac.uk"));
 
     }
+
     @Test
     public void getAccountId_withInvalidEmail() {
         assertEquals(-1, consentService.getAccountID("leechay@bristol.ac.uk"));
@@ -114,15 +116,16 @@ public class AccountServiceTests {
     }
 
     @Test
-    public void getAccountsVisitors_noVisitors()  {
-        assertEquals( new HashSet<Visitor>(), consentService.getAccountsVisitors(2));
-        assertEquals( new HashSet<Visitor>(), consentService.getAccountsVisitors(3));
+    public void getAccountsVisitors_noVisitors() {
+        assertEquals(new HashSet<Visitor>(), consentService.getAccountsVisitors(2));
+        assertEquals(new HashSet<Visitor>(), consentService.getAccountsVisitors(3));
     }
+
     @Test
-    public void getAccountsVisitors_withVisitors()  {
+    public void getAccountsVisitors_withVisitors() {
         Account a = consentService.getAccount(1);
         Iterable<Visitor> visitors = consentService.getAccountsVisitors(1);
-        for (Visitor v : visitors)  {
+        for (Visitor v : visitors) {
             assertEquals("Harry Visitor", v.getName());
         }
     }

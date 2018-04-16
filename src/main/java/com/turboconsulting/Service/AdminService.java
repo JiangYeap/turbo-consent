@@ -186,6 +186,8 @@ public class AdminService implements AdminServiceInterface {
     }
     @Override
     public boolean deleteVisitorExperiment(int visitorExperimentId) {
+        visitorExperimentDao.findOne(visitorExperimentId).getExperiment().removeVisitor(visitorExperimentDao.findOne(visitorExperimentId));
+        visitorExperimentDao.findOne(visitorExperimentId).getVisitor().removeExperiment(visitorExperimentDao.findOne(visitorExperimentId));
         visitorExperimentDao.delete(visitorExperimentId);
         return true;
     }
