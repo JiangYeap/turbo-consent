@@ -14,6 +14,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.GregorianCalendar;
@@ -30,19 +31,23 @@ public class AdminAddVisitorController {
     private MyUserDetailsService userService;
 
     @GetMapping("/admin/visitors")
-    public String adminVisitorsPage(ModelMap m) {
+    public String adminVisitorsPage(ModelMap m,
+                                    @RequestParam("updateSuccess") boolean update) {
         m.addAttribute("visitors", adminService.getAllVisitors());
-
+        m.addAttribute("updateSuccess", update);
         int aID = getLoggedInAccountID();
         return "admin-visitors";
     }
 
     @PostMapping("/admin/visitors/add")
-    public ModelAndView addAccount(@ModelAttribute("accountId") int accountId,
+    public ModelAndView addAccount(ModelMap m,
+                                   @ModelAttribute("accountId") int accountId,
                                    @ModelAttribute("name") String name,
-                                   @ModelAttribute("email") GregorianCalendar date)  {
+                                   @ModelAttribute("email") GregorianCalendar date,
+                                   @RequestParam("updateSuccess") boolean update)  {
         adminService.addNewVisitor(new Visitor(name, date), accountId );
         ModelAndView mav = new ModelAndView();
+
         mav.setViewName("redirect:/admin/visitors");
         return mav;
     }

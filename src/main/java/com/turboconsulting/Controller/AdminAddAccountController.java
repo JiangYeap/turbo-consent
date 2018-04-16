@@ -13,6 +13,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -27,17 +28,22 @@ public class AdminAddAccountController {
     private MyUserDetailsService userService;
 
     @GetMapping("/admin/accounts")
-    public String adminAccountsPage(ModelMap m) {
+    public String adminAccountsPage(ModelMap m, @RequestParam("updateSuccess") boolean update ) {
         m.addAttribute("accounts", adminService.getAllAccounts());
         int aID = getLoggedInAccountID();
+        m.addAttribute("updateSuccess", update);
         return "admin-accounts";
     }
 
     @PostMapping("/admin/accounts/add")
-    public ModelAndView addAccount(@ModelAttribute("name") String name,
+    public ModelAndView addAccount(ModelMap m,
+                                   @ModelAttribute("name") String name,
                                    @ModelAttribute("email") String email,
-                                   @ModelAttribute("password") String pword)  {
+                                   @ModelAttribute("password") String pword,
+                                   @RequestParam("updateSuccess") boolean update)  {
         adminService.addNewAccount(new Account(name, email, bCryptPasswordEncoder.encode(pword)));
+        m.addAttribute("updateSuccess", update);
+
         ModelAndView mav = new ModelAndView();
         mav.setViewName("redirect:/admin/accounts");
         return mav;

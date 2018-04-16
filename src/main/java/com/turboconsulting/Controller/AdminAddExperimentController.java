@@ -15,6 +15,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashSet;
@@ -32,8 +33,9 @@ public class AdminAddExperimentController {
     private MyUserDetailsService userService;
 
     @GetMapping("/admin/experiments")
-    public String adminExperimentsPage(ModelMap m) {
+    public String adminExperimentsPage(ModelMap m, @RequestParam("updateSuccess") boolean update) {
         m.addAttribute("experiments", adminService.getAllExperiments());
+        m.addAttribute("updateSuccess", update);
 
         int aID = getLoggedInAccountID();
         return "admin-experiments";

@@ -14,6 +14,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.GregorianCalendar;
@@ -30,9 +31,11 @@ public class AdminAddVisitorExperimentController {
     private MyUserDetailsService userService;
 
     @GetMapping("/admin/vexp")
-    public String adminVisitorExperimentsPage(ModelMap m) {
-        m.addAttribute("visitorExperiments", adminService.getAllVisitorExperiments());
+    public String adminVisitorExperimentsPage(ModelMap m,
+                                              @RequestParam("updateSuccess") boolean update) {
 
+        m.addAttribute("visitorExperiments", adminService.getAllVisitorExperiments());
+        m.addAttribute("updateSuccess", update);
         int aID = getLoggedInAccountID();
         return "admin-vexp";
     }
