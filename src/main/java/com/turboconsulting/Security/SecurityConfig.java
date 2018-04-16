@@ -35,5 +35,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/", "/visitors/**", "/settings/**").hasAuthority("USER")
                 .antMatchers("/admin/**").hasAuthority("ADMIN")
                 .and().formLogin().loginPage("/login");
+        http.csrf().ignoringAntMatchers("/admin/**");
     }
 }
