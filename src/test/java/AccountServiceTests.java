@@ -80,6 +80,10 @@ public class AccountServiceTests {
             }
         });
 
+        mockEntityFactory.mockConsentOption("No Consent", "Description", consentOptionDao, 1);
+        mockEntityFactory.mockConsentOption("Full Consent", "Description", consentOptionDao, 2);
+
+
     }
 
     @Test
@@ -92,7 +96,6 @@ public class AccountServiceTests {
         assertEquals(found.getName(), "Yeap");
 
     }
-
     @Test
     public void getAccount_withInvalidId() {
         assertEquals(consentService.getAccount(-1), null);
@@ -107,7 +110,6 @@ public class AccountServiceTests {
         assertEquals(2, consentService.getAccountID("finn@bristol.ac.uk"));
 
     }
-
     @Test
     public void getAccountId_withInvalidEmail() {
         assertEquals(-1, consentService.getAccountID("leechay@bristol.ac.uk"));
@@ -120,13 +122,31 @@ public class AccountServiceTests {
         assertEquals(new HashSet<Visitor>(), consentService.getAccountsVisitors(2));
         assertEquals(new HashSet<Visitor>(), consentService.getAccountsVisitors(3));
     }
-
     @Test
     public void getAccountsVisitors_withVisitors() {
         Account a = consentService.getAccount(1);
         Iterable<Visitor> visitors = consentService.getAccountsVisitors(1);
         for (Visitor v : visitors) {
             assertEquals("Harry Visitor", v.getName());
+        }
+    }
+
+
+    @Test
+    public void checkAccountsInitialVisitorsConsents()  {
+        Account a = consentService.getAccount(1);
+        for(Visitor v : a.getVisitors())  {
+            assertEquals("No Consent", v.getDefaultConsent().getName());
+        }
+    }
+    @Test
+    public void checkUpdateAccountConsent()  {
+        ArrayList<Integer> vIds = new ArrayList<>();
+        vIds.add(1);  vIds.add(2);
+        consentService.updateAccountConsent(vIds, new ConsentOption("Full Consent", " "));
+        Account a = consentService.getAccount(1);
+        for(Visitor v : a.getVisitors())  {
+            assertEquals("Full Consent", v.getDefaultConsent().getName());
         }
     }
 
