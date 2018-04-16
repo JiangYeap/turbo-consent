@@ -54,11 +54,6 @@
         </div>
     </nav>
 
-    <div class="notification is-info has-text-centered success-flag" th:classappend="${updateSuccess} ? '' : 'is-hidden'">
-        <p>Changes saved successfully!</p>
-        <button class="delete is-medium close-success"></button>
-    </div>
-
     <!-- Banner start -->
     <section class="hero is-success is-2 is-bold">
         <div class="hero-body">
@@ -72,6 +67,11 @@
             </div>
         </div>
     </section>
+
+    <div class="notification is-info has-text-centered success-flag" th:classappend="${updateSuccess} ? '' : 'is-hidden'">
+        <p>Changes saved successfully!</p>
+        <button class="delete is-medium close-success"></button>
+    </div>
 
     <!-- Main Content start -->
     <section class="container" style="margin-top:24px">
