@@ -86,7 +86,9 @@ public class AdminService implements AdminServiceInterface {
     @Override
     public boolean deleteAccount(int accountId) {
         boolean successful = true;
-        for(Visitor visitor : accountDao.findByAccountId(accountId).getVisitors())  {
+        Collection<Visitor> visitors = new ArrayList<>();
+        visitors.addAll(accountDao.findByAccountId(accountId).getVisitors());
+        for(Visitor visitor : visitors)  {
             successful = successful & deleteVisitor(visitor.getVisitorId());
         }
         accountDao.delete(accountId);
