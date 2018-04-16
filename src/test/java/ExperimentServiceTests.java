@@ -97,8 +97,12 @@ public class ExperimentServiceTests {
     @Test
     public void getExperimentsConsentOptions()  {
         ArrayList<ConsentOption> consentOptions = Lists.newArrayList(consentService.getExperimentsConsentOptions(1));
-        assertEquals("No Consent", consentOptions.get(0).getName());
-        assertEquals("Full Consent", consentOptions.get(1).getName());
+        if(consentOptions.get(0).getName().equals("Full Consent"))  {
+            assertEquals("No Consent", consentOptions.get(1).getName());
+
+        }else{
+            assertEquals("Full Consent", consentOptions.get(1).getName());
+        }
     }
 
 }
