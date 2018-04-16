@@ -57,15 +57,20 @@ public class ExperimentServiceTests {
     @Before
     public void setup() {
 
-        MockEntityFactory mockEntityFactory = new MockEntityFactory();
+        MockEntityFactory mockEntityFactory = new MockEntityFactory( accountDao,
+                experimentDao,
+                visitorDao,
+                visitorExperimentDao,
+                consentOptionDao,
+                consentExperimentDao);
         ArrayList<Experiment> experiments = new ArrayList<>();
         ArrayList<ConsentOption> consentOptions = new ArrayList<>();
 
-        experiments.add(mockEntityFactory.mockExperiment(experimentDao, "Physics Experiment", "Description 1", 1));
-        experiments.add(mockEntityFactory.mockExperiment(experimentDao, "Chemistry Experiment", "Description 2", 2));
+        experiments.add(mockEntityFactory.mockExperiment( "Physics Experiment", "Description 1", 1));
+        experiments.add(mockEntityFactory.mockExperiment( "Chemistry Experiment", "Description 2", 2));
 
-        consentOptions.add(mockEntityFactory.mockConsentOption("No Consent", " ", consentOptionDao, 1));
-        consentOptions.add(mockEntityFactory.mockConsentOption("Full Consent", " ", consentOptionDao, 2));
+        consentOptions.add(mockEntityFactory.mockConsentOption("No Consent", " ",  1));
+        consentOptions.add(mockEntityFactory.mockConsentOption("Full Consent", " ",  2));
 
         experiments.get(0).addConsentOption(new ConsentExperiment(consentOptions.get(0), experiments.get(0)));
         experiments.get(0).addConsentOption(new ConsentExperiment(consentOptions.get(1), experiments.get(0)));

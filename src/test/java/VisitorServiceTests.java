@@ -56,18 +56,23 @@ public class VisitorServiceTests {
 
     @Before
     public void setup() {
-        MockEntityFactory mockEntityFactory = new MockEntityFactory();
+        MockEntityFactory mockEntityFactory = new MockEntityFactory( accountDao,
+                experimentDao,
+                visitorDao,
+                visitorExperimentDao,
+                consentOptionDao,
+                consentExperimentDao);
         ArrayList<Account> accounts = new ArrayList<>();
         ArrayList<Visitor> visitors = new ArrayList<>();
 
-        accounts.add(mockEntityFactory.mockAccount(accountDao, "Harry", "harry@bristol.ac.uk", "password", 1));
-        accounts.add(mockEntityFactory.mockAccount(accountDao, "Finn", "finn@bristol.ac.uk", "password", 2));
-        accounts.add(mockEntityFactory.mockAccount(accountDao, "Yeap", "yeap@bristol.ac.uk", "password", 3));
+        accounts.add(mockEntityFactory.mockAccount( "Harry", "harry@bristol.ac.uk", "password", 1));
+        accounts.add(mockEntityFactory.mockAccount( "Finn", "finn@bristol.ac.uk", "password", 2));
+        accounts.add(mockEntityFactory.mockAccount( "Yeap", "yeap@bristol.ac.uk", "password", 3));
         //Mockito.when(accountDao.save(any(Account.class))).thenAnswer(AdditionalAnswers.<Account>returnsFirstArg());
         //Mockito.when(accountDao.findAll()).thenReturn(accounts);
 
-        visitors.add(mockEntityFactory.mockVisitor(visitorDao, "Harry Visitor 1", 1, accounts.get(0)));
-        visitors.add(mockEntityFactory.mockVisitor(visitorDao, "Harry Visitor 2", 2, accounts.get(0)));
+        visitors.add(mockEntityFactory.mockVisitor( "Harry Visitor 1", 1, accounts.get(0)));
+        visitors.add(mockEntityFactory.mockVisitor( "Harry Visitor 2", 2, accounts.get(0)));
         //Mockito.when(visitorDao.save(any(Visitor.class))).thenAnswer(AdditionalAnswers.<Visitor>returnsFirstArg());
         //Mockito.when(visitorDao.findAll()).thenReturn(visitors);
 
@@ -79,16 +84,10 @@ public class VisitorServiceTests {
             }
         });
 
-        mockEntityFactory.mockConsentOption("No Consent", "Description", consentOptionDao, 1);
-        mockEntityFactory.mockConsentOption("Full Consent", "Description", consentOptionDao, 2);
+        mockEntityFactory.mockConsentOption("No Consent", "Description",  1);
+        mockEntityFactory.mockConsentOption("Full Consent", "Description",  2);
 
     }
-
-//    @Test
-//    public void addNewVisitor_success()  {
-//        Visitor visitor = new Visitor( "Tony", new GregorianCalendar(2000, 01, 01));
-//        //assertTrue(consentService.addNewVisitor(visitor, 1));
-//    }
 
     @Test
     public void getVisitor_withValidId() {
