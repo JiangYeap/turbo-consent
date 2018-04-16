@@ -38,10 +38,10 @@
                     <a th:href="@{/settings}" class="navbar-item">
                         Settings
                     </a>
-                    <a th:href="@{/logout}" class="navbar-item has-text-danger is-hidden-desktop">
+                    <a th:href="@{/logout}" class="navbar-item has-text-danger is-hidden-tablet">
                         Log Out
                     </a>
-                    <span class="navbar-item is-hidden-touch">
+                    <span class="navbar-item is-hidden-mobile">
                         <a th:href="@{/logout}" class="button is-danger is-inverted is-outlined">Log Out</a>
                     </span>
                 </div>
@@ -69,7 +69,7 @@
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title has-text-weight-semibold is-size-3-desktop">Consent Level Options</p>
-                <button class="delete is-medium close-modal is-hidden-touch" aria-label="close"></button>
+                <button class="delete is-medium close-modal is-hidden-mobile" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
                 <div class="content">

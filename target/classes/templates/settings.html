@@ -40,10 +40,10 @@
                     <a th:href="@{/settings}" class="navbar-item is-active">
                         Settings
                     </a>
-                    <a th:href="@{/logout}" class="navbar-item has-text-danger is-hidden-desktop">
+                    <a th:href="@{/logout}" class="navbar-item has-text-danger is-hidden-tablet">
                         Log Out
                     </a>
-                    <span class="navbar-item is-hidden-touch">
+                    <span class="navbar-item is-hidden-mobile">
                         <a th:href="@{/logout}" class="button is-danger is-inverted is-outlined">Log Out</a>
                     </span>
                 </div>
@@ -90,7 +90,7 @@
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title has-text-weight-semibold is-size-3-desktop">Consent Level Options</p>
-                <button class="delete is-medium close-modal is-hidden-touch" aria-label="close"></button>
+                <button class="delete is-medium close-modal is-hidden-mobile" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
                 <div class="content">
@@ -123,13 +123,13 @@
         </div>
 
         <form class="dependent-visitors" th:action="@{/settings/updateConsent}" th:method="post">
-            <div class="columns is-hidden-desktop">
+            <div class="columns is-hidden-tablet">
                 <div class="column has-text-left">
-                    <a class="is-outlined is-primary button toggle-v is-hidden-desktop" th:attrappend="disabled=${#lists.isEmpty(visitors)} ? true : false">Select All</a>
+                    <a class="is-outlined is-primary button toggle-v is-hidden-tablet" th:attrappend="disabled=${#lists.isEmpty(visitors)} ? true : false">Select All</a>
                 </div>
             </div>
 
-            <div class="card is-hidden-desktop mobile-exp" th:each="v : ${visitors}">
+            <div class="card is-hidden-tablet mobile-exp" th:each="v : ${visitors}">
                 <div class="card-content medium-card">
                     <p class="subtitle tiny-subtitle has-text-weight-semibold" th:text="${v.name}">Visitor Name</p>
                     <p>Default Consent Level: <em class="has-text-success" th:text="${v.defaultConsent.name}">Consent Level</em></p>
@@ -144,13 +144,13 @@
                 </div>
             </div>
 
-            <div class="card is-hidden-desktop mobile-exp" th:if="${#lists.isEmpty(visitors)}">
+            <div class="card is-hidden-tablet mobile-exp" th:if="${#lists.isEmpty(visitors)}">
                 <div class="card-content medium-card">
                     <p class="subtitle title has-text-weight-semibold">No Visitors To Show</p>
                 </div>
             </div>
 
-            <table class="features table is-hoverable is-fullwidth is-striped is-hidden-touch">
+            <table class="features table is-hoverable is-fullwidth is-striped is-hidden-mobile">
                 <tbody class="tbody">
                 <tr>
                     <th class="hentry is-size-6"><a class="button toggle-v" th:attrappend="disabled=${#lists.isEmpty(visitors)} ? true : false">Select All</a></th>

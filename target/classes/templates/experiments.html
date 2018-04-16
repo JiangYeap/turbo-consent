@@ -40,10 +40,10 @@
                     <a th:href="@{/settings}" class="navbar-item">
                         Settings
                     </a>
-                    <a th:href="@{/logout}" class="navbar-item has-text-danger is-hidden-desktop">
+                    <a th:href="@{/logout}" class="navbar-item has-text-danger is-hidden-tablet">
                         Log Out
                     </a>
-                    <span class="navbar-item is-hidden-touch">
+                    <span class="navbar-item is-hidden-mobile">
                         <a th:href="@{/logout}" class="button is-danger is-inverted is-outlined">Log Out</a>
                     </span>
                 </div>
@@ -91,7 +91,7 @@
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title has-text-weight-semibold is-size-3-desktop">Consent Level Options</p>
-                <button class="delete is-medium close-modal is-hidden-touch" aria-label="close"></button>
+                <button class="delete is-medium close-modal is-hidden-mobile" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
                 <div class="content">
@@ -134,20 +134,20 @@
             <button class="button is-outlined is-danger move-all" type="submit" th:attrappend="disabled=${#lists.isEmpty(visitorExps.?[not changedConsent])} ? true : false">Review All</button>
         </form>
 
-        <!--<div class="field is-hidden-desktop">-->
+        <!--<div class="field is-hidden-tablet">-->
             <!--<input id="t-switch-m" type="checkbox" class="switch is-warning is-rounded" />-->
             <!--<label for="t-switch-m"></label>-->
             <!--<label class="current-table-m is-size-4">Consent-Pending Experiments</label>-->
         <!--</div>-->
 
         <form class="consent-pending" th:action="@{/visitors/experiments/updateConsent(vID=${vID})}" th:method="post" th:with="pending = ${visitorExps.?[not changedConsent]}">
-            <div class="columns is-hidden-desktop">
+            <div class="columns is-hidden-tablet">
                 <div class="column has-text-left">
-                    <a class="is-outlined is-primary button toggle-p is-hidden-desktop" th:attrappend="disabled=${#lists.isEmpty(pending)} ? true : false">Select All</a>
+                    <a class="is-outlined is-primary button toggle-p is-hidden-tablet" th:attrappend="disabled=${#lists.isEmpty(pending)} ? true : false">Select All</a>
                 </div>
             </div>
 
-            <div class="card is-hidden-desktop mobile-exp" th:each="visitorExp : ${pending}">
+            <div class="card is-hidden-tablet mobile-exp" th:each="visitorExp : ${pending}">
                 <div class="card-content medium-card">
                     <p class="subtitle tiny-subtitle has-text-weight-semibold" th:text="${visitorExp.experiment.name}">Physics Experiment With An Extremely Long Title</p>
                     <p>Date: <span class="has-text-grey-dark" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">6/4/2018</span></p>
@@ -166,16 +166,16 @@
                 </div>
             </div>
 
-            <div class="card is-hidden-desktop mobile-exp" th:if="${#lists.isEmpty(pending)}">
+            <div class="card is-hidden-tablet mobile-exp" th:if="${#lists.isEmpty(pending)}">
                 <div class="card-content medium-card">
                     <p class="subtitle title has-text-weight-semibold">No Experiments To Show</p>
                 </div>
             </div>
 
-            <table class="features table is-hoverable is-fullwidth is-striped is-hidden-touch">
+            <table class="features table is-hoverable is-fullwidth is-striped is-hidden-mobile">
                 <tbody class="tbody">
                     <tr>
-                        <th class="hentry is-size-6"><a class="button toggle-p is-hidden-touch" th:attrappend="disabled=${#lists.isEmpty(pending)} ? true : false">Select All</a></th>
+                        <th class="hentry is-size-6"><a class="button toggle-p is-hidden-mobile" th:attrappend="disabled=${#lists.isEmpty(pending)} ? true : false">Select All</a></th>
                         <th class="hentry is-size-6">Experiment Title</th>
                         <th class="hentry is-size-6">Experiment Date</th>
                         <th class="hentry is-size-6">Consent Status</th>
@@ -218,13 +218,13 @@
         </form>
 
         <form class="reviewed is-hidden" th:action="@{/visitors/experiments/updateConsent(vID=${vID})}" th:method="post" th:with="reviewed = ${visitorExps.?[changedConsent]}">
-            <div class="columns is-hidden-desktop">
+            <div class="columns is-hidden-tablet">
                 <div class="column has-text-left">
-                    <a class="is-outlined is-primary button toggle-r is-hidden-desktop" th:attrappend="disabled=${#lists.isEmpty(reviewed)} ? true : false">Select All</a>
+                    <a class="is-outlined is-primary button toggle-r is-hidden-tablet" th:attrappend="disabled=${#lists.isEmpty(reviewed)} ? true : false">Select All</a>
                 </div>
             </div>
 
-            <div class="card is-hidden-desktop mobile-exp" th:each="visitorExp : ${reviewed}">
+            <div class="card is-hidden-tablet mobile-exp" th:each="visitorExp : ${reviewed}">
                 <div class="card-content medium-card">
                     <p class="subtitle tiny-subtitle has-text-weight-semibold" th:text="${visitorExp.experiment.name}">Physics Experiment With An Extremely Long Title</p>
                     <p>Date: <span class="has-text-grey-dark" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">6/4/2018</span></p>
@@ -243,13 +243,13 @@
                 </div>
             </div>
 
-            <div class="card is-hidden-desktop mobile-exp" th:if="${#lists.isEmpty(reviewed)}">
+            <div class="card is-hidden-tablet mobile-exp" th:if="${#lists.isEmpty(reviewed)}">
                 <div class="card-content medium-card">
                     <p class="subtitle title has-text-weight-semibold">No Experiments To Show</p>
                 </div>
             </div>
 
-            <table class="features table is-hoverable is-fullwidth is-striped is-hidden-touch">
+            <table class="features table is-hoverable is-fullwidth is-striped is-hidden-mobile">
                 <!--<thead class="thead">-->
                     <!--<nav class="breadcrumb is-large" aria-label="breadcrumbs">-->
                         <!--<ul>-->
@@ -260,7 +260,7 @@
                 <!--</thead>-->
                 <tbody class="tbody">
                     <tr>
-                        <th class="hentry is-size-6"><a class="button toggle-r is-hidden-touch" th:attrappend="disabled=${#lists.isEmpty(reviewed)} ? true : false">Select All</a></th>
+                        <th class="hentry is-size-6"><a class="button toggle-r is-hidden-mobile" th:attrappend="disabled=${#lists.isEmpty(reviewed)} ? true : false">Select All</a></th>
                         <th class="hentry is-size-6">Experiment Title</th>
                         <th class="hentry is-size-6">Experiment Date</th>
                         <th class="hentry is-size-6">Consent Status</th>
