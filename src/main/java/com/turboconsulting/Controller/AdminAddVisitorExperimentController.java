@@ -32,7 +32,7 @@ public class AdminAddVisitorExperimentController {
 
     @GetMapping("/admin/vexp")
     public String adminVisitorExperimentsPage(ModelMap m,
-                                              @RequestParam("updateSuccess") boolean update) {
+                                              @RequestParam(name="updateSuccess",  required = false) boolean update) {
 
         m.addAttribute("visitorExperiments", adminService.getAllVisitorExperiments());
         m.addAttribute("updateSuccess", update);

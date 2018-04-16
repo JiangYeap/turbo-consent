@@ -32,7 +32,7 @@ public class AdminAddVisitorController {
 
     @GetMapping("/admin/visitors")
     public String adminVisitorsPage(ModelMap m,
-                                    @RequestParam("updateSuccess") boolean update) {
+                                    @RequestParam(name="updateSuccess", required = false) boolean update) {
         m.addAttribute("visitors", adminService.getAllVisitors());
         m.addAttribute("updateSuccess", update);
         int aID = getLoggedInAccountID();

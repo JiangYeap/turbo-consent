@@ -33,7 +33,7 @@ public class AdminAddExperimentController {
     private MyUserDetailsService userService;
 
     @GetMapping("/admin/experiments")
-    public String adminExperimentsPage(ModelMap m, @RequestParam("updateSuccess") boolean update) {
+    public String adminExperimentsPage(ModelMap m, @RequestParam(name="updateSuccess", required = false) boolean update) {
         m.addAttribute("experiments", adminService.getAllExperiments());
         m.addAttribute("updateSuccess", update);
 

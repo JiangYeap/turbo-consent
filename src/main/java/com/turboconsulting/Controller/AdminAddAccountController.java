@@ -28,7 +28,7 @@ public class AdminAddAccountController {
     private MyUserDetailsService userService;
 
     @GetMapping("/admin/accounts")
-    public String adminAccountsPage(ModelMap m, @RequestParam("updateSuccess") boolean update ) {
+    public String adminAccountsPage(ModelMap m, @RequestParam(name = "updateSuccess", required = false) boolean update ) {
         m.addAttribute("accounts", adminService.getAllAccounts());
         int aID = getLoggedInAccountID();
         m.addAttribute("updateSuccess", update);
