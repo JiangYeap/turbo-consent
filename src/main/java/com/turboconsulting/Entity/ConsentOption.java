@@ -61,6 +61,9 @@ public class ConsentOption {
     public void addConsentExperiment(ConsentExperiment consentExperiment)  {
         this.consentExperiments.add(consentExperiment);
     }
+    public void removeConsentExperiment(ConsentExperiment consentExperiment)  {
+        consentExperiments.remove(consentExperiment);
+    }
 
     public Set<Visitor> getVisitors() {
         return visitors;

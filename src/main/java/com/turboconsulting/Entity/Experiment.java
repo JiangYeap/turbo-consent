@@ -78,6 +78,7 @@ public class Experiment {
     public void addConsentOption(ConsentExperiment consentOption)  {
         this.consentExperiments.add(consentOption);
     }
+    public void removeConsentExperiment(ConsentExperiment consentExperiment)  {this.consentExperiments.remove(consentExperiment);}
 
 
 }
