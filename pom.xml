@@ -48,6 +48,7 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
+        <!-- REMOVE FOLLOWING DEPENDENCY FOR JAR DEPLOYMENT (RUNNING IN IDE)-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
