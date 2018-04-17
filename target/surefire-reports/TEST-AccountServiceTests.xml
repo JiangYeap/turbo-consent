@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AccountServiceTests" time="0.032" tests="9" errors="0" skipped="0" failures="0">
+<testsuite name="AccountServiceTests" time="0.031" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -63,11 +63,11 @@
   </properties>
   <testcase name="getAccountsVisitors_noVisitors" classname="AccountServiceTests" time="0.004"/>
   <testcase name="getAccount_withValidId" classname="AccountServiceTests" time="0.002"/>
-  <testcase name="checkAccountsInitialVisitorsConsents" classname="AccountServiceTests" time="0.004"/>
+  <testcase name="checkAccountsInitialVisitorsConsents" classname="AccountServiceTests" time="0.003"/>
   <testcase name="checkUpdateAccountConsent_invalidConsent" classname="AccountServiceTests" time="0.004"/>
-  <testcase name="getAccountId_withValidEmail" classname="AccountServiceTests" time="0.004"/>
+  <testcase name="getAccountId_withValidEmail" classname="AccountServiceTests" time="0.003"/>
   <testcase name="getAccountId_withInvalidEmail" classname="AccountServiceTests" time="0.003"/>
   <testcase name="getAccount_withInvalidId" classname="AccountServiceTests" time="0.004"/>
-  <testcase name="getAccountsVisitors_withVisitors" classname="AccountServiceTests" time="0.004"/>
-  <testcase name="checkUpdateAccountConsent_validConsent" classname="AccountServiceTests" time="0.003"/>
+  <testcase name="getAccountsVisitors_withVisitors" classname="AccountServiceTests" time="0.003"/>
+  <testcase name="checkUpdateAccountConsent_validConsent" classname="AccountServiceTests" time="0.005"/>
 </testsuite>
