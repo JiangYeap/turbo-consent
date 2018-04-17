@@ -203,6 +203,9 @@ label.tiny-label {
 .modal-list {
   list-style-type: disc !important; }
 
+.left-align-list {
+  margin: 1rem !important; }
+
 .hentry {
   vertical-align: middle !important; }
 

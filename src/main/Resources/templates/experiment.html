@@ -94,17 +94,6 @@
         </div>
     </div>
 
-    <!-- Update Notification start-->
-    <div class="notification is-danger has-text-centered error-flag" th:classappend="${updateFailure} ? '' : 'is-hidden'">
-        <p>Sorry, an error occurred! Please try again.</p>
-        <button class="delete is-medium close-danger"></button>
-    </div>
-
-    <div class="notification is-success has-text-centered success-flag" th:classappend="${updateSuccess} ? '' : 'is-hidden'">
-        <p>Changes saved successfully!</p>
-        <button class="delete is-medium close-success"></button>
-    </div>
-
     <!-- Main Content start -->
     <section class="section">
         <div class="box feature">
@@ -117,6 +106,16 @@
                     Date Participated
                 </h1>
                 <p class="has-text-grey" th:text="${#dates.format(visitorExp.date, 'dd/MM/YYYY')}">date here</p>
+                <h1 class="tiny-subtitle is-size-4">
+                    Consent Level Descriptions
+                </h1>
+                <ul class="left-align-list">
+                    <li th:each="cco : ${customConsentOptions}" th:inline="text">
+                        <p class="has-text-grey">
+                            <span class="has-text-weight-semibold">[[${cco.name}]]: </span>[[${cco.description}]]
+                        </p>
+                    </li>
+                </ul>
                 <h1 class="tiny-subtitle is-size-4">
                     Current Consent Level
                 </h1>
