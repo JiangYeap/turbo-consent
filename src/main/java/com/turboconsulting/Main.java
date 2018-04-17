@@ -28,6 +28,7 @@ public class Main {
 //USE THIS CODE FOR WAR DEPLOYMENT (RUNNING ON PRODUCTION ENVIRONMENT)
 //********************************************************************
 @SpringBootApplication
+@EnableConfigurationProperties
 public class Main extends SpringBootServletInitializer {
 
     @Override
