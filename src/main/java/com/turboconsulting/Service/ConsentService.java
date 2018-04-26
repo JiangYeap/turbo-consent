@@ -106,6 +106,7 @@ public class ConsentService implements ConsentServiceInterface {
 
         return visitorExperimentsList;
     }
+
     @Override
     public VisitorExperiment getVisitorExperiment(int visitorID, int experimentID)  {
         ArrayList<Experiment> experiments = new ArrayList<>();
