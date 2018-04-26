@@ -29,6 +29,7 @@ public class ConsentOption {
     @Column(unique = true)
     private String name;
 
+    @Column(columnDefinition="Text")
     private String description;
 
     public ConsentOption() {};
