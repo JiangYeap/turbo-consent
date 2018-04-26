@@ -47,9 +47,9 @@ public class AdminService implements AdminServiceInterface {
         consentExperimentDao.deleteAll();
 
         consentOptionDao.save(new ConsentOption("Full Consent",
-                "This option means you give consent for We The Curious and the involved researchers to use all of the data collected when you participated in this experiment."));
+                "You agree to allow WTC and the researchers involved in this experiment to view and use your experiment results and your details."));
         consentOptionDao.save(new ConsentOption("No Consent",
-                "This option means you do not give consent for We The Curious or any other parties to use any of the data collected when you participated in this experiment."));
+                "You do not agree to allow anyone to view or use your experiment results or any of your details."));
 
         Account account1 = new Account("Admin", "admin@turboconsent.com", bCryptPasswordEncoder.encode("tcadmin123"));
         addNewAccount(account1);
