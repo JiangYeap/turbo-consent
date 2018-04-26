@@ -46,7 +46,7 @@ public class ExperimentsController {
 
     @PostMapping("/visitors/experiments/updateConsent")
     public String updateConsent(ModelMap m, @RequestParam("vID") int vID,
-                                      @ModelAttribute("selected") List<Integer> eIDs,
+                                      @RequestParam("selected") List<Integer> eIDs,
                                       @ModelAttribute("consentLevel") String c) throws AccessDeniedException {
         checkAccountID(vID);
         boolean updateSuccessful = consentService.updateBatchExperimentConsents(vID, new ConsentOption(c.toUpperCase(), "Description"), eIDs);
