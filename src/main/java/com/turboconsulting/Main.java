@@ -11,7 +11,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 //************************************************
 //USE THIS CODE TO JAR DEPLOYMENT (RUNNING IN IDE)
 //************************************************
-@SpringBootApplication
+/*@SpringBootApplication
 @EnableConfigurationProperties
 public class Main {
 
@@ -22,12 +22,12 @@ public class Main {
     }
 
 
-}
+}*/
 
 //********************************************************************
 //USE THIS CODE FOR WAR DEPLOYMENT (RUNNING ON PRODUCTION ENVIRONMENT)
 //********************************************************************
-/*@SpringBootApplication
+@SpringBootApplication
 @EnableConfigurationProperties
 public class Main extends SpringBootServletInitializer {
 
@@ -40,4 +40,4 @@ public class Main extends SpringBootServletInitializer {
         SpringApplication.run(Main.class, args);
     }
 
-}*/
+}
