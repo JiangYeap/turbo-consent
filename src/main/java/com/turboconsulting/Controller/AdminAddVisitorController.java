@@ -43,7 +43,7 @@ public class AdminAddVisitorController {
     public ModelAndView addAccount(ModelMap m,
                                    @ModelAttribute("accountId") int accountId,
                                    @ModelAttribute("name") String name,
-                                   @ModelAttribute("email") GregorianCalendar date)  {
+                                   @ModelAttribute("dob") GregorianCalendar date)  {
         adminService.addNewVisitor(new Visitor(name, date), accountId );
         ModelAndView mav = new ModelAndView();
 

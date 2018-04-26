@@ -38,7 +38,7 @@ public class SettingsController {
 
     @PostMapping("/settings/updateConsent")
     public String updateConsent(ModelMap m,
-                                @ModelAttribute("vSelected") List<Integer> vIDs,
+                                @RequestParam("vSelected") List<Integer> vIDs,
                                 @ModelAttribute("dConsentLevel") String c)  {
         boolean updateSuccessful = consentService.updateAccountConsent(vIDs, new ConsentOption(c.toUpperCase(), "Description"));
 
