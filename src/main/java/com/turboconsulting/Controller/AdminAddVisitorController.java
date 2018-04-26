@@ -17,7 +17,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 
 @Controller
 public class AdminAddVisitorController {
@@ -43,7 +47,15 @@ public class AdminAddVisitorController {
     public ModelAndView addAccount(ModelMap m,
                                    @ModelAttribute("accountId") int accountId,
                                    @ModelAttribute("name") String name,
-                                   @ModelAttribute("dob") GregorianCalendar date)  {
+                                   @ModelAttribute("dob") String dateVal)  {
+        GregorianCalendar date = new GregorianCalendar();
+        try {
+            Date d = new SimpleDateFormat("yyyy-MM-dd").parse(dateVal);
+            date. setTime(d);
+        } catch (ParseException ex) {
+            // do nothing
+        }
+
         adminService.addNewVisitor(new Visitor(name, date), accountId );
         ModelAndView mav = new ModelAndView();
 
