@@ -1,31 +1,27 @@
-# README #
+# Turbo Consent #
+Turbo Consent is a web application developed for We The Curious, a charity based science centre based in Bristol. The application aims to enable We The Curious to efficiently handle visitors' consent on data being generated through their participation in public experiments.
 
-Please read this up to learn the proper git workflow: https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud, especially the **Collaborating** section as it accurately depicts what the actual workflow will be like. 
+## Getting Started ##
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Terminal commands for initialising git: ###
+### Prerequisites ###
+- At least Java version 8 or newer installed on your machine. Download: https://www.java.com/en/download/
+- MySQL installed. Download: https://dev.mysql.com/downloads/
+- An IDE which supports Java.
 
-`git clone <https://<username>:<password>@github.com/<username>/turbo-consent.git>` : creates a copy of this repository locally on your machine
+### Installation ###
+- Pull the repository to your local machine and import the pom.xml file as a project with your IDE. Your IDE should automatically download all the dependencies required.
+- Create a database with the name `consentdb` on your local MySQL server.
+- Run the `main` function of the application, make sure MySQL service is running on your machine.
+- On successful build, navigate to localhost:8080/ to visit the web application.
+- Log in with the email: admin@turboconsent.com and password: tcadmin123.
+- Navigate to localhost:8080/admin to create and remove accounts and test out other functionalities.
 
+## Built With ##
+- Spring Boot [Web Framework] - https://spring.io/projects/spring-boot
+- Thymeleaf [Templating Engine] - https://www.thymeleaf.org/
+- Maven [Dependency Management] - https://maven.apache.org/
+- MySQL [Server] - https://www.mysql.com/
 
-### Terminal commands for using git: ###
-
-`git pull` : downloads and updates all files from the remote repository to your local repository
-
-`git branch <branch-name>` : creates a new branch with the specified name in your local repository
-
-`git checkout <branch-name>` : switches your current local working branch to the specified branch
-
-`git status` : displays all changes made since the previous commit
-
-`git add .` : add all files and folder from your current directory
-
-`git commit -am "<description>"` : saves the changes made to the git-added files in your local repository
-
-`git push -u  origin <branch-name>` : uploads the changes on your local repository branch to the remote repository (GitHub)
-
-
-### Before You Begin... ###
-
-- `git checkout` to your `master` branch (and your other shared branches) and issue a `git pull` to get the latest versions of the branches **EVERY TIME** before starting development work.
-
-- Before working on a new feature / bug fixing, **ALWAYS** create a separate branch with `git branch <feature-name>` (lower case, dashes for separation) and work on that branch instead of `master`. This prevents bad code from being accidentally committed to `master` branch.
+## License ##
+Turbo Consent is licensed under MIT License.
