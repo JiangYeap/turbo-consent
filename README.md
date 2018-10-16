@@ -11,8 +11,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installation ###
 - Pull the repository to your local machine and import the pom.xml file as a project with your IDE. Your IDE should automatically download all the dependencies required.
-- Create a database with the name `consentdb` on your local MySQL server.
-- Run the `main` function of the application, make sure MySQL service is running on your machine.
+- Log in to your local MySQL server with the root user.
+- Create the database needed for the web app with `CREATE DATABASE consentDB;`.
+- Create a user and grant previlages on the database with `CREATE USER 'tcuser'@'localhost' IDENTIFIED BY 'tcpass';` then `GRANT ALL PRIVILEGES ON consentDB.* TO 'tcuser'@'localhost';`
+- Run the `main` function of the application, make sure your local MySQL server is running on your machine.
 - On successful build, navigate to localhost:8080/ to visit the web application.
 - Log in with the email: admin@turboconsent.com and password: tcadmin123.
 - Navigate to localhost:8080/admin to create and remove accounts and test out other functionalities.
